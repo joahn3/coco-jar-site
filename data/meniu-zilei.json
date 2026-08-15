@@ -1,0 +1,37 @@
+{
+  "luni": [
+    {"name":"Ciorbă de pui", "description":"servită cu leuștean și mămăligă", "price":"22 lei"},
+    {"name":"Friptură de porc la grătar", "description":"cu cartofi copți și sos piperata", "price":"38 lei"},
+    {"name":"Sorbete de lămâie", "description":"dulce de final", "price":"16 lei"}
+  ],
+  "marti": [
+    {"name":"Bulz cu brânză", "description":"cu smântână proaspătă", "price":"30 lei"},
+    {"name":"Muschi de pui pane", "description":"cartofi prăjiți + salată", "price":"34 lei"},
+    {"name":"Chec cu fructe", "description":"porție mare", "price":"14 lei"}
+  ],
+  "miercuri": [
+    {"name":"Supă de legume", "description":"cu paste", "price":"18 lei"},
+    {"name":"Snitel de pui", "description":"cu piure de cartofi", "price":"35 lei"},
+    {"name":"Clătite cu dulceață", "description":"4 bucăți", "price":"15 lei"}
+  ],
+  "joi": [
+    {"name":"Rasol la cuptor", "description":"vinete coapte + sos piperata", "price":"36 lei"},
+    {"name":"Tocană de legume", "description":"cu mămăligă", "price":"26 lei"},
+    {"name":"Prăjitură de casă", "description":"porție", "price":"13 lei"}
+  ],
+  "vineri": [
+    {"name":"Zacusca de pâine", "description":"cu legume", "price":"19 lei"},
+    {"name":"Parizer de casă", "description":"cotlet la grătar cu legume", "price":"39 lei"},
+    {"name":"Cheesecake la borcan", "description":"dulce de final", "price":"17 lei"}
+  ],
+  "sambata": [
+    {"name":"Ciorbă țărănească", "description":"cu afumătură", "price":"24 lei"},
+    {"name":"Mici plată (6 buc)", "description":"cu muștar și cartofi", "price":"42 lei"},
+    {"name":"Înghețată artizanală", "description":"2 cupe", "price":"18 lei"}
+  ],
+  "duminica": [
+    {"name":"Bors de vită", "description":"servit tradițional", "price":"23 lei"},
+    {"name":"Cozonac cu păstrăv", "description":"specialitate săptămânală", "price":"44 lei"},
+    {"name":"Papanasi", "description":"cu smântână", "price":"19 lei"}
+  ]
+}

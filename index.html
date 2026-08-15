@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coco Jar | Restaurant in Popești-Leordeni</title>
+    <meta name="description" content="Coco Jar, restaurant în Popești-Leordeni. Meniu zilei, evenimente și catering, contact rapid pe telefon sau WhatsApp." />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@type":"Restaurant",
+        "name":"Coco Jar",
+        "description":"Restaurant in Popești-Leordeni",
+        "address":{
+          "@type":"PostalAddress",
+          "addressLocality":"Popești-Leordeni",
+          "addressCountry":"RO"
+        },
+        "servesCuisine":"Romanian"
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="topbar">
+          <div class="brand">
+            <span class="dot"></span>
+            <span><strong data-fill="siteName">Coco Jar</strong> — <span data-fill="tagline">Meniu tradițional</span></span>
+          </div>
+          <div class="top-actions">
+            <a class="btn btn-call" data-link="phone" href="#" data-track="call_click">Sună acum</a>
+            <a class="btn btn-wa" data-link="whatsapp" href="#" data-track="whatsapp_click">WhatsApp</a>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html" class="active">Acasă</a></li>
+            <li><a href="meniu.html">Meniu</a></li>
+            <li><a href="meniu-zilei.html">Meniul zilei</a></li>
+            <li><a href="despre-noi.html">Despre noi</a></li>
+            <li><a href="evenimente-catering.html">Evenimente + Catering</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="container hero">
+        <div>
+          <p>Restaurant • Popești-Leordeni</p>
+          <h1>Îți facem ziua mai bună cu preparate aromate și servire rapidă.</h1>
+          <p>
+            Vino la <strong data-fill="siteName">Coco Jar</strong> pentru o experiență clară: meniuri bine structurate, evenimente organizate și catering simplu de comandat. Totul la un click.
+          </p>
+          <div class="lead">
+            <a class="btn btn-call" href="#" data-link="phone" data-track="call_click">Sună pentru rezervare</a>
+            <a class="btn btn-wa" href="#" data-link="whatsapp" data-track="whatsapp_click">Discută pe WhatsApp</a>
+            <a class="btn" href="meniu-zilei.html" data-track="daily_menu_click" style="border-color:#ffcc66;color:#ffcc66">Vezi Meniul zilei</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" alt="Mâncare restaurant" loading="lazy" />
+        </div>
+      </section>
+
+      <section class="container section">
+        <h2>Rezervări rapide, acțiuni clare</h2>
+        <div class="grid">
+          <article class="service">
+            <h3>Telefon & WhatsApp</h3>
+            <p class="mini">Număr principal: <strong><a data-link="phone" href="#"></a></strong></p>
+            <p class="mini">Program: <span data-fill="hours"></span></p>
+          </article>
+          <article class="service">
+            <h3>Locație</h3>
+            <p class="mini"><span data-fill="fullAddress"></span></p>
+            <p class="mini">Popești-Leordeni, Ilfov</p>
+          </article>
+          <article class="service">
+            <h3>Evenimente & Catering</h3>
+            <p class="mini">Nuntă, botez, onomastici, team lunch, aniversări.</p>
+            <p><a href="evenimente-catering.html">Trimite cerere ofertă</a></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container section">
+        <h2>Meniul zilei</h2>
+        <p class="mini" id="daily-title">Încărcare meniu...</p>
+        <div id="daily-menu" class="grid"></div>
+        <p class="mini">Actualizare zilnică direct în fișierul <code>data/meniu-zilei.json</code>.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <strong data-fill="siteName">Coco Jar</strong> · <span data-fill="locality"></span><br/>
+          <span data-fill="hours"></span><br/>
+          <a id="map-link" href="#" target="_blank" rel="noopener">Deschide pe hartă</a>
+        </div>
+        <div>
+          <a data-link="phone" href="#" data-track="call_click">Telefon</a><br />
+          <a data-link="whatsapp" href="#" data-track="whatsapp_click">WhatsApp</a><br />
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <a href="meniu.html">Meniu</a><br />
+          <a href="evenimente-catering.html">Evenimente + Catering</a><br />
+          <a data-link="facebook" href="#" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="floating-cta">
+      <a class="btn btn-call" data-link="phone" href="#" data-track="call_click_mobile">Sună</a>
+      <a class="btn btn-wa" data-link="whatsapp" href="#" data-track="whatsapp_click_mobile">WhatsApp</a>
+    </div>
+
+    <script src="scripts/site.js" defer></script>
+  </body>
+</html>

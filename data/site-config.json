@@ -1,0 +1,18 @@
+{
+  "siteName": "Coco Jar",
+  "tagline": "Meniu tradițional cu grătar și preparate la cuptor",
+  "locality": "Popești-Leordeni",
+  "fullAddress": "Popești-Leordeni, Ilfov",
+  "street": "Strada ... (de completat de client)",
+  "phone": "+40 737 000 000",
+  "whatsapp": "+40737000000",
+  "email": "contact@cocojar.ro",
+  "coords": "44.3767,26.1744",
+  "hours": "Luni-Duminica: 09:00 - 22:00",
+  "formspreeEndpoint": "",
+  "social": {
+    "facebook": "https://www.facebook.com/people/Coco-Jar/61592924622016/",
+    "instagram": "",
+    "googleBusiness": ""
+  }
+}

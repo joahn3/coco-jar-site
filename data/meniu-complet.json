@@ -1,0 +1,21 @@
+{
+  "supe": [
+    {"name":"Ciorbă de pui", "price":"20-24 lei", "desc":"cu tăiței, mămăligă, usturoi"},
+    {"name":"Ciorbă de vită", "price":"22-28 lei", "desc":"borș + smântână + ou"}
+  ],
+  "gratar": [
+    {"name":"Mici la grătar", "price":"40 lei", "desc":"6 buc + murături + muștar"},
+    {"name":"Ceafă de porc", "price":"42 lei", "desc":"cartofi copți + garnitură"},
+    {"name":"Parizer de casă", "price":"46 lei", "desc":"cu salată de varză"}
+  ],
+  "preparate-specifice": [
+    {"name":"Friptură de pui la cuptor", "price":"38 lei", "desc":"cu lămâie și rozmarin"},
+    {"name":"Muschi de pui pane", "price":"36 lei", "desc":"cartofi prăjiți + salată"},
+    {"name":"Snitel de pui", "price":"35 lei", "desc":"cu piure de cartofi"}
+  ],
+  "deserturi": [
+    {"name":"Papanasi", "price":"16 lei", "desc":"cu smântână și dulceață"},
+    {"name":"Chec de casa", "price":"14 lei", "desc":"porție"},
+    {"name":"Înghețată artizanală", "price":"18 lei", "desc":"2 cupe"}
+  ]
+}

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Coco Jar</title>
+    <meta name="description" content="Contact Coco Jar in Popești-Leordeni: telefon, WhatsApp, adresă și formulare rapidă." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="topbar">
+          <div class="brand">
+            <span class="dot"></span>
+            <span><strong data-fill="siteName">Coco Jar</strong> — Contact</span>
+          </div>
+          <div class="top-actions">
+            <a class="btn btn-call" data-link="phone" href="#" data-track="call_click">Sună</a>
+            <a class="btn btn-wa" data-link="whatsapp" href="#" data-track="whatsapp_click">WhatsApp</a>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="meniu.html">Meniu</a></li>
+            <li><a href="meniu-zilei.html">Meniul zilei</a></li>
+            <li><a href="despre-noi.html">Despre noi</a></li>
+            <li><a href="evenimente-catering.html">Evenimente + Catering</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section">
+      <h1>Contact</h1>
+      <div class="grid">
+        <section class="card">
+          <h2>Date</h2>
+          <p>Telefon: <a data-link="phone" href="#">—</a></p>
+          <p>WhatsApp: <a data-link="whatsapp" href="#">—</a></p>
+          <p>Adresă: <span data-fill="fullAddress"></span></p>
+          <p>Program: <span data-fill="hours"></span></p>
+          <p><a id="map-link" href="#" target="_blank" rel="noopener">Deschide pe hartă</a></p>
+        </section>
+        <section class="card">
+          <h2>Trimite mesaj rapid</h2>
+          <form data-form>
+            <label>Nume <input name="name" required placeholder="Numele" /></label>
+            <label>Telefon <input name="phone" required placeholder="07xx xxx xxx" /></label>
+            <label>Mesaj <textarea rows="4" name="message" placeholder="Cum te putem ajuta?"></textarea></label>
+            <button class="btn btn-call" type="submit">Trimite</button>
+            <p class="msg-ok" role="status"></p>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div><a data-map-link href="#" target="_blank" rel="noopener">Google Maps</a></div>
+        <div><a data-link="facebook" href="#" target="_blank" rel="noopener">Pagina oficială Facebook</a></div>
+        <div><a href="evenimente-catering.html">Formular evenimente</a></div>
+      </div>
+    </footer>
+
+    <script src="scripts/site.js" defer></script>
+  </body>
+</html>

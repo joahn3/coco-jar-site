@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meniul Zilei | Coco Jar</title>
+    <meta name="description" content="Meniul zilei de la Coco Jar, actualizat periodic și optimizat pentru clienții din Popești-Leordeni." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="topbar">
+          <div class="brand">
+            <span class="dot"></span>
+            <span><strong data-fill="siteName">Coco Jar</strong> — Meniul zilei</span>
+          </div>
+          <div class="top-actions">
+            <a class="btn btn-call" data-link="phone" href="#" data-track="call_click">Sună</a>
+            <a class="btn btn-wa" data-link="whatsapp" href="#" data-track="whatsapp_click">WhatsApp</a>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="meniu.html">Meniu</a></li>
+            <li><a href="meniu-zilei.html">Meniul zilei</a></li>
+            <li><a href="despre-noi.html">Despre noi</a></li>
+            <li><a href="evenimente-catering.html">Evenimente + Catering</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section">
+      <h1 id="daily-title">Meniul zilei</h1>
+      <p class="mini">Actualizare zilnică pentru ziua locală curentă.</p>
+      <div id="daily-menu" class="grid"></div>
+      <p class="mini">Pentru actualizare, se modifică fișierul <code>data/meniu-zilei.json</code>.</p>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div><strong>Comandă</strong><br /><a data-link="whatsapp" href="#" data-track="whatsapp_click">Trimite un mesaj</a></div>
+        <div><a href="contact.html">Contact</a></div>
+        <div><a href="meniu.html">Meniu complet</a></div>
+      </div>
+    </footer>
+
+    <script src="scripts/site.js" defer></script>
+  </body>
+</html>
