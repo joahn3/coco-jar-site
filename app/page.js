@@ -35,6 +35,12 @@ export default async function HomePage() {
     "Opțiuni directe pentru rezervare în timp real",
   ];
 
+  const heroHighlights = [
+    "Mese curățate zilnic",
+    "Produse din sezon",
+    "Grătar la jar + preparate din casă",
+  ];
+
   const reviewSignals = [
     {
       source: "Google Maps",
@@ -147,11 +153,22 @@ export default async function HomePage() {
         className="grid gap-4 pt-4 md:gap-6 lg:grid-cols-[1.35fr_0.92fr] lg:gap-6"
       >
         <Card className="space-y-6 py-6 sm:py-7">
+          <p className="jar-badge">Restaurant de pui la jar</p>
           <p className="jar-badge">Atmosferă + mâncare bună</p>
           <h2 className="text-title-lg">O experiență gândită pentru răgaz</h2>
           <p className="max-w-3xl text-body-lg text-ink-muted prose-balance">
             Un loc cald, relaxat și primitor unde te așezi cu poftă, savurezi un preparat bun și ai chef să te mai oprești puțin.
           </p>
+          <div className="grid gap-2.5 sm:grid-cols-3 sm:gap-3">
+            {heroHighlights.map((item) => (
+              <div
+                key={item}
+                className="rounded-xl border border-line-soft bg-surface-base/75 px-3 py-2.5 text-xs font-semibold uppercase tracking-[0.07em] text-ink-muted"
+              >
+                {item}
+              </div>
+            ))}
+          </div>
           <div className="grid gap-2.5 sm:grid-cols-3 sm:gap-3">
             <p className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
               Meniu zilei: până la 16:00

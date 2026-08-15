@@ -3,7 +3,7 @@ import { cn } from "./cn";
 
 const variants = {
   primary:
-    "bg-gradient-to-r from-brand-600 to-brand-700 text-jar-charcoal hover:text-jar-charcoal shadow-elevated hover:from-brand-500 hover:to-brand-800 focus-visible:ring-offset-surface-base",
+    "bg-gradient-to-r from-brand-500 to-brand-700 text-ink-overlay hover:brightness-110 shadow-elevated hover:from-brand-400 hover:to-brand-800 focus-visible:ring-offset-surface-base",
   whatsapp:
     "bg-whatsapp text-jar-gold shadow-cta hover:bg-whatsapp-hover hover:shadow-cta-hover focus-visible:ring-offset-surface-base",
   ghost:
