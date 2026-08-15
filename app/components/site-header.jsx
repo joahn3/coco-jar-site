@@ -140,8 +140,8 @@ export default function SiteHeader({ config }) {
       </header>
 
       <div
-        className={`pointer-events-none fixed inset-0 z-20 bg-black/55 transition-opacity duration-300 lg:hidden ${
-          isMenuOpen ? "opacity-100" : "pointer-events-none opacity-0"
+        className={`fixed inset-0 z-20 bg-black/55 transition-opacity duration-300 lg:hidden ${
+          isMenuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
         aria-hidden
         onClick={closeMenu}
@@ -149,7 +149,7 @@ export default function SiteHeader({ config }) {
 
       <div
         id="mobile-nav"
-        className={`pointer-events-none fixed inset-x-0 top-0 z-30 mt-[4.4rem] px-3 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden ${
+        className={`fixed inset-x-0 top-0 z-30 mt-[4.4rem] px-3 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden ${
           isMenuOpen
             ? "pointer-events-auto translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-2 opacity-0"
