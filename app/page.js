@@ -124,6 +124,7 @@ export default async function HomePage() {
                     <Button
                       as="next-link"
                       href="/meniu-zilei"
+                      variant="secondary"
                       data-analytics="click|navigation|meniu_zilei_hero|source=home|journey=menu_cta|lead_type=menu"
                       className="touch-target"
                     >
@@ -131,20 +132,12 @@ export default async function HomePage() {
                     </Button>
                     <Button
                       as="next-link"
-                      href="/galerie"
+                      href="/evenimente-catering"
                       variant="ghost"
-                      data-analytics="click|navigation|galerie_hero|source=home|journey=exploration|lead_type=lifestyle"
+                      data-analytics="click|navigation|evenimente_hero|source=home|journey=exploration|lead_type=event"
                       className="touch-target"
                     >
-                      Descoperă atmosfera
-                    </Button>
-                    <Button
-                      href={whatsappHref(config.whatsapp, config.phone)}
-                      variant="ghost"
-                      data-analytics="whatsapp_click|conversion|whatsapp_hero|source=home|journey=lead_capture|lead_type=whatsapp"
-                      className="touch-target"
-                    >
-                      Trimite mesaj pe WhatsApp
+                      Evenimente private
                     </Button>
                   </div>
 
@@ -227,6 +220,7 @@ export default async function HomePage() {
             <p>
               <a
                 className="jar-link touch-target"
+                aria-label={`Sună la ${config.phone || "numărul de telefon"} pentru rezervare`}
                 href={phoneHref(config.phone)}
               >
                 Telefon: {config.phone || "în curs de actualizare"}
@@ -235,6 +229,7 @@ export default async function HomePage() {
             <p>
               <a
                 className="jar-link touch-target"
+                aria-label={`Deschide conversație pe WhatsApp ${config.whatsapp || config.phone || "la restaurant"} din pagina principală`}
                 href={whatsappHref(config.whatsapp, config.phone, "Bună ziua, vreau mai multe detalii.")}
               >
                 WhatsApp: {config.whatsapp || config.phone || "în curs de actualizare"}

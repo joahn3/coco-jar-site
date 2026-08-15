@@ -3,6 +3,7 @@ import { phoneHref } from "../../lib/format";
 import Container from "../components/ui/container";
 import Card from "../components/ui/card";
 import EventForm from "../components/event-form";
+import Button from "../components/ui/button";
 import Breadcrumbs from "../components/breadcrumbs";
 
 export const metadata = {
@@ -42,6 +43,14 @@ export default async function EventPage() {
           <p className="text-body-lg text-ink">
             Momentele speciale merită să fie sărbătorite cu cei dragi, în jurul unei mese bune.
           </p>
+          <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:max-w-2xl">
+            <Button as="next-link" href="/contact" variant="primary" className="w-full sm:w-auto">
+              Cere o ofertă personalizată
+            </Button>
+            <Button as="next-link" href="/meniu-zilei" variant="secondary" className="w-full sm:w-auto">
+              Vezi opțiunile zilei
+            </Button>
+          </div>
           <div className="grid gap-2 sm:grid-cols-3">
             {eventProof.map((item) => (
               <Card key={item.title} className="space-y-2">
@@ -66,7 +75,7 @@ export default async function EventPage() {
           <div className="jar-link-list">
             <p>
               <a className="jar-link touch-target" href={phoneHref(config.phone)}>
-                {config.phone || "în curs de actualizare"}
+                Sună la {config.phone || "în curs de actualizare"}
               </a>
             </p>
           </div>

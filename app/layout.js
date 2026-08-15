@@ -27,10 +27,10 @@ export const metadata = {
   metadataBase: new URL("https://coco-jar-site.vercel.app"),
   title: {
     template: "%s | Coco Jar Bistro",
-    default: "Coco Jar — Restaurant Popești-Leordeni",
+    default: "Coco Jar Bistro | Restaurant premium de pui la jar în Popești-Leordeni",
   },
   description:
-    "Meniu complet, meniu zilei, evenimente și catering pentru Coco Jar Bistro din Popești-Leordeni.",
+    "Coco Jar Bistro – experiență premium de pui la jar, cu atmosferă caldă, preparate atent gătite și rezervări rapide.",
   keywords: [
     "Coco Jar",
     "restaurant Popești-Leordeni",
@@ -41,18 +41,19 @@ export const metadata = {
     "restaurant cu terasă",
   ],
   openGraph: {
-    title: "Coco Jar Bistro",
-    description: "Gust autentic, atmosferă primitoare.",
+    title: "Coco Jar Bistro | Restaurant premium de pui la jar",
+    description:
+      "Atmosferă caldă, preparate gătite la jar și un cadru premium pentru seri de neuitat.",
     type: "website",
     locale: "ro_RO",
     siteName: "Coco Jar",
     url: "https://coco-jar-site.vercel.app",
     images: [
       {
-        url: "https://coco-jar-site.vercel.app/galerie/instagram-010-ff3cb9cdf0.jpg",
-        width: 100,
-        height: 100,
-        alt: "Coco Jar logo",
+        url: "https://coco-jar-site.vercel.app/galerie/instagram-011-47b855d73e.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Coco Jar Bistro, atmosferă de restaurant pui la jar",
       },
     ],
   },

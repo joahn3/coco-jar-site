@@ -4,39 +4,39 @@
   --font-sans: var(--font-manrope), "Manrope", "Inter", system-ui, "Segoe UI", Arial, sans-serif;
   --font-serif: var(--font-playfair), "Playfair Display", "Georgia", "Times New Roman", serif;
 
-  --color-jar-dark: #18110b;
-  --color-jar-charcoal: #2a221a;
-  --color-jar-gold: #d6a267;
-  --color-jar-ember: #6f4b24;
-  --color-brand-50: #fcf8f3;
-  --color-brand-100: #f1dfcf;
-  --color-brand-200: #e1c29b;
-  --color-brand-300: #c8925a;
-  --color-brand-400: #b06f32;
-  --color-brand-500: #9a5a24;
-  --color-brand-600: #7c431f;
-  --color-brand-700: #59321b;
-  --color-brand-800: #3a1f11;
-  --color-brand-900: #20100a;
+  --color-jar-dark: #150d08;
+  --color-jar-charcoal: #22160d;
+  --color-jar-gold: #d8b17a;
+  --color-jar-ember: #b67f40;
+  --color-brand-50: #f6efe3;
+  --color-brand-100: #f0e3cf;
+  --color-brand-200: #e1c7a6;
+  --color-brand-300: #cab08b;
+  --color-brand-400: #c79e63;
+  --color-brand-500: #b67f40;
+  --color-brand-600: #9a6b34;
+  --color-brand-700: #7a5429;
+  --color-brand-800: #5a3f1d;
+  --color-brand-900: #342414;
 
-  --color-surface-base: #0d0907;
-  --color-surface-soft: #18120d;
-  --color-surface-panel: #241d16;
-  --color-surface-raised: #31271e;
+  --color-surface-base: #150d08;
+  --color-surface-soft: #1a120b;
+  --color-surface-panel: #22160d;
+  --color-surface-raised: #2a2017;
 
-  --color-ink-title: #f7f0e8;
-  --color-ink-muted: #ccbaaa;
-  --color-ink-soft: #b09780;
+  --color-ink-title: #ede4d5;
+  --color-ink-muted: #b39d87;
+  --color-ink-soft: #c8b296;
   --color-ink-on-brand: #251910;
   --color-ink-overlay: #f6ebd8;
 
-  --color-line: #4a3726;
-  --color-line-soft: #553c29;
-  --color-line-soft-2: #3d2d1e;
+  --color-line: #4a3a2b;
+  --color-line-soft: #543b29;
+  --color-line-soft-2: #3f2f22;
 
-  --color-restaurant-void: #090806;
-  --color-restaurant-smoke: #1a130f;
-  --color-restaurant-embers: #241b14;
+  --color-restaurant-void: #0f0a05;
+  --color-restaurant-smoke: #1a120b;
+  --color-restaurant-embers: #241b12;
   --color-restaurant-canvas: #ffffff;
 
   --color-whatsapp: #22c55e;
@@ -879,9 +879,51 @@
   .card-hover,
   a,
   button,
+  .premium-cta::after,
+  .glass-shell,
+  .hero-ambiance__grain,
   .menu-table tbody tr,
   .menu-table td {
     transition-duration: 1ms !important;
     transform: none !important;
+    animation: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-ambiance {
+    min-height: min(78vh, 560px);
+  }
+
+  .hero-ambiance__overlay {
+    opacity: 0.34;
+    background: radial-gradient(circle at 30% 20%, color-mix(in srgb, var(--color-brand-400) 32%, transparent), transparent 52%),
+      linear-gradient(180deg, rgb(0 0 0 / 0.16), color-mix(in srgb, var(--color-brand-300) 6%, transparent));
+  }
+
+  .hero-ambiance__grain {
+    opacity: 0.11;
+    background-size: 220px 220px;
+  }
+
+  .glass-panel--hero {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .jar-card,
+  .jar-filter {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  .jar-link {
+    color: var(--color-brand-300);
+  }
+
+  .jar-link:hover,
+  .jar-link:focus-visible {
+    color: var(--color-brand-200);
+    border-color: color-mix(in srgb, var(--color-brand-300) 72%, transparent);
   }
 }

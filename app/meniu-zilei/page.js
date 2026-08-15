@@ -5,10 +5,11 @@ import {
   getDailyMenu,
   getSiteConfig,
 } from "../../lib/site-data";
-import { isMenuDayActive } from "../../lib/format";
+import { isMenuDayActive, phoneHref } from "../../lib/format";
 import Image from "next/image";
 import Container from "../components/ui/container";
 import Card from "../components/ui/card";
+import Button from "../components/ui/button";
 import Breadcrumbs from "../components/breadcrumbs";
 
 export const metadata = {
@@ -79,6 +80,17 @@ export default async function DailyMenuPage({ searchParams }) {
         <p className="mt-2 text-sm text-ink-muted">
           Meniul este actualizat zilnic, în funcție de oferta de sezon.
         </p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <Button as="next-link" href="/contact" variant="primary" className="touch-target">
+            Rezervă masa pentru seara de azi
+          </Button>
+          <Button as="next-link" href="/meniu" variant="secondary" className="touch-target">
+            Vezi meniu complet
+          </Button>
+          <Button href={phoneHref(config.phone)} className="touch-target">
+            Sună direct
+          </Button>
+        </div>
 
         <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {dayItems.length === 0 ? (

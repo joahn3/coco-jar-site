@@ -179,7 +179,7 @@ export default function ContactForm() {
             loading ? "pointer-events-none opacity-70" : "",
           )}
         >
-          {loading ? "Se procesează..." : "Trimite cererea mea"}
+          {loading ? "Se procesează..." : "Trimite cererea de rezervare"}
         </Button>
         {status && <p className="text-sm text-success">{status}</p>}
       </form>

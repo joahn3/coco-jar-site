@@ -2,6 +2,7 @@ import { mapHref, phoneHref, whatsappHref } from "../../lib/format";
 import { getSiteConfig } from "../../lib/site-data";
 import Container from "../components/ui/container";
 import Card from "../components/ui/card";
+import Button from "../components/ui/button";
 import ContactForm from "../components/contact-form";
 import Breadcrumbs from "../components/breadcrumbs";
 
@@ -43,6 +44,14 @@ export default async function ContactPage() {
             Confirmăm rapid cererile clare: număr de persoane, interval dorit și tipul vizitei. Pentru evenimente complexe,
             îți vom trimite propunerea în cel mult o zi lucrătoare.
           </p>
+          <div className="mt-4 grid gap-2 sm:grid-cols-2">
+            <Button as="next-link" href="/meniu-zilei" variant="secondary" className="w-full sm:w-auto">
+              Meniul zilei
+            </Button>
+            <Button href={phoneHref(config.phone)} className="w-full sm:w-auto">
+              Rezervare directă pe telefon
+            </Button>
+          </div>
           <div className="grid gap-2 sm:grid-cols-3">
             {conversionSignals.map((item) => (
               <div key={item.label} className="rounded-lg border border-line-soft/80 bg-surface-base/75 p-3">
