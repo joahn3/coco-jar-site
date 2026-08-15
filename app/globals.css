@@ -910,31 +910,6 @@
     background: color-mix(in srgb, var(--color-brand-500) 10%, transparent);
   }
 
-  .cta-link {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.28rem;
-    font-weight: 600;
-    color: var(--color-brand-400);
-    text-underline-offset: 3px;
-  }
-
-  .cta-link:hover {
-    color: var(--color-brand-300);
-    text-decoration-thickness: 2px;
-  }
-
-  .cta-link::after {
-    content: "↗";
-    font-size: 0.78rem;
-    opacity: 0.84;
-    transition: transform 180ms ease;
-  }
-
-  .cta-link:hover::after {
-    transform: translate(2px, -2px);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
