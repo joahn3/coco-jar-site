@@ -4,9 +4,24 @@ import SiteFooter from "./components/site-footer";
 import SeoSchema from "./components/seo-schema";
 import { phoneHref, whatsappHref } from "../lib/format";
 import AnalyticsScripts from "./components/analytics-scripts";
+import { Manrope, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Container from "./components/ui/container";
 import Button from "./components/ui/button";
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-manrope",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  variable: "--font-playfair",
+  display: "swap",
+});
 
 export const metadata = {
   metadataBase: new URL("https://coco-jar-site.vercel.app"),
@@ -52,7 +67,7 @@ export default async function RootLayout({ children }) {
       <head>
         <SeoSchema config={config} menu={fullMenu} />
       </head>
-      <body className="min-h-screen">
+      <body className={`${manrope.variable} ${playfair.variable} min-h-screen`}>
         <AnalyticsScripts />
         <SiteHeader config={config} />
         {children}

@@ -1,9 +1,8 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
 
 @theme {
-  --font-sans: "Manrope", "Inter", system-ui, "Segoe UI", Arial, sans-serif;
-  --font-serif: "Playfair Display", "Georgia", "Times New Roman", serif;
+  --font-sans: var(--font-manrope), "Manrope", "Inter", system-ui, "Segoe UI", Arial, sans-serif;
+  --font-serif: var(--font-playfair), "Playfair Display", "Georgia", "Times New Roman", serif;
 
   --color-jar-dark: #18110b;
   --color-jar-charcoal: #2a221a;
