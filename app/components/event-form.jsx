@@ -218,7 +218,7 @@ export default function EventForm() {
             loading ? "pointer-events-none opacity-70" : "",
           )}
         >
-          {loading ? "Se procesează..." : "Trimite solicitarea"}
+          {loading ? "Se procesează..." : "Trimite cererea pentru eveniment"}
         </Button>
         {status && <p className="text-sm text-success">{status}</p>}
       </form>

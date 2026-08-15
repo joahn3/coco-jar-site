@@ -79,7 +79,7 @@ export default async function RootLayout({ children }) {
               data-analytics="phone_click|conversion|floating_phone|source=global|journey=lead_capture|lead_type=reservation"
               className="w-full text-sm sm:text-base"
             >
-              Sună
+              Sună pentru rezervare
             </Button>
             <Button
               variant="whatsapp"
@@ -87,7 +87,7 @@ export default async function RootLayout({ children }) {
               data-analytics="whatsapp_click|conversion|floating_whatsapp|source=global|journey=lead_capture|lead_type=whatsapp"
               className="w-full text-sm sm:text-base"
             >
-              WhatsApp
+              Mesaj pe WhatsApp
             </Button>
           </Container>
         </div>

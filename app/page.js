@@ -13,6 +13,12 @@ import Card from "./components/ui/card";
 import Container from "./components/ui/container";
 import Section from "./components/ui/section";
 
+export const metadata = {
+  title: "Coco Jar | Restaurant premium pui la jar în Popești-Leordeni",
+  description:
+    "La Coco Jar, atmosfera caldă și puiul la jar creează cadrul perfect pentru mesele de seară. Descoperă meniul zilnic, rezervări rapide și evenimente private.",
+};
+
 export default async function HomePage() {
   const config = await getSiteConfig();
   const dailyMenu = await getDailyMenu();
@@ -66,14 +72,14 @@ export default async function HomePage() {
       source: "Google Maps",
       title: "Recenzii active pe profil",
       text: "Afișăm recenziile din profilul public pentru verificare directă.",
-      cta: "Vezi recenziile",
+      cta: "Vezi recenziile clienților",
       href: config.social?.googleBusiness || "#",
     },
     {
       source: "Instagram",
       title: "Conținut real din locație",
       text: "Actualizări periodice, preparate, atmosferă, evenimente și comunicări utile.",
-      cta: "Vezi pagina",
+      cta: "Vezi pagina Instagram",
       href: config.social?.instagram || "#",
     },
   ];
@@ -113,7 +119,7 @@ export default async function HomePage() {
                       data-analytics="click|conversion|rezervare_primara|source=home|journey=primary_cta|lead_type=reservation"
                       className="touch-target"
                     >
-                      Rezervare directă
+                      Rezervă masa
                     </Button>
                     <Button
                       as="next-link"
@@ -121,7 +127,7 @@ export default async function HomePage() {
                       data-analytics="click|navigation|meniu_zilei_hero|source=home|journey=menu_cta|lead_type=menu"
                       className="touch-target"
                     >
-                      Meniul zilei
+                      Vezi meniul zilei
                     </Button>
                     <Button
                       as="next-link"
@@ -130,7 +136,7 @@ export default async function HomePage() {
                       data-analytics="click|navigation|galerie_hero|source=home|journey=exploration|lead_type=lifestyle"
                       className="touch-target"
                     >
-                      Atmosfera noastră
+                      Descoperă atmosfera
                     </Button>
                     <Button
                       href={whatsappHref(config.whatsapp, config.phone)}
@@ -138,7 +144,7 @@ export default async function HomePage() {
                       data-analytics="whatsapp_click|conversion|whatsapp_hero|source=home|journey=lead_capture|lead_type=whatsapp"
                       className="touch-target"
                     >
-                      Scrie pe WhatsApp
+                      Trimite mesaj pe WhatsApp
                     </Button>
                   </div>
 
@@ -245,7 +251,7 @@ export default async function HomePage() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Deschide pe hartă
+                  Deschide locația pe hartă
                 </a>
             </p>
           </div>
@@ -346,7 +352,7 @@ export default async function HomePage() {
               <h3 className="text-title-md">Evenimente și catering</h3>
               <p className="text-sm text-ink-muted">Nuntă, botez, aniversări, evenimente corporate.</p>
               <Link className="jar-link jar-link--text touch-target" href="/evenimente-catering">
-                Solicită ofertă evenimente
+                Cere o ofertă pentru evenimente
               </Link>
             </Card>
           </div>

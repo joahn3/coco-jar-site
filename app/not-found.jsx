@@ -104,7 +104,7 @@ export default async function NotFound() {
               data-analytics="404_click|conversion|whatsapp|source=404|journey=lead_capture|lead_type=whatsapp"
               className="sm:col-span-2 md:col-span-1"
             >
-              Scrie pe WhatsApp
+              Trimite mesaj pe WhatsApp
             </Button>
           </div>
         </Card>
