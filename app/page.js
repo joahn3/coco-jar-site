@@ -7,7 +7,7 @@ import {
   getDayLabel,
 } from "../lib/site-data";
 import { isMenuDayActive, mapHref, phoneHref, whatsappHref } from "../lib/format";
-import galleryCatalog from "../../data/galerie-atmosfera.json";
+import galleryCatalog from "../data/galerie-atmosfera.json";
 import Button from "./components/ui/button";
 import Card from "./components/ui/card";
 import Container from "./components/ui/container";
