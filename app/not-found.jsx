@@ -79,7 +79,7 @@ export default async function NotFound() {
             <Button
               as="next-link"
               href="/meniu-zilei"
-              data-analytics="404_click|navigation|meniu_zilei"
+              data-analytics="404_click|navigation|meniu_zilei|source=404|journey=recovery|lead_type=menu"
             >
               Meniul zilei
             </Button>
@@ -87,13 +87,13 @@ export default async function NotFound() {
               as="next-link"
               href="/evenimente-catering"
               variant="ghost"
-              data-analytics="404_click|navigation|evenimente"
+              data-analytics="404_click|navigation|evenimente|source=404|journey=recovery|lead_type=event"
             >
               Evenimente și catering
             </Button>
             <Button
               href={phoneHref(config.phone)}
-              data-analytics="404_click|conversion|telefon"
+              data-analytics="404_click|conversion|telefon|source=404|journey=lead_capture|lead_type=reservation"
               className="sm:col-span-2 md:col-span-1"
             >
               Sună pentru rezervare
@@ -101,7 +101,7 @@ export default async function NotFound() {
             <Button
               variant="whatsapp"
               href={whatsappHref(config.whatsapp, config.phone, "Bună! Am ajuns la 404, am vrea detalii despre meniuri.")}
-              data-analytics="404_click|conversion|whatsapp"
+              data-analytics="404_click|conversion|whatsapp|source=404|journey=lead_capture|lead_type=whatsapp"
               className="sm:col-span-2 md:col-span-1"
             >
               Scrie pe WhatsApp
@@ -121,7 +121,7 @@ export default async function NotFound() {
                 href={mapsLink}
                 target="_blank"
                 rel="noreferrer"
-                data-analytics="404_click|conversion|google_maps"
+                data-analytics="404_click|conversion|google_maps|source=404|journey=information|lead_type=site"
               >
                 Deschide locația pe Google Maps
               </a>
@@ -147,13 +147,13 @@ export default async function NotFound() {
         <div className="jar-link-list">
           {directLinks.map((item) => (
             <p key={item.href} className="space-y-1.5">
-              <Link
-                className="jar-link touch-target"
-                href={item.href}
-                data-analytics={`404_click|navigation|${item.href.replace("/", "") || "home"}`}
-              >
-                {item.title}
-              </Link>
+                <Link
+                  className="jar-link touch-target"
+                  href={item.href}
+                  data-analytics={`404_click|navigation|${item.href.replace("/", "") || "home"}|source=404|journey=recovery|lead_type=${item.href.includes("/evenimente") ? "event" : item.href.includes("/meniu") ? "menu" : "navigation"}`}
+                >
+                  {item.title}
+                </Link>
               <span className="block text-sm text-ink-muted">{item.text}</span>
             </p>
           ))}

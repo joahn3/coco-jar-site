@@ -8,11 +8,25 @@ import Breadcrumbs from "../components/breadcrumbs";
 export const metadata = {
   title: "Evenimente private | Coco Jar Bistro",
   description:
-    "Servicii pentru evenimente private: nuntă, botez, aniversări și team-building în atmosfera restaurantului Coco Jar, cu meniu la jar și servicii personalizate.",
+    "Evenimente private la Coco Jar: nuntă, botez, aniversări, team-building. Oferim pachete premium cu meniu la jar, servicii personalizate și coordonare clară.",
 };
 
 export default async function EventPage() {
   const config = await getSiteConfig();
+  const eventProof = [
+    {
+      title: "Răspuns prioritar",
+      text: "Confirmare internă în maxim 24 de ore pentru evenimente private.",
+    },
+    {
+      title: "Cadru premium",
+      text: "Cooperare pe număr invitați, interval de servire, meniu preferat și buget orientativ.",
+    },
+    {
+      title: "Transparență pachet",
+      text: "Include coordonare de bază și organizare logistică; excludem explicit ce nu intră automat.",
+    },
+  ];
 
     return (
       <main className="pb-28">
@@ -23,14 +37,29 @@ export default async function EventPage() {
               { label: "Evenimente private", href: "/evenimente-catering" },
             ]}
           />
-          <div>
+        <div>
           <h1 className="text-display-md">Evenimente private</h1>
           <p className="text-body-lg text-ink">
             Momentele speciale merită să fie sărbătorite cu cei dragi, în jurul unei mese bune.
           </p>
+          <div className="grid gap-2 sm:grid-cols-3">
+            {eventProof.map((item) => (
+              <Card key={item.title} className="space-y-2">
+                <p className="jar-badge jar-badge--subtle">{item.title}</p>
+                <p className="text-sm text-ink-muted">{item.text}</p>
+              </Card>
+            ))}
+          </div>
           <p className="mt-4 text-body text-ink-muted">
             La Coco Jar Bistro, transformăm întâlnirile speciale în amintiri frumoase. Fie că este vorba de o aniversare, o reuniune de familie, o petrecere restrânsă sau un eveniment special, punem la dispoziție un cadru primitor, preparate atent pregătite și o atmosferă potrivită pentru fiecare ocazie. Adaptăm experiența în funcție de preferințele tale pentru ca totul să fie exact cum îți dorești.
           </p>
+          <div className="jar-link-list mt-4">
+            <p className="jar-badge jar-badge--subtle">Calitatea întâlnirii tale contează în fiecare detaliu</p>
+            <p className="text-sm text-ink-muted">
+              Confirmăm disponibilitatea evenimentelor preferabil cu 48 de ore înainte; pentru seriile aglomerate,
+              recomandăm o aprobare prealabilă.
+            </p>
+          </div>
           <p className="mt-4 text-body text-ink-muted">
             Pentru mai multe detalii despre evenimentele private și opțiunile disponibile, contactează-ne la:
           </p>
@@ -56,9 +85,12 @@ export default async function EventPage() {
             </p>
           </Card>
           <Card>
-            <h2 className="text-title-lg">Livrare și detalii</h2>
+            <h2 className="text-title-lg">Ce include pachetul</h2>
             <p className="text-sm text-ink-muted">
-              Îți propunem meniul, condițiile de livrare, transportul și detaliile de buget prin formularul de mai jos.
+              Meniu recomandat, coordonare logistică internă, propunere de program, suport de rezervare pe interval și personal de servire.
+            </p>
+            <p className="text-sm text-ink-muted mt-2">
+              Ce nu include: băuturi alcoolice, decorații tematice și transport extern, acestea se discută explicit la ofertă.
             </p>
           </Card>
         </div>

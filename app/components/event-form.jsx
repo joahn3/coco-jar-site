@@ -8,6 +8,23 @@ import { cn } from "./ui/cn";
 const inputClassName =
   "jar-form-field touch-target text-sm";
 
+const eventTypes = [
+  "Nuntă",
+  "Botez",
+  "Aniversare",
+  "Corporate",
+  "Parastas",
+  "Conferință",
+  "Altul",
+];
+
+const timeSlots = [
+  "17:00–19:00",
+  "19:00–21:00",
+  "21:00–23:00",
+  "După program",
+];
+
 export default function EventForm() {
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
@@ -24,6 +41,10 @@ export default function EventForm() {
       email: form.email.value.trim(),
       eventType: form.eventType.value,
       eventDate: form.eventDate.value,
+      guestCount: form.guestCount.value.trim(),
+      preferredMenu: form.preferredMenu.value.trim(),
+      budget: form.budget.value.trim(),
+      timeSlot: form.timeSlot.value,
       message: form.message.value.trim(),
       consent: form.consent?.checked,
       website: form.website?.value,
@@ -50,19 +71,27 @@ export default function EventForm() {
     }
 
     if (window?.gtag) {
-      window.gtag("event", "send_form", {
+      window.gtag("event", "form_submit", {
         event_category: "conversion",
-        event_label: "evenimente",
+        event_label: "event_form",
+        source_page: "/evenimente-catering",
+        journey_stage: "lead_capture",
+        lead_type: "event",
+        guest_count: payload.guestCount ? Number(payload.guestCount) : 0,
+        budget: payload.budget || "nedefinit",
       });
     }
 
-    setStatus("Solicitarea ta a fost transmisă. Te contactăm în cel mai scurt timp.");
+    setStatus("Solicitarea ta a fost transmisă. Confirmarea primei etape o trimitem în cel mult 24 de ore.");
     form.reset();
   }
 
   return (
     <Card>
       <h2 className="text-title-lg">Cerere evenimente și catering</h2>
+      <p className="mt-2 text-sm text-ink-muted">
+        Pentru un răspuns punctual, completează numărul de invitați, data dorită și intervalul de servire.
+      </p>
       <form onSubmit={onSubmit} className="mt-4 grid gap-3.5">
         <label className="grid gap-1.5 text-sm text-ink-muted">
           Nume *
@@ -91,35 +120,82 @@ export default function EventForm() {
             className={inputClassName}
           />
         </label>
-        <label className="sr-only">
-          Nu completați acest câmp
-          <input className="sr-only" name="website" tabIndex={-1} autoComplete="off" />
-        </label>
         <label className="grid gap-1.5 text-sm text-ink-muted">
           Tip eveniment
           <select
             name="eventType"
+            required
+            defaultValue=""
             className={inputClassName}
             aria-label="Tip eveniment"
           >
-            <option>Nuntă</option>
-            <option>Botez</option>
-            <option>Aniversare</option>
-            <option>Parastas</option>
-            <option>Corporate / conferință</option>
-            <option>Altul</option>
+            <option value="" disabled>
+              Selectează tipul evenimentului
+            </option>
+            {eventTypes.map((type) => (
+              <option key={type} value={type}>
+                {type}
+              </option>
+            ))}
           </select>
         </label>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <label className="grid gap-1.5 text-sm text-ink-muted">
+            Data evenimentului
+            <input name="eventDate" type="date" required className={inputClassName} />
+          </label>
+          <label className="grid gap-1.5 text-sm text-ink-muted">
+            Număr invitați
+            <input
+              type="number"
+              min="5"
+              max="300"
+              name="guestCount"
+              placeholder="Ex: 40"
+              required
+              className={inputClassName}
+            />
+          </label>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <label className="grid gap-1.5 text-sm text-ink-muted">
+            Interval de servire
+            <select name="timeSlot" className={inputClassName} aria-label="Interval de servire">
+              <option value="">Alege intervalul</option>
+              {timeSlots.map((slot) => (
+                <option key={slot} value={slot}>
+                  {slot}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="grid gap-1.5 text-sm text-ink-muted">
+            Buget orientativ
+            <input
+              name="budget"
+              placeholder="Ex: 80-120 lei/persoană"
+              className={inputClassName}
+            />
+          </label>
+        </div>
         <label className="grid gap-1.5 text-sm text-ink-muted">
-          Data evenimentului
-          <input name="eventDate" type="date" className={inputClassName} />
+          Tip meniu preferat
+          <input
+            name="preferredMenu"
+            placeholder="ex: pui la jar, opțiuni vegetariene"
+            className={inputClassName}
+          />
+        </label>
+        <label className="sr-only">
+          Nu completați acest câmp
+          <input className="sr-only" name="website" tabIndex={-1} autoComplete="off" />
         </label>
         <label className="grid gap-1.5 text-sm">
-          Mesaj / buget / alergeni
+          Mesaj / alergeni / alte detalii
           <textarea
             name="message"
             rows={4}
-            placeholder="Câte persoane, tip meniu, orar..."
+            placeholder="Scopul întâlnirii, restricții alimentare, echipamente disponibile"
             className="jar-form-field min-h-28 resize-y text-sm"
           />
         </label>
@@ -130,13 +206,13 @@ export default function EventForm() {
             defaultChecked
             className="mt-1 rounded border-line-soft"
           />
-          <span>Sunt de acord să primesc oferta și detaliile prin telefon sau WhatsApp.</span>
+          <span>Sunt de acord să primesc oferta și detaliile finale prin telefon sau WhatsApp.</span>
         </label>
         <Button
           as="button"
           type="submit"
           disabled={loading}
-          data-analytics="form_submit|conversion|event_form"
+          data-analytics="form_submit|conversion|event_form|source=/evenimente-catering|journey=lead_capture|lead_type=event"
           className={cn(
             "justify-self-start",
             loading ? "pointer-events-none opacity-70" : "",

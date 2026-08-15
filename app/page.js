@@ -7,6 +7,7 @@ import {
   getDayLabel,
 } from "../lib/site-data";
 import { isMenuDayActive, mapHref, phoneHref, whatsappHref } from "../lib/format";
+import galleryCatalog from "../../data/galerie-atmosfera.json";
 import Button from "./components/ui/button";
 import Card from "./components/ui/card";
 import Container from "./components/ui/container";
@@ -20,25 +21,44 @@ export default async function HomePage() {
   const isMenuActive = isMenuDayActive(config.menuValidUntilHour);
   const todayMenuLabel = getDayLabel(dayKey);
   const heroImage = "/galerie/instagram-011-47b855d73e.jpg";
+  const galleryCount = Array.isArray(galleryCatalog) ? galleryCatalog.length : 0;
+  const proofStack = [
+    {
+      label: "Răspuns verificat",
+      value: "sub 30 min",
+      description: "confirmare telefonică în intervalul de program",
+    },
+    {
+      label: "Meniu la zi",
+      value: `${todayItems.length || "—"} feluri`,
+      description: isMenuActive
+        ? "Actualizat până la ora 16:00"
+        : "Actualizare programată zilnic, după ora 16:00",
+    },
+    {
+      label: "Atmosferă documentată",
+      value: `${galleryCount} cadre`,
+      description: "galerie separată pe Interior / Locație / Preparat / Grătar",
+    },
+  ];
 
   const trustSignals = [
-    "Program clar: 10:00–16:00, respectiv 16:00–22:00",
-    "Terasă intimă, luminată cald, potrivită pentru o seară liniștită",
-    "Răspuns direct pe telefon și WhatsApp",
+    "Program clar: meniu 10:00–16:00, restaurant 16:00–22:00",
     "Meniul zilei este actualizat zilnic, până la ora 16:00",
+    "Răspuns direct prin telefon sau WhatsApp, de regulă în maxim 30 de minute",
   ];
 
   const safetySignals = [
-    "Clasificare clară pe categorii, cu informații de alergeni",
+    "Informații clare pe secțiuni, cu mențiuni de preparare și alergeni",
     "Pregătire atentă, cu ritm constant de servire",
-    "Comunicare transparentă pentru evenimente și catering",
+    "Comunicare transparentă pentru rezervări și evenimente",
     "Rezervare directă, fără pași suplimentari",
   ];
 
   const heroHighlights = [
-    "Mese pregătite și aranjate zilnic",
-    "Ingrediente selectate pe bază de sezon",
-    "Grătar la jar, preparate gătite în bucătărie",
+    "Mese aranjate zilnic, cu grijă pentru detaliu",
+    "Preparate gătite pe grătarul de pui la jar",
+    "Atmosferă relaxată pentru o seară fără grabă",
   ];
 
   const reviewSignals = [
@@ -86,30 +106,39 @@ export default async function HomePage() {
                   </p>
 
                   <div className="mt-5 flex flex-wrap gap-2.5">
-	                    <Button
-	                      as="next-link"
-	                      href="/meniu-zilei"
-	                      data-analytics="click|navigation|meniu_zilei_hero"
-	                      className="touch-target"
-	                    >
-	                      Meniul zilei
-	                    </Button>
-	                    <Button
-	                      href={whatsappHref(config.whatsapp, config.phone)}
-	                      variant="primary"
-	                      data-analytics="whatsapp_click|conversion|whatsapp_hero"
-	                      className="touch-target"
-	                    >
-	                      Rezervare pe WhatsApp
-	                    </Button>
+                    <Button
+                      as="next-link"
+                      href="/contact"
+                      variant="primary"
+                      data-analytics="click|conversion|rezervare_primara|source=home|journey=primary_cta|lead_type=reservation"
+                      className="touch-target"
+                    >
+                      Rezervare directă
+                    </Button>
+                    <Button
+                      as="next-link"
+                      href="/meniu-zilei"
+                      data-analytics="click|navigation|meniu_zilei_hero|source=home|journey=menu_cta|lead_type=menu"
+                      className="touch-target"
+                    >
+                      Meniul zilei
+                    </Button>
                     <Button
                       as="next-link"
                       href="/galerie"
                       variant="ghost"
-                      data-analytics="click|navigation|galerie_hero"
+                      data-analytics="click|navigation|galerie_hero|source=home|journey=exploration|lead_type=lifestyle"
                       className="touch-target"
                     >
                       Atmosfera noastră
+                    </Button>
+                    <Button
+                      href={whatsappHref(config.whatsapp, config.phone)}
+                      variant="ghost"
+                      data-analytics="whatsapp_click|conversion|whatsapp_hero|source=home|journey=lead_capture|lead_type=whatsapp"
+                      className="touch-target"
+                    >
+                      Scrie pe WhatsApp
                     </Button>
                   </div>
 
@@ -185,6 +214,9 @@ export default async function HomePage() {
         <Card className="space-y-4 py-6 sm:py-7">
           <h2 className="text-title-lg">Rezervări și contact</h2>
           <p className="text-sm text-ink-muted">Program: {config.hours}</p>
+          <p className="text-sm text-ink-muted">
+            Se recomandă planificarea în avans pentru seriile de vârf (vineri, sâmbătă, duminică).
+          </p>
           <div className="jar-link-list">
             <p>
               <a
@@ -206,30 +238,44 @@ export default async function HomePage() {
           <p className="text-sm text-ink-muted">Adresa: {config.fullAddress}</p>
           <div className="jar-link-list">
             <p>
-              <a
-                className="jar-link jar-link--text touch-target"
-                href={mapHref(config.siteName, config.fullAddress)}
-                data-analytics="maps_click|conversion|google_maps"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Deschide pe hartă
-              </a>
+                <a
+                  className="jar-link jar-link--text touch-target"
+                  href={mapHref(config.siteName, config.fullAddress)}
+                  data-analytics="maps_click|conversion|google_maps|source=home|journey=information|lead_type=site"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Deschide pe hartă
+                </a>
             </p>
           </div>
         </Card>
       </Container>
 
       <Container as="section">
+        <Section title="Proof stack – criterii de încredere" className="pb-4 pt-8">
+          <div className="grid gap-3 sm:grid-cols-3">
+            {proofStack.map((item) => (
+              <Card key={item.label} className="space-y-2">
+                <p className="jar-badge">{item.label}</p>
+                <p className="text-title-lg text-ink-title">{item.value}</p>
+                <p className="text-sm text-ink-muted">{item.description}</p>
+              </Card>
+            ))}
+          </div>
+        </Section>
+      </Container>
+
+      <Container as="section">
         <Section
-          title="Îngrijire atentă, claritate, experiență premium"
-          subtitle="Informațiile sunt gândite pentru o alegere ușoară: meniu clar, comunicare directă și opțiuni de rezervare."
+          title="Claritate, consecvență, experiență premium"
+          subtitle="Avem reguli clare de comunicare, prețuri și livrare a informației ca să alegi repede și fără ambiguitate."
           className="pb-6 pt-8"
         >
           <div className="grid gap-4 md:grid-cols-3">
             <Card className="space-y-3">
               <p className="trust-stat">Încredere</p>
-              <h3 className="text-title-md">Experiență simplă pentru vizitatori</h3>
+              <h3 className="text-title-md">Decizie simplă, fără ambiguitate</h3>
               <ul className="space-y-2 text-sm text-ink-muted">
                 {trustSignals.map((item) => (
                   <li key={item} className="flex items-start gap-2">
@@ -255,7 +301,7 @@ export default async function HomePage() {
 
             <Card className="space-y-3">
               <p className="trust-stat">Recenzii</p>
-              <h3 className="text-title-md">Recenzii verificabile din surse publice</h3>
+              <h3 className="text-title-md">Verificabil, nu doar promovat</h3>
               <div className="space-y-2.5">
                 {reviewSignals.map((review) => (
                     <article key={review.source} className="space-y-1.5 rounded-lg bg-surface-base/70 p-3">
@@ -289,6 +335,7 @@ export default async function HomePage() {
                 Număr principal: {config.phone || "în curs de actualizare"}
               </p>
               <p className="text-sm text-ink-muted">Program: {config.hours}</p>
+              <p className="text-xs text-ink-muted">Confirmare estimativă: sub 30 minute (în interval de program)</p>
             </Card>
             <Card>
               <h3 className="text-title-md">Locație</h3>

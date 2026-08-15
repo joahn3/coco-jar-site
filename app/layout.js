@@ -76,7 +76,7 @@ export default async function RootLayout({ children }) {
           <Container className="grid grid-cols-2 gap-3">
             <Button
               href={phoneHref(config.phone)}
-              data-analytics="phone_click|conversion|telefon_floating"
+              data-analytics="phone_click|conversion|floating_phone|source=global|journey=lead_capture|lead_type=reservation"
               className="w-full text-sm sm:text-base"
             >
               Sună
@@ -84,7 +84,7 @@ export default async function RootLayout({ children }) {
             <Button
               variant="whatsapp"
               href={whatsappHref(config.whatsapp, config.phone)}
-              data-analytics="whatsapp_click|conversion|whatsapp_floating"
+              data-analytics="whatsapp_click|conversion|floating_whatsapp|source=global|journey=lead_capture|lead_type=whatsapp"
               className="w-full text-sm sm:text-base"
             >
               WhatsApp
