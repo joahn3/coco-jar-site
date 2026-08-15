@@ -22,23 +22,23 @@ export default async function HomePage() {
   const heroImage = "/galerie/instagram-011-47b855d73e.jpg";
 
   const trustSignals = [
-    "Program clar: ziua 10:00–16:00, seara 16:00–22:00",
-    "Terasă intimă, luminată cald, perfectă pentru o ieșire fără grabă",
-    "Răspuns rapid pe telefon și WhatsApp",
-    "Meniul zilei actualizat zilnic, cu limită de 16:00",
+    "Program clar: 10:00–16:00, respectiv 16:00–22:00",
+    "Terasă intimă, luminată cald, potrivită pentru o seară liniștită",
+    "Răspuns direct pe telefon și WhatsApp",
+    "Meniul zilei este actualizat zilnic, până la ora 16:00",
   ];
 
   const safetySignals = [
-    "Prezentare clară pe categorii și alergeni",
-    "Pregătire atentă pentru o experiență de servire calmă",
-    "Comunicare transparentă pentru evenimente + catering",
-    "Opțiuni directe pentru rezervare în timp real",
+    "Clasificare clară pe categorii, cu informații de alergeni",
+    "Pregătire atentă, cu ritm constant de servire",
+    "Comunicare transparentă pentru evenimente și catering",
+    "Rezervare directă, fără pași suplimentari",
   ];
 
   const heroHighlights = [
-    "Mese curățate zilnic",
-    "Produse din sezon",
-    "Grătar la jar + preparate din casă",
+    "Mese pregătite și aranjate zilnic",
+    "Ingrediente selectate pe bază de sezon",
+    "Grătar la jar, preparate gătite în bucătărie",
   ];
 
   const reviewSignals = [
@@ -59,8 +59,8 @@ export default async function HomePage() {
   ];
 
   return (
-    <main className="pb-28">
-      <section className="relative isolate overflow-hidden">
+	    <main className="pb-28">
+	      <section className="relative isolate overflow-hidden">
         <div className="hero-ambiance">
           <Image
             src={heroImage}
@@ -82,26 +82,26 @@ export default async function HomePage() {
                   </h1>
                   <p className="mt-3 max-w-3xl text-body-lg text-ink-title/90 prose-balance">
                     Terasa cu accente rustice, lemn natural, lumini calde și verdeață creează un spațiu intim și plăcut,
-                    exact cum îți place pentru o masă în familie sau cu prietenii.
+                    perfect pentru o masă în familie sau pentru o întâlnire de weekend într-o ambianță caldă.
                   </p>
 
                   <div className="mt-5 flex flex-wrap gap-2.5">
-                    <Button
-                      as="next-link"
-                      href="/meniu-zilei"
-                      data-analytics="click|navigation|meniu_zilei_hero"
-                      className="touch-target"
-                    >
-                      Meniul zilei
-                    </Button>
-                    <Button
-                      href={whatsappHref(config.whatsapp, config.phone)}
-                      variant="whatsapp"
-                      data-analytics="whatsapp_click|conversion|whatsapp_hero"
-                      className="touch-target"
-                    >
-                      Rezervare rapidă
-                    </Button>
+	                    <Button
+	                      as="next-link"
+	                      href="/meniu-zilei"
+	                      data-analytics="click|navigation|meniu_zilei_hero"
+	                      className="touch-target"
+	                    >
+	                      Meniul zilei
+	                    </Button>
+	                    <Button
+	                      href={whatsappHref(config.whatsapp, config.phone)}
+	                      variant="primary"
+	                      data-analytics="whatsapp_click|conversion|whatsapp_hero"
+	                      className="touch-target"
+	                    >
+	                      Rezervare pe WhatsApp
+	                    </Button>
                     <Button
                       as="next-link"
                       href="/galerie"
@@ -115,9 +115,9 @@ export default async function HomePage() {
 
                   <div className="mt-5 flex flex-wrap gap-2">
                     {[
-                      "Meniu clar, fără pași grei",
-                      "Pregătiri de la grătar",
-                      "Locație prietenoasă, ușor de ajuns",
+                      "Meniu clar, fără compromisuri",
+                      "Grătarul la jar, pregătit la comandă",
+                      "Locație cu acces facil, perfect pentru ieșiri relaxate",
                     ].map((badge) => (
                       <span key={badge} className="jar-chip">
                         {badge}
@@ -154,10 +154,10 @@ export default async function HomePage() {
       >
         <Card className="space-y-6 py-6 sm:py-7">
           <p className="jar-badge">Restaurant de pui la jar</p>
-          <p className="jar-badge">Atmosferă + mâncare bună</p>
+          <p className="jar-badge">Atmosferă autentică, gust autentic</p>
           <h2 className="text-title-lg">O experiență gândită pentru răgaz</h2>
           <p className="max-w-3xl text-body-lg text-ink-muted prose-balance">
-            Un loc cald, relaxat și primitor unde te așezi cu poftă, savurezi un preparat bun și ai chef să te mai oprești puțin.
+            Un loc cald, relaxat și primitor, unde poți savura preparate atent lucrate și poți rămâne liniștit până târziu.
           </p>
           <div className="grid gap-2.5 sm:grid-cols-3 sm:gap-3">
             {heroHighlights.map((item) => (
@@ -174,7 +174,7 @@ export default async function HomePage() {
               Meniu zilei: până la 16:00
             </p>
             <p className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
-              Telefon: {config.phone || "de completat"}
+              Telefon: {config.phone || "în curs de actualizare"}
             </p>
             <p className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
               Locație: {config.locality}
@@ -183,15 +183,15 @@ export default async function HomePage() {
         </Card>
 
         <Card className="space-y-4 py-6 sm:py-7">
-          <h2 className="text-title-lg">Contact rapid</h2>
-          <p className="text-sm text-ink-muted">Orar: {config.hours}</p>
+          <h2 className="text-title-lg">Rezervări și contact</h2>
+          <p className="text-sm text-ink-muted">Program: {config.hours}</p>
           <div className="jar-link-list">
             <p>
               <a
                 className="jar-link touch-target"
                 href={phoneHref(config.phone)}
               >
-                Telefon: {config.phone || "de completat"}
+                Telefon: {config.phone || "în curs de actualizare"}
               </a>
             </p>
             <p>
@@ -199,14 +199,14 @@ export default async function HomePage() {
                 className="jar-link touch-target"
                 href={whatsappHref(config.whatsapp, config.phone, "Bună ziua, vreau mai multe detalii.")}
               >
-                WhatsApp: {config.whatsapp || "de completat"}
+                WhatsApp: {config.whatsapp || config.phone || "în curs de actualizare"}
               </a>
             </p>
           </div>
-          <p className="text-sm text-ink-muted">Adresă: {config.fullAddress}</p>
+          <p className="text-sm text-ink-muted">Adresa: {config.fullAddress}</p>
           <div className="jar-link-list">
             <p>
-            <a
+              <a
                 className="jar-link jar-link--text touch-target"
                 href={mapHref(config.siteName, config.fullAddress)}
                 data-analytics="maps_click|conversion|google_maps"
@@ -222,14 +222,14 @@ export default async function HomePage() {
 
       <Container as="section">
         <Section
-          title="Încredere, claritate, reacție rapidă"
-          subtitle="Totul este configurat pentru conversie: informații directe, apel/WhatsApp vizibile și meniu ordonat."
+          title="Îngrijire atentă, claritate, experiență premium"
+          subtitle="Informațiile sunt gândite pentru o alegere ușoară: meniu clar, comunicare directă și opțiuni de rezervare."
           className="pb-6 pt-8"
         >
           <div className="grid gap-4 md:grid-cols-3">
             <Card className="space-y-3">
               <p className="trust-stat">Încredere</p>
-              <h3 className="text-title-md">Proces simplu pentru clienți</h3>
+              <h3 className="text-title-md">Experiență simplă pentru vizitatori</h3>
               <ul className="space-y-2 text-sm text-ink-muted">
                 {trustSignals.map((item) => (
                   <li key={item} className="flex items-start gap-2">
@@ -242,7 +242,7 @@ export default async function HomePage() {
 
             <Card className="space-y-3">
               <p className="trust-stat">Siguranță</p>
-              <h3 className="text-title-md">Mese clare de livrare și servire</h3>
+              <h3 className="text-title-md">Servire consecventă, fără surprize</h3>
               <ul className="space-y-2 text-sm text-ink-muted">
                 {safetySignals.map((item) => (
                   <li key={item} className="flex items-start gap-2">
@@ -255,7 +255,7 @@ export default async function HomePage() {
 
             <Card className="space-y-3">
               <p className="trust-stat">Recenzii</p>
-              <h3 className="text-title-md">Evaluări din surse publice</h3>
+              <h3 className="text-title-md">Recenzii verificabile din surse publice</h3>
               <div className="space-y-2.5">
                 {reviewSignals.map((review) => (
                     <article key={review.source} className="space-y-1.5 rounded-lg bg-surface-base/70 p-3">
@@ -281,11 +281,13 @@ export default async function HomePage() {
       </Container>
 
       <Container as="section" className="grid gap-4 py-6 md:grid-cols-2 xl:grid-cols-3">
-        <Section title="Rezervări rapide, acțiuni clare" className="md:col-span-2 xl:col-span-3 py-0">
+        <Section title="Rezervare directă și informații clare" className="md:col-span-2 xl:col-span-3 py-0">
           <div className="grid gap-4 md:grid-cols-3">
             <Card>
-              <h3 className="text-title-md">Telefon &amp; WhatsApp</h3>
-              <p className="text-sm text-ink-muted">Număr principal: {config.phone || "neconfirmat"}</p>
+              <h3 className="text-title-md">Telefon și WhatsApp</h3>
+              <p className="text-sm text-ink-muted">
+                Număr principal: {config.phone || "în curs de actualizare"}
+              </p>
               <p className="text-sm text-ink-muted">Program: {config.hours}</p>
             </Card>
             <Card>
@@ -294,10 +296,10 @@ export default async function HomePage() {
               <p className="text-sm text-ink-muted">Popești-Leordeni, Ilfov</p>
             </Card>
             <Card>
-              <h3 className="text-title-md">Evenimente + Catering</h3>
+              <h3 className="text-title-md">Evenimente și catering</h3>
               <p className="text-sm text-ink-muted">Nuntă, botez, aniversări, evenimente corporate.</p>
               <Link className="jar-link jar-link--text touch-target" href="/evenimente-catering">
-                Trimite cerere ofertă
+                Solicită ofertă evenimente
               </Link>
             </Card>
           </div>
@@ -313,8 +315,7 @@ export default async function HomePage() {
             {!todayItems.length ? (
               <Card className="md:col-span-2 xl:col-span-3">
                 <p className="text-sm text-ink-muted">
-                  Nu avem încă meniul zilei încărcat. Se actualizează periodic în fișierul
-                  <span className="font-mono text-ink-title"> data/meniu-zilei.json</span>.
+                  Meniul zilei este în curs de actualizare. Revino în scurt timp pentru oferta de astăzi.
                 </p>
               </Card>
             ) : (

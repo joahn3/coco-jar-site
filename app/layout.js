@@ -21,7 +21,9 @@ export const metadata = {
     "restaurant Popești-Leordeni",
     "meniu zilei",
     "catering Popești-Leordeni",
-    "cochinita",
+    "pui la jar",
+    "grătar",
+    "restaurant cu terasă",
   ],
   openGraph: {
     title: "Coco Jar Bistro",

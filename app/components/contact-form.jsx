@@ -26,7 +26,7 @@ export default function ContactForm() {
     };
 
     if (!payload.name || !payload.phone) {
-      setStatus("Te rugăm să completezi nume și telefon.");
+      setStatus("Te rugăm să completezi numele și numărul de telefon.");
       setLoading(false);
       return;
     }
@@ -41,7 +41,7 @@ export default function ContactForm() {
     setLoading(false);
 
     if (!res.ok || !data.ok) {
-      setStatus(data.error || "Nu am putut trimite mesajul. Încearcă din nou.");
+      setStatus(data.error || "Momentan nu am putut transmite mesajul. Încearcă din nou.");
       return;
     }
 
@@ -52,13 +52,13 @@ export default function ContactForm() {
       });
     }
 
-    setStatus("Mulțumim! Mesajul tău a fost transmis.");
+    setStatus("Mesajul tău a fost transmis. Te contactăm în cel mai scurt timp.");
     form.reset();
   }
 
   return (
     <Card>
-      <h2 className="text-title-lg">Trimite mesaj rapid</h2>
+      <h2 className="text-title-lg">Trimite o solicitare</h2>
       <form onSubmit={onSubmit} className="mt-4 grid gap-3.5">
         <label className="grid gap-1.5 text-sm text-ink-muted">
           Nume *
@@ -87,7 +87,7 @@ export default function ContactForm() {
           <textarea
             name="message"
             rows={4}
-            placeholder="Scrie-ne ce ai nevoie"
+            placeholder="Detaliază scopul vizitei sau întrebarea ta"
             className="jar-form-field min-h-28 resize-y text-sm"
           />
         </label>
@@ -98,7 +98,7 @@ export default function ContactForm() {
             defaultChecked
             className="mt-1 rounded border-line-soft"
           />
-          <span>Sunt de acord să primesc apel/mesaj de confirmare.</span>
+          <span>Sunt de acord să primesc apel sau mesaj de confirmare.</span>
         </label>
         <Button
           as="button"
@@ -110,7 +110,7 @@ export default function ContactForm() {
             loading ? "pointer-events-none opacity-70" : "",
           )}
         >
-          {loading ? "Se trimite..." : "Trimite"}
+          {loading ? "Se procesează..." : "Trimite solicitarea"}
         </Button>
         {status && <p className="text-sm text-success">{status}</p>}
       </form>

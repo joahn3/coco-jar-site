@@ -30,7 +30,7 @@ export default function SiteFooter({ config }) {
         </div>
 
         <div className="space-y-2">
-          <p className="font-semibold text-ink-title">Informații legale</p>
+          <p className="font-semibold text-ink-title">Informații utile</p>
           <div className="jar-link-list">
             <p>
               <Link href="/termeni-si-conditii" className="jar-link jar-link--text touch-target">
@@ -44,7 +44,7 @@ export default function SiteFooter({ config }) {
             </p>
             <p>
               <Link href="/cookies" className="jar-link jar-link--text touch-target">
-                Politica cookie
+                Politica cookie-urilor
               </Link>
             </p>
             <p>
@@ -107,7 +107,7 @@ export default function SiteFooter({ config }) {
             </p>
             <p>
               <Link href="/evenimente-catering" className="jar-link jar-link--text touch-target">
-                Evenimente + Catering
+                Evenimente și catering
               </Link>
             </p>
           </div>

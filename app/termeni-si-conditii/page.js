@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "../components/ui/container";
 import Card from "../components/ui/card";
+import Breadcrumbs from "../components/breadcrumbs";
 
 export const metadata = {
   title: "Termeni și condiții",
@@ -11,10 +12,16 @@ export const metadata = {
 export default function TermsPage() {
   const lastUpdated = "15 august 2026";
 
-  return (
-    <main className="pb-28">
-      <Container as="section" className="space-y-5 py-6">
-        <div>
+    return (
+      <main className="pb-28">
+        <Container as="section" className="space-y-5 py-6">
+          <Breadcrumbs
+            items={[
+              { label: "Acasă", href: "/" },
+              { label: "Termeni și condiții", href: "/termeni-si-conditii" },
+            ]}
+          />
+          <div>
           <p className="jar-badge">Pui la jar, claritate din prima</p>
           <h1 className="text-display-md">Termeni și condiții</h1>
           <p className="mt-2 text-sm text-ink-muted">

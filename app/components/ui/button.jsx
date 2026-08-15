@@ -5,7 +5,7 @@ const variants = {
   primary:
     "bg-gradient-to-r from-brand-500 to-brand-700 text-ink-overlay hover:brightness-110 shadow-elevated hover:from-brand-400 hover:to-brand-800 focus-visible:ring-offset-surface-base",
   whatsapp:
-    "bg-whatsapp text-jar-gold shadow-cta hover:bg-whatsapp-hover hover:shadow-cta-hover focus-visible:ring-offset-surface-base",
+    "bg-gradient-to-r from-jar-ember to-brand-700 text-ink-overlay shadow-elevated hover:from-brand-500 hover:to-brand-800 hover:brightness-110 focus-visible:ring-offset-surface-base",
   ghost:
     "border border-line-soft bg-surface-raised/65 text-ink-title hover:border-brand-500 hover:text-brand-400 hover:bg-surface-raised",
 };

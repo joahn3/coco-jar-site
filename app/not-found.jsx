@@ -21,12 +21,12 @@ const directLinks = [
   {
     href: "/",
     title: "Înapoi acasă",
-    text: "Vezi ce poți comanda, unde ești și cum te poți întâlni cu echipa.",
+    text: "Vezi ce poți comanda, ce servicii ai aici și cum ne poți contacta.",
   },
   {
     href: "/meniu",
     title: "Meniu complet",
-    text: "Toate preparatele, cuprețuri și categorii clare.",
+    text: "Toate preparatele, porțiile și categoriile sunt organizate clar.",
   },
   {
     href: "/meniu-zilei",
@@ -35,7 +35,7 @@ const directLinks = [
   },
   {
     href: "/evenimente-catering",
-    title: "Evenimente + Catering",
+    title: "Evenimente și catering",
     text: "Nunta, botez, aniversări, team-building sau petreceri private.",
   },
   {
@@ -45,8 +45,8 @@ const directLinks = [
   },
   {
     href: "/contact",
-    title: "Contact rapid",
-    text: "Telefon, WhatsApp și formular de mesaj într-un singur loc.",
+    title: "Contact și rezervări",
+    text: "Telefon, WhatsApp și formular de rezervare într-un singur loc.",
   },
 ];
 
@@ -67,8 +67,8 @@ export default async function NotFound() {
 
       <Container className="relative z-10 grid gap-4 md:grid-cols-[1.25fr_0.95fr]">
         <Card className="space-y-5">
-          <p className="jar-badge">Pui la jar, drumuri fără rută</p>
-          <h1 className="text-display-md">404 — am dat în focul celălalt drum</h1>
+          <p className="jar-badge">Pui la jar, direcția e clară</p>
+          <h1 className="text-display-md">404 — pagina căutată nu a mai fost găsită</h1>
           <p className="text-body-lg text-ink-muted prose-balance">
             Pagina pe care o cauți nu există sau a fost mutată. Dar restaurantul
             e deschis: poți reveni la meniuri, program, locație sau poți lua
@@ -89,7 +89,7 @@ export default async function NotFound() {
               variant="ghost"
               data-analytics="404_click|navigation|evenimente"
             >
-              Evenimente + catering
+              Evenimente și catering
             </Button>
             <Button
               href={phoneHref(config.phone)}
@@ -110,7 +110,7 @@ export default async function NotFound() {
         </Card>
 
         <Card className="space-y-4">
-          <h2 className="text-title-md">N-avem drum, ai ce știi unde ești</h2>
+          <h2 className="text-title-md">Nu te-ai rătăcit? Găsește-ne aici.</h2>
           <p className="text-sm text-ink-muted">
             Adresă: {config.fullAddress}
           </p>
@@ -130,14 +130,14 @@ export default async function NotFound() {
 
           <div className="space-y-2.5 pt-1">
             <p className="trust-stat">Contact direct</p>
-            <p className="text-sm text-ink-muted">Telefon: {config.phone || "de completat"}</p>
-            <p className="text-sm text-ink-muted">WhatsApp: {config.whatsapp || "de completat"}</p>
+            <p className="text-sm text-ink-muted">Telefon: {config.phone || "în curs de actualizare"}</p>
+            <p className="text-sm text-ink-muted">WhatsApp: {config.whatsapp || "în curs de actualizare"}</p>
             <p className="text-sm text-ink-muted">Program: {config.hours}</p>
           </div>
 
           <p className="text-xs text-ink-muted">
-            Sfat de bucătar: dacă ai ajuns aici dintr-un link vechi, încearcă secțiunea principală
-            de mai jos — de obicei e acolo ce cauți.
+            Notă de servire: dacă ai ajuns aici dintr-un link vechi, folosește ruta principală de mai
+            jos — de regulă acolo găsești exact ce cauți.
           </p>
         </Card>
       </Container>

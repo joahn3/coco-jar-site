@@ -5,6 +5,7 @@ import path from "node:path";
 import Container from "../components/ui/container";
 import Card from "../components/ui/card";
 import galleryCatalog from "../../data/galerie-atmosfera.json";
+import Breadcrumbs from "../components/breadcrumbs";
 
 const galleryPath = path.join(process.cwd(), "public/galerie");
 const EXCLUDED_PATTERNS = [/meniu/i];
@@ -50,17 +51,23 @@ export default async function GalleryPage({ searchParams }) {
     toate: "Toate momentele din atmosfera Coco Jar",
     interior: "Interior: spațiu primitor, lemn și lumină caldă",
     locatie: "Locație: unde te simți ca acasă",
-    preparat: "Preparat: prezentat cu grijă în farfurie",
+    preparat: "Preparat: prezentare atentă în farfurie",
     gratar: "Grătar: căldură, fum și textură",
   };
 
   return (
-    <main className="pb-28">
+      <main className="pb-28">
       <Container as="section" className="space-y-5 py-6">
+        <Breadcrumbs
+          items={[
+            { label: "Acasă", href: "/" },
+            { label: "Galerie", href: "/galerie" },
+          ]}
+        />
         <div>
           <h1 className="text-display-md">Atmosferă la Coco Jar</h1>
           <p className="text-sm text-ink-muted">
-            Fotografii din restaurant, organizate pe ce îi definiește vibe-ul: liniște, lemn și preparate de la grătar.
+            Fotografii din restaurant, organizate pe elementele care definesc atmosfera: liniște, lemn și preparate de la grătar.
           </p>
         </div>
 

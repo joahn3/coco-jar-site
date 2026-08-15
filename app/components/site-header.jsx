@@ -13,14 +13,14 @@ const NAV_LINKS = [
   { href: "/meniu-zilei", label: "Meniul zilei" },
   { href: "/galerie", label: "Galerie" },
   { href: "/despre-noi", label: "Despre noi" },
-  { href: "/evenimente-catering", label: "Evenimente + Catering" },
+  { href: "/evenimente-catering", label: "Evenimente și catering" },
   { href: "/contact", label: "Contact" },
 ];
 
 const EVENING_HIGHLIGHTS = [
-  { href: "/meniu", label: "Friptură la jar, așa cum îi place serilor" },
-  { href: "/meniu-zilei", label: "Meniul zilei (până la 16:00)" },
-  { href: "/galerie", label: "Atmosfera din seara de weekend" },
+  { href: "/meniu", label: "Friptură la jar, pentru seara de weekend" },
+  { href: "/meniu-zilei", label: "Meniul zilei (valabil până la 16:00)" },
+  { href: "/galerie", label: "Atmosferă autentică de seară" },
 ];
 
 function MenuIcon({ open }) {

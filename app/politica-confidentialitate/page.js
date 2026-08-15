@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "../components/ui/container";
 import Card from "../components/ui/card";
+import Breadcrumbs from "../components/breadcrumbs";
 
 export const metadata = {
   title: "Politica de confidențialitate",
@@ -11,14 +12,20 @@ export const metadata = {
 export default function PrivacyPolicyPage() {
   const lastUpdated = "15 august 2026";
 
-  return (
-    <main className="pb-28">
-      <Container as="section" className="space-y-5 py-6">
-        <div>
+    return (
+      <main className="pb-28">
+        <Container as="section" className="space-y-5 py-6">
+          <Breadcrumbs
+            items={[
+              { label: "Acasă", href: "/" },
+              { label: "Politica de confidențialitate", href: "/politica-confidentialitate" },
+            ]}
+          />
+          <div>
           <p className="jar-badge">Transparență &amp; calm</p>
           <h1 className="text-display-md">Politica de confidențialitate</h1>
           <p className="mt-2 text-sm text-ink-muted">
-            Ultima actualizare: {lastUpdated}. Protejăm datele cu tratament minimal și utilizare transparentă.
+            Ultima actualizare: {lastUpdated}. Protejăm datele tale personale prin prelucrare minimă, cu utilizare transparentă.
           </p>
         </div>
 

@@ -51,7 +51,7 @@ export async function POST(request) {
     ok: true,
     message: delivery.sent
       ? "Cererea a fost transmisă."
-      : "Cererea a fost înregistrată. Te contactăm rapid.",
+      : "Cererea a fost înregistrată. Te contactăm în cel mai scurt timp.",
     delivery,
   });
 }

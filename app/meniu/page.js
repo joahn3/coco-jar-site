@@ -2,6 +2,13 @@ import { getFullMenu, getOrderedMenuSections, getMenuCategoryLabel } from "../..
 import Container from "../components/ui/container";
 import Button from "../components/ui/button";
 import MenuSearch from "../components/meniu-search";
+import Breadcrumbs from "../components/breadcrumbs";
+
+export const metadata = {
+  title: "Meniu complet | Coco Jar Bistro",
+  description:
+    "Descoperă meniul complet al restaurantului Coco Jar: pui la jar, preparate pe categorii, porții clare și recomandări pentru o seară de vară sau iarnă.",
+};
 
 export default async function MenuPage() {
   const fullMenu = await getFullMenu();
@@ -13,18 +20,31 @@ export default async function MenuPage() {
   }));
   const totalItems = menuSections.reduce((acc, section) => acc + section.rows.length, 0);
 
-  return (
-    <main className="pb-28">
-      <Container as="section" className="py-6">
-        <div className="flex flex-wrap items-end justify-between gap-3">
+    return (
+      <main className="pb-28">
+        <Container as="section" className="py-6">
+          <Breadcrumbs
+            items={[
+              { label: "Acasă", href: "/" },
+              { label: "Meniu", href: "/meniu" },
+            ]}
+          />
+          <div className="flex flex-wrap items-end justify-between gap-3">
           <div className="space-y-1">
-            <h1 className="text-display-md">Meniu</h1>
+            <h1 className="text-display-md">Meniu complet</h1>
             <p className="text-body-lg text-ink-muted">
-              Toate preparatele cu prețuri actualizate, organizate pe categorii clare.
+              Toate preparatele sunt organizate pe categorii clare, cu prețuri actualizate constant.
             </p>
           </div>
-          <Button as="a" href="/meniu/coco-jar-meniu-detaliat-2026-08-15.pdf" target="_blank" rel="noopener" variant="ghost" className="touch-target">
-            Descarcă meniul în PDF
+          <Button
+            as="a"
+            href="/meniu/coco-jar-meniu-detaliat-2026-08-15.pdf"
+            target="_blank"
+            rel="noopener"
+            variant="ghost"
+            className="touch-target"
+          >
+            Descarcă meniul complet (PDF)
           </Button>
         </div>
 

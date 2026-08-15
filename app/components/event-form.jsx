@@ -30,7 +30,7 @@ export default function EventForm() {
     };
 
     if (!payload.name || !payload.phone) {
-      setStatus("Nume și telefon sunt obligatorii.");
+      setStatus("Te rugăm să completezi numele și numărul de telefon.");
       setLoading(false);
       return;
     }
@@ -45,7 +45,7 @@ export default function EventForm() {
     setLoading(false);
 
     if (!response.ok || !data.ok) {
-      setStatus(data.error || "Nu am putut trimite cererea. Încearcă din nou.");
+      setStatus(data.error || "Momentan nu am putut trimite cererea. Încearcă din nou în câteva minute.");
       return;
     }
 
@@ -56,13 +56,13 @@ export default function EventForm() {
       });
     }
 
-    setStatus("Cererea ta a fost trimisă. Te contactăm rapid.");
+    setStatus("Solicitarea ta a fost transmisă. Te contactăm în cel mai scurt timp.");
     form.reset();
   }
 
   return (
     <Card>
-      <h2 className="text-title-lg">Cerere ofertă evenimente / catering</h2>
+      <h2 className="text-title-lg">Cerere evenimente și catering</h2>
       <form onSubmit={onSubmit} className="mt-4 grid gap-3.5">
         <label className="grid gap-1.5 text-sm text-ink-muted">
           Nume *
@@ -130,7 +130,7 @@ export default function EventForm() {
             defaultChecked
             className="mt-1 rounded border-line-soft"
           />
-          <span>Sunt de acord să primesc ofertă + detalii prin telefon/WhatsApp.</span>
+          <span>Sunt de acord să primesc oferta și detaliile prin telefon sau WhatsApp.</span>
         </label>
         <Button
           as="button"
@@ -142,7 +142,7 @@ export default function EventForm() {
             loading ? "pointer-events-none opacity-70" : "",
           )}
         >
-          {loading ? "Se trimite..." : "Trimite cererea"}
+          {loading ? "Se procesează..." : "Trimite solicitarea"}
         </Button>
         {status && <p className="text-sm text-success">{status}</p>}
       </form>

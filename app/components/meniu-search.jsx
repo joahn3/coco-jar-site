@@ -56,7 +56,7 @@ export default function MenuSearch({ sections, totalItems = 0 }) {
     <>
       <div className="mt-4 rounded-[0.9rem] border border-line-soft/90 p-3 md:p-4">
         <label className="grid gap-2">
-          <span className="text-sm font-medium text-ink-muted">Caută preparatul dorit</span>
+          <span className="text-sm font-medium text-ink-muted">Caută preparatul preferat</span>
           <div className="relative">
             <span
               aria-hidden
@@ -75,7 +75,7 @@ export default function MenuSearch({ sections, totalItems = 0 }) {
             <input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="ex: pui la jar, salată, bere..."
+              placeholder="Ex: pui la jar, salată, cartofi..."
               className="jar-form-field touch-target w-full pl-10"
             />
             {hasQuery ? (
@@ -92,14 +92,14 @@ export default function MenuSearch({ sections, totalItems = 0 }) {
         </label>
         <p className="mt-2 text-xs text-ink-muted">
           {hasQuery
-            ? `Am găsit ${resultCount} preparat${resultCount === 1 ? "" : "e"} pentru „${query}”.`
+            ? `Am găsit ${resultCount} rezultat${resultCount === 1 ? "" : "e"} pentru „${query}”.`
             : `Meniu complet: ${resultCount} preparate.`}
         </p>
       </div>
 
       {noResults ? (
         <div className="rounded-lg border border-line-soft bg-surface-panel/65 px-4 py-4 text-ink-muted">
-          Nu există preparate care să corespundă căutării. Încearcă un alt termen.
+          Nu au fost găsite preparate pentru această căutare. Încearcă un alt termen.
         </div>
       ) : null}
 
@@ -109,7 +109,7 @@ export default function MenuSearch({ sections, totalItems = 0 }) {
             <h2 className="text-title-lg">{section.label}</h2>
             {section.rows.length === 0 ? (
               <p className="text-sm text-ink-muted">
-                Nu sunt produse în această secțiune.
+                Nu sunt preparate disponibile în această secțiune.
               </p>
             ) : (
               <div className="mt-3 overflow-x-auto -mx-1 rounded-lg">

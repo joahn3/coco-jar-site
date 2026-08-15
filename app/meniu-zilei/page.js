@@ -9,6 +9,13 @@ import { isMenuDayActive } from "../../lib/format";
 import Image from "next/image";
 import Container from "../components/ui/container";
 import Card from "../components/ui/card";
+import Breadcrumbs from "../components/breadcrumbs";
+
+export const metadata = {
+  title: "Meniul zilei | Coco Jar Bistro",
+  description:
+    "Meniul zilei de azi de la Coco Jar: pui la jar, preparate tradiționale, salate și gusturi gândite pentru seara perfectă.",
+};
 
 function formatDateInput(dateInput) {
   if (!dateInput || typeof dateInput !== "string") {
@@ -45,13 +52,19 @@ export default async function DailyMenuPage({ searchParams }) {
     ? `Meniul zilei — ${getDayLabel(dayKey)} (${requestedLabel || selectedDate})`
     : `Meniul zilei — ${getDayLabel(dayKey)}`;
 
-  return (
-    <main className="pb-28">
-      <Container as="section" className="py-6">
-        <h1 className="text-display-md">{pageTitle}</h1>
+    return (
+      <main className="pb-28">
+        <Container as="section" className="py-6">
+          <Breadcrumbs
+            items={[
+              { label: "Acasă", href: "/" },
+              { label: "Meniul zilei", href: "/meniu-zilei" },
+            ]}
+          />
+          <h1 className="text-display-md">{pageTitle}</h1>
         {selectedDate ? (
           <p className="mt-2 text-sm text-ink-muted">
-            Ai accesat vizualizarea pe data <span className="font-semibold">{requestedLabel || selectedDate}</span>.{" "}
+            Ai deschis meniul zilei pentru data <span className="font-semibold">{requestedLabel || selectedDate}</span>.{" "}
             <a href="/meniu-zilei" className="underline underline-offset-3">
               Revino la ziua curentă
             </a>
@@ -64,14 +77,14 @@ export default async function DailyMenuPage({ searchParams }) {
           </p>
         )}
         <p className="mt-2 text-sm text-ink-muted">
-          Actualizare periodică prin fișierul <span className="font-mono">data/meniu-zilei.json</span>.
+          Meniul este actualizat zilnic, în funcție de oferta de sezon.
         </p>
 
         <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {dayItems.length === 0 ? (
             <Card className="md:col-span-2 xl:col-span-3">
               <p className="text-sm text-ink-muted">
-                Nu avem încă meniul zilei încărcat. Se actualizează periodic.
+                Meniul zilei nu a fost încă publicat. Revino peste puțin.
               </p>
             </Card>
           ) : (

@@ -1,14 +1,21 @@
 import { getSiteConfig } from "../../lib/site-data";
 import Container from "../components/ui/container";
 import Card from "../components/ui/card";
+import Breadcrumbs from "../components/breadcrumbs";
 
 export default async function AboutPage() {
   const config = await getSiteConfig();
 
-  return (
-    <main className="pb-28">
-      <Container as="section" className="space-y-6 py-6">
-        <div>
+    return (
+      <main className="pb-28">
+        <Container as="section" className="space-y-6 py-6">
+          <Breadcrumbs
+            items={[
+              { label: "Acasă", href: "/" },
+              { label: "Despre noi", href: "/despre-noi" },
+            ]}
+          />
+          <div>
           <h1 className="text-display-md">Despre {config.siteName}</h1>
           <p className="text-body-lg text-ink-muted">
             La Coco Jar, fiecare vizită începe cu poftă și se termină cu dorința de a
@@ -28,20 +35,20 @@ export default async function AboutPage() {
           <Card>
             <h2 className="text-title-lg">Ce oferim</h2>
             <p className="text-sm text-ink-muted">
-              Meniu transparent, opțiuni rapide de contact și răspuns la cereri de
-              evenimente / catering.
+              Meniu transparent, răspuns pe canale directe și suport complet pentru cereri de
+              evenimente sau catering.
             </p>
           </Card>
           <Card>
             <h2 className="text-title-lg">Valori</h2>
             <p className="text-sm text-ink-muted">
-              Igienă, ingrediente clare, comunicare rapidă, punctualitate.
+              Igienă riguroasă, ingrediente atent alese, comunicare clară și punctualitate.
             </p>
           </Card>
           <Card>
             <h2 className="text-title-lg">Zona noastră</h2>
             <p className="text-sm text-ink-muted">
-              Servim clienți din Popești-Leordeni și împrejurimi.
+              Prietenii locului sunt din Popești-Leordeni și împrejurimi.
             </p>
           </Card>
         </div>
