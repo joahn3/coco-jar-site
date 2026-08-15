@@ -1,0 +1,512 @@
+{
+  "generatedAt": "2026-08-15T17:27:36.960Z",
+  "baseUrl": "https://coco-jar-site.vercel.app",
+  "checks": [
+    {
+      "timestamp": "2026-08-15T17:27:39.710Z",
+      "route": "/",
+      "url": "https://coco-jar-site.vercel.app/",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "screenshotBase": "docs/ui-ux-audit/home-360x800.png",
+      "hasHorizontalOverflow": false,
+      "layoutMetrics": {
+        "scrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "docScrollWidth": 390,
+        "innerWidth": 390,
+        "overflowX": "visible",
+        "hasBurger": true,
+        "burger": {
+          "display": "flex",
+          "visibility": "visible",
+          "pointerEvents": "auto",
+          "opacity": "1",
+          "zIndex": "auto",
+          "width": 44,
+          "x": 313,
+          "y": 15
+        },
+        "desktopNav": null,
+        "mobileNav": {
+          "display": "block",
+          "visibility": "visible",
+          "pointerEvents": "none",
+          "opacity": "0",
+          "zIndex": "30",
+          "width": 390,
+          "x": 0,
+          "y": 62
+        },
+        "overlay": {
+          "display": "block",
+          "visibility": "visible",
+          "pointerEvents": "none",
+          "opacity": "0",
+          "zIndex": "20",
+          "width": 390,
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-15T17:27:42.626Z",
+      "route": "/meniu",
+      "url": "https://coco-jar-site.vercel.app/meniu",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "screenshotBase": "docs/ui-ux-audit/meniu-360x800.png",
+      "hasHorizontalOverflow": false,
+      "layoutMetrics": {
+        "scrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "docScrollWidth": 390,
+        "innerWidth": 390,
+        "overflowX": "visible",
+        "hasBurger": true,
+        "burger": {
+          "display": "flex",
+          "visibility": "visible",
+          "pointerEvents": "auto",
+          "opacity": "1",
+          "zIndex": "auto",
+          "width": 44,
+          "x": 313,
+          "y": 15
+        },
+        "desktopNav": null,
+        "mobileNav": {
+          "display": "block",
+          "visibility": "visible",
+          "pointerEvents": "none",
+          "opacity": "0",
+          "zIndex": "30",
+          "width": 390,
+          "x": 0,
+          "y": 62
+        },
+        "overlay": {
+          "display": "block",
+          "visibility": "visible",
+          "pointerEvents": "none",
+          "opacity": "0",
+          "zIndex": "20",
+          "width": 390,
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-15T17:27:46.148Z",
+      "route": "/galerie",
+      "url": "https://coco-jar-site.vercel.app/galerie",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "screenshotBase": "docs/ui-ux-audit/galerie-360x800.png",
+      "hasHorizontalOverflow": false,
+      "layoutMetrics": {
+        "scrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "docScrollWidth": 390,
+        "innerWidth": 390,
+        "overflowX": "visible",
+        "hasBurger": true,
+        "burger": {
+          "display": "flex",
+          "visibility": "visible",
+          "pointerEvents": "auto",
+          "opacity": "1",
+          "zIndex": "auto",
+          "width": 44,
+          "x": 313,
+          "y": 15
+        },
+        "desktopNav": null,
+        "mobileNav": {
+          "display": "block",
+          "visibility": "visible",
+          "pointerEvents": "none",
+          "opacity": "0",
+          "zIndex": "30",
+          "width": 390,
+          "x": 0,
+          "y": 62
+        },
+        "overlay": {
+          "display": "block",
+          "visibility": "visible",
+          "pointerEvents": "none",
+          "opacity": "0",
+          "zIndex": "20",
+          "width": 390,
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-15T17:27:48.205Z",
+      "route": "/",
+      "url": "https://coco-jar-site.vercel.app/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotBase": "docs/ui-ux-audit/home-390x844.png",
+      "hasHorizontalOverflow": false,
+      "layoutMetrics": {
+        "scrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "docScrollWidth": 390,
+        "innerWidth": 390,
+        "overflowX": "visible",
+        "hasBurger": true,
+        "burger": {
+          "display": "flex",
+          "visibility": "visible",
+          "pointerEvents": "auto",
+          "opacity": "1",
+          "zIndex": "auto",
+          "width": 44,
+          "x": 313,
+          "y": 15
+        },
+        "desktopNav": null,
+        "mobileNav": {
+          "display": "block",
+          "visibility": "visible",
+          "pointerEvents": "none",
+          "opacity": "0",
+          "zIndex": "30",
+          "width": 390,
+          "x": 0,
+          "y": 62
+        },
+        "overlay": {
+          "display": "block",
+          "visibility": "visible",
+          "pointerEvents": "none",
+          "opacity": "0",
+          "zIndex": "20",
+          "width": 390,
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-15T17:27:50.640Z",
+      "route": "/meniu",
+      "url": "https://coco-jar-site.vercel.app/meniu",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotBase": "docs/ui-ux-audit/meniu-390x844.png",
+      "hasHorizontalOverflow": false,
+      "layoutMetrics": {
+        "scrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "docScrollWidth": 390,
+        "innerWidth": 390,
+        "overflowX": "visible",
+        "hasBurger": true,
+        "burger": {
+          "display": "flex",
+          "visibility": "visible",
+          "pointerEvents": "auto",
+          "opacity": "1",
+          "zIndex": "auto",
+          "width": 44,
+          "x": 313,
+          "y": 15
+        },
+        "desktopNav": null,
+        "mobileNav": {
+          "display": "block",
+          "visibility": "visible",
+          "pointerEvents": "none",
+          "opacity": "0",
+          "zIndex": "30",
+          "width": 390,
+          "x": 0,
+          "y": 62
+        },
+        "overlay": {
+          "display": "block",
+          "visibility": "visible",
+          "pointerEvents": "none",
+          "opacity": "0",
+          "zIndex": "20",
+          "width": 390,
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-15T17:27:53.548Z",
+      "route": "/galerie",
+      "url": "https://coco-jar-site.vercel.app/galerie",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshotBase": "docs/ui-ux-audit/galerie-390x844.png",
+      "hasHorizontalOverflow": false,
+      "layoutMetrics": {
+        "scrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "docScrollWidth": 390,
+        "innerWidth": 390,
+        "overflowX": "visible",
+        "hasBurger": true,
+        "burger": {
+          "display": "flex",
+          "visibility": "visible",
+          "pointerEvents": "auto",
+          "opacity": "1",
+          "zIndex": "auto",
+          "width": 44,
+          "x": 313,
+          "y": 15
+        },
+        "desktopNav": null,
+        "mobileNav": {
+          "display": "block",
+          "visibility": "visible",
+          "pointerEvents": "none",
+          "opacity": "0",
+          "zIndex": "30",
+          "width": 390,
+          "x": 0,
+          "y": 62
+        },
+        "overlay": {
+          "display": "block",
+          "visibility": "visible",
+          "pointerEvents": "none",
+          "opacity": "0",
+          "zIndex": "20",
+          "width": 390,
+          "x": 0,
+          "y": 0
+        }
+      }
+    }
+  ],
+  "mobileMenuInteraction": [
+    {
+      "route": "/",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "openState": {
+        "menuExpanded": "true",
+        "mobileNav": {
+          "display": "block",
+          "opacity": "1",
+          "pointerEvents": "none",
+          "visibility": "visible"
+        },
+        "overlay": {
+          "display": "block",
+          "opacity": "1",
+          "pointerEvents": "none",
+          "visibility": "visible"
+        },
+        "menuItemsVisible": [
+          {
+            "text": "Acasă",
+            "href": "/",
+            "canInteract": true
+          },
+          {
+            "text": "Meniu",
+            "href": "/meniu",
+            "canInteract": true
+          }
+        ]
+      }
+    },
+    {
+      "route": "/meniu",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "openState": {
+        "menuExpanded": "true",
+        "mobileNav": {
+          "display": "block",
+          "opacity": "1",
+          "pointerEvents": "none",
+          "visibility": "visible"
+        },
+        "overlay": {
+          "display": "block",
+          "opacity": "1",
+          "pointerEvents": "none",
+          "visibility": "visible"
+        },
+        "menuItemsVisible": [
+          {
+            "text": "Acasă",
+            "href": "/",
+            "canInteract": true
+          },
+          {
+            "text": "Meniu",
+            "href": "/meniu",
+            "canInteract": true
+          }
+        ]
+      }
+    },
+    {
+      "route": "/galerie",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "openState": {
+        "menuExpanded": "true",
+        "mobileNav": {
+          "display": "block",
+          "opacity": "1",
+          "pointerEvents": "none",
+          "visibility": "visible"
+        },
+        "overlay": {
+          "display": "block",
+          "opacity": "1",
+          "pointerEvents": "none",
+          "visibility": "visible"
+        },
+        "menuItemsVisible": [
+          {
+            "text": "Acasă",
+            "href": "/",
+            "canInteract": true
+          },
+          {
+            "text": "Meniu",
+            "href": "/meniu",
+            "canInteract": true
+          }
+        ]
+      }
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "openState": {
+        "menuExpanded": "true",
+        "mobileNav": {
+          "display": "block",
+          "opacity": "1",
+          "pointerEvents": "none",
+          "visibility": "visible"
+        },
+        "overlay": {
+          "display": "block",
+          "opacity": "1",
+          "pointerEvents": "none",
+          "visibility": "visible"
+        },
+        "menuItemsVisible": [
+          {
+            "text": "Acasă",
+            "href": "/",
+            "canInteract": true
+          },
+          {
+            "text": "Meniu",
+            "href": "/meniu",
+            "canInteract": true
+          }
+        ]
+      }
+    },
+    {
+      "route": "/meniu",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "openState": {
+        "menuExpanded": "true",
+        "mobileNav": {
+          "display": "block",
+          "opacity": "1",
+          "pointerEvents": "none",
+          "visibility": "visible"
+        },
+        "overlay": {
+          "display": "block",
+          "opacity": "1",
+          "pointerEvents": "none",
+          "visibility": "visible"
+        },
+        "menuItemsVisible": [
+          {
+            "text": "Acasă",
+            "href": "/",
+            "canInteract": true
+          },
+          {
+            "text": "Meniu",
+            "href": "/meniu",
+            "canInteract": true
+          }
+        ]
+      }
+    },
+    {
+      "route": "/galerie",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "openState": {
+        "menuExpanded": "true",
+        "mobileNav": {
+          "display": "block",
+          "opacity": "1",
+          "pointerEvents": "none",
+          "visibility": "visible"
+        },
+        "overlay": {
+          "display": "block",
+          "opacity": "1",
+          "pointerEvents": "none",
+          "visibility": "visible"
+        },
+        "menuItemsVisible": [
+          {
+            "text": "Acasă",
+            "href": "/",
+            "canInteract": true
+          },
+          {
+            "text": "Meniu",
+            "href": "/meniu",
+            "canInteract": true
+          }
+        ]
+      }
+    }
+  ]
+}

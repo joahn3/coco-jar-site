@@ -1,0 +1,38 @@
+[
+  {
+    "viewport": {
+      "name": "360x812",
+      "width": 360,
+      "height": 812
+    },
+    "headerHeight": 185,
+    "heroTop": 185,
+    "navHeight": 60,
+    "horizontalOverflow": false,
+    "generatedAt": "2026-08-15T14:02:43.676Z"
+  },
+  {
+    "viewport": {
+      "name": "768x1024",
+      "width": 768,
+      "height": 1024
+    },
+    "headerHeight": 233,
+    "heroTop": 233,
+    "navHeight": 164,
+    "horizontalOverflow": false,
+    "generatedAt": "2026-08-15T14:02:44.838Z"
+  },
+  {
+    "viewport": {
+      "name": "1280x900",
+      "width": 1280,
+      "height": 900
+    },
+    "headerHeight": 233,
+    "heroTop": 233,
+    "navHeight": 164,
+    "horizontalOverflow": false,
+    "generatedAt": "2026-08-15T14:02:45.570Z"
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "name": "coco-jar-site",
+  "version": "1.0.0",
+  "description": "Website de prezentare pentru restaurant, optimizat pentru conversii locale: telefon, WhatsApp, meniu, evenimente + catering și formulare de contact.",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "assets:collect": "node scripts/fetch-social-media.mjs",
+    "assets:collect:gallery": "node scripts/fetch-social-media.mjs --copyToGallery=true",
+    "assets:meniu-pdf": "node scripts/build-menu-pdf.mjs",
+    "daily-menu:sync": "node scripts/sync-daily-menu-from-facebook.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "next": "^14.2.25",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "@types/react": "^18.3.31",
+    "autoprefixer": "^10.5.4",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.35",
+    "playwright": "^1.55.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.4.5"
+  }
+}

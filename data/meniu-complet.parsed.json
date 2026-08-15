@@ -1,0 +1,572 @@
+{
+  "GUSTĂRI": [
+    {
+      "name": "Platou Bruschete",
+      "desc": "Baghete cu roșii, usturoi, busuioc, pâine prăjită",
+      "size": "200 g",
+      "price": "25"
+    },
+    {
+      "name": "Platou Mix Aperitiv",
+      "desc": "Meniu de aperitive",
+      "size": "550 g",
+      "price": "72"
+    },
+    {
+      "name": "Mix Gustare Bere / Carneciorii Bere",
+      "desc": "Cârnaț de bere, stick mozzarella, măsline, inele de ceapă, jalapeños",
+      "size": "150 / 350 g",
+      "price": "32"
+    },
+    {
+      "name": "Barabule",
+      "desc": "Cartofi, bacon, ou, telemea, ceapă verde",
+      "size": "200 g",
+      "price": "36"
+    },
+    {
+      "name": "Bread Garlic Gratinat",
+      "desc": "Cartofi prăjiți, bacon, ou, telemea, usturoi, cheddar",
+      "size": "350 g",
+      "price": "18"
+    }
+  ],
+  "CIORBE & SALATE": [
+    {
+      "name": "Salată de vinete",
+      "desc": "Vinete, ceapă, ulei, sare, piper, pâine prăjită",
+      "size": "200 g",
+      "price": "25"
+    },
+    {
+      "name": "Salată de icre",
+      "desc": "Icre, pâine prăjită",
+      "size": "200 g",
+      "price": ""
+    },
+    {
+      "name": "Salată zacuscă cu mamaliga, brânză, smântână, ou",
+      "desc": "Zacuscă și maioneză",
+      "size": "200 g",
+      "price": ""
+    },
+    {
+      "name": "Salată Caesar",
+      "desc": "Salată iceberg, piept de pui crocant, sos Caesar, crutoane, parmezan",
+      "size": "300 g",
+      "price": "39"
+    }
+  ],
+  "CIORBE": [
+    {
+      "name": "Ciorbă de burtă",
+      "desc": "Burtă vită, ou, usturoi, tărâțe telina? etc",
+      "size": "300 ml",
+      "price": "24"
+    },
+    {
+      "name": "Supă de pui cu tăiței de casă",
+      "desc": "Carne de pui, morcov, ceapă, ardei, pătrunjel, pastarnac",
+      "size": "300 ml + 80 g",
+      "price": "22"
+    },
+    {
+      "name": "Supă de coadă de viță",
+      "desc": "Vită, morcov, ceapă, cartof, telină, pătrunjel",
+      "size": "300 ml + 100 g",
+      "price": "24"
+    }
+  ],
+  "SALATE": [
+    {
+      "name": "Salată verde cu lămâie",
+      "desc": "Salată verde",
+      "size": "120 g",
+      "price": "18"
+    },
+    {
+      "name": "Salată grecească",
+      "desc": "Roșii, castraveti, ceapă roșie, ardei capia, brânză feta",
+      "size": "300 g",
+      "price": "37"
+    },
+    {
+      "name": "Salată de varză",
+      "desc": "Varză, morcov, ulei, oțet",
+      "size": "150 g",
+      "price": ""
+    },
+    {
+      "name": "Salată de ardei copți",
+      "desc": "Ardei copți",
+      "size": "180 g",
+      "price": ""
+    },
+    {
+      "name": "Salată de roșii",
+      "desc": "Roșii, ulei, sare",
+      "size": "120 g",
+      "price": ""
+    },
+    {
+      "name": "Salată mixtă",
+      "desc": "Roșii, castraveți, ardei capia, ceapă roșie",
+      "size": "150 g",
+      "price": ""
+    },
+    {
+      "name": "Salată murături mix",
+      "desc": "Gogosari, castraveti murați, gogonele",
+      "size": "150 g",
+      "price": "14"
+    },
+    {
+      "name": "Salată coleslaw",
+      "desc": "Varză, morcov, maioneză",
+      "size": "150 g",
+      "price": "15"
+    },
+    {
+      "name": "Salată sfeclă cu hrean",
+      "desc": "Sfeclă, hrean (conservat cu oțet)",
+      "size": "150 g",
+      "price": "14"
+    }
+  ],
+  "PASTE": [
+    {
+      "name": "Spaghete Carbonara",
+      "desc": "Bacon, ou, smântână lichidă, parmezan",
+      "size": "350 g",
+      "price": ""
+    },
+    {
+      "name": "Spaghete AOP",
+      "desc": "Ragu de vită",
+      "size": "350 g",
+      "price": "32"
+    },
+    {
+      "name": "Spaghete AOP cu creveți",
+      "desc": "Creveți, roșii cherry, usturoi, ardei iute",
+      "size": "350 g",
+      "price": ""
+    },
+    {
+      "name": "Tagliatelle cu creveți",
+      "desc": "Creveți, zucchini, roșii cherry, usturoi",
+      "size": "350 g",
+      "price": ""
+    },
+    {
+      "name": "Penne Siciliene al Forno",
+      "desc": "Penne cu piept de pui, sos roșii",
+      "size": "380 g",
+      "price": ""
+    },
+    {
+      "name": "Penne Quattro Formaggi",
+      "desc": "Gorgonzola, mozzarella, parmezan, cheddar",
+      "size": "350 g",
+      "price": "52"
+    }
+  ],
+  "BURGER / QUESADILLA": [
+    {
+      "name": "Burger Coco Jar",
+      "desc": "Chiflă, carne vită, bacon, ou, salată, castraveți murați, cartofi prăjiți",
+      "size": "350 g",
+      "price": "49"
+    },
+    {
+      "name": "Burger Pulled Pork",
+      "desc": "Pulled pork, castraveți murați, salată, sos Coco Jar",
+      "size": "350 g",
+      "price": ""
+    },
+    {
+      "name": "Burger pui / Quesadilla",
+      "desc": "Chiflă, mozzarella, cheddar, ceapă, ardei capia, bacon, sos Coco Jar",
+      "size": "400 g",
+      "price": ""
+    }
+  ],
+  "PREPARATE DIN PUI": [
+    {
+      "name": "Pui în sos gorgonzola",
+      "desc": "Pui, sos alb, gorgonzola, mozzarella, cartofi la cuptor",
+      "size": "400 g",
+      "price": ""
+    },
+    {
+      "name": "Thai Chicken",
+      "desc": "Pui cu condimente asiatice",
+      "size": "450 g",
+      "price": "47"
+    },
+    {
+      "name": "Snitel de pui în crustă de semințe",
+      "desc": "Pui, sos de soia, orez, semințe, sos sweet chilli",
+      "size": "250–350 g",
+      "price": ""
+    },
+    {
+      "name": "Tigaie picantă de pui",
+      "desc": "Pui, ceapă roșie, ardei capia, ciuperci, sos roșii",
+      "size": "350 g",
+      "price": "41"
+    },
+    {
+      "name": "Pui crispy în crustă de semințe",
+      "desc": "Pui, mix semințe, ou, smântână",
+      "size": "250 g",
+      "price": ""
+    },
+    {
+      "name": "Pollo alla parmigiana",
+      "desc": "Snitel pui, sos roșii, mozzarella, parmezan",
+      "size": "400 g",
+      "price": "40"
+    },
+    {
+      "name": "Aripioare crispy",
+      "desc": "Aripioare pui crocante",
+      "size": "",
+      "price": ""
+    },
+    {
+      "name": "Pui cu smântână și ciuperci",
+      "desc": "Pui, ciuperci, usturoi, vin alb, cartofi la cuptor",
+      "size": "450 g",
+      "price": "40"
+    },
+    {
+      "name": "Piepț de pui",
+      "desc": "Pui dezosat, cimbru",
+      "size": "250 g",
+      "price": "28"
+    }
+  ],
+  "PREPARATE DIN VITA": [
+    {
+      "name": "T-bone steak Dry Age",
+      "desc": "T-bone de vită, unt, rozmarin, usturoi",
+      "size": "300–350 g",
+      "price": ""
+    },
+    {
+      "name": "Antricot de vită Black Angus Uruguay",
+      "desc": "Carne vită",
+      "size": "300 g",
+      "price": "128"
+    },
+    {
+      "name": "Thai Beef",
+      "desc": "Vită, legume, sos de soia, susan, orez",
+      "size": "450 g",
+      "price": "59"
+    },
+    {
+      "name": "Muschi de vită cu sos de piper verde",
+      "desc": "Vită, sos de piper verde",
+      "size": "250 g",
+      "price": "95"
+    }
+  ],
+  "PREPARATE DE LA GRĂTAR": [
+    {
+      "name": "Frigarui de pui",
+      "desc": "Frigarui pui, condimente",
+      "size": "250 g",
+      "price": ""
+    },
+    {
+      "name": "Frigarui de porc",
+      "desc": "Frigarui porc",
+      "size": "250 g",
+      "price": "31"
+    }
+  ],
+  "PREPARATE DIN PORC": [
+    {
+      "name": "Tomahawk de porc",
+      "desc": "Tomahawk porc, sare, piper",
+      "size": "500 g",
+      "price": ""
+    },
+    {
+      "name": "Tigaie picantă de porc",
+      "desc": "Ceafă de porc, legume, sos roșu",
+      "size": "350 g",
+      "price": ""
+    },
+    {
+      "name": "Tochitură moldovenească",
+      "desc": "Porc, ou, brânză, sos roșii",
+      "size": "450 g",
+      "price": "42"
+    },
+    {
+      "name": "Pomană de porc",
+      "desc": "Porc, usturoi, piper",
+      "size": "450 g",
+      "price": ""
+    },
+    {
+      "name": "Coaste de porc",
+      "desc": "Coaste porc cu sos barbecue",
+      "size": "650 g",
+      "price": ""
+    },
+    {
+      "name": "Pastramă oaie",
+      "desc": "Oaie, usturoi, mamaliga",
+      "size": "250 g",
+      "price": "46"
+    },
+    {
+      "name": "Cotlet de berbec",
+      "desc": "Cotlet de berbec, garnitură de cartofi",
+      "size": "250 g",
+      "price": "59"
+    }
+  ],
+  "FRUCTE DE MARE": [
+    {
+      "name": "Creveți în sos de vin",
+      "desc": "Creveți, sos de roșii, ardei iute",
+      "size": "400 g",
+      "price": "47"
+    },
+    {
+      "name": "Midi in sos de vin",
+      "desc": "Midii, ardei iute, usturoi, pâine prăjită",
+      "size": "400 g",
+      "price": ""
+    },
+    {
+      "name": "Creveți Diavola",
+      "desc": "Creveți, sos roșu, usturoi, pâine prăjită",
+      "size": "300 g",
+      "price": "37"
+    },
+    {
+      "name": "Creveți in sos de unt",
+      "desc": "Creveți, unt, usturoi, sos aioli",
+      "size": "300 g",
+      "price": "59"
+    },
+    {
+      "name": "Panko seafood",
+      "desc": "Creveți/alcool? creveți crispy + inele de calamari",
+      "size": "250 g",
+      "price": ""
+    }
+  ],
+  "PLATOURI": [
+    {
+      "name": "Platou mix grill",
+      "desc": "Ceafă porc, pulpă pui, mici, cartofi, muștar",
+      "size": "1 persoană",
+      "price": ""
+    },
+    {
+      "name": "Platou family",
+      "desc": "Pulpă pui, mici, cârnați, cartofi",
+      "size": "3/4 persoane",
+      "price": "165"
+    },
+    {
+      "name": "Platou românesc",
+      "desc": "Ceafă, pulpa pui, mici, cărnati, cartofi",
+      "size": "2/3 persoane",
+      "price": "145"
+    },
+    {
+      "name": "Platou Coco Jar",
+      "desc": "Ceafă, côaste, pastramă, mici, frigarui, cartofi",
+      "size": "12 persoane",
+      "price": ""
+    },
+    {
+      "name": "Platou Gurmandului",
+      "desc": "Păstrăv de berbec, pui, cărnati, frigarui",
+      "size": "4/5 persoane",
+      "price": "255"
+    }
+  ],
+  "SOSURI": [
+    {
+      "name": "Sos Coco Jar",
+      "desc": "Maioneză, ketchup, coniac",
+      "size": "50 g",
+      "price": ""
+    },
+    {
+      "name": "Sos Jalapeños",
+      "desc": "Usturoi, roșii, ardei copt",
+      "size": "50 g",
+      "price": ""
+    },
+    {
+      "name": "Sos ketchup",
+      "desc": "Roșii, zahăr, oțet",
+      "size": "50 g",
+      "price": ""
+    },
+    {
+      "name": "Sos aioli",
+      "desc": "Maioneză, usturoi",
+      "size": "50 g",
+      "price": ""
+    },
+    {
+      "name": "Sos sweet chilli",
+      "desc": "Chili, oțet, amidon",
+      "size": "50 g",
+      "price": ""
+    },
+    {
+      "name": "Sos de muștar",
+      "desc": "Muștar clasic",
+      "size": "50 g",
+      "price": ""
+    }
+  ],
+  "GARNITURI": [
+    {
+      "name": "Smântână",
+      "desc": "Smântână",
+      "size": "50 g",
+      "price": ""
+    },
+    {
+      "name": "Telemea",
+      "desc": "Brânză telemea",
+      "size": "50 g",
+      "price": ""
+    },
+    {
+      "name": "Parmezan",
+      "desc": "Brânză parmezan",
+      "size": "50 g",
+      "price": ""
+    },
+    {
+      "name": "Ardei iute",
+      "desc": "Ardei iute",
+      "size": "50 g",
+      "price": ""
+    },
+    {
+      "name": "Cartofi prăjiți",
+      "desc": "Cartofi, sare",
+      "size": "200 g",
+      "price": ""
+    },
+    {
+      "name": "Cartofi prăjiți cu mozzarella",
+      "desc": "Cartofi, mozzarella",
+      "size": "200 g",
+      "price": ""
+    },
+    {
+      "name": "Piure",
+      "desc": "Cartofi, unt",
+      "size": "200 g",
+      "price": ""
+    },
+    {
+      "name": "Orez cu legume",
+      "desc": "Orez basmati, legume, unt",
+      "size": "200 g",
+      "price": ""
+    },
+    {
+      "name": "Cartofi la cuptor cu rozmarin",
+      "desc": "Cartofi, rozmarin",
+      "size": "200 g",
+      "price": ""
+    },
+    {
+      "name": "Sparanghel",
+      "desc": "Sparanghel",
+      "size": "200 g",
+      "price": ""
+    },
+    {
+      "name": "Cartofi prăjiți cu usturoi și parmezan",
+      "desc": "Cartofi, usturoi, parmezan",
+      "size": "200 g",
+      "price": ""
+    },
+    {
+      "name": "Cartofi prăjiți cu telemea și ierburi aromatice",
+      "desc": "Cartofi, telemea, ierburi",
+      "size": "200 g",
+      "price": ""
+    },
+    {
+      "name": "Orez basmati",
+      "desc": "Orez basmati, unt",
+      "size": "200 g",
+      "price": ""
+    }
+  ],
+  "DESERTURI": [
+    {
+      "name": "Tiramisu",
+      "desc": "Pistocuți, mascarpone, cacao",
+      "size": "160 g",
+      "price": "25"
+    },
+    {
+      "name": "Clătită cu ciocolată",
+      "desc": "Ou, făină, lapte, ciocolată",
+      "size": "150 g",
+      "price": ""
+    },
+    {
+      "name": "Clătită cu miere și nuci",
+      "desc": "Ou, miere, nuci",
+      "size": "150 g",
+      "price": "27"
+    },
+    {
+      "name": "Clătită cu dulceată",
+      "desc": "Ou, lapte, dulceată",
+      "size": "150 g",
+      "price": "21"
+    },
+    {
+      "name": "Papanasi cu ciocolată",
+      "desc": "Brânză dulce de vaci, făină, cacao",
+      "size": "250 g",
+      "price": "30"
+    },
+    {
+      "name": "Papanasi cu dulceată",
+      "desc": "Brânză dulce de vaci, făină, dulceată, smântână",
+      "size": "250 g",
+      "price": "30"
+    },
+    {
+      "name": "Papanasi cu nuci și miere",
+      "desc": "Brânză dulce de vaci, miere, nuci",
+      "size": "250 g",
+      "price": "33"
+    },
+    {
+      "name": "Lava cake",
+      "desc": "Ciocolată, înghețată",
+      "size": "180 g",
+      "price": "28"
+    },
+    {
+      "name": "Profiterol",
+      "desc": "Batoane choux, înghețată, sos ciocolată",
+      "size": "1 buc",
+      "price": "32"
+    }
+  ]
+}

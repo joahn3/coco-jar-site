@@ -1,21 +1,1327 @@
 {
-  "supe": [
-    {"name":"Ciorbă de pui", "price":"20-24 lei", "desc":"cu tăiței, mămăligă, usturoi"},
-    {"name":"Ciorbă de vită", "price":"22-28 lei", "desc":"borș + smântână + ou"}
+  "_meta": {
+    "version": "2026-08-15",
+    "source": "data/meniu-coco-jar-fotografii-2026-08-15.xlsx",
+    "generator": "xlsx-parser"
+  },
+  "GUSTĂRI": [
+    {
+      "name": "Platou Bruschete",
+      "size": "200 g",
+      "price": "25 LEI",
+      "description": "Baghete cu roșii, usturoi, busuioc, pâine prăjită",
+      "source": "1-Photo-1.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Platou Mix Aperitiv",
+      "size": "550 g",
+      "price": "72 LEI",
+      "description": "Meniu de aperitive",
+      "source": "1-Photo-1.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Mix Gustare Bere / Carneciorii Bere",
+      "size": "150 / 350 g",
+      "price": "32 LEI",
+      "description": "Cârnaț de bere, stick mozzarella, măsline, inele de ceapă, jalapeños",
+      "source": "1-Photo-1.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Barabule",
+      "size": "200 g",
+      "price": "36 LEI",
+      "description": "Cartofi, bacon, ou, telemea, ceapă verde",
+      "source": "1-Photo-1.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Bread Garlic Gratinat",
+      "size": "350 g",
+      "price": "18 LEI",
+      "description": "Cartofi prăjiți, bacon, ou, telemea, usturoi, cheddar",
+      "source": "1-Photo-1.jpg",
+      "notes": "Pret OCR clar"
+    }
   ],
-  "gratar": [
-    {"name":"Mici la grătar", "price":"40 lei", "desc":"6 buc + murături + muștar"},
-    {"name":"Ceafă de porc", "price":"42 lei", "desc":"cartofi copți + garnitură"},
-    {"name":"Parizer de casă", "price":"46 lei", "desc":"cu salată de varză"}
+  "CIORBE & SALATE": [
+    {
+      "name": "Salată de vinete",
+      "size": "200 g",
+      "price": "25 LEI",
+      "description": "Vinete, ceapă, ulei, sare, piper, pâine prăjită",
+      "source": "1-Photo-1.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Salată de icre",
+      "size": "200 g",
+      "price": "",
+      "description": "Icre, pâine prăjită",
+      "source": "1-Photo-1.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Salată zacuscă cu mamaliga, brânză, smântână, ou",
+      "size": "200 g",
+      "price": "",
+      "description": "Zacuscă și maioneză",
+      "source": "1-Photo-1.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Salată Caesar",
+      "size": "300 g",
+      "price": "39 LEI",
+      "description": "Salată iceberg, piept de pui crocant, sos Caesar, crutoane, parmezan",
+      "source": "1-Photo-1.jpg",
+      "notes": "Pret OCR clar"
+    }
   ],
-  "preparate-specifice": [
-    {"name":"Friptură de pui la cuptor", "price":"38 lei", "desc":"cu lămâie și rozmarin"},
-    {"name":"Muschi de pui pane", "price":"36 lei", "desc":"cartofi prăjiți + salată"},
-    {"name":"Snitel de pui", "price":"35 lei", "desc":"cu piure de cartofi"}
+  "CIORBE": [
+    {
+      "name": "Ciorbă de burtă",
+      "size": "300 ml",
+      "price": "24 LEI",
+      "description": "Burtă vită, ou, usturoi, tărâțe telina? etc",
+      "source": "1-Photo-1.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Supă de pui cu tăiței de casă",
+      "size": "300 ml + 80 g",
+      "price": "22 LEI",
+      "description": "Carne de pui, morcov, ceapă, ardei, pătrunjel, pastarnac",
+      "source": "1-Photo-1.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Supă de coadă de viță",
+      "size": "300 ml + 100 g",
+      "price": "24 LEI",
+      "description": "Vită, morcov, ceapă, cartof, telină, pătrunjel",
+      "source": "1-Photo-1.jpg",
+      "notes": "Pret OCR clar"
+    }
   ],
-  "deserturi": [
-    {"name":"Papanasi", "price":"16 lei", "desc":"cu smântână și dulceață"},
-    {"name":"Chec de casa", "price":"14 lei", "desc":"porție"},
-    {"name":"Înghețată artizanală", "price":"18 lei", "desc":"2 cupe"}
+  "SALATE": [
+    {
+      "name": "Salată verde cu lămâie",
+      "size": "120 g",
+      "price": "18 LEI",
+      "description": "Salată verde",
+      "source": "1-Photo-1.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Salată grecească",
+      "size": "300 g",
+      "price": "37 LEI",
+      "description": "Roșii, castraveti, ceapă roșie, ardei capia, brânză feta",
+      "source": "1-Photo-1.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Salată de varză",
+      "size": "150 g",
+      "price": "",
+      "description": "Varză, morcov, ulei, oțet",
+      "source": "5-Photo-5.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Salată de ardei copți",
+      "size": "180 g",
+      "price": "",
+      "description": "Ardei copți",
+      "source": "5-Photo-5.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Salată de roșii",
+      "size": "120 g",
+      "price": "",
+      "description": "Roșii, ulei, sare",
+      "source": "5-Photo-5.jpg",
+      "notes": "OCR parțial"
+    },
+    {
+      "name": "Salată mixtă",
+      "size": "150 g",
+      "price": "",
+      "description": "Roșii, castraveți, ardei capia, ceapă roșie",
+      "source": "5-Photo-5.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Salată murături mix",
+      "size": "150 g",
+      "price": "14 LEI",
+      "description": "Gogosari, castraveti murați, gogonele",
+      "source": "5-Photo-5.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Salată coleslaw",
+      "size": "150 g",
+      "price": "15 LEI",
+      "description": "Varză, morcov, maioneză",
+      "source": "5-Photo-5.jpg",
+      "notes": "Pret OCR parțial"
+    },
+    {
+      "name": "Salată sfeclă cu hrean",
+      "size": "150 g",
+      "price": "14 LEI",
+      "description": "Sfeclă, hrean (conservat cu oțet)",
+      "source": "5-Photo-5.jpg",
+      "notes": "Pret OCR clar"
+    }
+  ],
+  "PASTE": [
+    {
+      "name": "Spaghete Carbonara",
+      "size": "350 g",
+      "price": "",
+      "description": "Bacon, ou, smântână lichidă, parmezan",
+      "source": "2-Photo-2.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Spaghete AOP",
+      "size": "350 g",
+      "price": "32 LEI",
+      "description": "Ragu de vită",
+      "source": "2-Photo-2.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Spaghete AOP cu creveți",
+      "size": "350 g",
+      "price": "",
+      "description": "Creveți, roșii cherry, usturoi, ardei iute",
+      "source": "2-Photo-2.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Tagliatelle cu creveți",
+      "size": "350 g",
+      "price": "",
+      "description": "Creveți, zucchini, roșii cherry, usturoi",
+      "source": "2-Photo-2.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Penne Siciliene al Forno",
+      "size": "380 g",
+      "price": "",
+      "description": "Penne cu piept de pui, sos roșii",
+      "source": "2-Photo-2.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Penne Quattro Formaggi",
+      "size": "350 g",
+      "price": "52 LEI",
+      "description": "Gorgonzola, mozzarella, parmezan, cheddar",
+      "source": "2-Photo-2.jpg",
+      "notes": "Pret OCR clar"
+    }
+  ],
+  "BURGER / QUESADILLA": [
+    {
+      "name": "Burger Coco Jar",
+      "size": "350 g",
+      "price": "49 LEI",
+      "description": "Chiflă, carne vită, bacon, ou, salată, castraveți murați, cartofi prăjiți",
+      "source": "2-Photo-2.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Burger Pulled Pork",
+      "size": "350 g",
+      "price": "",
+      "description": "Pulled pork, castraveți murați, salată, sos Coco Jar",
+      "source": "2-Photo-2.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Burger pui / Quesadilla",
+      "size": "400 g",
+      "price": "",
+      "description": "Chiflă, mozzarella, cheddar, ceapă, ardei capia, bacon, sos Coco Jar",
+      "source": "2-Photo-2.jpg",
+      "notes": "OCR clar"
+    }
+  ],
+  "PREPARATE DIN PUI": [
+    {
+      "name": "Pui în sos gorgonzola",
+      "size": "400 g",
+      "price": "",
+      "description": "Pui, sos alb, gorgonzola, mozzarella, cartofi la cuptor",
+      "source": "3-Photo-3.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Thai Chicken",
+      "size": "450 g",
+      "price": "47 LEI",
+      "description": "Pui cu condimente asiatice",
+      "source": "3-Photo-3.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Snitel de pui în crustă de semințe",
+      "size": "250–350 g",
+      "price": "",
+      "description": "Pui, sos de soia, orez, semințe, sos sweet chilli",
+      "source": "3-Photo-3.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Tigaie picantă de pui",
+      "size": "350 g",
+      "price": "41 LEI",
+      "description": "Pui, ceapă roșie, ardei capia, ciuperci, sos roșii",
+      "source": "3-Photo-3.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Pui crispy în crustă de semințe",
+      "size": "250 g",
+      "price": "",
+      "description": "Pui, mix semințe, ou, smântână",
+      "source": "3-Photo-3.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Pollo alla parmigiana",
+      "size": "400 g",
+      "price": "40 LEI",
+      "description": "Snitel pui, sos roșii, mozzarella, parmezan",
+      "source": "3-Photo-3.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Aripioare crispy",
+      "size": "",
+      "price": "",
+      "description": "Aripioare pui crocante",
+      "source": "3-Photo-3.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Pui cu smântână și ciuperci",
+      "size": "450 g",
+      "price": "40 LEI",
+      "description": "Pui, ciuperci, usturoi, vin alb, cartofi la cuptor",
+      "source": "3-Photo-3.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Piepț de pui",
+      "size": "250 g",
+      "price": "28 LEI",
+      "description": "Pui dezosat, cimbru",
+      "source": "4-Photo-4.jpg",
+      "notes": "Pret OCR clar"
+    }
+  ],
+  "PREPARATE DIN VITA": [
+    {
+      "name": "T-bone steak Dry Age",
+      "size": "300–350 g",
+      "price": "",
+      "description": "T-bone de vită, unt, rozmarin, usturoi",
+      "source": "4-Photo-4.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Antricot de vită Black Angus Uruguay",
+      "size": "300 g",
+      "price": "128 LEI",
+      "description": "Carne vită",
+      "source": "4-Photo-4.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Thai Beef",
+      "size": "450 g",
+      "price": "59 LEI",
+      "description": "Vită, legume, sos de soia, susan, orez",
+      "source": "4-Photo-4.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Muschi de vită cu sos de piper verde",
+      "size": "250 g",
+      "price": "95 LEI",
+      "description": "Vită, sos de piper verde",
+      "source": "4-Photo-4.jpg",
+      "notes": "Pret OCR clar"
+    }
+  ],
+  "PREPARATE DE LA GRĂTAR": [
+    {
+      "name": "Frigarui de pui",
+      "size": "250 g",
+      "price": "",
+      "description": "Frigarui pui, condimente",
+      "source": "4-Photo-4.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Frigarui de porc",
+      "size": "250 g",
+      "price": "31 LEI",
+      "description": "Frigarui porc",
+      "source": "4-Photo-4.jpg",
+      "notes": "Pret OCR clar"
+    }
+  ],
+  "PREPARATE DIN PORC": [
+    {
+      "name": "Tomahawk de porc",
+      "size": "500 g",
+      "price": "",
+      "description": "Tomahawk porc, sare, piper",
+      "source": "3-Photo-3.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Tigaie picantă de porc",
+      "size": "350 g",
+      "price": "",
+      "description": "Ceafă de porc, legume, sos roșu",
+      "source": "3-Photo-3.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Tochitură moldovenească",
+      "size": "450 g",
+      "price": "42 LEI",
+      "description": "Porc, ou, brânză, sos roșii",
+      "source": "3-Photo-3.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Pomană de porc",
+      "size": "450 g",
+      "price": "",
+      "description": "Porc, usturoi, piper",
+      "source": "3-Photo-3.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Coaste de porc",
+      "size": "650 g",
+      "price": "",
+      "description": "Coaste porc cu sos barbecue",
+      "source": "3-Photo-3.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Pastramă oaie",
+      "size": "250 g",
+      "price": "46 LEI",
+      "description": "Oaie, usturoi, mamaliga",
+      "source": "4-Photo-4.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Cotlet de berbec",
+      "size": "250 g",
+      "price": "59 LEI",
+      "description": "Cotlet de berbec, garnitură de cartofi",
+      "source": "4-Photo-4.jpg",
+      "notes": "Pret OCR clar"
+    }
+  ],
+  "FRUCTE DE MARE": [
+    {
+      "name": "Creveți în sos de vin",
+      "size": "400 g",
+      "price": "47 LEI",
+      "description": "Creveți, sos de roșii, ardei iute",
+      "source": "5-Photo-5.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Midi in sos de vin",
+      "size": "400 g",
+      "price": "",
+      "description": "Midii, ardei iute, usturoi, pâine prăjită",
+      "source": "5-Photo-5.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Creveți Diavola",
+      "size": "300 g",
+      "price": "37 LEI",
+      "description": "Creveți, sos roșu, usturoi, pâine prăjită",
+      "source": "5-Photo-5.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Creveți in sos de unt",
+      "size": "300 g",
+      "price": "59 LEI",
+      "description": "Creveți, unt, usturoi, sos aioli",
+      "source": "5-Photo-5.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Panko seafood",
+      "size": "250 g",
+      "price": "",
+      "description": "Creveți/alcool? creveți crispy + inele de calamari",
+      "source": "5-Photo-5.jpg",
+      "notes": "OCR clar"
+    }
+  ],
+  "PLATOURI": [
+    {
+      "name": "Platou mix grill",
+      "size": "1 persoană",
+      "price": "",
+      "description": "Ceafă porc, pulpă pui, mici, cartofi, muștar",
+      "source": "6-Photo-6.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Platou family",
+      "size": "3/4 persoane",
+      "price": "165 LEI",
+      "description": "Pulpă pui, mici, cârnați, cartofi",
+      "source": "6-Photo-6.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Platou românesc",
+      "size": "2/3 persoane",
+      "price": "145 LEI",
+      "description": "Ceafă, pulpa pui, mici, cărnati, cartofi",
+      "source": "6-Photo-6.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Platou Coco Jar",
+      "size": "12 persoane",
+      "price": "",
+      "description": "Ceafă, côaste, pastramă, mici, frigarui, cartofi",
+      "source": "6-Photo-6.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Platou Gurmandului",
+      "size": "4/5 persoane",
+      "price": "255 LEI",
+      "description": "Păstrăv de berbec, pui, cărnati, frigarui",
+      "source": "6-Photo-6.jpg",
+      "notes": "Pret OCR clar"
+    }
+  ],
+  "SOSURI": [
+    {
+      "name": "Sos Coco Jar",
+      "size": "50 g",
+      "price": "",
+      "description": "Maioneză, ketchup, coniac",
+      "source": "6-Photo-6.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Sos Jalapeños",
+      "size": "50 g",
+      "price": "",
+      "description": "Usturoi, roșii, ardei copt",
+      "source": "6-Photo-6.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Sos ketchup",
+      "size": "50 g",
+      "price": "",
+      "description": "Roșii, zahăr, oțet",
+      "source": "6-Photo-6.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Sos aioli",
+      "size": "50 g",
+      "price": "",
+      "description": "Maioneză, usturoi",
+      "source": "6-Photo-6.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Sos sweet chilli",
+      "size": "50 g",
+      "price": "",
+      "description": "Chili, oțet, amidon",
+      "source": "6-Photo-6.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Sos de muștar",
+      "size": "50 g",
+      "price": "",
+      "description": "Muștar clasic",
+      "source": "6-Photo-6.jpg",
+      "notes": "OCR clar"
+    }
+  ],
+  "GARNITURI": [
+    {
+      "name": "Smântână",
+      "size": "50 g",
+      "price": "",
+      "description": "Smântână",
+      "source": "6-Photo-6.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Telemea",
+      "size": "50 g",
+      "price": "",
+      "description": "Brânză telemea",
+      "source": "6-Photo-6.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Parmezan",
+      "size": "50 g",
+      "price": "",
+      "description": "Brânză parmezan",
+      "source": "6-Photo-6.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Ardei iute",
+      "size": "50 g",
+      "price": "",
+      "description": "Ardei iute",
+      "source": "6-Photo-6.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Cartofi prăjiți",
+      "size": "200 g",
+      "price": "",
+      "description": "Cartofi, sare",
+      "source": "7-Photo-7.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Cartofi prăjiți cu mozzarella",
+      "size": "200 g",
+      "price": "",
+      "description": "Cartofi, mozzarella",
+      "source": "7-Photo-7.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Piure",
+      "size": "200 g",
+      "price": "",
+      "description": "Cartofi, unt",
+      "source": "7-Photo-7.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Orez cu legume",
+      "size": "200 g",
+      "price": "",
+      "description": "Orez basmati, legume, unt",
+      "source": "7-Photo-7.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Cartofi la cuptor cu rozmarin",
+      "size": "200 g",
+      "price": "",
+      "description": "Cartofi, rozmarin",
+      "source": "7-Photo-7.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Sparanghel",
+      "size": "200 g",
+      "price": "",
+      "description": "Sparanghel",
+      "source": "7-Photo-7.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Cartofi prăjiți cu usturoi și parmezan",
+      "size": "200 g",
+      "price": "",
+      "description": "Cartofi, usturoi, parmezan",
+      "source": "7-Photo-7.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Cartofi prăjiți cu telemea și ierburi aromatice",
+      "size": "200 g",
+      "price": "",
+      "description": "Cartofi, telemea, ierburi",
+      "source": "7-Photo-7.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Orez basmati",
+      "size": "200 g",
+      "price": "",
+      "description": "Orez basmati, unt",
+      "source": "7-Photo-7.jpg",
+      "notes": "OCR clar"
+    }
+  ],
+  "DESERTURI": [
+    {
+      "name": "Tiramisu",
+      "size": "160 g",
+      "price": "25 LEI",
+      "description": "Pistocuți, mascarpone, cacao",
+      "source": "8-Photo-8.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Clătită cu ciocolată",
+      "size": "150 g",
+      "price": "",
+      "description": "Ou, făină, lapte, ciocolată",
+      "source": "8-Photo-8.jpg",
+      "notes": "OCR clar"
+    },
+    {
+      "name": "Clătită cu miere și nuci",
+      "size": "150 g",
+      "price": "27 LEI",
+      "description": "Ou, miere, nuci",
+      "source": "8-Photo-8.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Clătită cu dulceată",
+      "size": "150 g",
+      "price": "21 LEI",
+      "description": "Ou, lapte, dulceată",
+      "source": "8-Photo-8.jpg",
+      "notes": "Pret OCR parțial (2 valori posibile: 21/22)"
+    },
+    {
+      "name": "Papanasi cu ciocolată",
+      "size": "250 g",
+      "price": "30 LEI",
+      "description": "Brânză dulce de vaci, făină, cacao",
+      "source": "8-Photo-8.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Papanasi cu dulceată",
+      "size": "250 g",
+      "price": "30 LEI",
+      "description": "Brânză dulce de vaci, făină, dulceată, smântână",
+      "source": "8-Photo-8.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Papanasi cu nuci și miere",
+      "size": "250 g",
+      "price": "33 LEI",
+      "description": "Brânză dulce de vaci, miere, nuci",
+      "source": "8-Photo-8.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Lava cake",
+      "size": "180 g",
+      "price": "28 LEI",
+      "description": "Ciocolată, înghețată",
+      "source": "8-Photo-8.jpg",
+      "notes": "Pret OCR clar"
+    },
+    {
+      "name": "Profiterol",
+      "size": "1 buc",
+      "price": "32 LEI",
+      "description": "Batoane choux, înghețată, sos ciocolată",
+      "source": "8-Photo-8.jpg",
+      "notes": "Pret OCR clar"
+    }
+  ],
+  "Cafea": [
+    {
+      "name": "Espresso",
+      "size": "30 ml",
+      "price": "10 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": "clar"
+    },
+    {
+      "name": "Espresso dublu",
+      "size": "60 ml",
+      "price": "15 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": "clar"
+    },
+    {
+      "name": "Espresso lung",
+      "size": "60 ml",
+      "price": "10 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": "potrivit OCR"
+    },
+    {
+      "name": "Espresso cu lapte",
+      "size": "120 ml",
+      "price": "12 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": "clar"
+    },
+    {
+      "name": "Cappuccino",
+      "size": "180 ml",
+      "price": "14 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": "clar"
+    },
+    {
+      "name": "Caffe latte",
+      "size": "250 ml",
+      "price": "17 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": "clar"
+    },
+    {
+      "name": "Cappuccino vienez",
+      "size": "200 ml",
+      "price": "15 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": "clar"
+    },
+    {
+      "name": "Freddo coffee",
+      "size": "250 ml",
+      "price": "18 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": "clar"
+    },
+    {
+      "name": "Cafea fără cofeină",
+      "size": "30 ml",
+      "price": "12 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": "clar"
+    },
+    {
+      "name": "Cafea fără cofeină cu lapte",
+      "size": "120 ml",
+      "price": "15 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": "clar"
+    },
+    {
+      "name": "Frappe",
+      "size": "300 ml",
+      "price": "24 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": "clar"
+    },
+    {
+      "name": "Ciocolată caldă",
+      "size": "250 ml",
+      "price": "18 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": "clar"
+    }
+  ],
+  "Limonade & Apa": [
+    {
+      "name": "Limonadă clasică",
+      "size": "500 ml",
+      "price": "21 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Limonadă mentă & ghimbir",
+      "size": "500 ml",
+      "price": "22 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Limonadă fructul pasiunii",
+      "size": "500 ml",
+      "price": "25 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Limonadă căpșuni",
+      "size": "500 ml",
+      "price": "25 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Apa plata Perla",
+      "size": "0,33 L",
+      "price": "11 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Apa plată Perla",
+      "size": "0,75 L",
+      "price": "17 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Apa minerala Perla",
+      "size": "0,33 L",
+      "price": "11 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Apa minerala Perla",
+      "size": "0,75 L",
+      "price": "17 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    }
+  ],
+  "Răcoritoare": [
+    {
+      "name": "Cappy Portocale",
+      "size": "0,25 L",
+      "price": "13 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Cappy Piersică",
+      "size": "0,25 L",
+      "price": "13 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Coca-Cola",
+      "size": "0,25 L",
+      "price": "12 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Coca-Cola Zero",
+      "size": "0,25 L",
+      "price": "12 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Fanta",
+      "size": "0,25 L",
+      "price": "12 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Fuze Tea Piersică",
+      "size": "0,25 L",
+      "price": "13 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Sprite",
+      "size": "0,25 L",
+      "price": "12 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Fuze Tea Lămâie",
+      "size": "0,25 L",
+      "price": "13 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Fuze Tea Lemongrass",
+      "size": "0,25 L",
+      "price": "13 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Schweppes Bitter Lemon",
+      "size": "0,25 L",
+      "price": "12 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Schweppes Mandarin",
+      "size": "0,25 L",
+      "price": "12 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Kinley / Schweppes",
+      "size": "0,25 L",
+      "price": "12 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Figa",
+      "size": "0,25 L",
+      "price": "20 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Burn",
+      "size": "0,25 L",
+      "price": "16 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Ceai cu arome",
+      "size": "250 ml",
+      "price": "15 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    }
+  ],
+  "Bere": [
+    {
+      "name": "Ursus Premium",
+      "size": "0,500 L",
+      "price": "11 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Ursus Premium Draught",
+      "size": "0,400 L",
+      "price": "11 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Ursus Black",
+      "size": "0,330 L",
+      "price": "14 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Ursus IPA",
+      "size": "0,330 L",
+      "price": "14 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Kozel Lager",
+      "size": "0,500 L",
+      "price": "14 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Peroni Nastro Azzurro 0.0",
+      "size": "0,330 L",
+      "price": "14 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Peroni Nastro Azzurro",
+      "size": "0,500 L",
+      "price": "14 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Peroni Stile Capri",
+      "size": "0,330 L",
+      "price": "16 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Azuga Nefiltrată",
+      "size": "0,500 L",
+      "price": "22 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Azuga Nepasteurizată",
+      "size": "0,500 L",
+      "price": "22 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": "OCR: include varianta lemon/grapefruit"
+    }
+  ],
+  "Bere fără alcool": [
+    {
+      "name": "Ursus Retro / Remix",
+      "size": "0,330 L",
+      "price": "14 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Ursus 0.0",
+      "size": "0,500 L",
+      "price": "11 LEI",
+      "description": "",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    }
+  ],
+  "Cocktail cu alcool": [
+    {
+      "name": "Jack Daniel's",
+      "size": "350 ml",
+      "price": "22 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Hugo",
+      "size": "350 ml",
+      "price": "32 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Aperol Spritz",
+      "size": "350 ml",
+      "price": "32 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Negroni",
+      "size": "350 ml",
+      "price": "35 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Pina Colada",
+      "size": "350 ml",
+      "price": "32 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Blue Hawaiian",
+      "size": "350 ml",
+      "price": "32 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Mojito",
+      "size": "350 ml",
+      "price": "32 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Tequila Sunrise",
+      "size": "350 ml",
+      "price": "32 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Campari / Aperol / Cinzano",
+      "size": "350 ml",
+      "price": "18 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": "neclar, din listă băuturi"
+    }
+  ],
+  "Cocktail fără alcool": [
+    {
+      "name": "Hugo",
+      "size": "350 ml",
+      "price": "30 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": "0,0"
+    },
+    {
+      "name": "Gin Tonic",
+      "size": "350 ml",
+      "price": "30 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": "0,0"
+    },
+    {
+      "name": "Green Apple",
+      "size": "350 ml",
+      "price": "30 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Virgin Piña Colada",
+      "size": "350 ml",
+      "price": "30 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Sex on the Beach",
+      "size": "350 ml",
+      "price": "30 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": "0,0"
+    },
+    {
+      "name": "Tea?",
+      "size": "na",
+      "price": "30 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": "poate varianta Rosso / 0.0"
+    }
+  ],
+  "Long drinks": [
+    {
+      "name": "Cuba Libre",
+      "size": "250 ml",
+      "price": "29 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Campari Orange",
+      "size": "250 ml",
+      "price": "29 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Gin Tonic",
+      "size": "250 ml",
+      "price": "29 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": "cu/sau fără alcool"
+    },
+    {
+      "name": "Vodka Juice",
+      "size": "250 ml",
+      "price": "29 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Gin Tonic cu arome",
+      "size": "250 ml",
+      "price": "29 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    }
+  ],
+  "Răcoritoare alcoolice": [
+    {
+      "name": "Limoncello / Jagermeister",
+      "size": "180 ml",
+      "price": "18 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": "din secțiunea vin roșu? OCR neclar"
+    },
+    {
+      "name": "Caii de la Letea Vol.II Rosé",
+      "size": "0,75 L",
+      "price": "90 LEI",
+      "description": "",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    }
   ]
 }

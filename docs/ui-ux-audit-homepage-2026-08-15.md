@@ -1,64 +1,53 @@
-# Audit UI/UX Homepage – Coco Jar (mobile-first + 3 breakpoints)
+# Audit UI/UX Homepage (v2 – live, mobile-first)
 
-**Data audit:** 2026-08-15
-**Scope:** homepage (`/`) + header + CTA-uri primare
-**Modele de validare:**
-- Lighthouse local (desktop + mobile)
-- Validare mobile-first pe 3 breakpoints (360/768/1280)
-- Verificări de utilizabilitate: overflow X, înălțime tap-target, lizibilitate, accesibilitate a header-ului
+**Data:** 2026-08-15  
+**URL:** https://coco-jar-site.vercel.app  
+**Rezultat livrat:** Refresh premium pe hero + validare mobil-first + optimizări de conversie
 
-## Rezultate tehnice rapide
+## Ce am verificat
+- Homepage (`/`) + header + CTA principale
+- 3 breakpoint-uri: **360x812**, **768x1024**, **1280x900**
+- Lighthouse (desktop + mobile)
+- Conversie + micro-fricțiune pentru acțiuni: apel/WhatsApp/meniu-zilei
 
-- **Lighthouse desktop:** Performance 99, Accessibility 100, Best Practices 96, SEO 100
-- **Lighthouse mobile:** Performance 99, Accessibility 100, Best Practices 96, SEO 100
-- **LCP/FCP:** ~2.1–2.2s / 0.8s
-- **CLS/TBT/FID(max-potential):** 0 / 0ms / 20ms
-- **Color-contrast / target-size:** OK (1)
+## Validare live pe 3 breakpoints
 
-## Rezultate mobile-first pe 3 breakpoints
-
-| Breakpoint | Header (px) | Hero top (px) | Nav height (px) | Nav overflow | Observație |
+| Breakpoint | Header (px) | Hero top (px) | Nav (px) | Overflow orizontal | Status |
 |---|---:|---:|---:|---:|---|
-| 360x812 | 185 | 185 | 60 | No | OK pentru mobil compact |
-| 768x1024 | 233 | 233 | 164 | No | OK pe tabletă |
-| 1280x900 | 233 | 233 | 164 | No | OK pe desktop |
+| 360x812 | 185 | 185 | 60 | No | OK |
+| 768x1024 | 233 | 233 | 164 | No | OK |
+| 1280x900 | 233 | 233 | 164 | No | OK |
 
-## Schimbare vizuală făcută pe homepage (hero)
-- CTA-urile principale (Telefon, WhatsApp, Meniu zi) sunt acum mai aerisite și mai consistente pe spațiere.
-- Informațiile critice (program/telefon/locație) sunt prezente direct în zona hero ca „scan first-order”.
-- Am introdus CTA „Meniu zilei” clar și contrastant, cu aliniere simplă mobile.
-- Header-ul a fost rafinat pentru mobile (navigare orizontală scrollată) pentru a păstra homepage-ul ușor de scanat.
+Fișier brut: `docs/ui-ux-audit/live-mobile-first-breakpoints-report.json`
 
-## Listă scurtă îmbunătățiri UI/UX pentru conversie (prag scurt/rapid)
+## Lighthouse (live, production)
 
-1. **Consolidează „primul ecran”**
-   - Prioritizează 3 obiective: un buton de telefon, unul WhatsApp, una întrebare clară „Meniu zilei”.
-   - Păstrează un singur mesaj principal (ex: „Comandă rapidă, fără pași grei”).
+- **Desktop**: Performance **100**, Accessibility **100**, Best Practices **96**, SEO **100**, LCP ~**403ms**, FCP ~**281ms**, CLS **0.000**
+- **Mobile**: Performance **100**, Accessibility **100**, Best Practices **96**, SEO **100**, LCP ~**1540ms**, FCP ~**1540ms**, CLS **0.000**
+- Fișiere brute: `docs/ui-ux-audit/live-lighthouse-desktop.json`, `docs/ui-ux-audit/live-lighthouse-mobile.json`
 
-2. **Navigare mai simplă pe mobil**
-   - Păstrează doar 4–5 linkuri directe în nav primar și mută restul în „Mai multe servicii”.
-   - Păstrează scroll-ul orizontal doar dacă spațiul e limitat.
+## Ce a fost făcut pe homepage (pas premium simplu pentru client)
 
-3. **Reducerea fricțiunii la contact**
-   - În pagina „Contact”, afișează permanent un bloc mini „Sună / WhatsApp / Deschide hartă” (3 acțiuni, un click).
+- Hero clarificat: mesaj central + 3 acțiuni rapide vizibile.
+- Spațiere/ritm îmbunătățit pe desktop + mobile.
+- CTA-urile esențiale sunt vizibile fără scroll.
+- Header navigabil pe mobil prin layout compact, fără creșterea excesivă a înălțimii.
+- Informațiile pragmă importante (telefon, locație, oră meniu zilei) aflate sus, în primul ecran.
 
-4. **Mai multe micro-promisiuni clare**
-   - Adaugă un bloc de „Ce primești azi”: `Meniu actualizat`, `Comandă prin WhatsApp`, `Răspuns în 10 min`.
+## Listă scurtă îmbunătățiri UI/UX orientate conversie
 
-5. **Trust imediat**
-   - În hero/superioară, include 2 badge-uri: „Recenzii active” + „Localizare confirmată” cu iconițe simple.
+1. **Un singur traseu clar de comandă**: Telefon, WhatsApp, Meniu zilei.
+2. **Reducerea „deciziei” pe acțiuni**: butoane mari, etichete scurte, comportament de click predictibil.
+3. **Trust vizual minim, dar clar**: 2 badge-uri scurte în zona hero (ex: „Recenzii active”, „Locație confirmată”).
+4. **Navigare pe mobil fără fricțiune**: doar acțiuni esențiale primar; ce e secundar la scroll.
+5. **Ancoră de încredere**: telefon + WhatsApp mereu într-un bloc ușor de atins.
 
-6. **Reducerea anxietății**
-   - Confirmă ora limită meniu zilei direct pe buton: „Meniul zilei valid pănă la 16:00”.
-
-7. **Aliniere „premium simplu”**
-   - Păstrează culorile brand + spațiu consistent; evită blocuri prea multe de text.
-
-## Livrabile create
-- `app/page.js` – refresh hero premium și spațiere îmbunătățită
-- `app/components/site-header.jsx` – nav mobil compact / scannabil
-- `docs/ui-ux-audit/mobile-first-breakpoints-report.json` – date brute validare 360/768/1280
-- `docs/ui-ux-audit/homepage-*.png` – capturi de control pe cele 3 breakpoints
-
-## Status recomandare
-- Varianta curentă este acum semnificativ mai simplă pentru client (mai puține pași, acțiuni clare, touch targets conforme) și gata pentru livrare.
+## Output livrat
+- `app/page.js` – refresh hero + spacing premium și conversie mai simplă
+- `app/components/site-header.jsx` – layout compact pe mobil
+- `docs/ui-ux-audit/live-mobile-first-breakpoints-report.json`
+- `docs/ui-ux-audit/live-lighthouse-desktop.json`
+- `docs/ui-ux-audit/live-lighthouse-mobile.json`
+- `docs/ui-ux-audit/homepage-live-360x812.png`
+- `docs/ui-ux-audit/homepage-live-768x1024.png`
+- `docs/ui-ux-audit/homepage-live-1280x900.png`

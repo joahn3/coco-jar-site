@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Logo Coco Jar</title>
+  <desc id="desc">Logo minimalist pentru Coco Jar Bistro</desc>
+  <rect width="160" height="160" rx="26" fill="#151515" />
+  <circle cx="80" cy="80" r="56" fill="#f5c16c" />
+  <circle cx="80" cy="80" r="40" fill="#111827" />
+  <text x="80" y="96" text-anchor="middle" font-size="42" fill="#f5c16c" font-family="Arial, Helvetica, sans-serif" font-weight="700">CJ</text>
+</svg>

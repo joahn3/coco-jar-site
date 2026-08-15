@@ -1,0 +1,46 @@
+name: Sync Meniu Zilei din Facebook
+
+on:
+  schedule:
+    - cron: "*/15 6-8 * * *"
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Rulează sincronizarea automată meniu zilei
+        env:
+          DAILY_MENU_TZ: Europe/Bucharest
+          DAILY_MENU_START_TIME: "09:00"
+          DAILY_MENU_END_TIME: "10:00"
+          FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          FACEBOOK_PAGE_URL: ${{ vars.FACEBOOK_PAGE_URL }}
+          FACEBOOK_PUBLIC_PROXY: https://r.jina.ai/http://
+        run: npm run daily-menu:sync
+
+      - name: Commit & push actualizare meniului
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/meniu-zilei.json public/meniu-zilei; then
+            echo "Nu există modificări noi."
+            exit 0
+          fi
+          git add data/meniu-zilei.json public/meniu-zilei
+          git commit -m "feat: sync meniu zilei din Facebook"
+          git push

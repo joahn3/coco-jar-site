@@ -1,0 +1,370 @@
+[
+  {
+    "categorie": "CIORBE & SALATE",
+    "nume": "Salată de icre",
+    "portie": "200 g",
+    "descriere": "Icre, pâine prăjită",
+    "source": "1-Photo-1.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "CIORBE & SALATE",
+    "nume": "Salată zacuscă cu mamaliga, brânză, smântână, ou",
+    "portie": "200 g",
+    "descriere": "Zacuscă și maioneză",
+    "source": "1-Photo-1.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "SALATE",
+    "nume": "Salată de varză",
+    "portie": "150 g",
+    "descriere": "Varză, morcov, ulei, oțet",
+    "source": "5-Photo-5.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "SALATE",
+    "nume": "Salată de ardei copți",
+    "portie": "180 g",
+    "descriere": "Ardei copți",
+    "source": "5-Photo-5.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "SALATE",
+    "nume": "Salată de roșii",
+    "portie": "120 g",
+    "descriere": "Roșii, ulei, sare",
+    "source": "5-Photo-5.jpg",
+    "observatie": "OCR parțial"
+  },
+  {
+    "categorie": "SALATE",
+    "nume": "Salată mixtă",
+    "portie": "150 g",
+    "descriere": "Roșii, castraveți, ardei capia, ceapă roșie",
+    "source": "5-Photo-5.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "PASTE",
+    "nume": "Spaghete Carbonara",
+    "portie": "350 g",
+    "descriere": "Bacon, ou, smântână lichidă, parmezan",
+    "source": "2-Photo-2.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "PASTE",
+    "nume": "Spaghete AOP cu creveți",
+    "portie": "350 g",
+    "descriere": "Creveți, roșii cherry, usturoi, ardei iute",
+    "source": "2-Photo-2.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "PASTE",
+    "nume": "Tagliatelle cu creveți",
+    "portie": "350 g",
+    "descriere": "Creveți, zucchini, roșii cherry, usturoi",
+    "source": "2-Photo-2.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "PASTE",
+    "nume": "Penne Siciliene al Forno",
+    "portie": "380 g",
+    "descriere": "Penne cu piept de pui, sos roșii",
+    "source": "2-Photo-2.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "BURGER / QUESADILLA",
+    "nume": "Burger Pulled Pork",
+    "portie": "350 g",
+    "descriere": "Pulled pork, castraveți murați, salată, sos Coco Jar",
+    "source": "2-Photo-2.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "BURGER / QUESADILLA",
+    "nume": "Burger pui / Quesadilla",
+    "portie": "400 g",
+    "descriere": "Chiflă, mozzarella, cheddar, ceapă, ardei capia, bacon, sos Coco Jar",
+    "source": "2-Photo-2.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "PREPARATE DIN PUI",
+    "nume": "Pui în sos gorgonzola",
+    "portie": "400 g",
+    "descriere": "Pui, sos alb, gorgonzola, mozzarella, cartofi la cuptor",
+    "source": "3-Photo-3.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "PREPARATE DIN PUI",
+    "nume": "Snitel de pui în crustă de semințe",
+    "portie": "250–350 g",
+    "descriere": "Pui, sos de soia, orez, semințe, sos sweet chilli",
+    "source": "3-Photo-3.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "PREPARATE DIN PUI",
+    "nume": "Pui crispy în crustă de semințe",
+    "portie": "250 g",
+    "descriere": "Pui, mix semințe, ou, smântână",
+    "source": "3-Photo-3.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "PREPARATE DIN PUI",
+    "nume": "Aripioare crispy",
+    "portie": "",
+    "descriere": "Aripioare pui crocante",
+    "source": "3-Photo-3.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "PREPARATE DIN VITA",
+    "nume": "T-bone steak Dry Age",
+    "portie": "300–350 g",
+    "descriere": "T-bone de vită, unt, rozmarin, usturoi",
+    "source": "4-Photo-4.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "PREPARATE DE LA GRĂTAR",
+    "nume": "Frigarui de pui",
+    "portie": "250 g",
+    "descriere": "Frigarui pui, condimente",
+    "source": "4-Photo-4.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "PREPARATE DIN PORC",
+    "nume": "Tomahawk de porc",
+    "portie": "500 g",
+    "descriere": "Tomahawk porc, sare, piper",
+    "source": "3-Photo-3.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "PREPARATE DIN PORC",
+    "nume": "Tigaie picantă de porc",
+    "portie": "350 g",
+    "descriere": "Ceafă de porc, legume, sos roșu",
+    "source": "3-Photo-3.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "PREPARATE DIN PORC",
+    "nume": "Pomană de porc",
+    "portie": "450 g",
+    "descriere": "Porc, usturoi, piper",
+    "source": "3-Photo-3.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "PREPARATE DIN PORC",
+    "nume": "Coaste de porc",
+    "portie": "650 g",
+    "descriere": "Coaste porc cu sos barbecue",
+    "source": "3-Photo-3.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "FRUCTE DE MARE",
+    "nume": "Midi in sos de vin",
+    "portie": "400 g",
+    "descriere": "Midii, ardei iute, usturoi, pâine prăjită",
+    "source": "5-Photo-5.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "FRUCTE DE MARE",
+    "nume": "Panko seafood",
+    "portie": "250 g",
+    "descriere": "Creveți/alcool? creveți crispy + inele de calamari",
+    "source": "5-Photo-5.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "PLATOURI",
+    "nume": "Platou mix grill",
+    "portie": "1 persoană",
+    "descriere": "Ceafă porc, pulpă pui, mici, cartofi, muștar",
+    "source": "6-Photo-6.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "PLATOURI",
+    "nume": "Platou Coco Jar",
+    "portie": "12 persoane",
+    "descriere": "Ceafă, côaste, pastramă, mici, frigarui, cartofi",
+    "source": "6-Photo-6.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "SOSURI",
+    "nume": "Sos Coco Jar",
+    "portie": "50 g",
+    "descriere": "Maioneză, ketchup, coniac",
+    "source": "6-Photo-6.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "SOSURI",
+    "nume": "Sos Jalapeños",
+    "portie": "50 g",
+    "descriere": "Usturoi, roșii, ardei copt",
+    "source": "6-Photo-6.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "SOSURI",
+    "nume": "Sos ketchup",
+    "portie": "50 g",
+    "descriere": "Roșii, zahăr, oțet",
+    "source": "6-Photo-6.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "SOSURI",
+    "nume": "Sos aioli",
+    "portie": "50 g",
+    "descriere": "Maioneză, usturoi",
+    "source": "6-Photo-6.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "SOSURI",
+    "nume": "Sos sweet chilli",
+    "portie": "50 g",
+    "descriere": "Chili, oțet, amidon",
+    "source": "6-Photo-6.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "SOSURI",
+    "nume": "Sos de muștar",
+    "portie": "50 g",
+    "descriere": "Muștar clasic",
+    "source": "6-Photo-6.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "GARNITURI",
+    "nume": "Smântână",
+    "portie": "50 g",
+    "descriere": "Smântână",
+    "source": "6-Photo-6.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "GARNITURI",
+    "nume": "Telemea",
+    "portie": "50 g",
+    "descriere": "Brânză telemea",
+    "source": "6-Photo-6.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "GARNITURI",
+    "nume": "Parmezan",
+    "portie": "50 g",
+    "descriere": "Brânză parmezan",
+    "source": "6-Photo-6.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "GARNITURI",
+    "nume": "Ardei iute",
+    "portie": "50 g",
+    "descriere": "Ardei iute",
+    "source": "6-Photo-6.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "GARNITURI",
+    "nume": "Cartofi prăjiți",
+    "portie": "200 g",
+    "descriere": "Cartofi, sare",
+    "source": "7-Photo-7.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "GARNITURI",
+    "nume": "Cartofi prăjiți cu mozzarella",
+    "portie": "200 g",
+    "descriere": "Cartofi, mozzarella",
+    "source": "7-Photo-7.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "GARNITURI",
+    "nume": "Piure",
+    "portie": "200 g",
+    "descriere": "Cartofi, unt",
+    "source": "7-Photo-7.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "GARNITURI",
+    "nume": "Orez cu legume",
+    "portie": "200 g",
+    "descriere": "Orez basmati, legume, unt",
+    "source": "7-Photo-7.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "GARNITURI",
+    "nume": "Cartofi la cuptor cu rozmarin",
+    "portie": "200 g",
+    "descriere": "Cartofi, rozmarin",
+    "source": "7-Photo-7.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "GARNITURI",
+    "nume": "Sparanghel",
+    "portie": "200 g",
+    "descriere": "Sparanghel",
+    "source": "7-Photo-7.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "GARNITURI",
+    "nume": "Cartofi prăjiți cu usturoi și parmezan",
+    "portie": "200 g",
+    "descriere": "Cartofi, usturoi, parmezan",
+    "source": "7-Photo-7.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "GARNITURI",
+    "nume": "Cartofi prăjiți cu telemea și ierburi aromatice",
+    "portie": "200 g",
+    "descriere": "Cartofi, telemea, ierburi",
+    "source": "7-Photo-7.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "GARNITURI",
+    "nume": "Orez basmati",
+    "portie": "200 g",
+    "descriere": "Orez basmati, unt",
+    "source": "7-Photo-7.jpg",
+    "observatie": "OCR clar"
+  },
+  {
+    "categorie": "DESERTURI",
+    "nume": "Clătită cu ciocolată",
+    "portie": "150 g",
+    "descriere": "Ou, făină, lapte, ciocolată",
+    "source": "8-Photo-8.jpg",
+    "observatie": "OCR clar"
+  }
+]
