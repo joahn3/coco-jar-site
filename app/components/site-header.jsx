@@ -60,6 +60,55 @@ export default function SiteHeader({ config }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const body = document.body;
+    const html = document.documentElement;
+    const prevScrollY = window.scrollY;
+
+    if (isMenuOpen) {
+      body.dataset.cocoJarMenuScrollY = String(prevScrollY);
+      body.style.position = "fixed";
+      body.style.top = `-${prevScrollY}px`;
+      body.style.left = "0";
+      body.style.right = "0";
+      body.style.width = "100%";
+      body.style.overflow = "hidden";
+      body.style.touchAction = "none";
+      body.style.overscrollBehavior = "none";
+      html.style.overflow = "hidden";
+    } else {
+      const lastScrollY = Number(body.dataset.cocoJarMenuScrollY || "0");
+      body.style.overflow = "";
+      body.style.touchAction = "";
+      body.style.overscrollBehavior = "";
+      body.style.position = "";
+      body.style.top = "";
+      body.style.left = "";
+      body.style.right = "";
+      body.style.width = "";
+      html.style.overflow = "";
+      window.scrollTo(0, lastScrollY);
+      delete body.dataset.cocoJarMenuScrollY;
+    }
+
+    return () => {
+      body.style.overflow = "";
+      body.style.touchAction = "";
+      body.style.overscrollBehavior = "";
+      body.style.position = "";
+      body.style.top = "";
+      body.style.left = "";
+      body.style.right = "";
+      body.style.width = "";
+      html.style.overflow = "";
+      if (body.dataset.cocoJarMenuScrollY) {
+        const lastScrollY = Number(body.dataset.cocoJarMenuScrollY || "0");
+        delete body.dataset.cocoJarMenuScrollY;
+        window.scrollTo(0, lastScrollY);
+      }
+    };
+  }, [isMenuOpen]);
+
   return (
     <>
       <header className="relative z-30 border-b border-line glass-shell glass-shell--header">
