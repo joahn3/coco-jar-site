@@ -42,9 +42,9 @@ export default async function HomePage() {
         : "Actualizare programată zilnic, după ora 16:00",
     },
     {
-      label: "Atmosferă documentată",
-      value: `${galleryCount} cadre`,
-      description: "galerie separată pe Interior / Locație / Preparat / Grătar",
+      label: "Atmosferă din restaurant",
+      value: `${galleryCount} imagini`,
+      description: "Colecție separată pe interior, locație, preparate și grătar.",
     },
   ];
 
@@ -254,7 +254,7 @@ export default async function HomePage() {
       </Container>
 
       <Container as="section">
-        <Section title="Proof stack – criterii de încredere" className="pb-4 pt-8">
+        <Section title="Indicatori de încredere" className="pb-4 pt-8">
           <div className="grid gap-3 sm:grid-cols-3">
             {proofStack.map((item) => (
               <Card key={item.label} className="space-y-2">
@@ -269,8 +269,8 @@ export default async function HomePage() {
 
       <Container as="section">
         <Section
-          title="Claritate, consecvență, experiență premium"
-          subtitle="Avem reguli clare de comunicare, prețuri și livrare a informației ca să alegi repede și fără ambiguitate."
+          title="Claritate, coerență, experiență premium"
+          subtitle="Avem reguli clare de comunicare, oferte, și disponibilitate pentru a alege repede, fără dubii."
           className="pb-6 pt-8"
         >
           <div className="grid gap-4 md:grid-cols-3">

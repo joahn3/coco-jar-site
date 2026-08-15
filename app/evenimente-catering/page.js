@@ -14,19 +14,19 @@ export const metadata = {
 
 export default async function EventPage() {
   const config = await getSiteConfig();
-  const eventProof = [
-    {
-      title: "Răspuns prioritar",
-      text: "Confirmare internă în maxim 24 de ore pentru evenimente private.",
+const eventProof = [
+  {
+    title: "Răspuns prioritar",
+    text: "Confirmare din partea echipei în maxim 24 de ore pentru evenimente private.",
     },
     {
       title: "Cadru premium",
       text: "Cooperare pe număr invitați, interval de servire, meniu preferat și buget orientativ.",
     },
-    {
-      title: "Transparență pachet",
-      text: "Include coordonare de bază și organizare logistică; excludem explicit ce nu intră automat.",
-    },
+  {
+    title: "Transparență pachet",
+    text: "Include coordonare de bază, organizare logistică și suport punctual; ce nu intră este menționat clar.",
+  },
   ];
 
     return (
@@ -96,7 +96,7 @@ export default async function EventPage() {
           <Card>
             <h2 className="text-title-lg">Ce include pachetul</h2>
             <p className="text-sm text-ink-muted">
-              Meniu recomandat, coordonare logistică internă, propunere de program, suport de rezervare pe interval și personal de servire.
+              Meniu recomandat, coordonare logistică, propunere de program, suport de rezervare pe interval și personal de servire.
             </p>
             <p className="text-sm text-ink-muted mt-2">
               Ce nu include: băuturi alcoolice, decorații tematice și transport extern, acestea se discută explicit la ofertă.
