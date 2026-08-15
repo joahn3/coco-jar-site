@@ -60,7 +60,7 @@ export default async function RootLayout({ children }) {
             <Button
               href={phoneHref(config.phone)}
               data-analytics="phone_click|conversion|telefon_floating"
-              className="floating-cta-link floating-cta-link--call w-full text-sm sm:text-base"
+              className="w-full text-sm sm:text-base"
             >
               Sună
             </Button>
@@ -68,7 +68,7 @@ export default async function RootLayout({ children }) {
               variant="whatsapp"
               href={whatsappHref(config.whatsapp, config.phone)}
               data-analytics="whatsapp_click|conversion|whatsapp_floating"
-              className="floating-cta-link floating-cta-link--wa w-full text-sm sm:text-base"
+              className="w-full text-sm sm:text-base"
             >
               WhatsApp
             </Button>

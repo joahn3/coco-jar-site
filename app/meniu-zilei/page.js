@@ -1,5 +1,6 @@
 import {
   getCurrentDayKey,
+  getDayKeyByDate,
   getDayLabel,
   getDailyMenu,
   getSiteConfig,
@@ -9,17 +10,53 @@ import Image from "next/image";
 import Container from "../components/ui/container";
 import Card from "../components/ui/card";
 
-export default async function DailyMenuPage() {
-  const dayKey = getCurrentDayKey();
+function formatDateInput(dateInput) {
+  if (!dateInput || typeof dateInput !== "string") {
+    return "";
+  }
+
+  const match = dateInput.trim().match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!match) {
+    return "";
+  }
+
+  const date = new Date(match[1], Number(match[2]) - 1, Number(match[3]));
+  if (Number.isNaN(date.getTime())) {
+    return "";
+  }
+
+  return new Intl.DateTimeFormat("ro-RO", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  }).format(date);
+}
+
+export default async function DailyMenuPage({ searchParams }) {
+  const selectedDate = searchParams?.date;
+  const requestedDayKey = selectedDate ? getDayKeyByDate(selectedDate) : null;
+  const dayKey = requestedDayKey || getCurrentDayKey();
   const dailyMenu = await getDailyMenu();
   const config = await getSiteConfig();
   const dayItems = Array.isArray(dailyMenu[dayKey]) ? dailyMenu[dayKey] : [];
   const isMenuActive = isMenuDayActive(config.menuValidUntilHour);
+  const requestedLabel = selectedDate ? formatDateInput(selectedDate) : "";
+  const pageTitle = selectedDate
+    ? `Meniul zilei — ${getDayLabel(dayKey)} (${requestedLabel || selectedDate})`
+    : `Meniul zilei — ${getDayLabel(dayKey)}`;
 
   return (
     <main className="pb-28">
       <Container as="section" className="py-6">
-        <h1 className="text-display-md">Meniul zilei — {getDayLabel(dayKey)}</h1>
+        <h1 className="text-display-md">{pageTitle}</h1>
+        {selectedDate ? (
+          <p className="mt-2 text-sm text-ink-muted">
+            Ai accesat vizualizarea pe data <span className="font-semibold">{requestedLabel || selectedDate}</span>.{" "}
+            <a href="/meniu-zilei" className="underline underline-offset-3">
+              Revino la ziua curentă
+            </a>
+          </p>
+        ) : null}
         {!isMenuActive && (
           <p className="jar-badge jar-badge--subtle mt-2 normal-case">
             <span className="mr-2 inline-block size-2 rounded-full bg-brand-500" />

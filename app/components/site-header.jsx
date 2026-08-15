@@ -28,7 +28,7 @@ function MenuIcon({ open }) {
     <span className="relative block h-5 w-6" aria-hidden>
       <span
         className={`absolute left-0 right-0 top-0 h-0.5 rounded-full transition-all duration-300 ${
-          open ? "translate-y-2 rotate-45 bg-[#6f3f17]" : "bg-ink-title"
+          open ? "translate-y-2 rotate-45 bg-brand-500" : "bg-ink-title"
         }`}
       />
       <span
@@ -38,7 +38,7 @@ function MenuIcon({ open }) {
       />
       <span
         className={`absolute left-0 right-0 top-4 h-0.5 rounded-full transition-all duration-300 ${
-          open ? "translate-y-[-10px] -rotate-45 bg-[#6f3f17]" : "bg-ink-title"
+          open ? "translate-y-[-10px] -rotate-45 bg-brand-500" : "bg-ink-title"
         }`}
       />
     </span>
@@ -110,8 +110,8 @@ export default function SiteHeader({ config }) {
               type="button"
               className={`group inline-flex h-11 w-11 items-center justify-center rounded-full border text-ink-title shadow-[0_14px_30px_rgba(82,42,16,.18)] transition-all duration-200 lg:hidden ${
                 isHeaderScrolled
-                  ? "border-[#cf8b4f]/55 bg-surface-raised/85 backdrop-blur-xl shadow-[0_16px_30px_rgba(0,0,0,.28)]"
-                  : "border-[#6f3f17]/30 bg-gradient-to-b from-amber-50/70 to-amber-100/35"
+                  ? "border-brand-400/55 bg-surface-raised/85 backdrop-blur-xl shadow-[0_16px_30px_rgba(0,0,0,.28)]"
+                  : "border-brand-500/30 bg-gradient-to-b from-brand-50/70 to-brand-100/35"
               }`}
               aria-label={isMenuOpen ? "Închide meniul" : "Deschide meniul"}
               aria-expanded={isMenuOpen}
@@ -156,10 +156,10 @@ export default function SiteHeader({ config }) {
         }`}
       >
         <div className="relative mx-auto w-full max-w-[calc(100%-1.2rem)] overflow-hidden rounded-[1.45rem] px-3 pb-4 pt-3 glass-shell glass-shell--mobile-drawer">
-          <span className="pointer-events-none absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-r from-transparent via-[#cf8b4f]/75 to-transparent" />
+          <span className="pointer-events-none absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-r from-transparent via-brand-400/75 to-transparent" />
           <span className="pointer-events-none absolute inset-0 opacity-45" aria-hidden>
-            <span className="absolute left-[-20%] top-[-35%] h-[320px] w-[320px] rounded-full bg-amber-200/20 blur-[48px]" />
-            <span className="absolute right-[-14%] bottom-[-25%] h-[240px] w-[240px] rounded-full bg-[#6f3f17]/10 blur-[42px]" />
+            <span className="absolute left-[-20%] top-[-35%] h-[320px] w-[320px] rounded-full bg-brand-100/22 blur-[48px]" />
+            <span className="absolute right-[-14%] bottom-[-25%] h-[240px] w-[240px] rounded-full bg-brand-500/10 blur-[42px]" />
             <span className="absolute inset-0 opacity-15 bg-[linear-gradient(140deg,rgba(255,255,255,0.4),rgba(255,248,240,0),rgba(0,0,0,0.1))]" />
           </span>
           <p className="jar-badge mb-3 w-full justify-center">Restaurant autentic de pui la jar</p>
