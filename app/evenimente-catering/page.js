@@ -13,21 +13,22 @@ export const metadata = {
 };
 
 export default async function EventPage() {
-  const config = await getSiteConfig();
-const eventProof = [
+    const config = await getSiteConfig();
+	const phoneDisplay = config.phone || "la recepție";
+	const eventProof = [
+	  {
+	    title: "Răspuns prioritar",
+	    text: "Confirmarea preliminară vine de regulă în maxim 24 de ore.",
+	  },
   {
-    title: "Răspuns prioritar",
-    text: "Confirmare din partea echipei în maxim 24 de ore pentru evenimente private.",
-    },
-    {
-      title: "Cadru premium",
-      text: "Cooperare pe număr invitați, interval de servire, meniu preferat și buget orientativ.",
-    },
-  {
-    title: "Transparență pachet",
-    text: "Include coordonare de bază, organizare logistică și suport punctual; ce nu intră este menționat clar.",
-  },
-  ];
+    title: "Cadru premium",
+	    text: "Cooperare pe număr invitați, interval de servire, meniu preferat și buget orientativ.",
+	  },
+	  {
+	    title: "Transparență pachet",
+	    text: "Include coordonare de bază, organizare logistică și suport punctual; orice excludere este menționată explicit.",
+	  },
+	  ];
 
     return (
       <main className="pb-28">
@@ -39,14 +40,14 @@ const eventProof = [
             ]}
           />
         <div>
-          <h1 className="text-display-md">Evenimente private</h1>
-          <p className="text-body-lg text-ink">
-            Momentele speciale merită să fie sărbătorite cu cei dragi, în jurul unei mese bune.
-          </p>
+	              <h1 className="text-display-md">Evenimente private</h1>
+	            <p className="text-body-lg text-ink">
+	            Momentele speciale merită să fie sărbătorite cu cei dragi, în jurul unei mese bune.
+	            </p>
           <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:max-w-2xl">
-            <Button as="next-link" href="/contact" variant="primary" className="w-full sm:w-auto">
-              Cere o ofertă personalizată
-            </Button>
+                <Button as="next-link" href="/contact" variant="primary" className="w-full sm:w-auto">
+              Solicită ofertă personalizată
+              </Button>
             <Button as="next-link" href="/meniu-zilei" variant="secondary" className="w-full sm:w-auto">
               Vezi opțiunile zilei
             </Button>
@@ -65,8 +66,8 @@ const eventProof = [
           <div className="jar-link-list mt-4">
             <p className="jar-badge jar-badge--subtle">Calitatea întâlnirii tale contează în fiecare detaliu</p>
             <p className="text-sm text-ink-muted">
-              Confirmăm disponibilitatea evenimentelor preferabil cu 48 de ore înainte; pentru seriile aglomerate,
-              recomandăm o aprobare prealabilă.
+              Confirmăm disponibilitatea recomandat cu minim 48 de ore înainte. Pentru seriile aglomerate,
+              recomandăm confirmare prealabilă.
             </p>
           </div>
           <p className="mt-4 text-body text-ink-muted">
@@ -75,7 +76,7 @@ const eventProof = [
           <div className="jar-link-list">
             <p>
               <a className="jar-link touch-target" href={phoneHref(config.phone)}>
-                Sună la {config.phone || "în curs de actualizare"}
+                Sună la {phoneDisplay}
               </a>
             </p>
           </div>

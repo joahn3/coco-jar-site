@@ -1,572 +1,1327 @@
 {
+  "_meta": {
+    "version": "2026-08-15",
+    "source": "data/meniu-coco-jar-fotografii-2026-08-15.xlsx",
+    "generator": "xlsx-parser"
+  },
   "GUSTĂRI": [
     {
       "name": "Platou Bruschete",
-      "desc": "Baghete cu roșii, usturoi, busuioc, pâine prăjită",
       "size": "200 g",
-      "price": "25"
+      "price": "25 LEI",
+      "description": "Porție de deschidere cu răsfăț de textură: pâine ușor rumenită, roșii coapte, usturoi și busuioc, echilibrate într-un început curat și elegant.",
+      "source": "1-Photo-1.jpg",
+      "notes": ""
     },
     {
       "name": "Platou Mix Aperitiv",
-      "desc": "Meniu de aperitive",
       "size": "550 g",
-      "price": "72"
+      "price": "72 LEI",
+      "description": "Selecție atentă de început de seară, cu mezeluri, brânzeturi, măsline și legume murate, gândită de la bun început pentru o împărțire elegantă, fără excese.",
+      "source": "1-Photo-1.jpg",
+      "notes": ""
     },
     {
       "name": "Mix Gustare Bere / Carneciorii Bere",
-      "desc": "Cârnaț de bere, stick mozzarella, măsline, inele de ceapă, jalapeños",
       "size": "150 / 350 g",
-      "price": "32"
+      "price": "32 LEI",
+      "description": "Combinație robustă de bacon, mozzarella, măsline și aromă ușor iute, gândită pentru un start generos, cu accente de chef bine controlate.",
+      "source": "1-Photo-1.jpg",
+      "notes": ""
     },
     {
       "name": "Barabule",
-      "desc": "Cartofi, bacon, ou, telemea, ceapă verde",
       "size": "200 g",
-      "price": "36"
+      "price": "36 LEI",
+      "description": "Porție texturată din cartof rumenit, bacon aurit, telemea și ceapă verde, ideală pentru deschidere direct în tonalitate de grătar.",
+      "source": "1-Photo-1.jpg",
+      "notes": ""
     },
     {
       "name": "Bread Garlic Gratinat",
-      "desc": "Cartofi prăjiți, bacon, ou, telemea, usturoi, cheddar",
       "size": "350 g",
-      "price": "18"
+      "price": "18 LEI",
+      "description": "Pâine prăjită acoperită cu mix de usturoi, cartofi aurii, ou, telemea și cheddar; un gust discret, dar memorabil.",
+      "source": "1-Photo-1.jpg",
+      "notes": ""
     }
   ],
   "CIORBE & SALATE": [
     {
       "name": "Salată de vinete",
-      "desc": "Vinete, ceapă, ulei, sare, piper, pâine prăjită",
       "size": "200 g",
-      "price": "25"
+      "price": "25 LEI",
+      "description": "Vinete coapte cu textură catifelată, echilibrate cu ceapă, pâine prăjită crocantă și ulei de calitate, pentru un accent rustic sofisticat.",
+      "source": "1-Photo-1.jpg",
+      "notes": ""
     },
     {
       "name": "Salată de icre",
-      "desc": "Icre, pâine prăjită",
       "size": "200 g",
-      "price": ""
+      "price": "",
+      "description": "Icre fine într-o bază rafinată, așezate peste pâine crocantă cu echilibru de sare, ideală ca introducere curată înainte de preparate.",
+      "source": "1-Photo-1.jpg",
+      "notes": ""
     },
     {
       "name": "Salată zacuscă cu mamaliga, brânză, smântână, ou",
-      "desc": "Zacuscă și maioneză",
       "size": "200 g",
-      "price": ""
+      "price": "",
+      "description": "Compoziție de casă pe bază de zacuscă și maioneză, cu mamaliga aurie, brânză și textură de atelier.",
+      "source": "1-Photo-1.jpg",
+      "notes": ""
     },
     {
       "name": "Salată Caesar",
-      "desc": "Salată iceberg, piept de pui crocant, sos Caesar, crutoane, parmezan",
       "size": "300 g",
-      "price": "39"
+      "price": "39 LEI",
+      "description": "Clasică reinterpretată: salată fresh, piept de pui crocant, parmezan matur și crutoane aromate, într-un echilibru Caesar foarte bine controlat.",
+      "source": "1-Photo-1.jpg",
+      "notes": ""
     }
   ],
   "CIORBE": [
     {
       "name": "Ciorbă de burtă",
-      "desc": "Burtă vită, ou, usturoi, tărâțe telina? etc",
       "size": "300 ml",
-      "price": "24"
+      "price": "24 LEI",
+      "description": "Supă de casă cu corp dens, bogată în aromă și persistență, construită pe burtă de vită, tărâțe parfumate și telină.",
+      "source": "1-Photo-1.jpg",
+      "notes": ""
     },
     {
       "name": "Supă de pui cu tăiței de casă",
-      "desc": "Carne de pui, morcov, ceapă, ardei, pătrunjel, pastarnac",
       "size": "300 ml + 80 g",
-      "price": "22"
+      "price": "22 LEI",
+      "description": "Supă de pui onctuoasă, cu legume rădăcinoase și tăiței de casă, gătită lent pentru echilibru între căldură și prospețime.",
+      "source": "1-Photo-1.jpg",
+      "notes": ""
     },
     {
       "name": "Supă de coadă de viță",
-      "desc": "Vită, morcov, ceapă, cartof, telină, pătrunjel",
       "size": "300 ml + 100 g",
-      "price": "24"
+      "price": "24 LEI",
+      "description": "Coadă de viță maturată cu legume de sezon, redusă lent pentru o supă amplă, catifelată, cu parfumul blând al sosurilor de fond.",
+      "source": "1-Photo-1.jpg",
+      "notes": ""
     }
   ],
   "SALATE": [
     {
       "name": "Salată verde cu lămâie",
-      "desc": "Salată verde",
       "size": "120 g",
-      "price": "18"
+      "price": "18 LEI",
+      "description": "Salată proaspătă, crocantă, cu note limpezi de lămâie, menită să golească palatul fără să piardă caracter.",
+      "source": "1-Photo-1.jpg",
+      "notes": ""
     },
     {
       "name": "Salată grecească",
-      "desc": "Roșii, castraveti, ceapă roșie, ardei capia, brânză feta",
       "size": "300 g",
-      "price": "37"
+      "price": "37 LEI",
+      "description": "Roșii suculente, castravete, ceapă roșie, ardei capia și feta într-o notă mediteraneană echilibrată.",
+      "source": "1-Photo-1.jpg",
+      "notes": ""
     },
     {
       "name": "Salată de varză",
-      "desc": "Varză, morcov, ulei, oțet",
       "size": "150 g",
-      "price": ""
+      "price": "",
+      "description": "Varză și morcov răcoros, tăiate fin, cu aciditate discretă și textură crocantă pentru o deschidere limpede.",
+      "source": "5-Photo-5.jpg",
+      "notes": ""
     },
     {
       "name": "Salată de ardei copți",
-      "desc": "Ardei copți",
       "size": "180 g",
-      "price": ""
+      "price": "",
+      "description": "Ardei copți cu note caramelizate și gust rotund, păstrând prospețimea ce completează mesele grele.",
+      "source": "5-Photo-5.jpg",
+      "notes": ""
     },
     {
       "name": "Salată de roșii",
-      "desc": "Roșii, ulei, sare",
       "size": "120 g",
-      "price": ""
+      "price": "",
+      "description": "Roșii alese pentru volum, ulei fin și sare echilibrată; o variantă simplă, dar foarte bine calibrată.",
+      "source": "5-Photo-5.jpg",
+      "notes": ""
     },
     {
       "name": "Salată mixtă",
-      "desc": "Roșii, castraveți, ardei capia, ceapă roșie",
       "size": "150 g",
-      "price": ""
+      "price": "",
+      "description": "Culoare și textură într-o compoziție clasică: roșii, castraveți, ardei capia, ceapă roșie, fără compromis la prospețime.",
+      "source": "5-Photo-5.jpg",
+      "notes": ""
     },
     {
       "name": "Salată murături mix",
-      "desc": "Gogosari, castraveti murați, gogonele",
       "size": "150 g",
-      "price": "14"
+      "price": "14 LEI",
+      "description": "Salată de aperitiv crocantă, cu gogosari, castraveți murați și gogonele acidulate, pentru o deschidere fără greutate.",
+      "source": "5-Photo-5.jpg",
+      "notes": ""
     },
     {
       "name": "Salată coleslaw",
-      "desc": "Varză, morcov, maioneză",
       "size": "150 g",
-      "price": "15"
+      "price": "15 LEI",
+      "description": "Coleslaw cu textura atentă a varzei, morcov fin și maioneză, menită să răcorească palatul cu consistență premium.",
+      "source": "5-Photo-5.jpg",
+      "notes": ""
     },
     {
       "name": "Salată sfeclă cu hrean",
-      "desc": "Sfeclă, hrean (conservat cu oțet)",
       "size": "150 g",
-      "price": "14"
+      "price": "14 LEI",
+      "description": "Sfeclă crocantă, hrean parfumat și o notă acrișoară echilibrată, gândită ca contrapondere perfectă după preparatele mai grele.",
+      "source": "5-Photo-5.jpg",
+      "notes": ""
     }
   ],
   "PASTE": [
     {
       "name": "Spaghete Carbonara",
-      "desc": "Bacon, ou, smântână lichidă, parmezan",
       "size": "350 g",
-      "price": ""
+      "price": "",
+      "description": "Spaghete al dente, legate într-o textură catifelată de sos carbonara: ou, bacon, smântână și parmezan fără compromis de rafinament.",
+      "source": "2-Photo-2.jpg",
+      "notes": ""
     },
     {
       "name": "Spaghete AOP",
-      "desc": "Ragu de vită",
       "size": "350 g",
-      "price": "32"
+      "price": "32 LEI",
+      "description": "Paste artizanale cu ragu de vită, gătite la foc lent pentru un sos dens, lucios și persistent.",
+      "source": "2-Photo-2.jpg",
+      "notes": ""
     },
     {
       "name": "Spaghete AOP cu creveți",
-      "desc": "Creveți, roșii cherry, usturoi, ardei iute",
       "size": "350 g",
-      "price": ""
+      "price": "",
+      "description": "Spaghete premium cu creveți, roșii cherry, usturoi și o ușoară căldură de ardei iute, atent balansată.",
+      "source": "2-Photo-2.jpg",
+      "notes": ""
     },
     {
       "name": "Tagliatelle cu creveți",
-      "desc": "Creveți, zucchini, roșii cherry, usturoi",
       "size": "350 g",
-      "price": ""
+      "price": "",
+      "description": "Tagliatelle cu creveți, zucchini și roșii cherry, alcătuite într-un sos aromat de usturoi, pentru textură de restaurant.",
+      "source": "2-Photo-2.jpg",
+      "notes": ""
     },
     {
       "name": "Penne Siciliene al Forno",
-      "desc": "Penne cu piept de pui, sos roșii",
       "size": "380 g",
-      "price": ""
+      "price": "",
+      "description": "Penne coapte în savoare mediteraneană, cu piept de pui suculent și sos roșu intens, cu personalitate la fiecare îmbucătură.",
+      "source": "2-Photo-2.jpg",
+      "notes": ""
     },
     {
       "name": "Penne Quattro Formaggi",
-      "desc": "Gorgonzola, mozzarella, parmezan, cheddar",
       "size": "350 g",
-      "price": "52"
+      "price": "52 LEI",
+      "description": "Folosim patru brânzeturi într-un echilibru controlat: gorgonzola, mozzarella, parmezan, cheddar, pentru un final elegant al pastei.",
+      "source": "2-Photo-2.jpg",
+      "notes": ""
     }
   ],
   "BURGER / QUESADILLA": [
     {
       "name": "Burger Coco Jar",
-      "desc": "Chiflă, carne vită, bacon, ou, salată, castraveți murați, cartofi prăjiți",
       "size": "350 g",
-      "price": "49"
+      "price": "49 LEI",
+      "description": "Burger-quesadilla cu carne de vită bogată, bacon crocant, castraveți murați și salată proaspătă, gândit pentru o experiență consistentă.",
+      "source": "2-Photo-2.jpg",
+      "notes": ""
     },
     {
       "name": "Burger Pulled Pork",
-      "desc": "Pulled pork, castraveți murați, salată, sos Coco Jar",
       "size": "350 g",
-      "price": ""
+      "price": "",
+      "description": "Porția de personalitate pentru seară, cu pulled pork moale, legume murate atent texturate și sosul casei Coco Jar.",
+      "source": "2-Photo-2.jpg",
+      "notes": ""
     },
     {
       "name": "Burger pui / Quesadilla",
-      "desc": "Chiflă, mozzarella, cheddar, ceapă, ardei capia, bacon, sos Coco Jar",
       "size": "400 g",
-      "price": ""
+      "price": "",
+      "description": "Cozioasă variantă cu pui, mozzarella, cheddar, ceapă și ardei capia, unde fiecare strat are un rol clar în final.",
+      "source": "2-Photo-2.jpg",
+      "notes": ""
     }
   ],
   "PREPARATE DIN PUI": [
     {
       "name": "Pui în sos gorgonzola",
-      "desc": "Pui, sos alb, gorgonzola, mozzarella, cartofi la cuptor",
       "size": "400 g",
-      "price": ""
+      "price": "",
+      "description": "Pui fraged, îmbrăcat într-un sos de gorgonzola elegant, cu mozzarella topită și cartofi rumeniți ca acompaniament ferm.",
+      "source": "3-Photo-3.jpg",
+      "notes": ""
     },
     {
       "name": "Thai Chicken",
-      "desc": "Pui cu condimente asiatice",
       "size": "450 g",
-      "price": "47"
+      "price": "47 LEI",
+      "description": "Pui fraged cu accente asiatice, notă de soia, condimente fine și profunzime ușor picantă.",
+      "source": "3-Photo-3.jpg",
+      "notes": ""
     },
     {
       "name": "Snitel de pui în crustă de semințe",
-      "desc": "Pui, sos de soia, orez, semințe, sos sweet chilli",
       "size": "250–350 g",
-      "price": ""
+      "price": "",
+      "description": "Snitel de pui cu crustă de semințe crocantă, menținându-și suculența internă printr-o tehnică clasică, bine executată.",
+      "source": "3-Photo-3.jpg",
+      "notes": ""
     },
     {
       "name": "Tigaie picantă de pui",
-      "desc": "Pui, ceapă roșie, ardei capia, ciuperci, sos roșii",
       "size": "350 g",
-      "price": "41"
+      "price": "41 LEI",
+      "description": "Pui la tigaie cu ciuperci, ardei și ceapă roșie, în sos de roșii cu căldură echilibrată, pentru o experiență vie.",
+      "source": "3-Photo-3.jpg",
+      "notes": ""
     },
     {
       "name": "Pui crispy în crustă de semințe",
-      "desc": "Pui, mix semințe, ou, smântână",
       "size": "250 g",
-      "price": ""
+      "price": "",
+      "description": "Pui fript cu crustă crocantă de semințe, finisat cu smântână și note discrete de usturoi.",
+      "source": "3-Photo-3.jpg",
+      "notes": ""
     },
     {
       "name": "Pollo alla parmigiana",
-      "desc": "Snitel pui, sos roșii, mozzarella, parmezan",
       "size": "400 g",
-      "price": "40"
+      "price": "40 LEI",
+      "description": "Snitel de pui clasic reinterpretat cu sos roșu de casă și brânzeturi alese, textură robustă și gustoasă.",
+      "source": "3-Photo-3.jpg",
+      "notes": ""
     },
     {
       "name": "Aripioare crispy",
-      "desc": "Aripioare pui crocante",
       "size": "",
-      "price": ""
+      "price": "",
+      "description": "Aripioare aurii și crocante, pregătite pentru degustare la temperatura optimă de servire, perfecte de împărțit.",
+      "source": "3-Photo-3.jpg",
+      "notes": ""
     },
     {
       "name": "Pui cu smântână și ciuperci",
-      "desc": "Pui, ciuperci, usturoi, vin alb, cartofi la cuptor",
       "size": "450 g",
-      "price": "40"
+      "price": "40 LEI",
+      "description": "Pui cu suculență păstrată, sos de smântână, ciuperci mature și accent de vin alb.",
+      "source": "3-Photo-3.jpg",
+      "notes": ""
     },
     {
-      "name": "Piepț de pui",
-      "desc": "Pui dezosat, cimbru",
+      "name": "Piept de pui",
       "size": "250 g",
-      "price": "28"
+      "price": "28 LEI",
+      "description": "Piept de pui dezosat, fraged și bine condimentat, cu cimbru proaspăt pentru o notă ierboasă rafinată.",
+      "source": "4-Photo-4.jpg",
+      "notes": ""
     }
   ],
   "PREPARATE DIN VITA": [
     {
       "name": "T-bone steak Dry Age",
-      "desc": "T-bone de vită, unt, rozmarin, usturoi",
       "size": "300–350 g",
-      "price": ""
+      "price": "",
+      "description": "T-bone maturat, fript la foc cu unt, rozmarin și usturoi, pentru o textură fermă, catifelată și note de fum echilibrat.",
+      "source": "4-Photo-4.jpg",
+      "notes": ""
     },
     {
       "name": "Antricot de vită Black Angus Uruguay",
-      "desc": "Carne vită",
       "size": "300 g",
-      "price": "128"
+      "price": "128 LEI",
+      "description": "Antricot premium din Black Angus, crocant la margine și suculent în centru, pentru o densitate clasică de steak.",
+      "source": "4-Photo-4.jpg",
+      "notes": ""
     },
     {
       "name": "Thai Beef",
-      "desc": "Vită, legume, sos de soia, susan, orez",
       "size": "450 g",
-      "price": "59"
+      "price": "59 LEI",
+      "description": "Vită fragedă cu influență thai, legume crocante, semințe de susan și finisaj de soia, pentru un profil dulce-picant echilibrat.",
+      "source": "4-Photo-4.jpg",
+      "notes": ""
     },
     {
       "name": "Muschi de vită cu sos de piper verde",
-      "desc": "Vită, sos de piper verde",
       "size": "250 g",
-      "price": "95"
+      "price": "95 LEI",
+      "description": "Muschi de vită de primă alegere, acoperit într-un sos de piper verde catifelat, cu final picant elegant.",
+      "source": "4-Photo-4.jpg",
+      "notes": ""
     }
   ],
   "PREPARATE DE LA GRĂTAR": [
     {
       "name": "Frigarui de pui",
-      "desc": "Frigarui pui, condimente",
       "size": "250 g",
-      "price": ""
+      "price": "",
+      "description": "Frigarui de pui la grătar cu condimente discrete și note de fum fin.",
+      "source": "4-Photo-4.jpg",
+      "notes": ""
     },
     {
       "name": "Frigarui de porc",
-      "desc": "Frigarui porc",
       "size": "250 g",
-      "price": "31"
+      "price": "31 LEI",
+      "description": "Frigarui de porc la grătar cu condimente bine dozate și atingere fină de fum.",
+      "source": "4-Photo-4.jpg",
+      "notes": ""
     }
   ],
   "PREPARATE DIN PORC": [
     {
       "name": "Tomahawk de porc",
-      "desc": "Tomahawk porc, sare, piper",
       "size": "500 g",
-      "price": ""
+      "price": "",
+      "description": "Tomahawk de porc afumat la foc cu crustă minimă, sare și piper care lasă carnea să vorbească clar și suculent.",
+      "source": "3-Photo-3.jpg",
+      "notes": ""
     },
     {
       "name": "Tigaie picantă de porc",
-      "desc": "Ceafă de porc, legume, sos roșu",
       "size": "350 g",
-      "price": ""
+      "price": "",
+      "description": "Porc frăgezit pe tigaie, cu ceafă, legume și sos roșu cu aromă de picanterie bine așezată.",
+      "source": "3-Photo-3.jpg",
+      "notes": ""
     },
     {
       "name": "Tochitură moldovenească",
-      "desc": "Porc, ou, brânză, sos roșii",
       "size": "450 g",
-      "price": "42"
+      "price": "42 LEI",
+      "description": "Tochitură autentică cu porc, ou și brânză, îmbogățită de sos de roșii pentru un profil tradițional modernizat.",
+      "source": "3-Photo-3.jpg",
+      "notes": ""
     },
     {
       "name": "Pomană de porc",
-      "desc": "Porc, usturoi, piper",
       "size": "450 g",
-      "price": ""
+      "price": "",
+      "description": "Pomană de porc bogată și condimentată, cu unt simplu, usturoi și piper echilibrat, ideal pentru o masă de grup.",
+      "source": "3-Photo-3.jpg",
+      "notes": ""
     },
     {
       "name": "Coaste de porc",
-      "desc": "Coaste porc cu sos barbecue",
       "size": "650 g",
-      "price": ""
+      "price": "",
+      "description": "Coaste rumenite cu sos barbecue, crustă caramelizată la margine și textură fragedă în miez.",
+      "source": "3-Photo-3.jpg",
+      "notes": ""
     },
     {
       "name": "Pastramă oaie",
-      "desc": "Oaie, usturoi, mamaliga",
       "size": "250 g",
-      "price": "46"
+      "price": "46 LEI",
+      "description": "Fel de oaie marinat tradițional cu usturoi și mălai, gata pentru un echilibru rustic și consistent.",
+      "source": "4-Photo-4.jpg",
+      "notes": ""
     },
     {
       "name": "Cotlet de berbec",
-      "desc": "Cotlet de berbec, garnitură de cartofi",
       "size": "250 g",
-      "price": "59"
+      "price": "59 LEI",
+      "description": "Fel de berbec fraged, servit cu garnitură de cartofi rumeniți, pentru o notă consistentă de grătar.",
+      "source": "4-Photo-4.jpg",
+      "notes": ""
     }
   ],
   "FRUCTE DE MARE": [
     {
       "name": "Creveți în sos de vin",
-      "desc": "Creveți, sos de roșii, ardei iute",
       "size": "400 g",
-      "price": "47"
+      "price": "47 LEI",
+      "description": "Creveți rumeneți într-un sos de vin redus, cu textură fermă și profunzime marină, echilibrați de note proaspete.",
+      "source": "5-Photo-5.jpg",
+      "notes": ""
     },
     {
       "name": "Midi in sos de vin",
-      "desc": "Midii, ardei iute, usturoi, pâine prăjită",
       "size": "400 g",
-      "price": ""
+      "price": "",
+      "description": "Midii gătite în sos de vin fin, cu unt de usturoi discret și pâine prăjită crocantă, pentru o experiență de mare rafinată.",
+      "source": "5-Photo-5.jpg",
+      "notes": ""
     },
     {
       "name": "Creveți Diavola",
-      "desc": "Creveți, sos roșu, usturoi, pâine prăjită",
       "size": "300 g",
-      "price": "37"
+      "price": "37 LEI",
+      "description": "Creveți Diavola într-un sos roșu viu, cu usturoi maturat la foc și o iuțeală echilibrată pentru o experiență intensă.",
+      "source": "5-Photo-5.jpg",
+      "notes": ""
     },
     {
       "name": "Creveți in sos de unt",
-      "desc": "Creveți, unt, usturoi, sos aioli",
       "size": "300 g",
-      "price": "59"
+      "price": "59 LEI",
+      "description": "Creveți fragezi în unt aromat, îmbrăcați cu usturoi și aioli, cu o textură catifelată și un finish bogat.",
+      "source": "5-Photo-5.jpg",
+      "notes": ""
     },
     {
-      "name": "Panko seafood",
-      "desc": "Creveți/alcool? creveți crispy + inele de calamari",
+      "name": "Panko Seafood",
       "size": "250 g",
-      "price": ""
+      "price": "",
+      "description": "Panko Seafood cu creveți și inele de calamari crocante, armonizate prin sare fină și note marine curate.",
+      "source": "5-Photo-5.jpg",
+      "notes": ""
     }
   ],
   "PLATOURI": [
     {
       "name": "Platou mix grill",
-      "desc": "Ceafă porc, pulpă pui, mici, cartofi, muștar",
       "size": "1 persoană",
-      "price": ""
+      "price": "",
+      "description": "Platou de împărțit cu selecție de grătar: ceafă de porc, pulpă de pui, mici, cartofi și muștar de casă, pentru seara potrivită.",
+      "source": "6-Photo-6.jpg",
+      "notes": ""
     },
     {
       "name": "Platou family",
-      "desc": "Pulpă pui, mici, cârnați, cartofi",
       "size": "3/4 persoane",
-      "price": "165"
+      "price": "165 LEI",
+      "description": "Platou generos pentru 3-4 persoane, cu pulpă de pui, mici, cârnați și cartofi, ideal pentru o atmosferă relaxată.",
+      "source": "6-Photo-6.jpg",
+      "notes": ""
     },
     {
       "name": "Platou românesc",
-      "desc": "Ceafă, pulpa pui, mici, cărnati, cartofi",
       "size": "2/3 persoane",
-      "price": "145"
+      "price": "145 LEI",
+      "description": "Selecție tradițională de calitate: ceafă, pulpe de pui, cârnați și cartofi, reinterpretată cu echilibru modern.",
+      "source": "6-Photo-6.jpg",
+      "notes": ""
     },
     {
       "name": "Platou Coco Jar",
-      "desc": "Ceafă, côaste, pastramă, mici, frigarui, cartofi",
       "size": "12 persoane",
-      "price": ""
+      "price": "",
+      "description": "Platou semnătură pentru mese ample: ceafă, côaste, pastramă, mici, frigarui și cartofi, gândit pentru momente memorabile.",
+      "source": "6-Photo-6.jpg",
+      "notes": ""
     },
     {
       "name": "Platou Gurmandului",
-      "desc": "Păstrăv de berbec, pui, cărnati, frigarui",
       "size": "4/5 persoane",
-      "price": "255"
+      "price": "255 LEI",
+      "description": "Platou premium pentru 4-5 persoane, cu păstrăv de berbec, pui, cărnăciori, frigarui și garnituri echilibrate.",
+      "source": "6-Photo-6.jpg",
+      "notes": ""
     }
   ],
   "SOSURI": [
-    {
-      "name": "Sos Coco Jar",
-      "desc": "Maioneză, ketchup, coniac",
-      "size": "50 g",
-      "price": ""
-    },
-    {
-      "name": "Sos Jalapeños",
-      "desc": "Usturoi, roșii, ardei copt",
-      "size": "50 g",
-      "price": ""
-    },
-    {
-      "name": "Sos ketchup",
-      "desc": "Roșii, zahăr, oțet",
-      "size": "50 g",
-      "price": ""
-    },
-    {
-      "name": "Sos aioli",
-      "desc": "Maioneză, usturoi",
-      "size": "50 g",
-      "price": ""
-    },
-    {
-      "name": "Sos sweet chilli",
-      "desc": "Chili, oțet, amidon",
-      "size": "50 g",
-      "price": ""
-    },
-    {
-      "name": "Sos de muștar",
-      "desc": "Muștar clasic",
-      "size": "50 g",
-      "price": ""
-    }
+      {
+        "name": "Sos Coco Jar",
+        "size": "50 g",
+        "price": "",
+      "description": "Sos de semnătură cu textură catifelată, echilibru de maioneză, notă dulce de ketchup și final rotund de coniac.",
+        "source": "6-Photo-6.jpg",
+        "notes": ""
+      },
+      {
+        "name": "Sos Jalapeños",
+        "size": "50 g",
+        "price": "",
+      "description": "Sos de casă cu iuțeală controlată, usturoi copt și ardei copt, gândit pentru echilibru și intensitate.",
+        "source": "6-Photo-6.jpg",
+        "notes": ""
+      },
+      {
+        "name": "Sos ketchup",
+        "size": "50 g",
+        "price": "",
+      "description": "Ketchup artizanal din roșii alese, cu dulceață calibrată și un final aromatic de oțet elegant.",
+        "source": "6-Photo-6.jpg",
+        "notes": ""
+      },
+      {
+        "name": "Sos aioli",
+        "size": "50 g",
+        "price": "",
+      "description": "Aioli de casă cu profil dens și fin, usturoi echilibrat și persistenta discretă pentru finisaj de grătar.",
+        "source": "6-Photo-6.jpg",
+        "notes": ""
+      },
+      {
+        "name": "Sos sweet chilli",
+        "size": "50 g",
+        "price": "",
+      "description": "Sos dulce-picant cu luciu natural, chili balansat și accente ușor afumate, gândit ca notă de contrast.",
+        "source": "6-Photo-6.jpg",
+        "notes": ""
+      },
+      {
+        "name": "Sos de muștar",
+        "size": "50 g",
+        "price": "",
+      "description": "Muștar maturat de casă, rotund și curat, pentru a ridica farfuriile fără note agresive.",
+        "source": "6-Photo-6.jpg",
+        "notes": ""
+      }
   ],
   "GARNITURI": [
-    {
-      "name": "Smântână",
-      "desc": "Smântână",
-      "size": "50 g",
-      "price": ""
-    },
-    {
-      "name": "Telemea",
-      "desc": "Brânză telemea",
-      "size": "50 g",
-      "price": ""
-    },
-    {
-      "name": "Parmezan",
-      "desc": "Brânză parmezan",
-      "size": "50 g",
-      "price": ""
-    },
-    {
-      "name": "Ardei iute",
-      "desc": "Ardei iute",
-      "size": "50 g",
-      "price": ""
-    },
-    {
-      "name": "Cartofi prăjiți",
-      "desc": "Cartofi, sare",
-      "size": "200 g",
-      "price": ""
-    },
-    {
-      "name": "Cartofi prăjiți cu mozzarella",
-      "desc": "Cartofi, mozzarella",
-      "size": "200 g",
-      "price": ""
-    },
-    {
-      "name": "Piure",
-      "desc": "Cartofi, unt",
-      "size": "200 g",
-      "price": ""
-    },
-    {
-      "name": "Orez cu legume",
-      "desc": "Orez basmati, legume, unt",
-      "size": "200 g",
-      "price": ""
-    },
-    {
-      "name": "Cartofi la cuptor cu rozmarin",
-      "desc": "Cartofi, rozmarin",
-      "size": "200 g",
-      "price": ""
-    },
-    {
-      "name": "Sparanghel",
-      "desc": "Sparanghel",
-      "size": "200 g",
-      "price": ""
-    },
-    {
-      "name": "Cartofi prăjiți cu usturoi și parmezan",
-      "desc": "Cartofi, usturoi, parmezan",
-      "size": "200 g",
-      "price": ""
-    },
-    {
-      "name": "Cartofi prăjiți cu telemea și ierburi aromatice",
-      "desc": "Cartofi, telemea, ierburi",
-      "size": "200 g",
-      "price": ""
-    },
-    {
-      "name": "Orez basmati",
-      "desc": "Orez basmati, unt",
-      "size": "200 g",
-      "price": ""
-    }
+      {
+        "name": "Smântână",
+        "size": "50 g",
+        "price": "",
+      "description": "Smântână de casă, proaspătă, cu textură mătăsoasă, folosită ca punte fină între arome dense.",
+        "source": "6-Photo-6.jpg",
+        "notes": ""
+      },
+      {
+        "name": "Telemea",
+        "size": "50 g",
+        "price": "",
+      "description": "Telemea maturată, fermă și echilibrată, cu note sărate fine pentru o finalizare clară.",
+        "source": "6-Photo-6.jpg",
+        "notes": ""
+      },
+      {
+        "name": "Parmezan",
+        "size": "50 g",
+        "price": "",
+      "description": "Parmezan fin răzuit, cu note sărate rotunjite, pentru o profunzime elegantă pe farfurie.",
+        "source": "6-Photo-6.jpg",
+        "notes": ""
+      },
+      {
+        "name": "Ardei iute",
+        "size": "50 g",
+        "price": "",
+      "description": "Ardei iute proaspăt, crocant, folosit ca accent controlat pe preparatele cu personalitate.",
+        "source": "6-Photo-6.jpg",
+        "notes": ""
+      },
+      {
+        "name": "Cartofi prăjiți",
+        "size": "200 g",
+        "price": "",
+      "description": "Cartofi rumeniți la perfecție, cu crustă aurie, miez mătăsos și consistență constantă.",
+        "source": "7-Photo-7.jpg",
+        "notes": ""
+      },
+      {
+        "name": "Cartofi prăjiți cu mozzarella",
+        "size": "200 g",
+        "price": "",
+      "description": "Cartofi aurii, fierbinți, îmbogățiți cu mozzarella topită pentru un finisaj catifelat și echilibrat.",
+        "source": "7-Photo-7.jpg",
+        "notes": ""
+      },
+      {
+        "name": "Piure",
+        "size": "200 g",
+        "price": "",
+      "description": "Piure fin de cartofi, cremos, cu unt clar și textură constantă, ideal ca bază de echilibru.",
+        "source": "7-Photo-7.jpg",
+        "notes": ""
+      },
+      {
+        "name": "Orez cu legume",
+        "size": "200 g",
+        "price": "",
+      "description": "Orez basmati cu legume sotate, legat de unt și finisat pentru claritate în contrastul principalelor farfurii.",
+        "source": "7-Photo-7.jpg",
+        "notes": ""
+      },
+      {
+        "name": "Cartofi la cuptor cu rozmarin",
+        "size": "200 g",
+        "price": "",
+      "description": "Cartofi rumeniți la cuptor cu rozmarin proaspăt; crustă crocantă, interior catifelat, fără compromis.",
+        "source": "7-Photo-7.jpg",
+        "notes": ""
+      },
+      {
+        "name": "Sparanghel",
+        "size": "200 g",
+        "price": "",
+      "description": "Sparanghel proaspăt, păstrat ferm, cu note minerale curate ca separator de textură.",
+        "source": "7-Photo-7.jpg",
+        "notes": ""
+      },
+      {
+        "name": "Cartofi prăjiți cu usturoi și parmezan",
+        "size": "200 g",
+        "price": "",
+      "description": "Cartofi crocanți, cu usturoi rumenit și parmezan, pentru un accent intens de textură și savoare.",
+        "source": "7-Photo-7.jpg",
+        "notes": ""
+      },
+      {
+        "name": "Cartofi prăjiți cu telemea și ierburi aromatice",
+        "size": "200 g",
+        "price": "",
+      "description": "Cartofi aurii cu telemea și ierburi aromatice, notă sărată rafinată, echilibrată pentru un final elegant.",
+        "source": "7-Photo-7.jpg",
+        "notes": ""
+      },
+      {
+        "name": "Orez basmati",
+        "size": "200 g",
+        "price": "",
+      "description": "Orez basmati flocos, untat discret, cu textură curată și consistență stabilă.",
+        "source": "7-Photo-7.jpg",
+        "notes": ""
+      }
   ],
   "DESERTURI": [
     {
       "name": "Tiramisu",
-      "desc": "Pistocuți, mascarpone, cacao",
       "size": "160 g",
-      "price": "25"
+      "price": "25 LEI",
+      "description": "Tiramisu de casă, cu mascarpone catifelat, cacao fină și o încheiere dulce echilibrată.",
+      "source": "8-Photo-8.jpg",
+      "notes": ""
     },
     {
       "name": "Clătită cu ciocolată",
-      "desc": "Ou, făină, lapte, ciocolată",
       "size": "150 g",
-      "price": ""
+      "price": "",
+      "description": "Clătită subțire, cu umplutură de ciocolată intensă, gândită ca o punte dulce după masa principală.",
+      "source": "8-Photo-8.jpg",
+      "notes": ""
     },
     {
       "name": "Clătită cu miere și nuci",
-      "desc": "Ou, miere, nuci",
       "size": "150 g",
-      "price": "27"
+      "price": "27 LEI",
+      "description": "Clătită delicată, cu miere selectă și nuci crocante, pentru o notă de dulceață elegantă.",
+      "source": "8-Photo-8.jpg",
+      "notes": ""
     },
     {
       "name": "Clătită cu dulceată",
-      "desc": "Ou, lapte, dulceată",
       "size": "150 g",
-      "price": "21"
+      "price": "21 LEI",
+      "description": "Clătită ușor aerată, îmbogățită cu dulceată de fructe, cu textură fină și note armonioase.",
+      "source": "8-Photo-8.jpg",
+      "notes": ""
     },
     {
       "name": "Papanasi cu ciocolată",
-      "desc": "Brânză dulce de vaci, făină, cacao",
       "size": "250 g",
-      "price": "30"
+      "price": "30 LEI",
+      "description": "Papanasi de casă cu brânză dulce de vaci și cacao, cu textură fermă și final luminos.",
+      "source": "8-Photo-8.jpg",
+      "notes": ""
     },
     {
       "name": "Papanasi cu dulceată",
-      "desc": "Brânză dulce de vaci, făină, dulceată, smântână",
       "size": "250 g",
-      "price": "30"
+      "price": "30 LEI",
+      "description": "Papanasi calzi, cu brânză fină și dulceată de toamnă, pentru un final catifelat.",
+      "source": "8-Photo-8.jpg",
+      "notes": ""
     },
     {
       "name": "Papanasi cu nuci și miere",
-      "desc": "Brânză dulce de vaci, miere, nuci",
       "size": "250 g",
-      "price": "33"
+      "price": "33 LEI",
+      "description": "Papanasi cu nuci prăjite și miere aurie, echilibrate pentru un final dulce cu caracter.",
+      "source": "8-Photo-8.jpg",
+      "notes": ""
     },
     {
       "name": "Lava cake",
-      "desc": "Ciocolată, înghețată",
       "size": "180 g",
-      "price": "28"
+      "price": "28 LEI",
+      "description": "Lava cake cu ciocolată topită, servit fierbinte, acompaniat de înghețată rece pentru un contrast rafinat.",
+      "source": "8-Photo-8.jpg",
+      "notes": ""
     },
     {
       "name": "Profiterol",
-      "desc": "Batoane choux, înghețată, sos ciocolată",
       "size": "1 buc",
-      "price": "32"
+      "price": "32 LEI",
+      "description": "Profiterol cu aluat choux crocant, înghețată fină și sos de ciocolată, pentru un final memorabil.",
+      "source": "8-Photo-8.jpg",
+      "notes": ""
+    }
+  ],
+  "Cafea": [
+    {
+      "name": "Espresso",
+      "size": "30 ml",
+      "price": "10 LEI",
+      "description": "Espresso pur, aromatic și concentrat, ideal pentru o pauză fermă la final de masă.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Espresso dublu",
+      "size": "60 ml",
+      "price": "15 LEI",
+      "description": "Espresso dublu, cu corp dens și note finale solide, ideal când vrei intensitate pe toată nota.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Espresso lung",
+      "size": "60 ml",
+      "price": "10 LEI",
+      "description": "Espresso lung, mai aerat și echilibrat, pentru o finalizare blândă după seară.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Espresso cu lapte",
+      "size": "120 ml",
+      "price": "12 LEI",
+      "description": "Espresso cu lapte integrat cu finețe, cu contrast catifelat între amăreală și cremozitate.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Cappuccino",
+      "size": "180 ml",
+      "price": "14 LEI",
+      "description": "Cappuccino bine înălțat, cu spumă fină și caracter catifelat, pentru o pauză calmă la final de seară.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Caffe latte",
+      "size": "250 ml",
+      "price": "17 LEI",
+      "description": "Latte de atmosferă, mătăsos, cu aromă de cafea susținută de lapte proaspăt.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Cappuccino vienez",
+      "size": "200 ml",
+      "price": "15 LEI",
+      "description": "Variantă vieneză, cu textură bogată, spumă lungă și aromă curată, fără compromis.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Freddo coffee",
+      "size": "250 ml",
+      "price": "18 LEI",
+      "description": "Espresso rece, intens, servit cu textură catifelată pentru o pauză răcoritoare fără să piardă profunzime.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Cafea fără cofeină",
+      "size": "30 ml",
+      "price": "12 LEI",
+      "description": "Cafea descafeinată, cu amăreală blândă și echilibru elegant pentru seara de după.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Cafea fără cofeină cu lapte",
+      "size": "120 ml",
+      "price": "15 LEI",
+      "description": "Versiune fără cofeină cu spumă fină, pentru o încheiere calmă, dar aromată.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Frappe",
+      "size": "300 ml",
+      "price": "24 LEI",
+      "description": "Frappe dens, răcoritor și echilibrat, cu textură robustă de atelier de cafea.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Ciocolată caldă",
+      "size": "250 ml",
+      "price": "18 LEI",
+      "description": "Ciocolată caldă intensă, reconfortantă, perfectă pentru o pauză plăcută după masă.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    }
+  ],
+  "Limonade & Apa": [
+    {
+      "name": "Limonadă clasică",
+      "size": "500 ml",
+      "price": "21 LEI",
+      "description": "Limonadă curată, proaspătă, cu aciditate echilibrată, gândită ca o revenire clară și elegantă a palatului.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Limonadă mentă & ghimbir",
+      "size": "500 ml",
+      "price": "22 LEI",
+      "description": "Infuzie de mentă și ghimbir, vibrantă și clară, gândită pentru prospețime între feluri.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Limonadă fructul pasiunii",
+      "size": "500 ml",
+      "price": "25 LEI",
+      "description": "Limonadă exotică cu fructul pasiunii, parfumată, vibrantă și cu o urmă de final luminos.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Limonadă căpșuni",
+      "size": "500 ml",
+      "price": "25 LEI",
+      "description": "Limonadă de căpșuni echilibrată, dulce-acrișoară, ideală ca punte rafinată între feluri.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Apa plata Perla",
+      "size": "0,33 L",
+      "price": "11 LEI",
+      "description": "Apă plată rece, curată, ca o ancoră de prospețime pentru un final liniștit.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Apa plată Perla",
+      "size": "0,75 L",
+      "price": "17 LEI",
+      "description": "Apă plată rece, curată, alegere constantă pentru sesiunile lungi de cină.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Apa minerala Perla",
+      "size": "0,33 L",
+      "price": "11 LEI",
+      "description": "Apă minerală ușor efervescentă, pentru claritate gustativă imediată și confort de seară.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Apa minerala Perla",
+      "size": "0,75 L",
+      "price": "17 LEI",
+      "description": "Apă minerală ușor efervescentă, pentru claritate gustativă imediată și confort de seară.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    }
+  ],
+  "Răcoritoare": [
+    {
+      "name": "Cappy Portocale",
+      "size": "0,25 L",
+      "price": "13 LEI",
+      "description": "Răcoritor cu portocale românești, ideal ca punte de prospețime între feluri.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Cappy Piersică",
+      "size": "0,25 L",
+      "price": "13 LEI",
+      "description": "Răcoritor de piersică, echilibrat între fructul matur și prospețime.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Coca-Cola",
+      "size": "0,25 L",
+      "price": "12 LEI",
+      "description": "Răcorire clasică, echilibrată și clară, pentru pauze cu energie bună de conversație.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Coca-Cola Zero",
+      "size": "0,25 L",
+      "price": "12 LEI",
+      "description": "Versiunea fără zahăr, cu prospețime păstrată și profil mai ușor, fără senzație grea.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Fanta",
+      "size": "0,25 L",
+      "price": "12 LEI",
+      "description": "Răcoritoare citrică-fructată, potrivită ca notă veselă de tranziție.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Fuze Tea Piersică",
+      "size": "0,25 L",
+      "price": "13 LEI",
+      "description": "Infuzie rece de ceai cu piersică, cu o claritate discretă pe final.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Sprite",
+      "size": "0,25 L",
+      "price": "12 LEI",
+      "description": "Sodă citrică curată, ideală pentru o resetare rapidă a gustului.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Fuze Tea Lămâie",
+      "size": "0,25 L",
+      "price": "13 LEI",
+      "description": "Răcoritoare cu infuzie de lămâie, tonus fin pe final.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Fuze Tea Lemongrass",
+      "size": "0,25 L",
+      "price": "13 LEI",
+      "description": "Răcoritoare cu lemongrass, floral-citrică, pentru o gură de aer aromatic.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Schweppes Bitter Lemon",
+      "size": "0,25 L",
+      "price": "12 LEI",
+      "description": "Bitter Lemon elegant, echilibrat între amăreală și dulceață, pentru un plus de claritate.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Schweppes Mandarin",
+      "size": "0,25 L",
+      "price": "12 LEI",
+      "description": "Răcoritoare cu mandarină, intensă și directă, bună ca tranziție între gusturi.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Kinley / Schweppes",
+      "size": "0,25 L",
+      "price": "12 LEI",
+      "description": "Tonic elegant, sec și rafinat, ideal pentru acompanierea unei seri de dialog lung.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Figa",
+      "size": "0,25 L",
+      "price": "20 LEI",
+      "description": "Răcoritor de autor, cu dulceață intensă și note fructate, pentru seara cu personalitate.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Burn",
+      "size": "0,25 L",
+      "price": "16 LEI",
+      "description": "Energizant concentrat, menit să ofere claritate de ritm fără să umbrească băutura principală.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Ceai cu arome",
+      "size": "250 ml",
+      "price": "15 LEI",
+      "description": "Ceai aromat răcoritor, perfect pentru o finalizare elegantă a discuției.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    }
+  ],
+  "Bere": [
+    {
+      "name": "Ursus Premium",
+      "size": "0,500 L",
+      "price": "11 LEI",
+      "description": "Bere de întâlnire cu corp curat, echilibrată pentru începuturi controlate ale serii.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Ursus Premium Draught",
+      "size": "0,400 L",
+      "price": "11 LEI",
+      "description": "Draft cu textură catifelată, ales pentru conversații liniștite și sesiuni îndelungate.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Ursus Black",
+      "size": "0,330 L",
+      "price": "14 LEI",
+      "description": "Bere neagră cu corp dens, note prăjite și personalitate clară, fără excese.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Ursus IPA",
+      "size": "0,330 L",
+      "price": "14 LEI",
+      "description": "IPA intens aromată, cu hamei controlat și final curat, pentru o seară cu profil clar.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Kozel Lager",
+      "size": "0,500 L",
+      "price": "14 LEI",
+      "description": "Lager curat, deschis și echilibrat, o alegere sigură la orice masă.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Peroni Nastro Azzurro 0.0",
+      "size": "0,330 L",
+      "price": "14 LEI",
+      "description": "Nastro Azzurro fără alcool, cu buchet fin și final răcoritor.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Peroni Nastro Azzurro",
+      "size": "0,500 L",
+      "price": "14 LEI",
+      "description": "Lager italian echilibrat, cu note de malț delicate, potrivit pentru o seară lungă.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Peroni Stile Capri",
+      "size": "0,330 L",
+      "price": "16 LEI",
+      "description": "Bere de seară elegantă, ușor crocantă, cu final luminos și răcoritor.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Azuga Nefiltrată",
+      "size": "0,500 L",
+      "price": "22 LEI",
+      "description": "Nefiltrată cu caracter autentic, bogată și directă, pentru cei ce caută profunzime.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Azuga Nepasteurizată",
+      "size": "0,500 L",
+      "price": "22 LEI",
+      "description": "Nepasteurizată cu textură vie și gust intens, ideală când vrei caracter autentic.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    }
+  ],
+  "Bere fără alcool": [
+    {
+      "name": "Ursus Retro / Remix",
+      "size": "0,330 L",
+      "price": "14 LEI",
+      "description": "Opțiune fără alcool cu caracter de bere, pentru o alegere clară fără compromis.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    },
+    {
+      "name": "Ursus 0.0",
+      "size": "0,500 L",
+      "price": "11 LEI",
+      "description": "Variantă fără alcool cu corp și echilibru, pentru o seară controlată, fără presiune.",
+      "source": "9-Photo-9.jpg",
+      "notes": ""
+    }
+  ],
+  "Cocktail cu alcool": [
+    {
+      "name": "Jack Daniel's",
+      "size": "350 ml",
+      "price": "22 LEI",
+      "description": "Cocktail cu structură de whiskey și final catifelat, făcut pentru seri cu ritm constant.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Hugo",
+      "size": "350 ml",
+      "price": "32 LEI",
+      "description": "Cocktail floral, proaspăt și elegant, ideal pentru un început rafinat de seară.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Aperol Spritz",
+      "size": "350 ml",
+      "price": "32 LEI",
+      "description": "Aperitiv cu amăreală echilibrată și prospețime mediteraneană, pentru un start memorabil.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Negroni",
+      "size": "350 ml",
+      "price": "35 LEI",
+      "description": "Negroni clasic reinterpretat, cu echilibru controlat între bitter, gin și note rotunde.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Pina Colada",
+      "size": "350 ml",
+      "price": "32 LEI",
+      "description": "Pina Colada catifelată, cu echilibru de cocos și aciditate tropicală atentă.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Blue Hawaiian",
+      "size": "350 ml",
+      "price": "32 LEI",
+      "description": "Blue Hawaiian cu paletă tropicală, textură echilibrată și final vibrant.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Mojito",
+      "size": "350 ml",
+      "price": "32 LEI",
+      "description": "Mojito cu mentă proaspătă, echilibrat pe zahăr moderat și note liminoase curate.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Tequila Sunrise",
+      "size": "350 ml",
+      "price": "32 LEI",
+      "description": "Tequila Sunrise luminos, cu dulceață controlată și note stratificate de citrus.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Campari / Aperol / Cinzano",
+      "size": "350 ml",
+      "price": "18 LEI",
+      "description": "Combinație amară-citrică, cu eleganță de amestec pentru un preludiu de seară rafinat.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    }
+  ],
+  "Cocktail fără alcool": [
+    {
+      "name": "Hugo",
+      "size": "350 ml",
+      "price": "30 LEI",
+      "description": "Mocktail cu personalitate de cocktail, prospețime fină și note botanice echilibrate.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Gin Tonic",
+      "size": "350 ml",
+      "price": "30 LEI",
+      "description": "Creație fără alcool inspirată de gin-tonic, cu note tonice și final aromatic.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Green Apple",
+      "size": "350 ml",
+      "price": "30 LEI",
+      "description": "Mocktail clar, vibrant, cu aciditate de măr verde și senzație proaspătă.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Virgin Piña Colada",
+      "size": "350 ml",
+      "price": "30 LEI",
+      "description": "Versiune fără alcool cu nucleu tropical, cremoasă și echilibrată.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Sex on the Beach",
+      "size": "350 ml",
+      "price": "30 LEI",
+      "description": "Cocktail răcoritor cu profil fructat, construit pentru o pauză de conversație elegantă.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Tea",
+      "size": "",
+      "price": "30 LEI",
+      "description": "Infuzie de ceai fără alcool, cu ton răcoritor și structură discret revigorantă.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    }
+  ],
+  "Long drinks": [
+    {
+      "name": "Cuba Libre",
+      "size": "250 ml",
+      "price": "29 LEI",
+      "description": "Long drink echilibrat, cu rom, cola și o notă de lămâie clară.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Campari Orange",
+      "size": "250 ml",
+      "price": "29 LEI",
+      "description": "Long drink bitter-citrus, curat pe gură, cu final luminos.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Gin Tonic",
+      "size": "250 ml",
+      "price": "29 LEI",
+      "description": "Gin-tonic în format long, echilibrat și constant pe toată durata servirii.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Vodka Juice",
+      "size": "250 ml",
+      "price": "29 LEI",
+      "description": "Long drink cu profil direct, sucuri echilibrate și final curat.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Gin Tonic cu arome",
+      "size": "250 ml",
+      "price": "29 LEI",
+      "description": "Gin tonic de autor cu arome fine, pentru tranziții parfumate pe parcursul serii.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    }
+  ],
+  "Răcoritoare alcoolice": [
+    {
+      "name": "Limoncello / Jagermeister",
+      "size": "180 ml",
+      "price": "18 LEI",
+      "description": "Digestiv aromatic și echilibrat, pentru o încheiere rafinată a serii.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
+    },
+    {
+      "name": "Caii de la Letea Vol.II Rosé",
+      "size": "0,75 L",
+      "price": "90 LEI",
+      "description": "Vin rosé maturat, deschis și elegant, recomandat pentru final liniștit sau toast de mulțumire.",
+      "source": "10-Photo-10.txt",
+      "notes": ""
     }
   ]
 }

@@ -100,7 +100,7 @@ export default async function NotFound() {
             </Button>
             <Button
               variant="whatsapp"
-              href={whatsappHref(config.whatsapp, config.phone, "Bună! Am ajuns la 404, am vrea detalii despre meniuri.")}
+              href={whatsappHref(config.whatsapp, config.phone, "Bună! Nu am reușit să găsesc pagina. Aș vrea informații despre meniu, program sau o rezervare.")}
               data-analytics="404_click|conversion|whatsapp|source=404|journey=lead_capture|lead_type=whatsapp"
               className="sm:col-span-2 md:col-span-1"
             >
@@ -130,14 +130,14 @@ export default async function NotFound() {
 
           <div className="space-y-2.5 pt-1">
             <p className="trust-stat">Contact direct</p>
-            <p className="text-sm text-ink-muted">Telefon: {config.phone || "în curs de actualizare"}</p>
-            <p className="text-sm text-ink-muted">WhatsApp: {config.whatsapp || "în curs de actualizare"}</p>
+            <p className="text-sm text-ink-muted">Telefon: {config.phone || "la recepție"}</p>
+            <p className="text-sm text-ink-muted">WhatsApp: {config.whatsapp || "la recepție"}</p>
             <p className="text-sm text-ink-muted">Program: {config.hours}</p>
           </div>
 
           <p className="text-xs text-ink-muted">
-            Notă de servire: dacă ai ajuns aici dintr-un link vechi, folosește ruta principală de mai
-            jos — de regulă acolo găsești exact ce cauți.
+            Notă de orientare: dacă ai ajuns printr-un link vechi, folosește rutele de mai jos — acolo
+            găsești cel mai rapid ce cauți.
           </p>
         </Card>
       </Container>

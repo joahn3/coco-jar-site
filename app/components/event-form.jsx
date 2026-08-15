@@ -51,7 +51,7 @@ export default function EventForm() {
     };
 
     if (!payload.name || !payload.phone) {
-      setStatus("Te rugăm să completezi numele și numărul de telefon.");
+      setStatus("Te rugăm să introduci numele și numărul de telefon.");
       setLoading(false);
       return;
     }
@@ -62,11 +62,11 @@ export default function EventForm() {
       body: JSON.stringify(payload),
     });
 
-    const data = await response.json().catch(() => ({ ok: false, error: "Răspuns invalid de la server" }));
+    const data = await response.json().catch(() => ({ ok: false, error: "Am avut o mică întrerupere. Încearcă din nou peste câteva clipe." }));
     setLoading(false);
 
     if (!response.ok || !data.ok) {
-      setStatus(data.error || "Momentan nu am putut trimite cererea. Încearcă din nou în câteva minute.");
+      setStatus(data.error || "Încă nu am putut transmite cererea. Încearcă din nou în câteva clipe.");
       return;
     }
 
@@ -82,13 +82,13 @@ export default function EventForm() {
       });
     }
 
-    setStatus("Solicitarea ta a fost transmisă. Confirmarea primei etape o trimitem în cel mult 24 de ore.");
+    setStatus("Solicitarea ta a fost transmisă. Îți trimitem o confirmare preliminară în cel mult 24 de ore.");
     form.reset();
   }
 
   return (
     <Card>
-      <h2 className="text-title-lg">Cerere evenimente și catering</h2>
+      <h2 className="text-title-lg">Solicitarea pentru evenimente</h2>
       <p className="mt-2 text-sm text-ink-muted">
         Pentru un răspuns punctual, completează numărul de invitați, data dorită și intervalul de servire.
       </p>
@@ -107,7 +107,7 @@ export default function EventForm() {
           <input
             name="phone"
             required
-            placeholder="07xx xxx xxx"
+            placeholder="Ex: 07xx xxx xxx"
             className={inputClassName}
           />
         </label>
@@ -116,7 +116,7 @@ export default function EventForm() {
           <input
             name="email"
             type="email"
-            placeholder="email@exemplu.ro"
+            placeholder="nume@exemplu.com"
             className={inputClassName}
           />
         </label>
@@ -151,7 +151,7 @@ export default function EventForm() {
               min="5"
               max="300"
               name="guestCount"
-              placeholder="Ex: 40"
+              placeholder="Ex: 40 invitați"
               required
               className={inputClassName}
             />
@@ -161,7 +161,7 @@ export default function EventForm() {
           <label className="grid gap-1.5 text-sm text-ink-muted">
             Interval de servire
             <select name="timeSlot" className={inputClassName} aria-label="Interval de servire">
-              <option value="">Alege intervalul</option>
+              <option value="">Alege intervalul dorit</option>
               {timeSlots.map((slot) => (
                 <option key={slot} value={slot}>
                   {slot}
@@ -195,7 +195,7 @@ export default function EventForm() {
           <textarea
             name="message"
             rows={4}
-            placeholder="Scopul întâlnirii, restricții alimentare, echipamente disponibile"
+            placeholder="Scopul evenimentului, restricții alimentare sau cerințe speciale"
             className="jar-form-field min-h-28 resize-y text-sm"
           />
         </label>
@@ -206,7 +206,7 @@ export default function EventForm() {
             defaultChecked
             className="mt-1 rounded border-line-soft"
           />
-          <span>Sunt de acord să primesc oferta și detaliile finale prin telefon sau WhatsApp.</span>
+          <span>Sunt de acord să primesc propunerea finală prin telefon sau WhatsApp.</span>
         </label>
         <Button
           as="button"
@@ -218,7 +218,7 @@ export default function EventForm() {
             loading ? "pointer-events-none opacity-70" : "",
           )}
         >
-          {loading ? "Se procesează..." : "Trimite cererea de eveniment"}
+          {loading ? "Se procesează..." : "Trimite cererea"}
         </Button>
         {status && <p className="text-sm text-success">{status}</p>}
       </form>

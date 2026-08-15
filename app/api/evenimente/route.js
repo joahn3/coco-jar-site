@@ -11,7 +11,7 @@ export async function POST(request) {
   const rateState = canProcessRequest(request);
   if (rateState.limited) {
     return NextResponse.json(
-      { ok: false, error: "Prea multe cereri. Încearcă din nou peste un minut." },
+      { ok: false, error: "Am primit multe cereri în acest interval. Încearcă din nou peste un minut." },
       { status: 400 }
     );
   }
@@ -50,8 +50,8 @@ export async function POST(request) {
   return NextResponse.json({
     ok: true,
     message: delivery.sent
-      ? "Cererea a fost transmisă."
-      : "Cererea a fost înregistrată. Te contactăm în cel mai scurt timp.",
+      ? "Cererea ta a fost transmisă."
+      : "Am înregistrat cererea. Te contactăm în cel mai scurt timp.",
     delivery,
   });
 }

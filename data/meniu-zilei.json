@@ -2,7 +2,7 @@
   "luni": [
     {
       "name": "Meniul zilei",
-      "description": "Supă + fel principal + aperitiv",
+      "description": "Meniul zilei, compus zilnic după sezon, menține echilibrul ideal între confort, savoare și porționare pentru o experiență de restaurant premium.",
       "size": "",
       "price": "35 LEI"
     }
@@ -10,7 +10,7 @@
   "marti": [
     {
       "name": "Meniul zilei",
-      "description": "Supă + fel principal + aperitiv",
+      "description": "Meniul zilei, compus zilnic după sezon, menține echilibrul ideal între confort, savoare și porționare pentru o experiență de restaurant premium.",
       "size": "",
       "price": "35 LEI"
     }
@@ -18,7 +18,7 @@
   "miercuri": [
     {
       "name": "Meniul zilei",
-      "description": "Supă + fel principal + aperitiv",
+      "description": "Meniul zilei, compus zilnic după sezon, menține echilibrul ideal între confort, savoare și porționare pentru o experiență de restaurant premium.",
       "size": "",
       "price": "35 LEI"
     }
@@ -26,7 +26,7 @@
   "joi": [
     {
       "name": "Meniul zilei",
-      "description": "Supă + fel principal + aperitiv",
+      "description": "Meniul zilei, compus zilnic după sezon, menține echilibrul ideal între confort, savoare și porționare pentru o experiență de restaurant premium.",
       "size": "",
       "price": "35 LEI"
     }
@@ -34,49 +34,49 @@
   "vineri": [
     {
       "name": "Ciorbă de văcuță",
-      "description": "",
+      "description": "Ciorbă de casă cu intensitate de familie, densă, echilibrată și perfectă ca început generos pentru seara de la grătar.",
       "size": "",
       "price": "",
       "image": "/meniu-zilei/2026-08-14-2026-08-14-6de417eb89.jpg"
     },
     {
       "name": "Supă de pui cu tăiței de casă",
-      "description": "",
+      "description": "Supă de pui cu tăiței proaspeți, preparată lent, pentru o textură mătăsoasă și un final catifelat.",
       "size": "",
       "price": "",
       "image": "/meniu-zilei/2026-08-14-2026-08-14-6de417eb89.jpg"
     },
     {
       "name": "Pui la jar cu cartofi prăjiți",
-      "description": "",
+      "description": "Pui afumat pe jar, cu cartofi crocanți și crustă aurie, gândit pentru o experiență de seară cu caracter.",
       "size": "",
       "price": "",
       "image": "/meniu-zilei/2026-08-14-2026-08-14-6de417eb89.jpg"
     },
     {
       "name": "Pilaf de legume cu pui la jar",
-      "description": "",
+      "description": "Pilaf cu pui la jar și legume selectat, armonizat pentru o notă de casă premium.",
       "size": "",
       "price": "",
       "image": "/meniu-zilei/2026-08-14-2026-08-14-6de417eb89.jpg"
     },
     {
       "name": "Cârnăciori cu cartofi prăjiți",
-      "description": "",
+      "description": "Cârnăciori rumeniți pe exterior, alături de cartofi aurii și muștar artizanal, pentru gust direct și clar.",
       "size": "",
       "price": "",
       "image": "/meniu-zilei/2026-08-14-2026-08-14-6de417eb89.jpg"
     },
     {
       "name": "Mici cu cartofi prăjiți și muștar",
-      "description": "",
+      "description": "Mici cu crustă rumenă, combinați cu cartofi crocanți și muștar de casă, pentru o formulă clasică ridicată.",
       "size": "",
       "price": "",
       "image": "/meniu-zilei/2026-08-14-2026-08-14-6de417eb89.jpg"
     },
     {
       "name": "Salată de varză",
-      "description": "",
+      "description": "Sfeclă și varză gândită pentru echilibru acid, crocant și curat, ca contrapunct digestiv la preparatele principale.",
       "size": "",
       "price": "",
       "image": "/meniu-zilei/2026-08-14-2026-08-14-6de417eb89.jpg"
@@ -85,7 +85,7 @@
   "sambata": [
     {
       "name": "Meniul zilei",
-      "description": "Supă + fel principal + aperitiv",
+      "description": "Meniul zilei, compus zilnic după sezon, menține echilibrul ideal între confort, savoare și porționare pentru o experiență de restaurant premium.",
       "size": "",
       "price": "35 LEI"
     }
@@ -93,7 +93,7 @@
   "duminica": [
     {
       "name": "Meniul zilei",
-      "description": "Supă + fel principal + aperitiv",
+      "description": "Meniul zilei, compus zilnic după sezon, menține echilibrul ideal între confort, savoare și porționare pentru o experiență de restaurant premium.",
       "size": "",
       "price": "35 LEI"
     }
@@ -104,6 +104,6 @@
     "sourcePostId": "post-1786816976182-0",
     "date": "2026-08-14",
     "image": "/meniu-zilei/2026-08-14-2026-08-14-6de417eb89.jpg",
-    "updatedAt": "2026-08-15T18:02:56.280Z"
+    "updatedAt": "2026-08-15T19:23:19.886Z"
   }
 }

@@ -13,19 +13,21 @@ export const metadata = {
 };
 
 export default async function ContactPage() {
-  const config = await getSiteConfig();
-  const conversionSignals = [
-    {
-      label: "Răspuns",
-      text: "Maxim 30 minute în intervalul de program.",
+    const config = await getSiteConfig();
+	const phoneDisplay = config.phone || "la recepție";
+	const whatsappDisplay = config.whatsapp || config.phone || "la recepție";
+    const conversionSignals = [
+      {
+      label: "Răspuns prioritar",
+      text: "Confirmare inițială în cel mult 30 de minute în intervalul de program.",
     },
     {
-      label: "Calibrare timp",
-      text: "Îți cerem intervalul de oră și tipul vizitei, ca mesajul să fie relevant imediat.",
+      label: "Date clare din start",
+      text: "Solicităm intervalul dorit, tipul vizitei și numărul de persoane, pentru un răspuns punctual.",
     },
     {
-      label: "Confirmare",
-      text: "Contactăm pentru detalii suplimentare doar dacă ai cerut o rezervare complexă.",
+      label: "Confirmare personalizată",
+      text: "Dacă rezervarea este complexă, îți revenim direct cu o propunere de echipare și program.",
     },
   ];
 
@@ -40,16 +42,16 @@ export default async function ContactPage() {
           />
           <Card>
           <h1 className="text-display-md">Contact și rezervări premium</h1>
-          <p className="mt-2 text-body text-ink-muted">
-            Confirmăm rapid cererile clare: număr de persoane, interval dorit și tipul vizitei. Pentru evenimente complexe,
-            îți vom trimite propunerea în cel mult o zi lucrătoare.
+            <p className="mt-2 text-body text-ink-muted">
+            Confirmăm rapid cererile complete: număr persoane, interval dorit și tipul vizitei. Pentru evenimente complexe,
+            îți pregătim o propunere personalizată în maxim 24 de ore.
           </p>
           <div className="mt-4 grid gap-2 sm:grid-cols-2">
             <Button as="next-link" href="/meniu-zilei" variant="secondary" className="w-full sm:w-auto">
               Meniul zilei
             </Button>
-            <Button href={phoneHref(config.phone)} className="w-full sm:w-auto">
-              Rezervare directă pe telefon
+              <Button href={phoneHref(config.phone)} className="w-full sm:w-auto">
+              Rezervare directă telefonic
             </Button>
           </div>
           <div className="grid gap-2 sm:grid-cols-3">
@@ -67,7 +69,7 @@ export default async function ContactPage() {
                 data-analytics="phone_click|conversion|phone_contact|source=contact|journey=lead_capture|lead_type=reservation"
                 className="jar-link jar-link--text touch-target"
               >
-                Telefon: {config.phone || "în curs de actualizare"}
+                Telefon: {phoneDisplay}
               </a>
             </p>
             <p>
@@ -76,10 +78,10 @@ export default async function ContactPage() {
                 data-analytics="whatsapp_click|conversion|whatsapp_contact|source=contact|journey=lead_capture|lead_type=reservation"
                 className="jar-link jar-link--text touch-target"
               >
-                WhatsApp: {config.whatsapp || config.phone || "în curs de actualizare"}
+                WhatsApp: {whatsappDisplay}
               </a>
             </p>
-            <p className="jar-badge jar-badge--subtle">Răspuns estimativ: max. 30 minute în intervalul de program</p>
+            <p className="jar-badge jar-badge--subtle">Răspuns estimat: maxim 30 de minute</p>
             <p>
               <a
                 href={mapHref(config.siteName, config.fullAddress)}

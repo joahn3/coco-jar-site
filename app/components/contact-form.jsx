@@ -44,7 +44,7 @@ export default function ContactForm() {
     };
 
     if (!payload.name || !payload.phone) {
-      setStatus("Te rugăm să completezi numele și numărul de telefon.");
+      setStatus("Te rugăm să introduci numele și numărul de telefon.");
       setLoading(false);
       return;
     }
@@ -55,11 +55,11 @@ export default function ContactForm() {
       body: JSON.stringify(payload),
     });
 
-    const data = await res.json().catch(() => ({ ok: false, error: "Răspuns invalid de la server" }));
+    const data = await res.json().catch(() => ({ ok: false, error: "Am avut o mică întrerupere. Încearcă din nou peste câteva clipe." }));
     setLoading(false);
 
     if (!res.ok || !data.ok) {
-      setStatus(data.error || "Momentan nu am putut transmite mesajul. Încearcă din nou.");
+      setStatus(data.error || "Încă nu am putut transmite mesajul. Încearcă din nou în câteva clipe.");
       return;
     }
 
@@ -75,15 +75,15 @@ export default function ContactForm() {
       });
     }
 
-    setStatus("Mesajul tău a fost transmis. Confirmare estimativă: în maxim 30 minute sau la următorul interval de lucru.");
+    setStatus("Mesajul tău a fost transmis. Confirmăm de obicei în maxim 30 de minute, în intervalul de lucru.");
     form.reset();
   }
 
   return (
     <Card>
-      <h2 className="text-title-lg">Trimite o solicitare</h2>
+      <h2 className="text-title-lg">Trimite cererea ta</h2>
       <p className="mt-2 text-sm text-ink-muted">
-        Completează tipul vizitei și numărul de persoane, ca să-ți pregătim răspunsul cât mai precis.
+        Oferă tipul vizitei și numărul aproximativ de persoane, ca să îți pregătim un răspuns punctual.
       </p>
       <form onSubmit={onSubmit} className="mt-4 grid gap-3.5">
         <label className="grid gap-1.5 text-sm text-ink-muted">
@@ -110,7 +110,7 @@ export default function ContactForm() {
           <input
             name="name"
             required
-            placeholder="Numele"
+            placeholder="Numele tău"
             className={inputClassName}
           />
         </label>
@@ -119,7 +119,7 @@ export default function ContactForm() {
           <input
             name="phone"
             required
-            placeholder="07xx xxx xxx"
+            placeholder="Număr de telefon"
             className={inputClassName}
           />
         </label>
@@ -131,7 +131,7 @@ export default function ContactForm() {
               min="1"
               max="160"
               name="guestCount"
-              placeholder="Ex: 4"
+              placeholder="Ex: 4 persoane"
               className={inputClassName}
             />
           </label>
@@ -156,7 +156,7 @@ export default function ContactForm() {
           <textarea
             name="message"
             rows={4}
-            placeholder="Detaliază scopul vizitei, alergeni, preferințe"
+            placeholder="Detaliază scopul vizitei, preferințe culinare sau alergeni"
             className="jar-form-field min-h-28 resize-y text-sm"
           />
         </label>
@@ -167,7 +167,7 @@ export default function ContactForm() {
             defaultChecked
             className="mt-1 rounded border-line-soft"
           />
-          <span>Sunt de acord să primesc răspuns telefonic sau mesaj de confirmare.</span>
+          <span>Accept să primesc confirmarea prin telefon sau WhatsApp.</span>
         </label>
         <Button
           as="button"
@@ -179,7 +179,7 @@ export default function ContactForm() {
             loading ? "pointer-events-none opacity-70" : "",
           )}
         >
-          {loading ? "Se procesează..." : "Trimite cererea de rezervare"}
+          {loading ? "Se procesează..." : "Trimite cererea"}
         </Button>
         {status && <p className="text-sm text-success">{status}</p>}
       </form>

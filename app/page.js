@@ -25,15 +25,17 @@ export default async function HomePage() {
   const dayKey = getCurrentDayKey();
   const todayItems = Array.isArray(dailyMenu[dayKey]) ? dailyMenu[dayKey] : [];
   const isMenuActive = isMenuDayActive(config.menuValidUntilHour);
-  const todayMenuLabel = getDayLabel(dayKey);
-  const heroImage = "/galerie/instagram-011-47b855d73e.jpg";
-  const galleryCount = Array.isArray(galleryCatalog) ? galleryCatalog.length : 0;
-  const proofStack = [
-    {
-      label: "Răspuns verificat",
-      value: "sub 30 min",
-      description: "confirmare telefonică în intervalul de program",
-    },
+	const todayMenuLabel = getDayLabel(dayKey);
+	const contactText = config.phone || "la recepție";
+	const whatsappText = config.whatsapp || config.phone || "la recepție";
+	const heroImage = "/galerie/instagram-011-47b855d73e.jpg";
+	const galleryCount = Array.isArray(galleryCatalog) ? galleryCatalog.length : 0;
+	const proofStack = [
+		{
+	  label: "Răspuns verificat",
+	  value: "sub 30 min",
+	  description: "confirmare prioritară prin telefon sau WhatsApp",
+	},
     {
       label: "Meniu la zi",
       value: `${todayItems.length || "—"} feluri`,
@@ -48,24 +50,24 @@ export default async function HomePage() {
     },
   ];
 
-  const trustSignals = [
-    "Program clar: meniu 10:00–16:00, restaurant 16:00–22:00",
+	const trustSignals = [
+    "Program clar: meniu între 10:00–16:00, restaurant 16:00–22:00",
     "Meniul zilei este actualizat zilnic, până la ora 16:00",
-    "Răspuns direct prin telefon sau WhatsApp, de regulă în maxim 30 de minute",
-  ];
+    "Confirmări telefonice și pe WhatsApp, de obicei în mai puțin de 30 de minute",
+	];
 
-  const safetySignals = [
-    "Informații clare pe secțiuni, cu mențiuni de preparare și alergeni",
+	const safetySignals = [
+    "Informații transparente, cu mențiuni de preparare și alergeni",
     "Pregătire atentă, cu ritm constant de servire",
-    "Comunicare transparentă pentru rezervări și evenimente",
+    "Comunicare clară pentru rezervări, evenimente și ajustări de ultim moment",
     "Rezervare directă, fără pași suplimentari",
-  ];
+	];
 
-  const heroHighlights = [
+	const heroHighlights = [
     "Mese aranjate zilnic, cu grijă pentru detaliu",
     "Preparate gătite pe grătarul de pui la jar",
     "Atmosferă relaxată pentru o seară fără grabă",
-  ];
+	];
 
   const reviewSignals = [
     {
@@ -104,7 +106,7 @@ export default async function HomePage() {
                 <div className="max-w-2xl">
                   <p className="jar-badge">La Coco Jar, fiecare vizită începe cu poftă</p>
                   <h1 className="mt-2 text-display-2xl sm:text-display-xl">
-                    Te așteaptă o seară caldă, cu atmosferă autentică și mâncare gustoasă.
+                    Te așteaptă o seară cu atmosferă autentică, muzică blândă și preparate alese cu grijă.
                   </h1>
                   <p className="mt-3 max-w-3xl text-body-lg text-ink-title/90 prose-balance">
                     Terasa cu accente rustice, lemn natural, lumini calde și verdeață creează un spațiu intim și plăcut,
@@ -202,7 +204,7 @@ export default async function HomePage() {
               Meniu zilei: până la 16:00
             </p>
             <p className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
-              Telefon: {config.phone || "în curs de actualizare"}
+              Telefon: {contactText}
             </p>
             <p className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
               Locație: {config.locality}
@@ -223,7 +225,7 @@ export default async function HomePage() {
                 aria-label={`Sună la ${config.phone || "numărul de telefon"} pentru rezervare`}
                 href={phoneHref(config.phone)}
               >
-                Telefon: {config.phone || "în curs de actualizare"}
+                Telefon: {contactText}
               </a>
             </p>
             <p>
@@ -232,7 +234,7 @@ export default async function HomePage() {
                 aria-label={`Deschide conversație pe WhatsApp ${config.whatsapp || config.phone || "la restaurant"} din pagina principală`}
                 href={whatsappHref(config.whatsapp, config.phone, "Bună ziua, vreau mai multe detalii.")}
               >
-                WhatsApp: {config.whatsapp || config.phone || "în curs de actualizare"}
+                WhatsApp: {whatsappText}
               </a>
             </p>
           </div>
@@ -289,7 +291,7 @@ export default async function HomePage() {
 
             <Card className="space-y-3">
               <p className="trust-stat">Siguranță</p>
-              <h3 className="text-title-md">Servire consecventă, fără surprize</h3>
+              <h3 className="text-title-md">Servire consecventă, fără improvizații</h3>
               <ul className="space-y-2 text-sm text-ink-muted">
                 {safetySignals.map((item) => (
                   <li key={item} className="flex items-start gap-2">
@@ -333,7 +335,7 @@ export default async function HomePage() {
             <Card>
               <h3 className="text-title-md">Telefon și WhatsApp</h3>
               <p className="text-sm text-ink-muted">
-                Număr principal: {config.phone || "în curs de actualizare"}
+                Număr principal: {contactText}
               </p>
               <p className="text-sm text-ink-muted">Program: {config.hours}</p>
               <p className="text-xs text-ink-muted">Confirmare estimativă: sub 30 minute (în interval de program)</p>
@@ -363,7 +365,7 @@ export default async function HomePage() {
             {!todayItems.length ? (
               <Card className="md:col-span-2 xl:col-span-3">
                 <p className="text-sm text-ink-muted">
-                  Meniul zilei este în curs de actualizare. Revino în scurt timp pentru oferta de astăzi.
+                  Meniul zilei este finalizat în acest moment. Reîncărcarea paginii aduce meniul actualizat al zilei.
                 </p>
               </Card>
             ) : (

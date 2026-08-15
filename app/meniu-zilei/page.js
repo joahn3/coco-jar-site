@@ -96,7 +96,7 @@ export default async function DailyMenuPage({ searchParams }) {
           {dayItems.length === 0 ? (
             <Card className="md:col-span-2 xl:col-span-3">
               <p className="text-sm text-ink-muted">
-                Meniul zilei nu a fost încă publicat. Revino peste puțin.
+                Meniul zilei nu a fost încă publicat. Revino în scurt timp, îl actualizăm zilnic.
               </p>
             </Card>
           ) : (
