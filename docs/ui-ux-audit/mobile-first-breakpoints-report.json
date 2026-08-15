@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-08-15T13:59:36.554Z",
+  "results": [
+    {
+      "viewport": {
+        "name": "mobile-360",
+        "w": 360,
+        "h": 812
+      },
+      "headerHeight": 185,
+      "heroTop": 185,
+      "navHeight": 60,
+      "navOverflow": false,
+      "lines": 1,
+      "name": "mobile-360"
+    },
+    {
+      "viewport": {
+        "name": "tablet-768",
+        "w": 768,
+        "h": 1024
+      },
+      "headerHeight": 233,
+      "heroTop": 233,
+      "navHeight": 164,
+      "navOverflow": false,
+      "lines": 1,
+      "name": "tablet-768"
+    },
+    {
+      "viewport": {
+        "name": "desktop-1280",
+        "w": 1280,
+        "h": 900
+      },
+      "headerHeight": 233,
+      "heroTop": 233,
+      "navHeight": 164,
+      "navOverflow": false,
+      "lines": 1,
+      "name": "desktop-1280"
+    }
+  ]
+}
