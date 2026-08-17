@@ -16,10 +16,10 @@ export default async function ContactPage() {
     const config = await getSiteConfig();
 	const phoneDisplay = config.phone || "la recepție";
 	const whatsappDisplay = config.whatsapp || config.phone || "la recepție";
-    const conversionSignals = [
+  const conversionSignals = [
       {
       label: "Răspuns prioritar",
-      text: "Confirmare inițială în cel mult 30 de minute în intervalul de program.",
+      text: "Confirmare inițială în cel mult 30 de minute, direct pentru cererile complete.",
     },
     {
       label: "Date clare din start",
@@ -48,10 +48,10 @@ export default async function ContactPage() {
           </p>
           <div className="mt-4 grid gap-2 sm:grid-cols-2">
             <Button as="next-link" href="/meniu-zilei" variant="secondary" className="w-full sm:w-auto">
-              Meniul zilei
+              Verifică oferta de seară
             </Button>
               <Button href={phoneHref(config.phone)} className="w-full sm:w-auto">
-              Rezervare directă telefonic
+              Rezervare directă (confirmare prioritară)
             </Button>
           </div>
           <div className="grid gap-2 sm:grid-cols-3">
@@ -69,7 +69,7 @@ export default async function ContactPage() {
                 data-analytics="phone_click|conversion|phone_contact|source=contact|journey=lead_capture|lead_type=reservation"
                 className="jar-link jar-link--text touch-target"
               >
-                Telefon: {phoneDisplay}
+                Rezervare telefonică: confirmare prioritară — {phoneDisplay}
               </a>
             </p>
             <p>
@@ -78,7 +78,7 @@ export default async function ContactPage() {
                 data-analytics="whatsapp_click|conversion|whatsapp_contact|source=contact|journey=lead_capture|lead_type=reservation"
                 className="jar-link jar-link--text touch-target"
               >
-                WhatsApp: {whatsappDisplay}
+                Confirmare rapidă prin WhatsApp — {whatsappDisplay}
               </a>
             </p>
             <p className="jar-badge jar-badge--subtle">Răspuns estimat: maxim 30 de minute</p>

@@ -46,10 +46,10 @@ export default async function EventPage() {
 	            </p>
           <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:max-w-2xl">
                 <Button as="next-link" href="/contact" variant="primary" className="w-full sm:w-auto">
-              Solicită ofertă personalizată
+              Blochează experiența ta privată
               </Button>
             <Button as="next-link" href="/meniu-zilei" variant="secondary" className="w-full sm:w-auto">
-              Vezi opțiunile zilei
+              Alege meniu pentru seara ta
             </Button>
           </div>
           <div className="grid gap-2 sm:grid-cols-3">
@@ -70,13 +70,13 @@ export default async function EventPage() {
               recomandăm confirmare prealabilă.
             </p>
           </div>
-          <p className="mt-4 text-body text-ink-muted">
-            Pentru mai multe detalii despre evenimentele private și opțiunile disponibile, contactează-ne la:
-          </p>
+            <p className="mt-4 text-body text-ink-muted">
+              Pentru mai multe detalii despre evenimentele private și opțiunile disponibile, contactează-ne la:
+            </p>
           <div className="jar-link-list">
             <p>
               <a className="jar-link touch-target" href={phoneHref(config.phone)}>
-                Sună la {phoneDisplay}
+                Confirmare disponibilitate pentru eveniment — {phoneDisplay}
               </a>
             </p>
           </div>

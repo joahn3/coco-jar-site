@@ -18,6 +18,66 @@ export const metadata = {
     "Meniul zilei de azi de la Coco Jar: pui la jar, preparate tradiționale, salate și gusturi gândite pentru seara perfectă.",
 };
 
+const premiumMenuCopy = {
+  "Meniul zilei": {
+    name: "Meniul de seară premium",
+    description:
+      "O porție echilibrată, gândită ca experiență de seară: început blând, mijloc consistent și final fără grabă.",
+  },
+  "Ciorbă de văcuță": {
+    name: "Ciorbă de văcuță — porție de deschidere",
+    description:
+      "Ciorbă de casă cu intensitate de familie, densă, echilibrată și pregătită ca introducere pe o tavă de seară.",
+  },
+  "Supă de pui cu tăiței de casă": {
+    name: "Supă de pui cu tăiței de casă — porție de echilibru",
+    description:
+      "Supă de pui cu tăiței proaspeți, preparată lent, pentru textură mătăsoasă și răgaz dulceag al serii.",
+  },
+  "Pui la jar cu cartofi prăjiți": {
+    name: "Pui la jar marinat — porție de seară",
+    description:
+      "Pui afumat pe jar, cu cartofi crocanți și crustă aurie, porție generoasă pentru o experiență de seară constantă.",
+  },
+  "Pilaf de legume cu pui la jar": {
+    name: "Pilaf de legume cu pui la jar — porție completă",
+    description:
+      "Pilaf cu pui la jar și legume selectat, armonizat pentru o notă de casă premium.",
+  },
+  "Cârnăciori cu cartofi prăjiți": {
+    name: "Cârnăciori la jar — porție crocantă",
+    description:
+      "Cârnăciori rumeniți pe exterior, alături de cartofi aurii și muștar artizanal, pentru un final clar de seară.",
+  },
+  "Mici cu cartofi prăjiți și muștar": {
+    name: "Mici cu cartofi prăjiți și muștar — porție robustă",
+    description:
+      "Mici cu crustă rumenă, combinați cu cartofi crocanți și muștar de casă, ca accent de grătar premium.",
+  },
+  "Salată de varză": {
+    name: "Salată de varză crocantă — side note premium",
+    description:
+      "Sfeclă și varză gândite pentru echilibru acid, crocant și curat, ca contrapunct digestiv la preparatele principale.",
+  },
+};
+
+function getPremiumMenuItemCopy(item) {
+  const preset = premiumMenuCopy[item.name];
+  const title = preset?.name || item.name;
+  const baseDescription = (preset?.description || item.description || "").trim();
+  const extras = [];
+  const hasPorție = /\bporț/i.test(baseDescription);
+  const hasExperiență = /experienț|seară/i.test(baseDescription);
+  if (!hasPorție) {
+    extras.push("Porție gândită pentru o experiență de seară calmă.");
+  }
+  if (!hasExperiență) {
+    extras.push("Pachet de seară cu prezentare constantă.");
+  }
+  const description = [baseDescription, ...extras].filter(Boolean).join(" ");
+  return { title, description };
+}
+
 function formatDateInput(dateInput) {
   if (!dateInput || typeof dateInput !== "string") {
     return "";
@@ -62,10 +122,15 @@ export default async function DailyMenuPage({ searchParams }) {
               { label: "Meniul zilei", href: "/meniu-zilei" },
             ]}
           />
-          <h1 className="text-display-md">{pageTitle}</h1>
+        <h1 className="text-display-md">Meniul zilei de seară — calitate la jar</h1>
+        <p className="mt-2 text-sm text-ink-muted">
+          {selectedDate
+            ? `Oferta este optimizată pentru data ${requestedLabel || selectedDate} cu meniu de seară, porții echilibrate și ritm constant.`
+            : `Oferta zilei de azi este structurată pentru clienții care caută calitate rapidă: preparat la zi, porții clare, timp de servire stabil.`}
+        </p>
         {selectedDate ? (
           <p className="mt-2 text-sm text-ink-muted">
-            Ai deschis meniul zilei pentru data <span className="font-semibold">{requestedLabel || selectedDate}</span>.{" "}
+            Ai activat meniul zilei pentru data <span className="font-semibold">{requestedLabel || selectedDate}</span>.{" "}
             <a href="/meniu-zilei" className="underline underline-offset-3">
               Revino la ziua curentă
             </a>
@@ -78,17 +143,17 @@ export default async function DailyMenuPage({ searchParams }) {
           </p>
         )}
         <p className="mt-2 text-sm text-ink-muted">
-          Meniul este actualizat zilnic, în funcție de oferta de sezon.
+          Meniul este actualizat zilnic, din sursa publică, cu accent pe pregătire premium de seară.
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           <Button as="next-link" href="/contact" variant="primary" className="touch-target">
-            Rezervă masa pentru seara de azi
+            Rezervă locul pentru seara asta
           </Button>
           <Button as="next-link" href="/meniu" variant="secondary" className="touch-target">
-            Vezi meniu complet
+            Descoperă meniul complet
           </Button>
           <Button href={phoneHref(config.phone)} className="touch-target">
-            Sună direct
+            Confirmare directă prin telefon
           </Button>
         </div>
 
@@ -96,26 +161,29 @@ export default async function DailyMenuPage({ searchParams }) {
           {dayItems.length === 0 ? (
             <Card className="md:col-span-2 xl:col-span-3">
               <p className="text-sm text-ink-muted">
-                Meniul zilei nu a fost încă publicat. Revino în scurt timp, îl actualizăm zilnic.
+                Meniul zilei se actualizează zilnic după ora 16:00; revenim în scurt timp cu oferta completă de seară.
               </p>
             </Card>
-          ) : (
-            dayItems.map((item) => (
-              <Card key={item.name} className="space-y-2">
-                {item.image ? (
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    width={720}
-                    height={480}
-                    className="mx-auto w-full rounded-lg object-cover"
-                  />
-                ) : null}
-                <h2 className="text-title-lg">{item.name}</h2>
-                <p className="text-sm text-ink-muted">{item.description}</p>
-                <p className="font-semibold text-ink-title">{item.price || "—"}</p>
-              </Card>
-            ))
+            ) : (
+            dayItems.map((item) => {
+              const premiumItem = getPremiumMenuItemCopy(item);
+              return (
+                <Card key={item.name} className="space-y-2">
+                  {item.image ? (
+                    <Image
+                      src={item.image}
+                      alt={premiumItem.title}
+                      width={720}
+                      height={480}
+                      className="mx-auto w-full rounded-lg object-cover"
+                    />
+                  ) : null}
+                  <h2 className="text-title-lg">{premiumItem.title}</h2>
+                  <p className="text-sm text-ink-muted">{premiumItem.description}</p>
+                  <p className="font-semibold text-ink-title">{item.price || "—"}</p>
+                </Card>
+              );
+            })
           )}
         </div>
       </Container>

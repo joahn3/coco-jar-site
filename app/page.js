@@ -32,41 +32,49 @@ export default async function HomePage() {
 	const galleryCount = Array.isArray(galleryCatalog) ? galleryCatalog.length : 0;
 	const proofStack = [
 		{
-	  label: "Răspuns verificat",
+	  label: "Atmosferă verificată",
 	  value: "sub 30 min",
-	  description: "confirmare prioritară prin telefon sau WhatsApp",
+	  description: "Rezervări confirmate printr-un flux prioritar, înainte de ora de vârf.",
 	},
     {
       label: "Meniu la zi",
       value: `${todayItems.length || "—"} feluri`,
       description: isMenuActive
-        ? "Actualizat până la ora 16:00"
-        : "Actualizare programată zilnic, după ora 16:00",
+        ? "Actualizat până la ora 16:00, cu porții clare pentru seara de azi."
+        : "Actualizare programată zilnic, după ora 16:00.",
     },
     {
-      label: "Atmosferă din restaurant",
+      label: "Feedback verificabil",
       value: `${galleryCount} imagini`,
-      description: "Colecție separată pe interior, locație, preparate și grătar.",
+      description: "Colecție actualizată din locație, inclusiv terasă, grătar, preparate, evenimente.",
     },
   ];
 
 	const trustSignals = [
-    "Program clar: meniu între 10:00–16:00, restaurant 16:00–22:00",
-    "Meniul zilei este actualizat zilnic, până la ora 16:00",
-    "Confirmări telefonice și pe WhatsApp, de obicei în mai puțin de 30 de minute",
+    "Atmosferă: spațiu cald, servicii fără stres, timp de seară susținut.",
+    "Preparat: pui la jar, porții constante, garnituri alese la comandă.",
+    "Feedback: recenzii de profil, actualizări constante pe social.",
 	];
 
-	const safetySignals = [
-    "Informații transparente, cu mențiuni de preparare și alergeni",
-    "Pregătire atentă, cu ritm constant de servire",
-    "Comunicare clară pentru rezervări, evenimente și ajustări de ultim moment",
-    "Rezervare directă, fără pași suplimentari",
+	const experienceStories = [
+    {
+      title: "Terasă cu ritm lent",
+      text: "Lumini calde, lemn natural și muzică discretă. Un loc unde poți sta până când seara și gustul se liniștesc.",
+    },
+    {
+      title: "Evenimente private, atent calibrate",
+      text: "Grupuri mici, aniversări, întâlniri private — totul pregătit cu timp de servire clar și atenție la detalii.",
+    },
+    {
+      title: "Seri tematice",
+      text: "Propunem combinații de preparate pentru momente speciale, cu aceeași calitate premium în orice seară.",
+    },
 	];
 
 	const heroHighlights = [
-    "Mese aranjate zilnic, cu grijă pentru detaliu",
-    "Preparate gătite pe grătarul de pui la jar",
-    "Atmosferă relaxată pentru o seară fără grabă",
+    "Experiență de seară cu final clar",
+    "Preparate la jar, gătite pentru o masă echilibrată",
+    "Rezervare clară, fără pași inutili",
 	];
 
   const reviewSignals = [
@@ -80,7 +88,7 @@ export default async function HomePage() {
     {
       source: "Instagram",
       title: "Conținut real din locație",
-      text: "Actualizări periodice, preparate, atmosferă, evenimente și comunicări utile.",
+      text: "Actualizări periodice din restaurant, cu preparate și imagini de seară.",
       cta: "Vezi pagina Instagram",
       href: config.social?.instagram || "#",
     },
@@ -104,13 +112,13 @@ export default async function HomePage() {
             <div className="glass-panel glass-panel--hero relative z-10 rounded-[1.55rem] p-4 sm:p-6 md:p-8">
               <div className="grid gap-4 md:grid-cols-[1fr_auto] md:items-end md:gap-8">
                 <div className="max-w-2xl">
-                  <p className="jar-badge">La Coco Jar, fiecare vizită începe cu poftă</p>
+                  <p className="jar-badge">Seara bună începe cu căldura unui loc gândit pentru oameni</p>
                   <h1 className="mt-2 text-display-2xl sm:text-display-xl">
-                    Te așteaptă o seară cu atmosferă autentică, muzică blândă și preparate alese cu grijă.
+                    Aici, puiul la jar și atmosfera se întâlnesc într-o experiență de seară clară, fără compromisuri.
                   </h1>
                   <p className="mt-3 max-w-3xl text-body-lg text-ink-title/90 prose-balance">
-                    Terasa cu accente rustice, lemn natural, lumini calde și verdeață creează un spațiu intim și plăcut,
-                    perfect pentru o masă în familie sau pentru o întâlnire de weekend într-o ambianță caldă.
+                    Primești un parcurs complet: rezervare prioritară, preparate la jar cu porție de seară și un spațiu menit pentru
+                    conversații lungi, fără grabă și fără compromis pe calitate.
                   </p>
 
                   <div className="mt-5 flex flex-wrap gap-2.5">
@@ -121,7 +129,7 @@ export default async function HomePage() {
                       data-analytics="click|conversion|rezervare_primara|source=home|journey=primary_cta|lead_type=reservation"
                       className="touch-target"
                     >
-                      Rezervă masa
+                      Rezervare prioritară
                     </Button>
                     <Button
                       as="next-link"
@@ -130,7 +138,7 @@ export default async function HomePage() {
                       data-analytics="click|navigation|meniu_zilei_hero|source=home|journey=menu_cta|lead_type=menu"
                       className="touch-target"
                     >
-                      Vezi meniul zilei
+                      Meniul zilei pentru azi
                     </Button>
                     <Button
                       as="next-link"
@@ -139,15 +147,15 @@ export default async function HomePage() {
                       data-analytics="click|navigation|evenimente_hero|source=home|journey=exploration|lead_type=event"
                       className="touch-target"
                     >
-                      Evenimente private
+                      Alege evenimentul tău
                     </Button>
                   </div>
 
                   <div className="mt-5 flex flex-wrap gap-2">
                     {[
-                      "Meniu clar, fără compromisuri",
-                      "Grătarul la jar, pregătit la comandă",
-                      "Locație cu acces facil, perfect pentru ieșiri relaxate",
+                      "Atmosferă premium, fără agitație",
+                      "Preparat la jar, porție gândită pentru seară",
+                      "Rezervare clară, confirmare rapidă",
                     ].map((badge) => (
                       <span key={badge} className="jar-chip">
                         {badge}
@@ -182,12 +190,12 @@ export default async function HomePage() {
         as="section"
         className="grid gap-4 pt-4 md:gap-6 lg:grid-cols-[1.35fr_0.92fr] lg:gap-6"
       >
-        <Card className="space-y-6 py-6 sm:py-7">
+	        <Card className="space-y-6 py-6 sm:py-7">
           <p className="jar-badge">Restaurant de pui la jar</p>
-          <p className="jar-badge">Atmosferă autentică, gust autentic</p>
-          <h2 className="text-title-lg">O experiență gândită pentru răgaz</h2>
+          <p className="jar-badge">Atmosferă premium, ritm stabil</p>
+          <h2 className="text-title-lg">Ce simte clientul când intră</h2>
           <p className="max-w-3xl text-body-lg text-ink-muted prose-balance">
-            Un loc cald, relaxat și primitor, unde poți savura preparate atent lucrate și poți rămâne liniștit până târziu.
+            Loc cald, confortabil și atent, construit pentru o seară echilibrată: pregătire susținută, porții clare, fără zgomot de fond inutil.
           </p>
           <div className="grid gap-2.5 sm:grid-cols-3 sm:gap-3">
             {heroHighlights.map((item) => (
@@ -213,10 +221,10 @@ export default async function HomePage() {
         </Card>
 
         <Card className="space-y-4 py-6 sm:py-7">
-          <h2 className="text-title-lg">Rezervări și contact</h2>
+          <h2 className="text-title-lg">Rezervare pe acțiune</h2>
           <p className="text-sm text-ink-muted">Program: {config.hours}</p>
           <p className="text-sm text-ink-muted">
-            Se recomandă planificarea în avans pentru seriile de vârf (vineri, sâmbătă, duminică).
+            Se recomandă planificare din timp la vârf de seară: confirmăm rapid preferințele de masă.
           </p>
           <div className="jar-link-list">
             <p>
@@ -225,7 +233,7 @@ export default async function HomePage() {
                 aria-label={`Sună la ${config.phone || "numărul de telefon"} pentru rezervare`}
                 href={phoneHref(config.phone)}
               >
-                Telefon: {contactText}
+                Rezervare telefonic: confirmare prioritară — {contactText}
               </a>
             </p>
             <p>
@@ -234,7 +242,7 @@ export default async function HomePage() {
                 aria-label={`Deschide conversație pe WhatsApp ${config.whatsapp || config.phone || "la restaurant"} din pagina principală`}
                 href={whatsappHref(config.whatsapp, config.phone, "Bună ziua, vreau mai multe detalii.")}
               >
-                WhatsApp: {whatsappText}
+                Confirmare prin WhatsApp: răspuns rapid — {whatsappText}
               </a>
             </p>
           </div>
@@ -271,16 +279,33 @@ export default async function HomePage() {
 
       <Container as="section">
         <Section
-          title="Claritate, coerență, experiență premium"
-          subtitle="Avem reguli clare de comunicare, oferte, și disponibilitate pentru a alege repede, fără dubii."
+          title="Experiențe"
+          subtitle="Ce simte clientul în fiecare noapte, din seara de sâmbătă până în cea mai liniștită zi"
+          className="pb-4 pt-2"
+        >
+          <div className="grid gap-4 md:grid-cols-3">
+            {experienceStories.map((item) => (
+              <Card key={item.title} className="space-y-2">
+                <h3 className="text-title-md">{item.title}</h3>
+                <p className="text-sm text-ink-muted">{item.text}</p>
+              </Card>
+            ))}
+          </div>
+        </Section>
+      </Container>
+
+      <Container as="section">
+        <Section
+          title="3 argumente verificabile"
+          subtitle="Atitudini pe care le poți confirma direct, nu promisiuni generice."
           className="pb-6 pt-8"
         >
           <div className="grid gap-4 md:grid-cols-3">
             <Card className="space-y-3">
               <p className="trust-stat">Încredere</p>
-              <h3 className="text-title-md">Decizie simplă, fără ambiguitate</h3>
+              <h3 className="text-title-md">Atmosferă consistentă</h3>
               <ul className="space-y-2 text-sm text-ink-muted">
-                {trustSignals.map((item) => (
+                {trustSignals.slice(0, 1).map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <span className="mt-2 size-1.5 rounded-full bg-brand-500"></span>
                     <span>{item}</span>
@@ -291,9 +316,9 @@ export default async function HomePage() {
 
             <Card className="space-y-3">
               <p className="trust-stat">Siguranță</p>
-              <h3 className="text-title-md">Servire consecventă, fără improvizații</h3>
+              <h3 className="text-title-md">Preparat verificat</h3>
               <ul className="space-y-2 text-sm text-ink-muted">
-                {safetySignals.map((item) => (
+                {trustSignals.slice(1, 2).map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <span className="mt-2 size-1.5 rounded-full bg-brand-500"></span>
                     <span>{item}</span>
@@ -303,8 +328,8 @@ export default async function HomePage() {
             </Card>
 
             <Card className="space-y-3">
-              <p className="trust-stat">Recenzii</p>
-              <h3 className="text-title-md">Verificabil, nu doar promovat</h3>
+              <p className="trust-stat">Feedback</p>
+              <h3 className="text-title-md">Recenzii și activitate reală</h3>
               <div className="space-y-2.5">
                 {reviewSignals.map((review) => (
                     <article key={review.source} className="space-y-1.5 rounded-lg bg-surface-base/70 p-3">
@@ -313,7 +338,7 @@ export default async function HomePage() {
                         {review.source} — {review.title}
                       </p>
                       <p className="text-xs text-ink-muted">{review.text}</p>
-                      <a
+                    <a
                       className="jar-link jar-link--text touch-target"
                       href={review.href}
                       target="_blank"
@@ -335,10 +360,10 @@ export default async function HomePage() {
             <Card>
               <h3 className="text-title-md">Telefon și WhatsApp</h3>
               <p className="text-sm text-ink-muted">
-                Număr principal: {contactText}
+                Rezervare directă: {contactText}
               </p>
               <p className="text-sm text-ink-muted">Program: {config.hours}</p>
-              <p className="text-xs text-ink-muted">Confirmare estimativă: sub 30 minute (în interval de program)</p>
+              <p className="text-xs text-ink-muted">Confirmare estimativă: în maxim 30 de minute (în interval de program)</p>
             </Card>
             <Card>
               <h3 className="text-title-md">Locație</h3>
