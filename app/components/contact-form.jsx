@@ -116,10 +116,10 @@ export default function ContactForm() {
         </label>
         <label className="grid gap-1.5 text-sm text-ink-muted">
           Telefon *
-          <input
+              <input
             name="phone"
             required
-            placeholder="Număr de telefon"
+            placeholder="Telefon mobil, de ex. 07xx xxx xxx"
             className={inputClassName}
           />
         </label>
@@ -148,7 +148,7 @@ export default function ContactForm() {
           </label>
         </div>
         <label className="sr-only">
-          Nu completați acest câmp
+          Câmp de protecție automatizată
           <input className="sr-only" name="website" tabIndex={-1} autoComplete="off" />
         </label>
         <label className="grid gap-1.5 text-sm text-ink-muted">

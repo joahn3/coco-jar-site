@@ -55,7 +55,7 @@ const premiumMenuCopy = {
       "Mici cu crustă rumenă, combinați cu cartofi crocanți și muștar de casă, ca accent de grătar premium.",
   },
   "Salată de varză": {
-    name: "Salată de varză crocantă — side note premium",
+    name: "Salată de varză crocantă, notă fresh și răcoroasă",
     description:
       "Sfeclă și varză gândite pentru echilibru acid, crocant și curat, ca contrapunct digestiv la preparatele principale.",
   },
@@ -143,7 +143,7 @@ export default async function DailyMenuPage({ searchParams }) {
           </p>
         )}
         <p className="mt-2 text-sm text-ink-muted">
-          Meniul este actualizat zilnic din sursa publică, ca o experiență constantă de zi, nu doar o listă de feluri.
+          Meniul nostru este actualizat zilnic, la fiecare schimbare de bucătărie, ca o experiență consistentă de zi, nu doar o listă de feluri.
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           <Button as="next-link" href="/contact" variant="primary" className="touch-target">

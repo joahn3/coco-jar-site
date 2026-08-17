@@ -101,7 +101,7 @@ export default async function GalleryPage({ searchParams }) {
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {files.length === 0 ? (
             <Card>
-              <p className="text-sm text-ink-muted">Nu avem imagini noi încă pentru acest filtru. Îți încărcăm cele noi în curând.</p>
+              <p className="text-sm text-ink-muted">Încă adăugăm cadre noi pentru această secțiune, te așteptăm înapoi peste puțin.</p>
             </Card>
           ) : (
             files.map((item) => (

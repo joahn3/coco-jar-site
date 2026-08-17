@@ -104,10 +104,10 @@ export default function EventForm() {
         </label>
         <label className="grid gap-1.5 text-sm text-ink-muted">
           Telefon *
-          <input
+            <input
             name="phone"
             required
-            placeholder="Ex: 07xx xxx xxx"
+            placeholder="Telefon mobil, de ex. 07xx xxx xxx"
             className={inputClassName}
           />
         </label>
@@ -186,10 +186,10 @@ export default function EventForm() {
             className={inputClassName}
           />
         </label>
-        <label className="sr-only">
-          Nu completați acest câmp
-          <input className="sr-only" name="website" tabIndex={-1} autoComplete="off" />
-        </label>
+            <label className="sr-only">
+              Câmp de protecție automatizată
+              <input className="sr-only" name="website" tabIndex={-1} autoComplete="off" />
+            </label>
         <label className="grid gap-1.5 text-sm">
           Mesaj / alergeni / alte detalii
           <textarea

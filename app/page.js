@@ -253,7 +253,7 @@ export default async function HomePage() {
       </Container>
 
       <Container as="section">
-        <Section title="Proof stack" subtitle="Indicatori verificabili care susțin experiența premium" className="pb-4 pt-8">
+        <Section title="Indicatori verificabili" subtitle="Indicatori verificabili care susțin experiența premium" className="pb-4 pt-8">
           <div className="grid gap-3 sm:grid-cols-3">
             {proofStack.map((item) => (
               <Card key={item.label} className="space-y-2">
