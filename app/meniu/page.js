@@ -48,7 +48,7 @@ export default async function MenuPage() {
               variant="ghost"
               className="touch-target"
             >
-              Descarcă meniul complet (PDF premium)
+              Descarcă meniul complet (PDF)
             </Button>
           </div>
         </div>

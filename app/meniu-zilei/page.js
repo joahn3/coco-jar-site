@@ -144,7 +144,7 @@ export default async function DailyMenuPage({ searchParams }) {
           </p>
         )}
         <p className="mt-2 text-sm text-ink-muted">
-          Meniul este actualizat zilnic, la fiecare schimbare de bucătărie, ca o experiență completă pe zi — nu doar o listă tehnică.
+          Meniul este actualizat zilnic, la fiecare schimbare din bucătărie, ca o experiență de zi echilibrată și constantă.
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           <Button as="next-link" href="/contact" variant="primary" className="touch-target">

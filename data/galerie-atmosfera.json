@@ -30,18 +30,6 @@
     "description": "Exteriorul pentru o primire relaxată."
   },
   {
-    "file": "facebook-025-744e5ef736.png",
-    "title": "Locație și acces",
-    "category": "locatie",
-    "description": "Un punct de oprire cald și comod pentru echipă."
-  },
-  {
-    "file": "instagram-018-7d6b2d87c6.jpg",
-    "title": "Zona de socializare",
-    "category": "locatie",
-    "description": "Loc confortabil pentru întâlniri și discuții."
-  },
-  {
     "file": "instagram-016-bdef6b8abc.jpg",
     "title": "Placa cu gust",
     "category": "preparat",
@@ -58,11 +46,5 @@
     "title": "Grătarul zilei",
     "category": "gratar",
     "description": "Foc, lemn și savoare."
-  },
-  {
-    "file": "facebook-022-c2e4588a45.webp",
-    "title": "Focul de la grătar",
-    "category": "gratar",
-    "description": "Pregătire atentă, cu atenție la timp și textură."
   }
 ]

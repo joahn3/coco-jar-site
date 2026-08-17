@@ -20,6 +20,8 @@ const FILTERS = [
 
 const validFilters = new Set(FILTERS.map((filter) => filter.key));
 const catalogByFile = new Map(galleryCatalog.map((item) => [item.file, item]));
+const catalogFiles = new Set(galleryCatalog.map((item) => item.file));
+const galleryInvalid = new Set(["instagram-010-ff3cb9cdf0.jpg"]);
 
 function normalizeFilter(value) {
   return validFilters.has(value) ? value : "toate";
@@ -32,6 +34,8 @@ export default async function GalleryPage({ searchParams }) {
   const files = readdirSync(galleryPath)
     .filter((file) => /\.(jpe?g|png|webp|avif)$/i.test(file))
     .filter((file) => !EXCLUDED_PATTERNS.some((pattern) => pattern.test(file)))
+    .filter((file) => !galleryInvalid.has(file))
+    .filter((file) => catalogFiles.has(file))
     .sort()
     .map((file) => {
       const item = catalogByFile.get(file) || {};

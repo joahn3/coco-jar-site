@@ -34,7 +34,8 @@ export default async function HomePage() {
 		{
 	  label: "Recenzii verificabile",
 	  value: "Google & Instagram",
-	  description: "Păstrăm activitatea socială și recenziile deschise public pentru confirmare directă.",
+	  description:
+	    "Recenziile sunt publice, actuale și pot fi verificate din profilurile noastre oficiale.",
 	},
     {
       label: "Răspuns de rezervare",
@@ -78,13 +79,13 @@ export default async function HomePage() {
 	];
 
   const reviewSignals = [
-    {
-      source: "Google Maps",
-      title: "Recenzii active pe profil",
-      text: "Afișăm recenziile din profilul public pentru verificare directă.",
-      cta: "Vezi recenziile clienților",
-      href: config.social?.googleBusiness || "#",
-    },
+		{
+	  		source: "Google Maps",
+	  	title: "Recenzii active pe profil",
+	  	text: "Vezi ce spun clienții noștri în profilurile publice Google.",
+	  	cta: "Vezi recenziile clienților",
+	  	href: config.social?.googleBusiness || "#",
+	 	},
     {
       source: "Instagram",
       title: "Conținut real din locație",
@@ -254,7 +255,11 @@ export default async function HomePage() {
       </Container>
 
       <Container as="section">
-        <Section title="Indicatori verificabili" subtitle="Indicatori verificabili care susțin experiența premium" className="pb-4 pt-8">
+        <Section
+          title="Ce poți verifica înainte de a veni"
+          subtitle="Indicatori clari, ca să ai încredere completă în alegere"
+          className="pb-4 pt-8"
+        >
           <div className="grid gap-3 sm:grid-cols-3">
             {proofStack.map((item) => (
               <Card key={item.label} className="space-y-2">
