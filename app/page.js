@@ -15,7 +15,7 @@ import Section from "./components/ui/section";
 export const metadata = {
   title: "Coco Jar | Restaurant de pui la jar în Popești-Leordeni",
   description:
-    "La Coco Jar găsești pui la jar, atmosferă caldă și servicii clare: rezervare rapidă, preparat constant, evenimente atent organizate.",
+    "La Coco Jar ai două opțiuni clare de alegere: meniul zilei pentru o seară completă și preparatele la-platou din restaurantul nostru a la carte.",
 };
 
 export default async function HomePage() {
@@ -115,10 +115,10 @@ export default async function HomePage() {
                 <div className="max-w-2xl space-y-4">
                   <p className="jar-badge">Când focul se aude blând, gustul devine memorabil</p>
                   <h1 className="text-display-md sm:text-display-xl md:text-display-2xl">
-                    Coco Jar — pui la jar, atmosferă caldă și atenție autentică.
+                    Coco Jar — pui la jar, meniul zilei și preparate la carte.
                   </h1>
                   <p className="text-sm sm:text-base text-ink-title/90 prose-balance">
-                    Bucură-te de o experiență completă: rezervare clară, porții echilibrate și un spațiu care te primește ca pentru tine acasă.
+                    Alege experiența completă, cu meniul zilei gândit pe zi și selecția a la carte din restaurant.
                   </p>
 
 	                  <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
@@ -138,15 +138,15 @@ export default async function HomePage() {
 	                      data-analytics="click|navigation|meniu_zilei_hero|source=home|journey=menu_cta|lead_type=menu"
 	                      className="touch-target w-full min-h-11 text-sm sm:text-base"
 	                    >
-                      Vezi meniul zilei
-	                    </Button>
-	                  </div>
+                      Meniul zilei
+		                    </Button>
+                  </div>
 
 	                  <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
 	                    {[
-	                      "Atmosferă premium, fără agitație",
-                      "Meniu de zi gândit pentru orele tale",
-                      "Confirmare rapidă, fără pași suplimentari",
+                      "Meniu zilei și a la carte",
+                      "Atmosferă relaxată, orientată spre rafinament",
+                      "Rezervare clară, fără pași suplimentari",
 	                    ].map((badge) => (
 	                      <span key={badge} className="jar-chip text-[0.74rem]">
 	                        {badge}

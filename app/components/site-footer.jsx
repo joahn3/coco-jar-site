@@ -30,7 +30,7 @@ export default function SiteFooter({ config }) {
         </div>
 
         <div className="space-y-2">
-          <p className="font-semibold text-ink-title">Informații utile</p>
+          <p className="font-semibold text-ink-title">Meniu și rezervări</p>
           <div className="jar-link-list">
             <p>
               <Link href="/termeni-si-conditii" className="jar-link jar-link--text touch-target">
@@ -102,7 +102,7 @@ export default function SiteFooter({ config }) {
             </p>
             <p>
               <Link href="/meniu" className="jar-link jar-link--text touch-target">
-                Meniu
+                Meniu a la carte
               </Link>
             </p>
             <p>

@@ -43,7 +43,8 @@ export default async function ContactPage() {
         <Card>
           <h1 className="text-display-md">Rezervare clară, fără pași inutili</h1>
             <p className="mt-2 text-body text-ink-muted">
-            Trimite cererea completă și primim un răspuns prioritar în maxim 30 de minute.
+            Trimite cererea completă și alegi între două direcții: meniul zilei sau preparatele a la carte.
+            Echipa îți confirmă locul în maxim 30 de minute.
             Dacă ești la orar aglomerat sau ai grupul mare, îți fixăm opțiunea potrivită din prima variantă.
           </p>
           <div className="mt-4 grid gap-2 sm:grid-cols-2">
@@ -63,24 +64,24 @@ export default async function ContactPage() {
             ))}
           </div>
           <div className="jar-link-list">
-	            <p>
-	              <a
-	                href={phoneHref(config.phone)}
-	                data-analytics="phone_click|conversion|phone_contact|source=contact|journey=lead_capture|lead_type=reservation"
-	                className="jar-link jar-link--text touch-target"
-	              >
-	                Rezervare prioritară pe telefon — {phoneDisplay}
-	              </a>
-	            </p>
+            <p>
+              <a
+                href={phoneHref(config.phone)}
+                data-analytics="phone_click|conversion|phone_contact|source=contact|journey=lead_capture|lead_type=reservation"
+                className="jar-link jar-link--text touch-target"
+              >
+                Rezervare prioritară pe telefon — {phoneDisplay}
+              </a>
+            </p>
             <p>
               <a
 	                href={whatsappHref(config.whatsapp, config.phone)}
 	                data-analytics="whatsapp_click|conversion|whatsapp_contact|source=contact|journey=lead_capture|lead_type=reservation"
-	                className="jar-link jar-link--text touch-target"
-	              >
-	                Confirmare rapidă prin WhatsApp — {whatsappDisplay}
-	              </a>
-	            </p>
+                className="jar-link jar-link--text touch-target"
+              >
+                Confirmare rapidă prin WhatsApp — {whatsappDisplay}
+              </a>
+            </p>
             <p className="jar-badge jar-badge--subtle">
               Locurile bune se ocupă repede; rezervă din timp, mai ales pe intervalele căutate.
             </p>

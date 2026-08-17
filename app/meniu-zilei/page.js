@@ -15,7 +15,7 @@ import Breadcrumbs from "../components/breadcrumbs";
 export const metadata = {
   title: "Meniul zilei | Coco Jar Bistro",
   description:
-    "Meniul zilei de la Coco Jar: pui la jar, preparate tradiționale, salate și o experiență completă pentru întreaga zi.",
+    "Meniul zilei de la Coco Jar: pui la jar, preparate tradiționale și opțiuni a la carte pentru experiența ta completă.",
 };
 
 const premiumMenuCopy = {
@@ -123,7 +123,7 @@ export default async function DailyMenuPage({ searchParams }) {
               { label: "Meniul zilei", href: "/meniu-zilei" },
             ]}
           />
-        <h1 className="text-display-md">Meniul zilei — experiență completă la jar</h1>
+        <h1 className="text-display-md">Meniul zilei — experiență completă la jar + a la carte</h1>
         <p className="mt-2 text-sm text-ink-muted">
           {selectedDate
             ? `Compoziția pentru ${requestedLabel || selectedDate} este gândită ca o experiență de zi: start echilibrat, preparat la jar, ritm constant și servire stabilă.`
@@ -145,6 +145,9 @@ export default async function DailyMenuPage({ searchParams }) {
         )}
         <p className="mt-2 text-sm text-ink-muted">
           Meniul este actualizat zilnic, la fiecare schimbare din bucătărie, ca o experiență de zi echilibrată și constantă.
+        </p>
+        <p className="mt-2 text-sm text-ink-muted">
+          Vrei flexibilitate? În paralel cu meniul zilei, îți păstrăm complet meniul a la carte din restaurant.
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           <Button as="next-link" href="/contact" variant="primary" className="touch-target">

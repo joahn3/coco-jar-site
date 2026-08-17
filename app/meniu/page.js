@@ -7,7 +7,7 @@ import Breadcrumbs from "../components/breadcrumbs";
 export const metadata = {
   title: "Meniu complet | Coco Jar Bistro",
   description:
-    "Descoperă meniul complet al restaurantului Coco Jar: pui la jar, preparate pe categorii, porții clare și recomandări pentru mesele din orice zi.",
+    "Descoperă meniul complet a la carte al Coco Jar: preparate pe categorii, porții clare și recomandări pentru mesele de orice moment.",
 };
 
 export default async function MenuPage() {
@@ -31,9 +31,9 @@ export default async function MenuPage() {
           />
           <div className="flex flex-wrap items-end justify-between gap-3">
           <div className="space-y-1">
-            <h1 className="text-display-md">Meniu complet</h1>
+            <h1 className="text-display-md">Meniu a la carte</h1>
             <p className="text-body-lg text-ink-muted">
-              Toate preparatele sunt organizate pe categorii clare, cu prețuri actualizate constant.
+              Toate preparatele a la carte sunt organizate pe categorii clare, cu prețuri actualizate constant.
             </p>
           </div>
           <div className="flex flex-wrap justify-end gap-2">

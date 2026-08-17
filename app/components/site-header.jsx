@@ -9,7 +9,7 @@ import Button from "./ui/button";
 
 const NAV_LINKS = [
   { href: "/", label: "Acasă" },
-  { href: "/meniu", label: "Meniu" },
+  { href: "/meniu", label: "Meniu a la carte" },
   { href: "/meniu-zilei", label: "Meniul zilei" },
   { href: "/galerie", label: "Galerie" },
   { href: "/despre-noi", label: "Despre noi" },
@@ -18,7 +18,7 @@ const NAV_LINKS = [
 ];
 
 const EVENING_HIGHLIGHTS = [
-  { href: "/meniu", label: "Friptură la jar, pentru fiecare moment" },
+  { href: "/meniu", label: "Meniu a la carte, după gust" },
 	  { href: "/meniu-zilei", label: "Meniul zilei" },
   { href: "/galerie", label: "Atmosferă autentică din restaurant" },
 ];
