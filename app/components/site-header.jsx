@@ -18,9 +18,9 @@ const NAV_LINKS = [
 ];
 
 const EVENING_HIGHLIGHTS = [
-  { href: "/meniu", label: "Friptură la jar, pentru seara de weekend" },
+  { href: "/meniu", label: "Friptură la jar, pentru fiecare moment" },
 	  { href: "/meniu-zilei", label: "Meniul zilei" },
-  { href: "/galerie", label: "Atmosferă autentică de seară" },
+  { href: "/galerie", label: "Atmosferă autentică din restaurant" },
 ];
 
 function MenuIcon({ open }) {
@@ -231,7 +231,7 @@ export default function SiteHeader({ config }) {
             </ul>
           </nav>
           <div className="mt-4 rounded-lg border border-line-soft/70 bg-surface-panel/45 p-2.5">
-            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-ink-muted">Recomandări de seară</p>
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-ink-muted">Recomandări premium</p>
             <ul className="mt-2 space-y-2">
               {EVENING_HIGHLIGHTS.map((item) => (
                 <li key={item.href}>

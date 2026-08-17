@@ -13,9 +13,9 @@ export const metadata = {
 };
 
 export default async function ContactPage() {
-    const config = await getSiteConfig();
-	const phoneDisplay = config.phone || "la recepție";
-	const whatsappDisplay = config.whatsapp || config.phone || "la recepție";
+	    const config = await getSiteConfig();
+		const phoneDisplay = config.phone || "la recepție";
+		const whatsappDisplay = config.whatsapp || config.phone || "la recepție";
   const conversionSignals = [
       {
       label: "Răspuns prioritar",
@@ -41,17 +41,17 @@ export default async function ContactPage() {
             ]}
           />
           <Card>
-          <h1 className="text-display-md">Contact și rezervări premium</h1>
+          <h1 className="text-display-md">Rezervare fără pași inutili, cu confirmare clară</h1>
             <p className="mt-2 text-body text-ink-muted">
-            Confirmăm rapid cererile complete: număr persoane, interval dorit și tipul vizitei. Pentru evenimente complexe,
-            îți pregătim o propunere personalizată în maxim 24 de ore.
+            Trimite cererea completă și îți oferim o confirmare prioritară în 30 de minute, ca să ai siguranța locului.
+            Dacă ora e aglomerată sau ai un grup, îți fixăm oferta corect din prima, fără schimbări de ultim moment.
           </p>
           <div className="mt-4 grid gap-2 sm:grid-cols-2">
             <Button as="next-link" href="/meniu-zilei" variant="secondary" className="w-full sm:w-auto">
-              Verifică oferta de seară
+              Vezi meniul zilei premium
             </Button>
-              <Button href={phoneHref(config.phone)} className="w-full sm:w-auto">
-              Rezervare directă (confirmare prioritară)
+            <Button href={phoneHref(config.phone)} className="w-full sm:w-auto">
+              Confirmare prioritară prin telefon
             </Button>
           </div>
           <div className="grid gap-2 sm:grid-cols-3">
@@ -63,25 +63,27 @@ export default async function ContactPage() {
             ))}
           </div>
           <div className="jar-link-list">
+	            <p>
+	              <a
+	                href={phoneHref(config.phone)}
+	                data-analytics="phone_click|conversion|phone_contact|source=contact|journey=lead_capture|lead_type=reservation"
+	                className="jar-link jar-link--text touch-target"
+	              >
+	                Rezervare prioritară pe telefon — {phoneDisplay}
+	              </a>
+	            </p>
             <p>
               <a
-                href={phoneHref(config.phone)}
-                data-analytics="phone_click|conversion|phone_contact|source=contact|journey=lead_capture|lead_type=reservation"
-                className="jar-link jar-link--text touch-target"
-              >
-                Rezervare telefonică: confirmare prioritară — {phoneDisplay}
-              </a>
+	                href={whatsappHref(config.whatsapp, config.phone)}
+	                data-analytics="whatsapp_click|conversion|whatsapp_contact|source=contact|journey=lead_capture|lead_type=reservation"
+	                className="jar-link jar-link--text touch-target"
+	              >
+	                Confirmare rapidă prin WhatsApp — {whatsappDisplay}
+	              </a>
+	            </p>
+            <p className="jar-badge jar-badge--subtle">
+              Locurile se ocupă repede: rezervă din timp, ideal la începutul programului.
             </p>
-            <p>
-              <a
-                href={whatsappHref(config.whatsapp, config.phone)}
-                data-analytics="whatsapp_click|conversion|whatsapp_contact|source=contact|journey=lead_capture|lead_type=reservation"
-                className="jar-link jar-link--text touch-target"
-              >
-                Confirmare rapidă prin WhatsApp — {whatsappDisplay}
-              </a>
-            </p>
-            <p className="jar-badge jar-badge--subtle">Răspuns estimat: maxim 30 de minute</p>
             <p>
               <a
                 href={mapHref(config.siteName, config.fullAddress)}
@@ -97,7 +99,7 @@ export default async function ContactPage() {
           <p>Adresă: {config.fullAddress}</p>
 	        <p className="mt-2 text-sm text-ink-muted">Deschis: {config.hours}</p>
           <p className="mt-2 text-sm text-ink-muted">
-            Se recomandă rezervarea la <strong>început de seară</strong> pentru mese de grup între 6 și 10 persoane.
+            Se recomandă rezervarea din timp la intervale de vârf, mai ales pentru mese între 6 și 10 persoane.
           </p>
         </Card>
 

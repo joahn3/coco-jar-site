@@ -46,10 +46,10 @@ export default async function EventPage() {
 	            </p>
           <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:max-w-2xl">
                 <Button as="next-link" href="/contact" variant="primary" className="w-full sm:w-auto">
-              Blochează experiența ta privată
+              Rezervă experiența privată
               </Button>
-            <Button as="next-link" href="/meniu-zilei" variant="secondary" className="w-full sm:w-auto">
-              Alege meniu pentru seara ta
+    <Button as="next-link" href="/meniu-zilei" variant="secondary" className="w-full sm:w-auto">
+              Planifică meniul pentru eveniment
             </Button>
           </div>
           <div className="grid gap-2 sm:grid-cols-3">
@@ -76,7 +76,7 @@ export default async function EventPage() {
           <div className="jar-link-list">
             <p>
               <a className="jar-link touch-target" href={phoneHref(config.phone)}>
-                Confirmare disponibilitate pentru eveniment — {phoneDisplay}
+                Confirmare disponibilitate eveniment — {phoneDisplay}
               </a>
             </p>
           </div>

@@ -15,29 +15,29 @@ import Breadcrumbs from "../components/breadcrumbs";
 export const metadata = {
   title: "Meniul zilei | Coco Jar Bistro",
   description:
-    "Meniul zilei de azi de la Coco Jar: pui la jar, preparate tradiționale, salate și gusturi gândite pentru seara perfectă.",
+    "Meniul zilei de la Coco Jar: pui la jar, preparate tradiționale, salate și o experiență completă pentru întreaga zi.",
 };
 
 const premiumMenuCopy = {
   "Meniul zilei": {
-    name: "Meniul de seară premium",
+    name: "Meniul zilei premium",
     description:
-      "O porție echilibrată, gândită ca experiență de seară: început blând, mijloc consistent și final fără grabă.",
+      "O porție echilibrată, gândită ca experiență de zi: început echilibrat, mijloc consistent și final fără grabă.",
   },
   "Ciorbă de văcuță": {
     name: "Ciorbă de văcuță — porție de deschidere",
     description:
-      "Ciorbă de casă cu intensitate de familie, densă, echilibrată și pregătită ca introducere pe o tavă de seară.",
+      "Ciorbă de casă cu intensitate de familie, densă, echilibrată și pregătită ca introducere pentru zi.",
   },
   "Supă de pui cu tăiței de casă": {
     name: "Supă de pui cu tăiței de casă — porție de echilibru",
     description:
-      "Supă de pui cu tăiței proaspeți, preparată lent, pentru textură mătăsoasă și răgaz dulceag al serii.",
+      "Supă de pui cu tăiței proaspeți, preparată lent, pentru textură mătăsoasă și răgaz plăcut pe zi.",
   },
   "Pui la jar cu cartofi prăjiți": {
-    name: "Pui la jar marinat — porție de seară",
+    name: "Pui la jar marinat — porție de zi",
     description:
-      "Pui afumat pe jar, cu cartofi crocanți și crustă aurie, porție generoasă pentru o experiență de seară constantă.",
+      "Pui afumat pe jar, cu cartofi crocanți și crustă aurie, porție generoasă pentru o experiență de zi constantă.",
   },
   "Pilaf de legume cu pui la jar": {
     name: "Pilaf de legume cu pui la jar — porție completă",
@@ -47,7 +47,7 @@ const premiumMenuCopy = {
   "Cârnăciori cu cartofi prăjiți": {
     name: "Cârnăciori la jar — porție crocantă",
     description:
-      "Cârnăciori rumeniți pe exterior, alături de cartofi aurii și muștar artizanal, pentru un final clar de seară.",
+      "Cârnăciori rumeniți pe exterior, alături de cartofi aurii și muștar artizanal, cu prezentare clară pe toată ziua.",
   },
   "Mici cu cartofi prăjiți și muștar": {
     name: "Mici cu cartofi prăjiți și muștar — porție robustă",
@@ -67,12 +67,12 @@ function getPremiumMenuItemCopy(item) {
   const baseDescription = (preset?.description || item.description || "").trim();
   const extras = [];
   const hasPorție = /\bporț/i.test(baseDescription);
-  const hasExperiență = /experienț|seară/i.test(baseDescription);
+  const hasExperiență = /experienț|zi/i.test(baseDescription);
   if (!hasPorție) {
-    extras.push("Porție gândită pentru o experiență de seară calmă.");
+    extras.push("Porție gândită pentru o experiență de zi echilibrată.");
   }
   if (!hasExperiență) {
-    extras.push("Pachet de seară cu prezentare constantă.");
+    extras.push("Pachet de zi cu prezentare constantă.");
   }
   const description = [baseDescription, ...extras].filter(Boolean).join(" ");
   return { title, description };
@@ -122,11 +122,11 @@ export default async function DailyMenuPage({ searchParams }) {
               { label: "Meniul zilei", href: "/meniu-zilei" },
             ]}
           />
-        <h1 className="text-display-md">Meniul zilei de seară — calitate la jar</h1>
+        <h1 className="text-display-md">Meniul zilei — experiență completă la jar</h1>
         <p className="mt-2 text-sm text-ink-muted">
           {selectedDate
-            ? `Oferta este optimizată pentru data ${requestedLabel || selectedDate} cu meniu de seară, porții echilibrate și ritm constant.`
-            : `Oferta zilei de azi este structurată pentru clienții care caută calitate rapidă: preparat la zi, porții clare, timp de servire stabil.`}
+            ? `Compoziția pentru ${requestedLabel || selectedDate} este gândită ca o experiență de zi: start echilibrat, preparat la jar, ritm constant și servire stabilă.`
+            : `Este o ofertă de zi completă: intrare, fel principal și final pentru o masă întreagă, fără compromis pe calitate și timp.`}
         </p>
         {selectedDate ? (
           <p className="mt-2 text-sm text-ink-muted">
@@ -143,27 +143,27 @@ export default async function DailyMenuPage({ searchParams }) {
           </p>
         )}
         <p className="mt-2 text-sm text-ink-muted">
-          Meniul este actualizat zilnic, din sursa publică, cu accent pe pregătire premium de seară.
+          Meniul este actualizat zilnic din sursa publică, ca o experiență constantă de zi, nu doar o listă de feluri.
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           <Button as="next-link" href="/contact" variant="primary" className="touch-target">
-            Rezervă locul pentru seara asta
+            Rezervă-ți locul pentru azi
           </Button>
           <Button as="next-link" href="/meniu" variant="secondary" className="touch-target">
-            Descoperă meniul complet
+            Explorează meniul complet
           </Button>
           <Button href={phoneHref(config.phone)} className="touch-target">
-            Confirmare directă prin telefon
+            Rezervare directă pe telefon
           </Button>
         </div>
 
         <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {dayItems.length === 0 ? (
-            <Card className="md:col-span-2 xl:col-span-3">
-              <p className="text-sm text-ink-muted">
-                Meniul zilei este actualizat zilnic; revenim în scurt timp cu oferta completă de seară.
-              </p>
-            </Card>
+                <Card className="md:col-span-2 xl:col-span-3">
+                  <p className="text-sm text-ink-muted">
+                    Îți pregătim experiența zilei pas cu pas; revenim în scurt timp cu oferta completă pentru această zi.
+                  </p>
+                </Card>
             ) : (
             dayItems.map((item) => {
               const premiumItem = getPremiumMenuItemCopy(item);

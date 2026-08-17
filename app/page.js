@@ -7,7 +7,6 @@ import {
   getDayLabel,
 } from "../lib/site-data";
 import { isMenuDayActive, mapHref, phoneHref, whatsappHref } from "../lib/format";
-import galleryCatalog from "../data/galerie-atmosfera.json";
 import Button from "./components/ui/button";
 import Card from "./components/ui/card";
 import Container from "./components/ui/container";
@@ -16,7 +15,7 @@ import Section from "./components/ui/section";
 export const metadata = {
   title: "Coco Jar | Restaurant premium pui la jar în Popești-Leordeni",
   description:
-    "La Coco Jar, atmosfera caldă și puiul la jar creează cadrul perfect pentru mesele de seară. Descoperă meniul zilnic, rezervări rapide și evenimente private.",
+    "La Coco Jar, atmosfera caldă și puiul la jar creează cadrul perfect pentru mesele zilnice. Descoperă meniul de azi, rezervări rapide și evenimente private.",
 };
 
 export default async function HomePage() {
@@ -30,29 +29,28 @@ export default async function HomePage() {
 	const whatsappText = config.whatsapp || config.phone || "la recepție";
 	const operatingHoursText = "Deschis: 10:00–22:00";
 	const heroImage = "/galerie/instagram-011-47b855d73e.jpg";
-	const galleryCount = Array.isArray(galleryCatalog) ? galleryCatalog.length : 0;
 	const proofStack = [
 		{
-	  label: "Atmosferă verificată",
-	  value: "sub 30 min",
-	  description: "Rezervări confirmate printr-un flux prioritar, înainte de ora de vârf.",
+	  label: "Recenzii verificabile",
+	  value: "Google & Instagram",
+	  description: "Păstrăm activitatea socială și recenziile deschise public pentru confirmare directă.",
 	},
     {
-      label: "Meniu la zi",
-      value: `${todayItems.length || "—"} feluri`,
-        description: isMenuActive
-        ? "Actualizat zilnic, cu porții clare pentru seara de azi."
-        : "Actualizare programată zilnic, potrivit fluxului de seară.",
+      label: "Răspuns de rezervare",
+      value: "sub 30 min",
+      description: isMenuActive
+        ? "Răspunsul inițial vine rapid pentru confirmare, în zilele active."
+        : "Răspundem pe fluxul de zi, cu prioritate pentru cererile complete.",
     },
     {
-      label: "Feedback verificabil",
-      value: `${galleryCount} imagini`,
-      description: "Colecție actualizată din locație, inclusiv terasă, grătar, preparate, evenimente.",
+      label: "Acoperire evenimente",
+      value: "4 tipuri principale",
+      description: "Aniversări, reuniuni, evenimente corporate și întâlniri private, cu echipare adaptată.",
     },
   ];
 
 	const trustSignals = [
-    "Atmosferă: spațiu cald, servicii fără stres, timp de seară susținut.",
+    "Atmosferă: spațiu cald, servicii fără stres, timp susținut.",
     "Preparat: pui la jar, porții constante, garnituri alese la comandă.",
     "Feedback: recenzii de profil, actualizări constante pe social.",
 	];
@@ -60,7 +58,7 @@ export default async function HomePage() {
 	const experienceStories = [
     {
       title: "Terasă cu ritm lent",
-      text: "Lumini calde, lemn natural și muzică discretă. Un loc unde poți sta până când seara și gustul se liniștesc.",
+      text: "Lumini calde, lemn natural și muzică discretă. Un loc unde poți sta liniștit, de la lunch până la cină, fără grabă.",
     },
     {
       title: "Evenimente private, atent calibrate",
@@ -68,12 +66,12 @@ export default async function HomePage() {
     },
     {
       title: "Seri tematice",
-      text: "Propunem combinații de preparate pentru momente speciale, cu aceeași calitate premium în orice seară.",
+      text: "Propunem combinații de preparate pentru momente speciale, cu aceeași calitate premium în orice zi.",
     },
 	];
 
-	const heroHighlights = [
-    "Experiență de seară cu final clar",
+  const heroHighlights = [
+    "Experiență de zi cu final clar",
     "Preparate la jar, gătite pentru o masă echilibrată",
     "Rezervare clară, fără pași inutili",
 	];
@@ -89,7 +87,7 @@ export default async function HomePage() {
     {
       source: "Instagram",
       title: "Conținut real din locație",
-      text: "Actualizări periodice din restaurant, cu preparate și imagini de seară.",
+      text: "Actualizări periodice din restaurant, cu preparate și imagini din sala de zi.",
       cta: "Vezi pagina Instagram",
       href: config.social?.instagram || "#",
     },
@@ -113,55 +111,45 @@ export default async function HomePage() {
             <div className="glass-panel glass-panel--hero relative z-10 rounded-[1.35rem] p-4 sm:p-6 md:p-8">
               <div className="hero-copy-grid flex flex-col gap-4 md:grid md:grid-cols-[1fr_auto] md:items-end md:gap-8">
                 <div className="max-w-2xl space-y-4">
-                  <p className="jar-badge">Seara bună începe cu căldura unui loc gândit pentru oameni</p>
+                  <p className="jar-badge">Atmosferă caldă, preparat constant, experiență de restaurant</p>
                   <h1 className="text-display-md sm:text-display-xl md:text-display-2xl">
-                    Aici, puiul la jar și atmosfera se întâlnesc într-o experiență de seară clară, fără compromisuri.
+                    Coco Jar transformă fiecare zi într-o experiență coerentă: aroma lemnului, puiul la jar și timpul tău.
                   </h1>
                   <p className="text-sm sm:text-base text-ink-title/90 prose-balance">
-                    Primești un parcurs complet: rezervare prioritară, preparate la jar cu porție de seară și un spațiu menit pentru
-                    conversații lungi, fără grabă și fără compromis pe calitate.
+                    Nu e doar un meniu. Este o ofertă completă: rezervare clară, porții bine gândite și un cadru unde poți sta liniștit.
                   </p>
 
-                  <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-                    <Button
-                      as="next-link"
-                      href="/contact"
-                      variant="primary"
-                      data-analytics="click|conversion|rezervare_primara|source=home|journey=primary_cta|lead_type=reservation"
-                      className="touch-target w-full min-h-11 text-sm sm:text-base"
-                    >
-                      Rezervare prioritară
-                    </Button>
-                    <Button
-                      as="next-link"
-                      href="/meniu-zilei"
-                      variant="secondary"
-                      data-analytics="click|navigation|meniu_zilei_hero|source=home|journey=menu_cta|lead_type=menu"
-                      className="touch-target w-full min-h-11 text-sm sm:text-base"
-                    >
-                      Meniul zilei pentru azi
-                    </Button>
-                    <Button
-                      as="next-link"
-                      href="/evenimente-catering"
-                      variant="ghost"
-                      data-analytics="click|navigation|evenimente_hero|source=home|journey=exploration|lead_type=event"
-                      className="touch-target w-full min-h-11 text-sm sm:text-base"
-                    >
-                      Alege evenimentul tău
-                    </Button>
-                  </div>
+	                  <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+	                    <Button
+	                      as="next-link"
+	                      href="/contact"
+	                      variant="primary"
+	                      data-analytics="click|conversion|rezervare_primara|source=home|journey=primary_cta|lead_type=reservation"
+	                      className="touch-target w-full min-h-11 text-sm sm:text-base"
+	                    >
+                      Rezervare pentru azi
+	                    </Button>
+	                    <Button
+	                      as="next-link"
+	                      href="/meniu-zilei"
+	                      variant="secondary"
+	                      data-analytics="click|navigation|meniu_zilei_hero|source=home|journey=menu_cta|lead_type=menu"
+	                      className="touch-target w-full min-h-11 text-sm sm:text-base"
+	                    >
+                      Meniul zilei premium
+	                    </Button>
+	                  </div>
 
-                  <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-                    {[
-                      "Atmosferă premium, fără agitație",
-                      "Preparat la jar, porție gândită pentru seară",
-                      "Rezervare clară, confirmare rapidă",
-                    ].map((badge) => (
-                      <span key={badge} className="jar-chip text-[0.74rem]">
-                        {badge}
-                      </span>
-                    ))}
+	                  <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+	                    {[
+	                      "Atmosferă premium, fără agitație",
+                      "Meniu zilnic gândit pe ritm și consistență",
+                      "Confirmare directă, fără pași suplimentari",
+	                    ].map((badge) => (
+	                      <span key={badge} className="jar-chip text-[0.74rem]">
+	                        {badge}
+	                      </span>
+	                    ))}
                   </div>
                 </div>
 
@@ -196,7 +184,7 @@ export default async function HomePage() {
           <p className="jar-badge">Atmosferă premium, ritm stabil</p>
           <h2 className="text-title-lg">Ce simte clientul când intră</h2>
           <p className="max-w-3xl text-body-lg text-ink-muted prose-balance">
-            Loc cald, confortabil și atent, construit pentru o seară echilibrată: pregătire susținută, porții clare, fără zgomot de fond inutil.
+            Loc cald, confortabil și atent, construit pentru o experiență echilibrată: pregătire susținută, porții clare, fără zgomot de fond inutil.
           </p>
           <div className="grid gap-2.5 sm:grid-cols-3 sm:gap-3">
             {heroHighlights.map((item) => (
@@ -225,7 +213,7 @@ export default async function HomePage() {
           <h2 className="text-title-lg">Rezervare pe acțiune</h2>
           <p className="text-sm text-ink-muted">{operatingHoursText}</p>
           <p className="text-sm text-ink-muted">
-            Se recomandă planificare din timp la vârf de seară: confirmăm rapid preferințele de masă.
+            Se recomandă planificare din timp la vârf de cerere: confirmăm rapid preferințele de masă.
           </p>
           <div className="jar-link-list">
             <p>
@@ -265,7 +253,7 @@ export default async function HomePage() {
       </Container>
 
       <Container as="section">
-        <Section title="Indicatori de încredere" className="pb-4 pt-8">
+        <Section title="Proof stack" subtitle="Indicatori verificabili care susțin experiența premium" className="pb-4 pt-8">
           <div className="grid gap-3 sm:grid-cols-3">
             {proofStack.map((item) => (
               <Card key={item.label} className="space-y-2">
@@ -281,7 +269,7 @@ export default async function HomePage() {
       <Container as="section">
         <Section
           title="Experiențe"
-          subtitle="Ce simte clientul în fiecare noapte, din seara de sâmbătă până în cea mai liniștită zi"
+          subtitle="Ce simte clientul în fiecare zi, de luni până în cea mai liniștită zi de odihnă"
           className="pb-4 pt-2"
         >
           <div className="grid gap-4 md:grid-cols-3">

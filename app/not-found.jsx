@@ -31,7 +31,7 @@ const directLinks = [
     {
       href: "/meniu-zilei",
       title: "Meniul zilei",
-      text: "Actualizare zilnică pentru seara restaurantului.",
+      text: "Actualizare zilnică pentru meniul de zi.",
     },
   {
     href: "/evenimente-catering",
