@@ -32,7 +32,7 @@ export default function CookiesPage() {
             <h2 className="text-title-md">Ce folosim noi pe site</h2>
             <p className="text-sm text-ink-muted">
               Folosim cookie-uri strict necesare pentru funcționare stabilă: navigare rapidă, securitate
-              și un suport tehnic discret.
+              și o experiență constantă.
             </p>
           </section>
 
