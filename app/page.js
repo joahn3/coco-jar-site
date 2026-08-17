@@ -27,6 +27,7 @@ export default async function HomePage() {
 	const todayMenuLabel = getDayLabel(dayKey);
 	const contactText = config.phone || "la recepție";
 	const whatsappText = config.whatsapp || config.phone || "la recepție";
+	const menuWindowText = `Meniul zilei: 10:00–${config.menuValidUntilHour || "16:00"}`;
 	const operatingHoursText = "Deschis: 10:00–22:00";
 	const heroImage = "/galerie/instagram-011-47b855d73e.jpg";
 	const proofStack = [
@@ -373,7 +374,7 @@ export default async function HomePage() {
       <Container as="section">
         <Section
           title={`Meniul zilei — ${todayMenuLabel} (experiență completă)`}
-          subtitle={isMenuActive ? "" : "Deschis: 10:00–22:00"}
+          subtitle={isMenuActive ? "" : menuWindowText}
         >
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {!todayItems.length ? (

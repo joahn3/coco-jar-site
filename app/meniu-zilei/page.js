@@ -108,6 +108,7 @@ export default async function DailyMenuPage({ searchParams }) {
   const config = await getSiteConfig();
   const dayItems = Array.isArray(dailyMenu[dayKey]) ? dailyMenu[dayKey] : [];
   const isMenuActive = isMenuDayActive(config.menuValidUntilHour);
+  const menuWindowText = `Meniu zilei disponibil: 10:00–${config.menuValidUntilHour || "16:00"}`;
   const requestedLabel = selectedDate ? formatDateInput(selectedDate) : "";
   const pageTitle = selectedDate
     ? `Meniul zilei — ${getDayLabel(dayKey)} (${requestedLabel || selectedDate})`
@@ -139,7 +140,7 @@ export default async function DailyMenuPage({ searchParams }) {
 	        {!isMenuActive && (
           <p className="jar-badge jar-badge--subtle mt-2 normal-case">
             <span className="mr-2 inline-block size-2 rounded-full bg-brand-500" />
-            Deschis: 10:00–22:00
+            {menuWindowText}
           </p>
         )}
         <p className="mt-2 text-sm text-ink-muted">
