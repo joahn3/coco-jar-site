@@ -95,7 +95,7 @@ export default async function ContactPage() {
             </p>
           </div>
           <p>Adresă: {config.fullAddress}</p>
-          <p className="mt-2 text-sm text-ink-muted">Program zilnic: {config.hours}</p>
+	        <p className="mt-2 text-sm text-ink-muted">Deschis: {config.hours}</p>
           <p className="mt-2 text-sm text-ink-muted">
             Se recomandă rezervarea la <strong>început de seară</strong> pentru mese de grup între 6 și 10 persoane.
           </p>

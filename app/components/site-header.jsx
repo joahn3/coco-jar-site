@@ -19,7 +19,7 @@ const NAV_LINKS = [
 
 const EVENING_HIGHLIGHTS = [
   { href: "/meniu", label: "Friptură la jar, pentru seara de weekend" },
-  { href: "/meniu-zilei", label: "Meniul zilei (valabil până la 16:00)" },
+	  { href: "/meniu-zilei", label: "Meniul zilei" },
   { href: "/galerie", label: "Atmosferă autentică de seară" },
 ];
 

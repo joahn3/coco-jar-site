@@ -25,7 +25,7 @@ export default function SiteFooter({ config }) {
               {config.siteName} · {config.locality}
             </p>
           </div>
-          <p className="text-ink-title">{config.hours}</p>
+          <p className="text-ink-title">Deschis: {config.hours}</p>
           <p>Adresă: {config.fullAddress}</p>
         </div>
 

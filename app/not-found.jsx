@@ -28,11 +28,11 @@ const directLinks = [
     title: "Meniu complet",
     text: "Toate preparatele, porțiile și categoriile sunt organizate clar.",
   },
-  {
-    href: "/meniu-zilei",
-    title: "Meniul zilei",
-    text: "Actualizare zilnică, valabil până la ora 16:00.",
-  },
+    {
+      href: "/meniu-zilei",
+      title: "Meniul zilei",
+      text: "Actualizare zilnică pentru seara restaurantului.",
+    },
   {
     href: "/evenimente-catering",
     title: "Evenimente și catering",
@@ -132,7 +132,7 @@ export default async function NotFound() {
             <p className="trust-stat">Contact direct</p>
             <p className="text-sm text-ink-muted">Telefon: {config.phone || "la recepție"}</p>
             <p className="text-sm text-ink-muted">WhatsApp: {config.whatsapp || "la recepție"}</p>
-            <p className="text-sm text-ink-muted">Program: {config.hours}</p>
+            <p className="text-sm text-ink-muted">Deschis: 10:00–22:00</p>
           </div>
 
           <p className="text-xs text-ink-muted">

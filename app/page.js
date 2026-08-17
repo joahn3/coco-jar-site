@@ -28,6 +28,7 @@ export default async function HomePage() {
 	const todayMenuLabel = getDayLabel(dayKey);
 	const contactText = config.phone || "la recepție";
 	const whatsappText = config.whatsapp || config.phone || "la recepție";
+	const operatingHoursText = "Deschis: 10:00–22:00";
 	const heroImage = "/galerie/instagram-011-47b855d73e.jpg";
 	const galleryCount = Array.isArray(galleryCatalog) ? galleryCatalog.length : 0;
 	const proofStack = [
@@ -39,9 +40,9 @@ export default async function HomePage() {
     {
       label: "Meniu la zi",
       value: `${todayItems.length || "—"} feluri`,
-      description: isMenuActive
-        ? "Actualizat până la ora 16:00, cu porții clare pentru seara de azi."
-        : "Actualizare programată zilnic, după ora 16:00.",
+        description: isMenuActive
+        ? "Actualizat zilnic, cu porții clare pentru seara de azi."
+        : "Actualizare programată zilnic, potrivit fluxului de seară.",
     },
     {
       label: "Feedback verificabil",
@@ -207,9 +208,9 @@ export default async function HomePage() {
               </div>
             ))}
           </div>
-          <div className="grid gap-2.5 sm:grid-cols-3 sm:gap-3">
+        <div className="grid gap-2.5 sm:grid-cols-3 sm:gap-3">
             <p className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
-              Meniu zilei: până la 16:00
+              {operatingHoursText}
             </p>
             <p className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
               Telefon: {contactText}
@@ -222,7 +223,7 @@ export default async function HomePage() {
 
         <Card className="space-y-4 py-6 sm:py-7">
           <h2 className="text-title-lg">Rezervare pe acțiune</h2>
-          <p className="text-sm text-ink-muted">Program: {config.hours}</p>
+          <p className="text-sm text-ink-muted">{operatingHoursText}</p>
           <p className="text-sm text-ink-muted">
             Se recomandă planificare din timp la vârf de seară: confirmăm rapid preferințele de masă.
           </p>
@@ -362,7 +363,7 @@ export default async function HomePage() {
               <p className="text-sm text-ink-muted">
                 Rezervare directă: {contactText}
               </p>
-              <p className="text-sm text-ink-muted">Program: {config.hours}</p>
+              <p className="text-sm text-ink-muted">{operatingHoursText}</p>
               <p className="text-xs text-ink-muted">Confirmare estimativă: în maxim 30 de minute (în interval de program)</p>
             </Card>
             <Card>
@@ -384,7 +385,7 @@ export default async function HomePage() {
       <Container as="section">
         <Section
           title={`Meniul zilei — ${todayMenuLabel}`}
-          subtitle={isMenuActive ? "" : "Meniul zilei este valabil până la ora 16:00."}
+          subtitle={isMenuActive ? "" : "Deschis: 10:00–22:00"}
         >
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {!todayItems.length ? (

@@ -136,10 +136,10 @@ export default async function DailyMenuPage({ searchParams }) {
             </a>
           </p>
         ) : null}
-        {!isMenuActive && (
+	        {!isMenuActive && (
           <p className="jar-badge jar-badge--subtle mt-2 normal-case">
             <span className="mr-2 inline-block size-2 rounded-full bg-brand-500" />
-            Meniul zilei este valabil până la ora 16:00.
+            Deschis: 10:00–22:00
           </p>
         )}
         <p className="mt-2 text-sm text-ink-muted">
@@ -161,7 +161,7 @@ export default async function DailyMenuPage({ searchParams }) {
           {dayItems.length === 0 ? (
             <Card className="md:col-span-2 xl:col-span-3">
               <p className="text-sm text-ink-muted">
-                Meniul zilei se actualizează zilnic după ora 16:00; revenim în scurt timp cu oferta completă de seară.
+                Meniul zilei este actualizat zilnic; revenim în scurt timp cu oferta completă de seară.
               </p>
             </Card>
             ) : (
