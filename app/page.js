@@ -108,26 +108,26 @@ export default async function HomePage() {
           />
           <div className="hero-ambiance__overlay" />
           <div className="hero-ambiance__grain" />
-          <Container className="relative z-10 py-8 md:py-10">
-            <div className="glass-panel glass-panel--hero relative z-10 rounded-[1.55rem] p-4 sm:p-6 md:p-8">
-              <div className="grid gap-4 md:grid-cols-[1fr_auto] md:items-end md:gap-8">
-                <div className="max-w-2xl">
+          <Container className="relative z-10 py-4 sm:py-6 md:py-10">
+            <div className="glass-panel glass-panel--hero relative z-10 rounded-[1.35rem] p-4 sm:p-6 md:p-8">
+              <div className="hero-copy-grid flex flex-col gap-4 md:grid md:grid-cols-[1fr_auto] md:items-end md:gap-8">
+                <div className="max-w-2xl space-y-4">
                   <p className="jar-badge">Seara bună începe cu căldura unui loc gândit pentru oameni</p>
-                  <h1 className="mt-2 text-display-2xl sm:text-display-xl">
+                  <h1 className="text-display-md sm:text-display-xl md:text-display-2xl">
                     Aici, puiul la jar și atmosfera se întâlnesc într-o experiență de seară clară, fără compromisuri.
                   </h1>
-                  <p className="mt-3 max-w-3xl text-body-lg text-ink-title/90 prose-balance">
+                  <p className="text-sm sm:text-base text-ink-title/90 prose-balance">
                     Primești un parcurs complet: rezervare prioritară, preparate la jar cu porție de seară și un spațiu menit pentru
                     conversații lungi, fără grabă și fără compromis pe calitate.
                   </p>
 
-                  <div className="mt-5 flex flex-wrap gap-2.5">
+                  <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
                     <Button
                       as="next-link"
                       href="/contact"
                       variant="primary"
                       data-analytics="click|conversion|rezervare_primara|source=home|journey=primary_cta|lead_type=reservation"
-                      className="touch-target"
+                      className="touch-target w-full min-h-11 text-sm sm:text-base"
                     >
                       Rezervare prioritară
                     </Button>
@@ -136,7 +136,7 @@ export default async function HomePage() {
                       href="/meniu-zilei"
                       variant="secondary"
                       data-analytics="click|navigation|meniu_zilei_hero|source=home|journey=menu_cta|lead_type=menu"
-                      className="touch-target"
+                      className="touch-target w-full min-h-11 text-sm sm:text-base"
                     >
                       Meniul zilei pentru azi
                     </Button>
@@ -145,26 +145,26 @@ export default async function HomePage() {
                       href="/evenimente-catering"
                       variant="ghost"
                       data-analytics="click|navigation|evenimente_hero|source=home|journey=exploration|lead_type=event"
-                      className="touch-target"
+                      className="touch-target w-full min-h-11 text-sm sm:text-base"
                     >
                       Alege evenimentul tău
                     </Button>
                   </div>
 
-                  <div className="mt-5 flex flex-wrap gap-2">
+                  <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
                     {[
                       "Atmosferă premium, fără agitație",
                       "Preparat la jar, porție gândită pentru seară",
                       "Rezervare clară, confirmare rapidă",
                     ].map((badge) => (
-                      <span key={badge} className="jar-chip">
+                      <span key={badge} className="jar-chip text-[0.74rem]">
                         {badge}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                <div className="hero-ambiance__logo-wrap">
+                <div className="hero-ambiance__logo-wrap self-start md:self-end">
                   {config.social?.logo ? (
                     <Image
                       className="hero-ambiance-logo"

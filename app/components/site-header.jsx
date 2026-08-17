@@ -139,7 +139,7 @@ export default function SiteHeader({ config }) {
                 data-analytics="phone_click|conversion|header_phone|source=global|journey=lead_capture|lead_type=reservation"
                 className="touch-target"
               >
-                {config.phone || "Telefon"}
+                Sună
               </Button>
               <Button
                 variant="whatsapp"
@@ -251,9 +251,15 @@ export default function SiteHeader({ config }) {
             <Button
               href={phoneHref(config.phone)}
               data-analytics="phone_click|conversion|mobile_nav_phone|source=mobile|journey=lead_capture|lead_type=reservation"
+              aria-label="Sună restaurantul"
               className="touch-target h-auto flex-1 justify-center bg-surface-base/95 py-2.5 text-xs font-semibold md:h-11"
             >
-              {config.phone || "Telefon"}
+              <span className="hidden sm:inline">Sună</span>
+              <span className="sm:hidden inline-flex items-center justify-center" aria-hidden="true">
+                <span className="grid h-5 w-5 place-items-center rounded-full border border-current/65 text-xs font-semibold leading-none">
+                  ☎
+                </span>
+              </span>
             </Button>
             <Button
               variant="whatsapp"
@@ -263,9 +269,15 @@ export default function SiteHeader({ config }) {
                 "Bună ziua, aș vrea detalii pentru o rezervare.",
               )}
               data-analytics="whatsapp_click|conversion|mobile_nav_whatsapp|source=mobile|journey=lead_capture|lead_type=whatsapp"
+              aria-label="Trimite mesaj pe WhatsApp"
               className="touch-target h-auto flex-1 justify-center py-2.5 text-xs font-semibold md:h-11"
             >
-              WhatsApp
+              <span className="hidden sm:inline">WhatsApp</span>
+              <span className="sm:hidden inline-flex items-center justify-center" aria-hidden="true">
+                <span className="grid h-5 w-5 place-items-center rounded-full border border-current/65 text-[0.52rem] font-bold leading-none">
+                  WA
+                </span>
+              </span>
             </Button>
           </div>
         </div>

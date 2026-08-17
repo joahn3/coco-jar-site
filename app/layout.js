@@ -8,6 +8,7 @@ import { Manrope, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Container from "./components/ui/container";
 import Button from "./components/ui/button";
+import BackToTopButton from "./components/back-to-top-button";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -73,22 +74,31 @@ export default async function RootLayout({ children }) {
         <SiteHeader config={config} />
         {children}
         <SiteFooter config={config} />
-        <div className="fixed inset-x-0 bottom-0 z-40 border-t border-line/85 bg-surface-base/98 px-3 pb-[env(safe-area-inset-bottom)] pt-2 backdrop-blur-xl shadow-[0_-8px_34px_rgba(0,0,0,0.3)] lg:hidden">
-          <Container className="grid grid-cols-2 gap-3">
+        <BackToTopButton />
+        <div className="floating-cta-bar fixed inset-x-0 bottom-0 z-40 lg:hidden">
+          <Container className="floating-cta-shell grid h-full grid-cols-2 gap-2">
             <Button
               href={phoneHref(config.phone)}
               data-analytics="phone_click|conversion|floating_phone|source=global|journey=lead_capture|lead_type=reservation"
-              className="w-full text-sm sm:text-base"
+              aria-label={`Sună la ${config.phone || "restaurantul"}`}
+              className="floating-cta-button w-full justify-center gap-2"
             >
-              Sună pentru rezervare
+              <span className="floating-cta-icon" aria-hidden="true">
+                ☎
+              </span>
+              <span className="floating-cta-label">Sună</span>
             </Button>
             <Button
               variant="whatsapp"
               href={whatsappHref(config.whatsapp, config.phone)}
               data-analytics="whatsapp_click|conversion|floating_whatsapp|source=global|journey=lead_capture|lead_type=whatsapp"
-              className="w-full text-sm sm:text-base"
+              aria-label={`Trimite mesaj pe WhatsApp la ${config.whatsapp || config.phone || "restaurant"}`}
+              className="floating-cta-button w-full justify-center gap-2"
             >
-              Mesaj pe WhatsApp
+              <span className="floating-cta-icon" aria-hidden="true">
+                WA
+              </span>
+              <span className="floating-cta-label">WhatsApp</span>
             </Button>
           </Container>
         </div>
