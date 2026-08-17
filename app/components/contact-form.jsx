@@ -59,7 +59,7 @@ export default function ContactForm() {
     setLoading(false);
 
     if (!res.ok || !data.ok) {
-      setStatus(data.error || "Încă nu am putut transmite mesajul. Încearcă din nou în câteva clipe.");
+      setStatus(data.error || "Îți mulțumim pentru răbdare — te rugăm să încerci trimiterea din nou într-un moment.");
       return;
     }
 
@@ -75,7 +75,7 @@ export default function ContactForm() {
       });
     }
 
-    setStatus("Mesajul tău a fost transmis. Confirmăm de obicei în maxim 30 de minute, în intervalul de lucru.");
+      setStatus("Mesajul tău a ajuns. Confirmăm de obicei în maxim 30 de minute, în intervalul de lucru.");
     form.reset();
   }
 

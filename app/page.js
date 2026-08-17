@@ -285,8 +285,8 @@ export default async function HomePage() {
 
       <Container as="section">
         <Section
-          title="3 argumente verificabile"
-          subtitle="Atitudini pe care le poți confirma direct, nu promisiuni generice."
+          title="Ceea ce poți verifica înainte de a veni"
+          subtitle="Rezervare clară, feedback real și evenimente pregătite profesionist."
           className="pb-6 pt-8"
         >
           <div className="grid gap-4 md:grid-cols-3">
@@ -379,7 +379,7 @@ export default async function HomePage() {
             {!todayItems.length ? (
               <Card className="md:col-span-2 xl:col-span-3">
                 <p className="text-sm text-ink-muted">
-                  Meniul zilei este finalizat în acest moment. Reîncărcarea paginii aduce meniul actualizat al zilei.
+                  Pregătim oferta zilei. Te rugăm să revii peste câteva minute pentru meniul complet actual.
                 </p>
               </Card>
             ) : (

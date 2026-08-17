@@ -136,8 +136,7 @@ export default async function NotFound() {
           </div>
 
           <p className="text-xs text-ink-muted">
-            Notă de orientare: dacă ai ajuns printr-un link vechi, folosește rutele de mai jos — acolo
-            găsești cel mai rapid ce cauți.
+            Dacă ai ajuns aici printr-un link vechi, intră pe rutele de mai jos — găsești rapid pagina potrivită.
           </p>
         </Card>
       </Container>

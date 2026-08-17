@@ -67,7 +67,7 @@ export default async function GalleryPage({ searchParams }) {
         <div>
           <h1 className="text-display-md">Atmosferă la Coco Jar</h1>
           <p className="text-sm text-ink-muted">
-            Fotografii autentice din restaurant, organizate pe elementele care dau tonul fiecărei seri: lemn, lumină caldă și preparate de la grătar.
+            Fotografii autentice din restaurant, organizate pe elementele care dau tonul fiecărei vizite: lemn, lumină caldă și preparate de la grătar.
           </p>
         </div>
 
@@ -95,13 +95,13 @@ export default async function GalleryPage({ searchParams }) {
         </nav>
 
         <p className="text-sm text-ink-muted">
-          {sectionTitleByFilter[activeFilter] || "Atmosfera nu se vede doar în meniu, ci în fiecare detaliu."}
+          {sectionTitleByFilter[activeFilter] || "Atmosfera nu e doar pe meniu, e în fiecare detaliu al experienței."}
         </p>
 
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {files.length === 0 ? (
             <Card>
-              <p className="text-sm text-ink-muted">În acest moment, încărcăm cadre noi pentru filtrul selectat.</p>
+              <p className="text-sm text-ink-muted">Nu avem imagini noi încă pentru acest filtru. Îți încărcăm cele noi în curând.</p>
             </Card>
           ) : (
             files.map((item) => (

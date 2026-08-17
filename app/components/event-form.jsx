@@ -66,7 +66,7 @@ export default function EventForm() {
     setLoading(false);
 
     if (!response.ok || !data.ok) {
-      setStatus(data.error || "Încă nu am putut transmite cererea. Încearcă din nou în câteva clipe.");
+      setStatus(data.error || "Am întâmpinat o perturbare scurtă. Trimite cererea din nou în câteva momente.");
       return;
     }
 
@@ -82,7 +82,7 @@ export default function EventForm() {
       });
     }
 
-    setStatus("Solicitarea ta a fost transmisă. Îți trimitem o confirmare preliminară în cel mult 24 de ore.");
+    setStatus("Cererea ta a fost transmisă. Confirmarea preliminară o primești de regulă în maxim 24 de ore.");
     form.reset();
   }
 
