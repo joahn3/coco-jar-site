@@ -116,7 +116,7 @@ export default function EventForm() {
           <input
             name="email"
             type="email"
-            placeholder="nume@exemplu.com"
+            placeholder="nume@exemplu.ro (opțional)"
             className={inputClassName}
           />
         </label>
@@ -161,7 +161,7 @@ export default function EventForm() {
           <label className="grid gap-1.5 text-sm text-ink-muted">
             Interval de servire
             <select name="timeSlot" className={inputClassName} aria-label="Interval de servire">
-              <option value="">Alege intervalul dorit</option>
+              <option value="">Alege intervalul de servire</option>
               {timeSlots.map((slot) => (
                 <option key={slot} value={slot}>
                   {slot}

@@ -9,7 +9,7 @@ import Breadcrumbs from "../components/breadcrumbs";
 export const metadata = {
   title: "Evenimente private | Coco Jar Bistro",
   description:
-    "Evenimente private la Coco Jar: nuntă, botez, aniversări, team-building. Oferim pachete premium cu meniu la jar, servicii personalizate și coordonare clară.",
+    "Evenimente private la Coco Jar: nuntă, botez, aniversări, team-building. Pregătim pachete personalizate cu meniu la jar, organizare atentă și comunicare constantă.",
 };
 
 export default async function EventPage() {
@@ -49,7 +49,7 @@ export default async function EventPage() {
               Rezervă experiența privată
               </Button>
     <Button as="next-link" href="/meniu-zilei" variant="secondary" className="w-full sm:w-auto">
-              Planifică meniul pentru eveniment
+              Alege meniul potrivit pentru eveniment
             </Button>
           </div>
           <div className="grid gap-2 sm:grid-cols-3">
@@ -66,12 +66,12 @@ export default async function EventPage() {
           <div className="jar-link-list mt-4">
             <p className="jar-badge jar-badge--subtle">Calitatea întâlnirii tale contează în fiecare detaliu</p>
             <p className="text-sm text-ink-muted">
-              Confirmăm disponibilitatea recomandat cu minim 48 de ore înainte. Pentru seriile aglomerate,
-              recomandăm confirmare prealabilă.
+              Confirmăm disponibilitatea în medie în 24 de ore. Pentru serile aglomerate,
+              recomandăm confirmare prealabilă cu minim 48 de ore.
             </p>
           </div>
             <p className="mt-4 text-body text-ink-muted">
-              Pentru mai multe detalii despre evenimentele private și opțiunile disponibile, contactează-ne la:
+              Pentru detalii suplimentare despre oferta noastră de evenimente și pachete, contactează-ne direct:
             </p>
           <div className="jar-link-list">
             <p>

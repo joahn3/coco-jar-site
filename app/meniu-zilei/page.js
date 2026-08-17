@@ -126,7 +126,7 @@ export default async function DailyMenuPage({ searchParams }) {
         <p className="mt-2 text-sm text-ink-muted">
           {selectedDate
             ? `Compoziția pentru ${requestedLabel || selectedDate} este gândită ca o experiență de zi: start echilibrat, preparat la jar, ritm constant și servire stabilă.`
-            : `Este o ofertă de zi completă: intrare, fel principal și final pentru o masă întreagă, fără compromis pe calitate și timp.`}
+            : `Este o propunere de zi completă: început, fel principal și final pentru o masă întreagă, fără compromis pe calitate și timp.`}
         </p>
         {selectedDate ? (
           <p className="mt-2 text-sm text-ink-muted">
@@ -143,7 +143,7 @@ export default async function DailyMenuPage({ searchParams }) {
           </p>
         )}
         <p className="mt-2 text-sm text-ink-muted">
-          Meniul nostru este actualizat zilnic, la fiecare schimbare de bucătărie, ca o experiență consistentă de zi, nu doar o listă de feluri.
+          Meniul este actualizat zilnic, la fiecare schimbare de bucătărie, ca o experiență completă pe zi — nu doar o listă tehnică.
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           <Button as="next-link" href="/contact" variant="primary" className="touch-target">

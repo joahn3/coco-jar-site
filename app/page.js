@@ -13,9 +13,9 @@ import Container from "./components/ui/container";
 import Section from "./components/ui/section";
 
 export const metadata = {
-  title: "Coco Jar | Restaurant premium pui la jar în Popești-Leordeni",
+  title: "Coco Jar | Restaurant de pui la jar în Popești-Leordeni",
   description:
-    "La Coco Jar, atmosfera caldă și puiul la jar creează cadrul perfect pentru mesele zilnice. Descoperă meniul de azi, rezervări rapide și evenimente private.",
+    "La Coco Jar găsești pui la jar, atmosferă caldă și servicii clare: rezervare rapidă, preparat constant, evenimente atent organizate.",
 };
 
 export default async function HomePage() {
@@ -50,9 +50,9 @@ export default async function HomePage() {
   ];
 
 	const trustSignals = [
-    "Atmosferă: spațiu cald, servicii fără stres, timp susținut.",
-    "Preparat: pui la jar, porții constante, garnituri alese la comandă.",
-    "Feedback: recenzii de profil, actualizări constante pe social.",
+    "Atmosferă: spațiu cald, serviciu fără presiune și atenție la detaliu.",
+    "Preparat: pui la jar, porții constante, garnituri atent alese.",
+    "Feedback: recenzii autentice de la clienți reali, nu promisiuni goale.",
 	];
 
 	const experienceStories = [
@@ -70,10 +70,10 @@ export default async function HomePage() {
     },
 	];
 
-  const heroHighlights = [
-    "Experiență de zi cu final clar",
-    "Preparate la jar, gătite pentru o masă echilibrată",
-    "Rezervare clară, fără pași inutili",
+	const heroHighlights = [
+    "Atmosferă calmă, lumină caldă, muzică discretă",
+    "Mese echilibrate, porții constante, servire atentă",
+    "Rezervare directă, fără formulare suplimentare",
 	];
 
   const reviewSignals = [
@@ -109,25 +109,25 @@ export default async function HomePage() {
           <div className="hero-ambiance__grain" />
           <Container className="relative z-10 py-4 sm:py-6 md:py-10">
             <div className="glass-panel glass-panel--hero relative z-10 rounded-[1.35rem] p-4 sm:p-6 md:p-8">
-              <div className="hero-copy-grid flex flex-col gap-4 md:grid md:grid-cols-[1fr_auto] md:items-end md:gap-8">
+            <div className="hero-copy-grid flex flex-col gap-4 md:grid md:grid-cols-[1fr_auto] md:items-end md:gap-8">
                 <div className="max-w-2xl space-y-4">
-                  <p className="jar-badge">Atmosferă caldă, preparat constant, experiență de restaurant</p>
+                  <p className="jar-badge">Când focul se aude blând, gustul devine memorabil</p>
                   <h1 className="text-display-md sm:text-display-xl md:text-display-2xl">
-                    Coco Jar transformă fiecare zi într-o experiență coerentă: aroma lemnului, puiul la jar și timpul tău.
+                    Coco Jar — pui la jar, atmosferă caldă și atenție autentică.
                   </h1>
                   <p className="text-sm sm:text-base text-ink-title/90 prose-balance">
-                    Nu e doar un meniu. Este o ofertă completă: rezervare clară, porții bine gândite și un cadru unde poți sta liniștit.
+                    Bucură-te de o experiență completă: rezervare clară, porții echilibrate și un spațiu care te primește ca pentru tine acasă.
                   </p>
 
 	                  <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-	                    <Button
-	                      as="next-link"
-	                      href="/contact"
-	                      variant="primary"
-	                      data-analytics="click|conversion|rezervare_primara|source=home|journey=primary_cta|lead_type=reservation"
-	                      className="touch-target w-full min-h-11 text-sm sm:text-base"
-	                    >
-                      Rezervare pentru azi
+                    <Button
+                      as="next-link"
+                      href="/contact"
+                      variant="primary"
+                      data-analytics="click|conversion|rezervare_primara|source=home|journey=primary_cta|lead_type=reservation"
+                      className="touch-target w-full min-h-11 text-sm sm:text-base"
+                    >
+                      Rezervă-ți masa
 	                    </Button>
 	                    <Button
 	                      as="next-link"
@@ -136,15 +136,15 @@ export default async function HomePage() {
 	                      data-analytics="click|navigation|meniu_zilei_hero|source=home|journey=menu_cta|lead_type=menu"
 	                      className="touch-target w-full min-h-11 text-sm sm:text-base"
 	                    >
-                      Meniul zilei premium
+                      Vezi meniul zilei
 	                    </Button>
 	                  </div>
 
 	                  <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
 	                    {[
 	                      "Atmosferă premium, fără agitație",
-                      "Meniu zilnic gândit pe ritm și consistență",
-                      "Confirmare directă, fără pași suplimentari",
+                      "Meniu de zi gândit pentru orele tale",
+                      "Confirmare rapidă, fără pași suplimentari",
 	                    ].map((badge) => (
 	                      <span key={badge} className="jar-chip text-[0.74rem]">
 	                        {badge}
@@ -181,10 +181,10 @@ export default async function HomePage() {
       >
 	        <Card className="space-y-6 py-6 sm:py-7">
           <p className="jar-badge">Restaurant de pui la jar</p>
-          <p className="jar-badge">Atmosferă premium, ritm stabil</p>
-          <h2 className="text-title-lg">Ce simte clientul când intră</h2>
+          <p className="jar-badge">Atmosferă naturală, relaxată, autentică</p>
+          <h2 className="text-title-lg">Cum te simți când intri la noi</h2>
           <p className="max-w-3xl text-body-lg text-ink-muted prose-balance">
-            Loc cald, confortabil și atent, construit pentru o experiență echilibrată: pregătire susținută, porții clare, fără zgomot de fond inutil.
+            Loc cald, confortabil, orientat pe confortul tău: preparat constant, servicii la timp, fără agitație inutilă.
           </p>
           <div className="grid gap-2.5 sm:grid-cols-3 sm:gap-3">
             {heroHighlights.map((item) => (
@@ -210,10 +210,10 @@ export default async function HomePage() {
         </Card>
 
         <Card className="space-y-4 py-6 sm:py-7">
-          <h2 className="text-title-lg">Rezervare pe acțiune</h2>
+          <h2 className="text-title-lg">Rezervare directă</h2>
           <p className="text-sm text-ink-muted">{operatingHoursText}</p>
           <p className="text-sm text-ink-muted">
-            Se recomandă planificare din timp la vârf de cerere: confirmăm rapid preferințele de masă.
+                    Pentru intervalele aglomerate, recomandăm rezervare din timp. Confirmăm rapid preferințele tale.
           </p>
           <div className="jar-link-list">
             <p>
@@ -222,7 +222,7 @@ export default async function HomePage() {
                 aria-label={`Sună la ${config.phone || "numărul de telefon"} pentru rezervare`}
                 href={phoneHref(config.phone)}
               >
-                Rezervare telefonic: confirmare prioritară — {contactText}
+                Rezervare pe telefon — confirmare prioritară: {contactText}
               </a>
             </p>
             <p>
@@ -231,7 +231,7 @@ export default async function HomePage() {
                 aria-label={`Deschide conversație pe WhatsApp ${config.whatsapp || config.phone || "la restaurant"} din pagina principală`}
                 href={whatsappHref(config.whatsapp, config.phone, "Bună ziua, vreau mai multe detalii.")}
               >
-                Confirmare prin WhatsApp: răspuns rapid — {whatsappText}
+                Confirmare prin WhatsApp — răspuns în timp real: {whatsappText}
               </a>
             </p>
           </div>
@@ -372,14 +372,14 @@ export default async function HomePage() {
 
       <Container as="section">
         <Section
-          title={`Meniul zilei — ${todayMenuLabel}`}
+          title={`Meniul zilei — ${todayMenuLabel} (experiență completă)`}
           subtitle={isMenuActive ? "" : "Deschis: 10:00–22:00"}
         >
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {!todayItems.length ? (
               <Card className="md:col-span-2 xl:col-span-3">
                 <p className="text-sm text-ink-muted">
-                  Pregătim oferta zilei. Te rugăm să revii peste câteva minute pentru meniul complet actual.
+                  Preparatul zilei se finalizează, revenim în scurt timp cu oferta completă.
                 </p>
               </Card>
             ) : (

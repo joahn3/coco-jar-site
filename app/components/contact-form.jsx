@@ -156,7 +156,7 @@ export default function ContactForm() {
           <textarea
             name="message"
             rows={4}
-            placeholder="Detaliază scopul vizitei, preferințe culinare sau alergeni"
+            placeholder="Scrie motivul vizitei, preferințe culinare sau alergeni"
             className="jar-form-field min-h-28 resize-y text-sm"
           />
         </label>

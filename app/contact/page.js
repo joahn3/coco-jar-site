@@ -9,7 +9,7 @@ import Breadcrumbs from "../components/breadcrumbs";
 export const metadata = {
   title: "Contact și rezervări | Coco Jar Bistro",
   description:
-    "Rezervări premium la Coco Jar Bistro: confirmare rapidă, detalii clare pentru grupuri mici sau evenimente și echipă de servire cu atenție la detalii.",
+    "Rezervări rapide la Coco Jar Bistro: confirmare clară, detalii complete și un răspuns personalizat pentru mesele de zi sau seară.",
 };
 
 export default async function ContactPage() {
@@ -19,15 +19,15 @@ export default async function ContactPage() {
   const conversionSignals = [
       {
       label: "Răspuns prioritar",
-      text: "Confirmare inițială în cel mult 30 de minute, direct pentru cererile complete.",
+      text: "Răspundem de regulă în maxim 30 de minute, cu o propunere clară de orar.",
     },
     {
       label: "Date clare din start",
-      text: "Solicităm intervalul dorit, tipul vizitei și numărul de persoane, pentru un răspuns punctual.",
+      text: "Avem nevoie de interval, tipul vizitei și numărul de persoane ca răspunsul să fie exact.",
     },
     {
       label: "Confirmare personalizată",
-      text: "Dacă rezervarea este complexă, îți revenim direct cu o propunere de echipare și program.",
+      text: "Pentru cereri complexe îți propunem direct o soluție de organizare clară.",
     },
   ];
 
@@ -40,15 +40,15 @@ export default async function ContactPage() {
               { label: "Contact", href: "/contact" },
             ]}
           />
-          <Card>
-          <h1 className="text-display-md">Rezervare fără pași inutili, cu confirmare clară</h1>
+        <Card>
+          <h1 className="text-display-md">Rezervare clară, fără pași inutili</h1>
             <p className="mt-2 text-body text-ink-muted">
-            Trimite cererea completă și îți oferim o confirmare prioritară în 30 de minute, ca să ai siguranța locului.
-            Dacă ora e aglomerată sau ai un grup, îți fixăm oferta corect din prima, fără schimbări de ultim moment.
+            Trimite cererea completă și primim un răspuns prioritar în maxim 30 de minute.
+            Dacă ești la orar aglomerat sau ai grupul mare, îți fixăm opțiunea potrivită din prima variantă.
           </p>
           <div className="mt-4 grid gap-2 sm:grid-cols-2">
             <Button as="next-link" href="/meniu-zilei" variant="secondary" className="w-full sm:w-auto">
-              Vezi meniul zilei premium
+              Vezi meniul zilei
             </Button>
             <Button href={phoneHref(config.phone)} className="w-full sm:w-auto">
               Confirmare prioritară prin telefon
@@ -82,7 +82,7 @@ export default async function ContactPage() {
 	              </a>
 	            </p>
             <p className="jar-badge jar-badge--subtle">
-              Locurile se ocupă repede: rezervă din timp, ideal la începutul programului.
+              Locurile bune se ocupă repede; rezervă din timp, mai ales pe intervalele căutate.
             </p>
             <p>
               <a
@@ -99,7 +99,7 @@ export default async function ContactPage() {
           <p>Adresă: {config.fullAddress}</p>
 	        <p className="mt-2 text-sm text-ink-muted">Deschis: {config.hours}</p>
           <p className="mt-2 text-sm text-ink-muted">
-            Se recomandă rezervarea din timp la intervale de vârf, mai ales pentru mese între 6 și 10 persoane.
+            În orele de vârf, recomandăm rezervarea din timp pentru o experiență fără compromis.
           </p>
         </Card>
 

@@ -93,13 +93,13 @@ export default function MenuSearch({ sections, totalItems = 0 }) {
         <p className="mt-2 text-xs text-ink-muted">
           {hasQuery
             ? `Am găsit ${resultCount} rezultat${resultCount === 1 ? "" : "e"} pentru „${query}”.`
-            : `Meniu complet: ${resultCount} preparate.`}
+            : `Îți prezentăm meniul complet: ${resultCount} preparate atent sortate.`}
         </p>
       </div>
 
       {noResults ? (
         <div className="rounded-lg border border-line-soft bg-surface-panel/65 px-4 py-4 text-ink-muted">
-          Nu au fost găsite preparate pentru această căutare. Încearcă un alt termen.
+          Nu avem încă acest rezultat. Încearcă o altă formulare și găsim repede opțiunea potrivită.
         </div>
       ) : null}
 
