@@ -69,7 +69,7 @@ export default async function NotFound() {
         <Card className="space-y-5">
           <p className="jar-badge">Pui la jar, direcția e clară</p>
           <h1 className="text-display-md">404 — pagina căutată nu a mai fost găsită</h1>
-          <p className="text-body-lg text-ink-muted prose-balance">
+          <p className="jar-copy prose-balance">
             Pagina pe care o cauți nu există sau a fost mutată. Dar restaurantul
             e deschis: poți reveni la meniuri, program, locație sau poți lua
             contact direct pentru rezervare.
@@ -112,7 +112,7 @@ export default async function NotFound() {
         <Card className="space-y-4">
           <h2 className="text-title-md">Nu te-ai rătăcit? Găsește-ne aici.</h2>
           <div className="jar-link-list">
-            <p className="text-sm text-ink-muted">
+            <p className="jar-copy-sm">
               Adresă: {config.fullAddress}
             </p>
           </div>
@@ -132,12 +132,12 @@ export default async function NotFound() {
 
           <div className="jar-link-list">
             <p className="trust-stat">Contact direct</p>
-            <p className="text-sm text-ink-muted">Telefon: {config.phone || "la recepție"}</p>
-            <p className="text-sm text-ink-muted">WhatsApp: {config.whatsapp || "la recepție"}</p>
-            <p className="text-sm text-ink-muted">Deschis: 10:00–22:00</p>
+            <p className="jar-copy-sm">Telefon: {config.phone || "la recepție"}</p>
+            <p className="jar-copy-sm">WhatsApp: {config.whatsapp || "la recepție"}</p>
+            <p className="jar-copy-sm">Deschis: 10:00–22:00</p>
           </div>
 
-          <p className="text-xs text-ink-muted">
+          <p className="jar-copy-xs">
             Dacă ai ajuns aici printr-un link vechi, intră pe rutele de mai jos — găsești rapid pagina potrivită.
           </p>
         </Card>
@@ -155,7 +155,7 @@ export default async function NotFound() {
                 >
                   {item.title}
                 </Link>
-              <span className="block text-sm text-ink-muted">{item.text}</span>
+              <span className="block jar-copy-sm">{item.text}</span>
             </p>
           ))}
         </div>

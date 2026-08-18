@@ -24,7 +24,7 @@ export default function TermsPage() {
           <div>
           <p className="jar-badge">Pui la jar, claritate din prima</p>
           <h1 className="text-display-md">Termeni și condiții</h1>
-          <p className="mt-2 text-sm text-ink-muted">
+          <p className="mt-2 jar-copy-sm">
             Ultima actualizare: {lastUpdated}. Accesând acest site, ești de acord cu regulile de mai jos.
           </p>
         </div>
@@ -32,7 +32,7 @@ export default function TermsPage() {
         <Card className="space-y-4">
           <section className="space-y-2">
             <h2 className="text-title-md">1. Scopul site-ului</h2>
-            <p className="text-sm text-ink-muted">
+            <p className="jar-copy-sm">
               Informațiile de pe acest site descriu serviciile de ospitalitate ale Coco Jar: meniu,
               program, evenimente și contact. Toate detaliile sunt orientative și pot fi schimbate fără
               preaviz pentru sezonalitate sau disponibilitate.
@@ -41,7 +41,7 @@ export default function TermsPage() {
 
           <section className="space-y-2">
             <h2 className="text-title-md">2. Comenzi și rezervări</h2>
-            <p className="text-sm text-ink-muted">
+            <p className="jar-copy-sm">
               Rezervările se fac prin telefon, WhatsApp sau formularul de contact și se confirmă prin răspuns direct
               din partea echipei. Orele indicate trebuie tratate ca orientative pentru serviciul zilnic.
             </p>
@@ -49,7 +49,7 @@ export default function TermsPage() {
 
           <section className="space-y-2">
             <h2 className="text-title-md">3. Evenimente private</h2>
-            <p className="text-sm text-ink-muted">
+            <p className="jar-copy-sm">
               Oferta pentru evenimente se construiește pe baza unui acord prealabil, număr persoane și
               preferințe alimentare. Orice ofertă transmisă poate fi ajustată în funcție de ziua aleasă.
             </p>
@@ -57,7 +57,7 @@ export default function TermsPage() {
 
           <section className="space-y-2">
             <h2 className="text-title-md">4. Contact</h2>
-            <p className="text-sm text-ink-muted">
+            <p className="jar-copy-sm">
               Pentru nelămuriri, mergi la pagina sau sună direct la telefonul afișat.
             </p>
             <div className="jar-link-list">

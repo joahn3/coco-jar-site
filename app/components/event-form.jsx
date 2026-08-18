@@ -5,8 +5,7 @@ import Button from "./ui/button";
 import Card from "./ui/card";
 import { cn } from "./ui/cn";
 
-const inputClassName =
-  "jar-form-field touch-target text-sm";
+const inputClassName = "jar-form-field touch-target text-sm";
 
 const eventTypes = [
   "Nuntă",
@@ -26,12 +25,12 @@ const timeSlots = [
 ];
 
 export default function EventForm() {
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState({ type: "", message: "" });
   const [loading, setLoading] = useState(false);
 
   async function onSubmit(event) {
     event.preventDefault();
-    setStatus("");
+    setStatus({ type: "", message: "" });
     setLoading(true);
 
     const form = event.currentTarget;
@@ -51,7 +50,10 @@ export default function EventForm() {
     };
 
     if (!payload.name || !payload.phone) {
-      setStatus("Te rugăm să introduci numele și numărul de telefon.");
+      setStatus({
+        type: "error",
+        message: "Te rugăm să completezi numele și numărul de telefon.",
+      });
       setLoading(false);
       return;
     }
@@ -62,11 +64,20 @@ export default function EventForm() {
       body: JSON.stringify(payload),
     });
 
-    const data = await response.json().catch(() => ({ ok: false, error: "Am avut o mică întrerupere. Încearcă din nou peste câteva clipe." }));
+    const data = await response.json().catch(() => ({
+      ok: false,
+      error:
+        "Am avut o mică întrerupere. Încearcă din nou peste câteva clipe.",
+    }));
     setLoading(false);
 
     if (!response.ok || !data.ok) {
-      setStatus(data.error || "Am întâmpinat o perturbare scurtă. Trimite cererea din nou în câteva momente.");
+      setStatus({
+        type: "error",
+        message:
+          data.error ||
+          "Am întâmpinat o perturbare scurtă. Trimite cererea din nou în câteva momente.",
+      });
       return;
     }
 
@@ -82,51 +93,57 @@ export default function EventForm() {
       });
     }
 
-    setStatus("Cererea ta a fost transmisă. Confirmarea preliminară o primești de regulă în maxim 24 de ore.");
+    setStatus({
+      type: "success",
+      message:
+        "Cererea ta a fost transmisă. Confirmarea preliminară o primesti de regulă în maxim 24 de ore.",
+    });
     form.reset();
   }
 
   return (
     <Card>
       <h2 className="text-title-lg">Solicitarea pentru evenimente</h2>
-      <p className="mt-2 text-sm text-ink-muted">
+      <p className="mt-2 jar-copy-sm">
         Pentru un răspuns punctual, completează numărul de invitați, data dorită și intervalul de servire.
       </p>
       <form onSubmit={onSubmit} className="mt-4 grid gap-3.5">
-        <label className="grid gap-1.5 text-sm text-ink-muted">
-          Nume *
+        <label className="grid gap-1.5 jar-copy-sm">
+          <span>Nume*</span>
           <input
             name="name"
             required
+            aria-required="true"
             placeholder="Nume complet"
             className={inputClassName}
           />
         </label>
-        <label className="grid gap-1.5 text-sm text-ink-muted">
-          Telefon *
-            <input
-              type="tel"
-              name="phone"
-              required
-              inputMode="tel"
-              autoComplete="tel"
-              pattern="[0-9+()\\-\\s]{8,20}"
-              title="Folosește doar cifre, de exemplu 07xx xxx xxx"
-              placeholder="Telefon mobil (format 07xx xxx xxx)"
-              className={inputClassName}
-            />
-        </label>
-        <label className="grid gap-1.5 text-sm text-ink-muted">
-          Email
+        <label className="grid gap-1.5 jar-copy-sm">
+          <span>Telefon*</span>
           <input
-            name="email"
-            type="email"
-              placeholder="Email (opțional)"
+            type="tel"
+            name="phone"
+            required
+            aria-required="true"
+            inputMode="tel"
+            autoComplete="tel"
+            pattern="[0-9+()\\-\\s]{8,20}"
+            title="Folosește doar cifre, de exemplu 07xx xxx xxx"
+            placeholder="Telefon mobil (format 07xx xxx xxx)"
             className={inputClassName}
           />
         </label>
-        <label className="grid gap-1.5 text-sm text-ink-muted">
-          Tip eveniment
+        <label className="grid gap-1.5 jar-copy-sm">
+          <span>Email</span>
+          <input
+            name="email"
+            type="email"
+            placeholder="Email (opțional)"
+            className={inputClassName}
+          />
+        </label>
+        <label className="grid gap-1.5 jar-copy-sm">
+          <span>Tip eveniment</span>
           <select
             name="eventType"
             required
@@ -145,12 +162,12 @@ export default function EventForm() {
           </select>
         </label>
         <div className="grid gap-3 sm:grid-cols-2">
-          <label className="grid gap-1.5 text-sm text-ink-muted">
-            Data evenimentului
+          <label className="grid gap-1.5 jar-copy-sm">
+            <span>Data evenimentului</span>
             <input name="eventDate" type="date" required className={inputClassName} />
           </label>
-          <label className="grid gap-1.5 text-sm text-ink-muted">
-            Număr invitați
+          <label className="grid gap-1.5 jar-copy-sm">
+            <span>Număr invitați</span>
             <input
               type="number"
               min="5"
@@ -163,8 +180,8 @@ export default function EventForm() {
           </label>
         </div>
         <div className="grid gap-3 sm:grid-cols-2">
-          <label className="grid gap-1.5 text-sm text-ink-muted">
-            Interval de servire
+          <label className="grid gap-1.5 jar-copy-sm">
+            <span>Interval de servire</span>
             <select name="timeSlot" className={inputClassName} aria-label="Interval de servire">
               <option value="">Alege intervalul dorit</option>
               {timeSlots.map((slot) => (
@@ -174,8 +191,8 @@ export default function EventForm() {
               ))}
             </select>
           </label>
-          <label className="grid gap-1.5 text-sm text-ink-muted">
-            Buget orientativ
+          <label className="grid gap-1.5 jar-copy-sm">
+            <span>Buget orientativ</span>
             <input
               name="budget"
               placeholder="Ex.: 80–120 lei/persoană"
@@ -183,20 +200,20 @@ export default function EventForm() {
             />
           </label>
         </div>
-        <label className="grid gap-1.5 text-sm text-ink-muted">
-          Tip meniu preferat
-            <input
+        <label className="grid gap-1.5 jar-copy-sm">
+          <span>Tip meniu preferat</span>
+          <input
             name="preferredMenu"
             placeholder="Ex.: pui la jar, opțiuni vegetariene"
             className={inputClassName}
           />
         </label>
-    <label className="sr-only">
-      Câmp de protecție
-      <input className="sr-only" name="website" tabIndex={-1} autoComplete="off" />
-    </label>
+        <label className="sr-only">
+          Câmp de protecție
+          <input className="sr-only" name="website" tabIndex={-1} autoComplete="off" />
+        </label>
         <label className="grid gap-1.5 text-sm">
-          Mesaj / alergeni / alte detalii
+          <span>Mesaj / alergeni / alte detalii</span>
           <textarea
             name="message"
             rows={4}
@@ -204,12 +221,13 @@ export default function EventForm() {
             className="jar-form-field min-h-28 resize-y text-sm"
           />
         </label>
-        <label className="grid grid-cols-[auto,1fr] items-start gap-2 text-sm text-ink-muted">
+        <label className="grid grid-cols-[auto,1fr] items-start gap-2 jar-copy-sm">
           <input
             type="checkbox"
             name="consent"
             defaultChecked
-            className="mt-1 rounded border-line-soft"
+            aria-label="Sunt de acord să primesc propunerea finală prin telefon sau WhatsApp"
+            className="touch-target mt-1 h-11 w-11 rounded border border-[color:var(--ds-border)] bg-surface-soft accent-[color:var(--ds-accent)]"
           />
           <span>Sunt de acord să primesc propunerea finală prin telefon sau WhatsApp.</span>
         </label>
@@ -217,6 +235,7 @@ export default function EventForm() {
           as="button"
           type="submit"
           disabled={loading}
+          aria-describedby="event-form-status"
           data-analytics="form_submit|conversion|event_form|source_page=/evenimente-catering|journey_stage=lead_capture|lead_type=event"
           className={cn(
             "justify-self-start",
@@ -225,11 +244,17 @@ export default function EventForm() {
         >
           {loading ? "Se procesează..." : "Trimite cererea"}
         </Button>
-        {status && (
-          <p role="status" aria-live="polite" className="text-sm text-success">
-            {status}
+        {status.message ? (
+          <p
+            id="event-form-status"
+            role={status.type === "error" ? "alert" : "status"}
+            aria-live="polite"
+            className={status.type === "error" ? "text-sm status-error" : "text-sm status-success"}
+          >
+            {status.type === "error" ? "Eroare: " : "Confirmare: "}
+            {status.message}
           </p>
-        )}
+        ) : null}
       </form>
     </Card>
   );

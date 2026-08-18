@@ -24,8 +24,8 @@ export default function Breadcrumbs({ items = [] }) {
   };
 
   return (
-    <nav aria-label="Cale de navigare" className="mb-4 border-b border-line-soft/70 pb-3">
-      <ol className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.07em] text-ink-muted">
+    <nav aria-label="Cale de navigare" className="mb-4 border-b border-[color:var(--ds-border)]/70 pb-3">
+      <ol className="jar-copy-xs jar-kicker flex flex-wrap items-center gap-2">
         {validItems.map((item, index) => {
           const isLast = index === validItems.length - 1;
 
@@ -35,7 +35,10 @@ export default function Breadcrumbs({ items = [] }) {
               {isLast ? (
                 <span className="font-semibold text-ink-title">{item.label}</span>
               ) : (
-                <Link className="hover:text-ink-title transition-colors duration-200" href={item.href}>
+                <Link
+                  className="hover:text-ink-title touch-target inline-flex items-center transition-colors duration-200 rounded-full"
+                  href={item.href}
+                >
                   {item.label}
                 </Link>
               )}

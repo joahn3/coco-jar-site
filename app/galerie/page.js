@@ -70,7 +70,7 @@ export default async function GalleryPage({ searchParams }) {
         />
         <div>
           <h1 className="text-display-md">Atmosferă la Coco Jar</h1>
-          <p className="text-sm text-ink-muted">
+          <p className="jar-copy-sm">
             Fotografii autentice din restaurant, organizate pe elementele care dau tonul fiecărei vizite: lemn, lumină caldă și preparate de la grătar.
           </p>
         </div>
@@ -98,14 +98,14 @@ export default async function GalleryPage({ searchParams }) {
           </div>
         </nav>
 
-        <p className="text-sm text-ink-muted">
+        <p className="jar-copy-sm">
           {sectionTitleByFilter[activeFilter] || "Atmosfera nu e doar pe meniu, e în fiecare detaliu al experienței."}
         </p>
 
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {files.length === 0 ? (
             <Card>
-              <p className="text-sm text-ink-muted">Încă adăugăm cadre noi pentru această secțiune, te așteptăm înapoi peste puțin.</p>
+              <p className="jar-copy-sm">Încă adăugăm cadre noi pentru această secțiune, te așteptăm înapoi peste puțin.</p>
             </Card>
           ) : (
             files.map((item) => (
@@ -127,7 +127,7 @@ export default async function GalleryPage({ searchParams }) {
                 <div className="space-y-1 p-4">
                   <p className="text-xs font-semibold uppercase tracking-wide text-brand-300">{item.category}</p>
                   <h2 className="text-title-md">{item.title}</h2>
-                  <p className="text-sm text-ink-muted">{item.description}</p>
+                  <p className="jar-copy-sm">{item.description}</p>
                 </div>
               </Card>
             ))

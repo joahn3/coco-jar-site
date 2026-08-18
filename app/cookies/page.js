@@ -22,7 +22,7 @@ export default function CookiesPage() {
           <div>
           <p className="jar-badge">Mai puțin zgomot, mai multă discreție</p>
           <h1 className="text-display-md">Politica de utilizare a cookie-urilor</h1>
-          <p className="mt-2 text-sm text-ink-muted">
+          <p className="mt-2 jar-copy-sm">
             Ultima actualizare: {lastUpdated}.
           </p>
         </div>
@@ -30,7 +30,7 @@ export default function CookiesPage() {
         <Card className="space-y-4">
           <section className="space-y-2">
             <h2 className="text-title-md">Ce folosim noi pe site</h2>
-            <p className="text-sm text-ink-muted">
+            <p className="jar-copy-sm">
               Folosim cookie-uri strict necesare pentru funcționare stabilă: navigare rapidă, securitate
               și o experiență constantă.
             </p>
@@ -38,14 +38,14 @@ export default function CookiesPage() {
 
           <section className="space-y-2">
             <h2 className="text-title-md">Ce opțiuni ai</h2>
-            <p className="text-sm text-ink-muted">
+            <p className="jar-copy-sm">
               Poți controla aceste setări din browserul tău. Unele funcții pot fi limitate dacă sunt dezactivate.
             </p>
           </section>
 
           <section className="space-y-2">
             <h2 className="text-title-md">Modificări</h2>
-            <p className="text-sm text-ink-muted">
+            <p className="jar-copy-sm">
               Politica poate fi actualizată periodic. Orice modificare este publicată aici.
             </p>
           </section>

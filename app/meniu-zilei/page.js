@@ -125,33 +125,33 @@ export default async function DailyMenuPage({ searchParams }) {
           />
         <h1 className="text-display-md">Meniul zilei — experiență completă la jar + a la carte</h1>
         <div className="jar-link-list mt-2">
-          <p className="text-sm text-ink-muted">
+          <p className="jar-copy-sm">
             {selectedDate
               ? `Compoziția pentru ${requestedLabel || selectedDate} este gândită ca o experiență de zi: start echilibrat, preparat la jar, ritm constant și servire stabilă.`
               : `Este o propunere de zi completă: început, fel principal și final pentru o masă întreagă, fără compromis pe calitate și timp.`}
           </p>
         {selectedDate ? (
-          <p className="text-sm text-ink-muted">
+          <p className="jar-copy-sm">
             Ai activat meniul zilei pentru data <span className="font-semibold">{requestedLabel || selectedDate}</span>.{" "}
             <a href="/meniu-zilei" className="jar-link w-auto touch-target inline-flex">
               Revino la ziua curentă
             </a>
           </p>
         ) : null}
-          <p className="text-sm text-ink-muted">
+          <p className="jar-copy-sm">
             Meniul este actualizat zilnic, la fiecare schimbare din bucătărie, ca o experiență de zi echilibrată și constantă.
           </p>
-          <p className="text-sm text-ink-muted">
+          <p className="jar-copy-sm">
             Vrei flexibilitate? În paralel cu meniul zilei, îți păstrăm complet meniul a la carte din restaurant.
           </p>
-          <p className="text-xs text-ink-muted">
+          <p className="jar-copy-xs">
             Program: 10:00–{config.menuValidUntilHour || "16:00"}, complet cu opțiuni a la carte disponibile permanent.
           </p>
         </div>
         {!isMenuActive && (
           <div className="mt-2">
             <p className="jar-badge jar-badge--subtle normal-case">
-              <span className="mr-2 inline-block size-2 rounded-full bg-brand-500" />
+              <span className="mr-2 jar-dot" />
               {menuWindowText}
             </p>
           </div>
@@ -206,7 +206,7 @@ export default async function DailyMenuPage({ searchParams }) {
                     />
                   ) : null}
                   <h2 className="text-title-lg">{premiumItem.title}</h2>
-                  <p className="text-sm text-ink-muted">{premiumItem.description}</p>
+                  <p className="jar-copy-sm">{premiumItem.description}</p>
                   <p className="font-semibold text-ink-title">{item.price || "—"}</p>
                 </Card>
               );

@@ -3,13 +3,13 @@ import { cn } from "./cn";
 
 const variants = {
   primary:
-    "bg-gradient-to-r from-brand-500 to-brand-700 text-ink-overlay hover:brightness-110 shadow-elevated hover:from-brand-400 hover:to-brand-800 focus-visible:ring-offset-surface-base",
+    "bg-[var(--ds-accent)] text-[var(--ds-text-on-primary)] hover:brightness-105 shadow-[var(--ds-shadow-cta)] focus-visible:ring-offset-[var(--ds-surface-page)]",
   whatsapp:
-    "bg-gradient-to-r from-jar-ember to-brand-700 text-ink-overlay shadow-elevated hover:from-brand-500 hover:to-brand-800 hover:brightness-110 focus-visible:ring-offset-surface-base",
+    "bg-[var(--color-whatsapp)] text-[var(--ds-text-on-primary)] shadow-[var(--ds-shadow-elevated)] hover:brightness-105 focus-visible:ring-offset-[var(--ds-surface-page)]",
   secondary:
-    "border border-line-soft/85 bg-surface-soft/70 text-ink-title hover:border-brand-400 hover:text-ink-title hover:bg-surface-raised/92 focus-visible:ring-offset-surface-base",
+    "border border-[color:var(--ds-border)] bg-[var(--ds-surface-subtle)] text-[var(--ds-text-primary)] hover:border-[var(--ds-accent)] hover:bg-[color-mix(in srgb,var(--ds-surface-card) 88%,transparent)] focus-visible:ring-offset-[var(--ds-surface-page)]",
   ghost:
-    "border border-line-soft bg-surface-raised/65 text-ink-title hover:border-brand-500 hover:text-brand-400 hover:bg-surface-raised",
+    "border border-[color:var(--ds-border)] bg-transparent text-[var(--ds-text-primary)] hover:border-[var(--ds-accent)] hover:text-[var(--ds-accent)] hover:bg-[color-mix(in srgb,var(--ds-accent) 8%,transparent)] focus-visible:ring-offset-[var(--ds-surface-page)]",
 };
 
 export default function Button({
@@ -21,7 +21,7 @@ export default function Button({
   ...props
 }) {
   const baseClass =
-    "inline-flex min-h-11 w-max touch-target items-center justify-center rounded-full px-4 py-2.5 text-sm sm:text-base font-semibold tracking-wide transition-all duration-300 will-change-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-surface-base transform active:translate-y-px active:scale-[0.985] disabled:cursor-not-allowed disabled:opacity-65 relative overflow-hidden premium-cta";
+    "inline-flex min-h-11 min-w-11 touch-target items-center justify-center rounded-full px-4 py-2.5 text-sm sm:text-base font-semibold tracking-wide transition-all duration-200 focus-visible:ring-2 focus-visible:ring-[var(--ds-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ds-surface-page)] disabled:cursor-not-allowed disabled:opacity-65 relative overflow-hidden";
 
   const combined = cn(baseClass, variants[variant], className);
 

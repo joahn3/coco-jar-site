@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { mapHref } from "../../lib/format";
 import Container from "./ui/container";
 
 export default function SiteFooter({ config }) {
@@ -7,7 +8,7 @@ export default function SiteFooter({ config }) {
   const instaUrl = config.social?.instagram || "#";
 
   return (
-    <footer className="mt-10 border-t border-line/70 glass-shell glass-shell--footer py-8 text-sm text-ink-muted">
+    <footer className="mt-10 border-t border-[color:var(--ds-border)]/70 glass-shell glass-shell--footer py-8 jar-copy-sm">
       <Container className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <div className="space-y-2">
           <div className="mb-1 flex items-center gap-2">
@@ -26,8 +27,18 @@ export default function SiteFooter({ config }) {
             </p>
           </div>
           <div className="jar-link-list">
-            <p className="text-sm text-ink-muted">Deschis: {config.hours}</p>
-            <p className="text-sm text-ink-muted">Adresă: {config.fullAddress}</p>
+            <p className="jar-copy-sm">Deschis: {config.hours}</p>
+            <p>
+              <a
+                href={mapHref(config.siteName, config.fullAddress)}
+                className="jar-link touch-target"
+                target="_blank"
+                rel="noreferrer"
+                data-analytics="click|navigation|footer_address_maps|source_page=global|journey_stage=information|lead_type=site"
+              >
+                Adresă: {config.fullAddress}
+              </a>
+            </p>
           </div>
         </div>
 
@@ -147,6 +158,13 @@ export default function SiteFooter({ config }) {
           </div>
         </div>
       </Container>
+      <div className="mt-6 border-t border-[color:var(--ds-border)]/60 pt-4">
+        <div className="container mx-auto px-4 sm:px-6">
+          <p className="jar-copy-xs text-center text-ink-muted">
+            Restaurant, Cafenea, Grătar și Terasă în Popeşti-Leordeni! | Crafted with 🤍 and 🧠 by Firacode.ro
+          </p>
+        </div>
+      </div>
     </footer>
   );
 }

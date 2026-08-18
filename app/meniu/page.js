@@ -37,14 +37,14 @@ export default async function MenuPage() {
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div className="space-y-1">
             <h1 className="text-display-md">Meniu a la carte</h1>
-            <p className="text-body-lg text-ink-muted">
+            <p className="jar-copy">
               Toate preparatele a la carte sunt organizate pe categorii clare, cu prețuri actualizate constant.
             </p>
               <div className="jar-link-list mt-3">
-              <p className="text-sm text-ink-muted">
+              <p className="jar-copy-sm">
                 Structură completă: {menuSections.length} categorii, {totalItems} preparate atent ordonate.
               </p>
-              <p className="text-sm text-ink-muted">
+              <p className="jar-copy-sm">
                 Căutare rapidă + filtre disponibile pentru alegerea exactă a preparatelor preferate.
               </p>
             </div>

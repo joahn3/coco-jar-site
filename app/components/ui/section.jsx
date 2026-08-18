@@ -10,10 +10,12 @@ export default function Section({ className = "", title, subtitle, children, ...
       {...props}
     >
       {(title || subtitle) && (
-        <div className="space-y-2 md:space-y-3">
-          {title ? <h2 className="text-title-lg sm:text-display-md">{title}</h2> : null}
-          {subtitle ? <p className="max-w-content text-body-lg text-ink-muted prose-balance">{subtitle}</p> : null}
-        </div>
+        <header className="space-y-2 md:space-y-3">
+          {title ? (
+            <h2 className="section-title sm:text-[clamp(2rem,4vw,2.35rem)]">{title}</h2>
+          ) : null}
+          {subtitle ? <p className="max-w-content jar-copy prose-balance">{subtitle}</p> : null}
+        </header>
       )}
       {children}
     </section>

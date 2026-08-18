@@ -54,7 +54,7 @@ export default function MenuSearch({ sections, totalItems = 0 }) {
 
   return (
     <>
-      <div className="mt-4 rounded-[0.9rem] border border-line-soft/90 p-3 md:p-4">
+      <div className="mt-4 jar-soft-tile p-3 md:p-4">
         <label className="grid gap-2">
           <span className="text-sm font-medium text-ink-muted">Caută preparatul preferat</span>
           <div className="relative">
@@ -83,14 +83,14 @@ export default function MenuSearch({ sections, totalItems = 0 }) {
                 type="button"
                 aria-label="Șterge căutarea"
                 onClick={() => setQuery("")}
-                className="touch-target absolute right-1 top-1/2 -translate-y-1/2 rounded-full border border-line-soft bg-surface-base px-2 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-ink-muted transition hover:border-brand-500/55 hover:text-ink-title"
+                className="touch-target absolute right-1 top-1/2 -translate-y-1/2 rounded-full border border-[color:var(--ds-border)] bg-surface-panel px-2 py-1 jar-copy-xs jar-kicker transition hover:border-brand-500/55 hover:text-ink-title"
               >
                 ×
               </button>
             ) : null}
           </div>
         </label>
-        <p className="mt-2 text-xs text-ink-muted">
+        <p className="mt-2 jar-copy-xs">
           {hasQuery
             ? `Am găsit ${resultCount} rezultat${resultCount === 1 ? "" : "e"} pentru „${query}”.`
             : `Îți prezentăm meniul complet: ${resultCount} preparate atent sortate.`}
@@ -98,7 +98,7 @@ export default function MenuSearch({ sections, totalItems = 0 }) {
       </div>
 
       {noResults ? (
-        <div className="rounded-lg border border-line-soft bg-surface-panel/65 px-4 py-4 text-ink-muted">
+        <div className="jar-soft-tile bg-surface-panel/65 px-4 py-4">
           Nu avem încă acest rezultat. Încearcă o altă formulare și găsim repede opțiunea potrivită.
         </div>
       ) : null}
@@ -108,7 +108,7 @@ export default function MenuSearch({ sections, totalItems = 0 }) {
           <Card key={section.key} className="overflow-hidden">
             <h2 className="text-title-lg">{section.label}</h2>
             {section.rows.length === 0 ? (
-              <p className="text-sm text-ink-muted">
+              <p className="jar-copy-sm">
                 Nu sunt preparate disponibile în această secțiune.
               </p>
             ) : (

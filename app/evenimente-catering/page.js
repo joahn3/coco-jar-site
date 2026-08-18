@@ -60,7 +60,7 @@ export default async function EventPage() {
         <div>
 	              <h1 className="text-display-md">Evenimente private</h1>
               <div className="jar-link-list mt-3">
-              <p className="text-body text-ink-muted">
+              <p className="jar-copy">
                 Momentele speciale merită sărbătorite cu cei dragi, în jurul unei mese bune.
               </p>
             </div>
@@ -108,24 +108,24 @@ export default async function EventPage() {
             {eventProof.map((item) => (
               <Card key={item.title} className="space-y-2">
                 <p className="jar-badge jar-badge--subtle">{item.title}</p>
-                <p className="text-sm text-ink-muted">{item.text}</p>
+                <p className="jar-copy-sm">{item.text}</p>
               </Card>
             ))}
           </div>
             <div className="jar-link-list mt-4">
-              <p className="text-sm text-ink-muted">
+              <p className="jar-copy-sm">
                 La Coco Jar Bistro, transformăm întâlnirile speciale în amintiri durabile. Fie că este vorba de o aniversare, o reuniune de familie, o petrecere restrânsă sau un eveniment corporate, pregătim o experiență deosebită pe parcursul serii.
               </p>
             </div>
           <div className="jar-link-list mt-4">
             <p className="jar-badge jar-badge--subtle">Calitatea întâlnirii tale contează în fiecare detaliu</p>
-            <p className="text-sm text-ink-muted">
+            <p className="jar-copy-sm">
               Confirmăm disponibilitatea în medie în 24 de ore. Pentru serile aglomerate,
               recomandăm confirmare prealabilă cu minim 48 de ore.
             </p>
           </div>
             <div className="jar-link-list mt-4">
-              <p className="text-sm text-ink-muted">
+              <p className="jar-copy-sm">
               Pentru detalii suplimentare despre oferta noastră de evenimente și pachete, contactează-ne direct:
               </p>
             </div>
@@ -141,7 +141,7 @@ export default async function EventPage() {
             </p>
           </div>
           <div className="jar-link-list">
-            <p className="text-sm text-ink-muted">Te așteptăm cu drag și grijă la fiecare detaliu.</p>
+            <p className="jar-copy-sm">Te așteptăm cu drag și grijă la fiecare detaliu.</p>
           </div>
         </div>
 
@@ -150,7 +150,7 @@ export default async function EventPage() {
             <h2 className="text-title-lg">Tipuri evenimente</h2>
             <div className="jar-link-list mt-2">
               {eventTypes.map((item) => (
-                <p key={item} className="text-sm text-ink-muted">
+                <p key={item} className="jar-copy-sm">
                   {item}
                 </p>
               ))}
@@ -160,7 +160,7 @@ export default async function EventPage() {
             <h2 className="text-title-lg">Pachete</h2>
             <div className="jar-link-list mt-2">
               {eventPackages.map((item) => (
-                <p key={item} className="text-sm text-ink-muted">
+                <p key={item} className="jar-copy-sm">
                   {item}
                 </p>
               ))}
@@ -170,7 +170,7 @@ export default async function EventPage() {
             <h2 className="text-title-lg">Ce include pachetul</h2>
             <div className="jar-link-list mt-2">
               {eventIncludes.map((item) => (
-                <p key={item} className="text-sm text-ink-muted">
+                <p key={item} className="jar-copy-sm">
                   {item}
                 </p>
               ))}

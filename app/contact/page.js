@@ -42,7 +42,7 @@ export default async function ContactPage() {
           />
         <Card>
           <h1 className="text-display-md">Rezervare clară, fără pași inutili</h1>
-            <p className="mt-2 text-body text-ink-muted">
+            <p className="mt-2 jar-copy">
             Trimite cererea completă și alegi între două direcții: meniul zilei sau preparatele a la carte.
             Echipa îți confirmă locul în maxim 30 de minute.
             Dacă ești la orar aglomerat sau ai grupul mare, îți fixăm opțiunea potrivită din prima variantă.
@@ -67,9 +67,9 @@ export default async function ContactPage() {
           </div>
           <div className="grid gap-2 sm:grid-cols-3">
             {conversionSignals.map((item) => (
-              <div key={item.label} className="rounded-lg border border-line-soft/80 bg-surface-base/75 p-3">
-                <p className="text-xs font-semibold uppercase tracking-[0.08em] text-ink-muted">{item.label}</p>
-                <p className="mt-1 text-sm text-ink-title">{item.text}</p>
+              <div key={item.label} className="jar-soft-tile bg-surface-card/85 p-3">
+                <p className="jar-copy-xs jar-kicker">{item.label}</p>
+                <p className="mt-1 jar-copy">{item.text}</p>
               </div>
             ))}
           </div>
@@ -108,9 +108,9 @@ export default async function ContactPage() {
             </p>
           </div>
           <div className="jar-link-list mt-3">
-            <p className="text-sm text-ink-muted">Adresă: {config.fullAddress}</p>
-            <p className="text-sm text-ink-muted">Deschis: {config.hours}</p>
-            <p className="text-sm text-ink-muted">
+            <p className="jar-copy-sm">Adresă: {config.fullAddress}</p>
+            <p className="jar-copy-sm">Deschis: {config.hours}</p>
+            <p className="jar-copy-sm">
               În orele de vârf, recomandăm rezervarea din timp pentru o experiență fără compromis.
             </p>
           </div>

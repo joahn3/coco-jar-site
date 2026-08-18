@@ -3,21 +3,14 @@ import SiteHeader from "./components/site-header";
 import SiteFooter from "./components/site-footer";
 import SeoSchema from "./components/seo-schema";
 import AnalyticsScripts from "./components/analytics-scripts";
-import { Manrope, Playfair_Display } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import BackToTopButton from "./components/back-to-top-button";
 
-const manrope = Manrope({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-manrope",
-  display: "swap",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["600", "700", "800"],
-  variable: "--font-playfair",
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -66,7 +59,7 @@ export default async function RootLayout({ children }) {
       <head>
         <SeoSchema config={config} menu={fullMenu} />
       </head>
-      <body className={`${manrope.variable} ${playfair.variable} min-h-screen`}>
+      <body className={`${inter.variable} min-h-screen antialiased`}>
         <AnalyticsScripts />
         <SiteHeader config={config} />
         {children}

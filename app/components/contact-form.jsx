@@ -23,12 +23,12 @@ const TIME_SUGGESTIONS = [
 ];
 
 export default function ContactForm() {
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState({ type: "", message: "" });
   const [loading, setLoading] = useState(false);
 
   async function onSubmit(event) {
     event.preventDefault();
-    setStatus("");
+    setStatus({ type: "", message: "" });
     setLoading(true);
 
     const form = event.currentTarget;
@@ -44,7 +44,10 @@ export default function ContactForm() {
     };
 
     if (!payload.name || !payload.phone) {
-      setStatus("Te rugăm să introduci numele și numărul de telefon.");
+      setStatus({
+        type: "error",
+        message: "Te rugăm să completezi numele și numărul de telefon.",
+      });
       setLoading(false);
       return;
     }
@@ -55,11 +58,20 @@ export default function ContactForm() {
       body: JSON.stringify(payload),
     });
 
-    const data = await res.json().catch(() => ({ ok: false, error: "Am avut o mică întrerupere. Încearcă din nou peste câteva clipe." }));
+    const data = await res.json().catch(() => ({
+      ok: false,
+      error:
+        "Am avut o mică întrerupere. Încearcă din nou peste câteva clipe.",
+    }));
     setLoading(false);
 
     if (!res.ok || !data.ok) {
-      setStatus(data.error || "Îți mulțumim pentru răbdare — te rugăm să încerci trimiterea din nou într-un moment.");
+      setStatus({
+        type: "error",
+        message:
+          data.error ||
+          "Îți mulțumim pentru răbdare — te rugăm să încerci trimiterea din nou într-un moment.",
+      });
       return;
     }
 
@@ -75,23 +87,30 @@ export default function ContactForm() {
       });
     }
 
-      setStatus("Mesajul tău a ajuns. Confirmăm de obicei în maxim 30 de minute, în intervalul de lucru.");
+    setStatus({
+      type: "success",
+      message:
+        "Mesajul tău a ajuns. Confirmăm de obicei în maxim 30 de minute, în intervalul de lucru.",
+    });
     form.reset();
   }
 
   return (
     <Card>
       <h2 className="text-title-lg">Trimite cererea ta</h2>
-      <p className="mt-2 text-sm text-ink-muted">
+      <p className="mt-2 jar-copy-sm">
         Oferă tipul vizitei și numărul aproximativ de persoane, ca să îți pregătim un răspuns punctual.
       </p>
       <form onSubmit={onSubmit} className="mt-4 grid gap-3.5">
-        <label className="grid gap-1.5 text-sm text-ink-muted">
-          Tipul vizitei *
+        <label className="grid gap-1.5 jar-copy-sm">
+          <span>Tipul vizitei*</span>
           <select
+            id="visitType"
             name="visitType"
             required
             defaultValue=""
+            aria-required="true"
+            aria-describedby="visitType-error"
             className={inputClassName}
             aria-label="Tipul vizitei"
           >
@@ -105,44 +124,54 @@ export default function ContactForm() {
             ))}
           </select>
         </label>
-        <label className="grid gap-1.5 text-sm text-ink-muted">
-          Nume *
+        <label className="grid gap-1.5 jar-copy-sm">
+          <span>Nume*</span>
           <input
+            id="name"
             name="name"
             required
+            aria-required="true"
+            aria-describedby="contact-name-error"
             placeholder="Numele tău"
             className={inputClassName}
           />
         </label>
-        <label className="grid gap-1.5 text-sm text-ink-muted">
-          Telefon *
-            <input
-              type="tel"
-              name="phone"
-              required
-              inputMode="tel"
-              autoComplete="tel"
-              pattern="[0-9+()\\-\\s]{8,20}"
-              title="Folosește doar cifre, de exemplu 07xx xxx xxx"
-              placeholder="Telefon mobil (format 07xx xxx xxx)"
-              className={inputClassName}
-            />
+        <label className="grid gap-1.5 jar-copy-sm">
+          <span>Telefon*</span>
+          <input
+            id="phone"
+            type="tel"
+            name="phone"
+            required
+            aria-required="true"
+            aria-describedby="contact-phone-error"
+            inputMode="tel"
+            autoComplete="tel"
+            pattern="[0-9+()\\-\\s]{8,20}"
+            title="Folosește doar cifre, de exemplu 07xx xxx xxx"
+            placeholder="Telefon mobil (format 07xx xxx xxx)"
+            className={inputClassName}
+          />
         </label>
         <div className="grid gap-3 sm:grid-cols-2">
-          <label className="grid gap-1.5 text-sm text-ink-muted">
-            Număr persoane (estimativ)
-              <input
-                type="number"
-                min="1"
-                max="160"
-                name="guestCount"
-                placeholder="Ex.: 4 persoane"
-                className={inputClassName}
-              />
+          <label className="grid gap-1.5 jar-copy-sm">
+            <span>Număr persoane (estimativ)</span>
+            <input
+              type="number"
+              min="1"
+              max="160"
+              name="guestCount"
+              placeholder="Ex.: 4 persoane"
+              className={inputClassName}
+            />
           </label>
-          <label className="grid gap-1.5 text-sm text-ink-muted">
-            Interval dorit
-            <select name="preferredTime" className={inputClassName} aria-label="Intervalul dorit">
+          <label className="grid gap-1.5 jar-copy-sm">
+            <span>Interval dorit</span>
+            <select
+              name="preferredTime"
+              className={inputClassName}
+              aria-label="Intervalul dorit"
+            >
               <option value="">Ore preferate</option>
               {TIME_SUGGESTIONS.map((time) => (
                 <option key={time} value={time}>
@@ -154,23 +183,29 @@ export default function ContactForm() {
         </div>
         <label className="sr-only">
           Câmp de protecție
-          <input className="sr-only" name="website" tabIndex={-1} autoComplete="off" />
+          <input
+            className="sr-only"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+          />
         </label>
-        <label className="grid gap-1.5 text-sm text-ink-muted">
-          Mesaj
-            <textarea
-              name="message"
-              rows={4}
-              placeholder="Scrie motivul vizitei, preferințele culinare sau alergeni"
-              className="jar-form-field min-h-28 resize-y text-sm"
-            />
+        <label className="grid gap-1.5 jar-copy-sm">
+          <span>Mesaj</span>
+          <textarea
+            name="message"
+            rows={4}
+            placeholder="Scrie motivul vizitei, preferințele culinare sau alergeni"
+            className="jar-form-field min-h-28 resize-y text-sm"
+          />
         </label>
-        <label className="grid grid-cols-[auto,1fr] items-start gap-2 text-sm text-ink-muted">
+        <label className="grid grid-cols-[auto,1fr] items-start gap-2 jar-copy-sm">
           <input
             type="checkbox"
             name="consent"
             defaultChecked
-            className="mt-1 rounded border-line-soft"
+            aria-label="Accept confirmarea prin telefon sau WhatsApp"
+            className="touch-target mt-1 h-11 w-11 rounded border border-[color:var(--ds-border)] bg-surface-soft accent-[color:var(--ds-accent)]"
           />
           <span>Accept să primesc confirmarea prin telefon sau WhatsApp.</span>
         </label>
@@ -178,6 +213,7 @@ export default function ContactForm() {
           as="button"
           type="submit"
           disabled={loading}
+          aria-describedby="contact-form-status"
           data-analytics="form_submit|conversion|contact_form|source_page=/contact|journey_stage=lead_capture|lead_type=reservation"
           className={cn(
             "justify-self-start",
@@ -186,11 +222,17 @@ export default function ContactForm() {
         >
           {loading ? "Se procesează..." : "Trimite cererea"}
         </Button>
-        {status && (
-          <p role="status" aria-live="polite" className="text-sm text-success">
-            {status}
+        {status.message ? (
+          <p
+            id="contact-form-status"
+            role={status.type === "error" ? "alert" : "status"}
+            aria-live="polite"
+            className={status.type === "error" ? "text-sm status-error" : "text-sm status-success"}
+          >
+            {status.type === "error" ? "Eroare: " : "Confirmare: "}
+            {status.message}
           </p>
-        )}
+        ) : null}
       </form>
     </Card>
   );
