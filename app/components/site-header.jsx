@@ -171,7 +171,7 @@ export default function SiteHeader({ config }) {
             </button>
           </div>
 
-          <nav className="hidden pb-2 pt-1 lg:block">
+          <nav className="hidden pb-2 pt-1 lg:block" aria-label="Meniu principal">
             <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3">
               {NAV_LINKS.map((item) => (
                 <li key={item.href}>
@@ -197,14 +197,15 @@ export default function SiteHeader({ config }) {
         onClick={closeMenu}
       />
 
-      <div
-        id="mobile-nav"
-        className={`fixed inset-x-0 top-0 z-30 mt-[4.4rem] px-3 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden ${
-          isMenuOpen
-            ? "pointer-events-auto translate-y-0 opacity-100"
-            : "pointer-events-none -translate-y-2 opacity-0"
-        }`}
-      >
+        <div
+          aria-hidden={!isMenuOpen}
+          id="mobile-nav"
+          className={`fixed inset-x-0 top-0 z-30 mt-[4.4rem] px-3 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden ${
+            isMenuOpen
+              ? "pointer-events-auto translate-y-0 opacity-100"
+              : "pointer-events-none -translate-y-2 opacity-0"
+          }`}
+        >
         <div className="relative mx-auto w-full max-w-[calc(100%-1.2rem)] overflow-hidden rounded-[1.45rem] px-3 pb-4 pt-3 glass-shell glass-shell--mobile-drawer">
           <span className="pointer-events-none absolute inset-x-0 top-0 z-10 h-1.5 bg-gradient-to-r from-transparent via-brand-400/75 to-transparent" />
           <span className="pointer-events-none absolute inset-0 opacity-45" aria-hidden>
@@ -213,7 +214,7 @@ export default function SiteHeader({ config }) {
             <span className="absolute inset-0 opacity-15 bg-[linear-gradient(140deg,rgba(255,255,255,0.4),rgba(255,248,240,0),rgba(0,0,0,0.1))]" />
           </span>
           <p className="jar-badge mb-3 w-full justify-center">Restaurant autentic de pui la jar</p>
-          <nav>
+          <nav aria-label="Meniu mobil">
             <ul className="relative grid gap-2">
               {NAV_LINKS.map((item) => (
                 <li key={item.href}>

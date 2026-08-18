@@ -433,6 +433,8 @@
     border-color: color-mix(in srgb, var(--color-brand-400) 54%, transparent);
     color: var(--color-ink-title);
     background: color-mix(in srgb, var(--color-brand-500) 12%, transparent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-brand-500) 42%, transparent);
+    outline: none;
   }
 
   .jar-link::before {
