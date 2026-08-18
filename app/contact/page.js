@@ -68,7 +68,7 @@ export default async function ContactPage() {
               <a
                 href={phoneHref(config.phone)}
                 data-analytics="phone_click|conversion|phone_contact|source=contact|journey=lead_capture|lead_type=reservation"
-                className="jar-link jar-link--text touch-target"
+                className="jar-link touch-target"
               >
                 Rezervare prioritară pe telefon — {phoneDisplay}
               </a>
@@ -77,7 +77,7 @@ export default async function ContactPage() {
               <a
 	                href={whatsappHref(config.whatsapp, config.phone)}
 	                data-analytics="whatsapp_click|conversion|whatsapp_contact|source=contact|journey=lead_capture|lead_type=reservation"
-                className="jar-link jar-link--text touch-target"
+                className="jar-link touch-target"
               >
                 Confirmare rapidă prin WhatsApp — {whatsappDisplay}
               </a>
@@ -89,7 +89,7 @@ export default async function ContactPage() {
               <a
                 href={mapHref(config.siteName, config.fullAddress)}
                 data-analytics="maps_click|conversion|google_maps_contact|source=contact|journey=information|lead_type=none"
-                className="jar-link jar-link--text touch-target"
+                className="jar-link touch-target"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -97,11 +97,13 @@ export default async function ContactPage() {
               </a>
             </p>
           </div>
-          <p>Adresă: {config.fullAddress}</p>
-	        <p className="mt-2 text-sm text-ink-muted">Deschis: {config.hours}</p>
-          <p className="mt-2 text-sm text-ink-muted">
-            În orele de vârf, recomandăm rezervarea din timp pentru o experiență fără compromis.
-          </p>
+          <div className="jar-link-list mt-3">
+            <p className="text-sm text-ink-muted">Adresă: {config.fullAddress}</p>
+            <p className="text-sm text-ink-muted">Deschis: {config.hours}</p>
+            <p className="text-sm text-ink-muted">
+              În orele de vârf, recomandăm rezervarea din timp pentru o experiență fără compromis.
+            </p>
+          </div>
         </Card>
 
         <ContactForm />

@@ -75,7 +75,7 @@ export default function MenuSearch({ sections, totalItems = 0 }) {
             <input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Ex: pui la jar, salată, cartofi..."
+              placeholder="de exemplu: pui la jar, salată, cartofi"
               className="jar-form-field touch-target w-full pl-10"
             />
             {hasQuery ? (

@@ -61,11 +61,11 @@ export default function TermsPage() {
               Pentru nelămuriri, mergi la pagina sau sună direct la telefonul afișat.
             </p>
             <div className="jar-link-list">
-              <p>
-                <Link className="jar-link jar-link--text touch-target" href="/contact">
+            <p>
+                <Link className="jar-link touch-target" href="/contact">
                   Pagina de contact
                 </Link>
-              </p>
+            </p>
             </div>
           </section>
         </Card>

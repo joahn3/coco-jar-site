@@ -116,24 +116,24 @@ export default function ContactForm() {
         </label>
         <label className="grid gap-1.5 text-sm text-ink-muted">
           Telefon *
-              <input
-            name="phone"
-            required
-            placeholder="Telefon mobil, de ex. 07xx xxx xxx"
-            className={inputClassName}
-          />
+            <input
+              name="phone"
+              required
+              placeholder="Telefon mobil (format 07xx xxx xxx)"
+              className={inputClassName}
+            />
         </label>
         <div className="grid gap-3 sm:grid-cols-2">
           <label className="grid gap-1.5 text-sm text-ink-muted">
             Număr persoane (estimativ)
-            <input
-              type="number"
-              min="1"
-              max="160"
-              name="guestCount"
-              placeholder="Ex: 4 persoane"
-              className={inputClassName}
-            />
+              <input
+                type="number"
+                min="1"
+                max="160"
+                name="guestCount"
+                placeholder="Ex.: 4 persoane"
+                className={inputClassName}
+              />
           </label>
           <label className="grid gap-1.5 text-sm text-ink-muted">
             Interval dorit
@@ -148,17 +148,17 @@ export default function ContactForm() {
           </label>
         </div>
         <label className="sr-only">
-          Câmp de protecție automatizată
+          Câmp de protecție
           <input className="sr-only" name="website" tabIndex={-1} autoComplete="off" />
         </label>
         <label className="grid gap-1.5 text-sm text-ink-muted">
           Mesaj
-          <textarea
-            name="message"
-            rows={4}
-            placeholder="Scrie motivul vizitei, preferințe culinare sau alergeni"
-            className="jar-form-field min-h-28 resize-y text-sm"
-          />
+            <textarea
+              name="message"
+              rows={4}
+              placeholder="Scrie motivul vizitei, preferințele culinare sau alergeni"
+              className="jar-form-field min-h-28 resize-y text-sm"
+            />
         </label>
         <label className="grid grid-cols-[auto,1fr] items-start gap-2 text-sm text-ink-muted">
           <input

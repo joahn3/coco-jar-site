@@ -111,9 +111,11 @@ export default async function NotFound() {
 
         <Card className="space-y-4">
           <h2 className="text-title-md">Nu te-ai rătăcit? Găsește-ne aici.</h2>
-          <p className="text-sm text-ink-muted">
-            Adresă: {config.fullAddress}
-          </p>
+          <div className="jar-link-list">
+            <p className="text-sm text-ink-muted">
+              Adresă: {config.fullAddress}
+            </p>
+          </div>
           <div className="jar-link-list">
             <p>
               <a
@@ -128,7 +130,7 @@ export default async function NotFound() {
             </p>
           </div>
 
-          <div className="space-y-2.5 pt-1">
+          <div className="jar-link-list">
             <p className="trust-stat">Contact direct</p>
             <p className="text-sm text-ink-muted">Telefon: {config.phone || "la recepție"}</p>
             <p className="text-sm text-ink-muted">WhatsApp: {config.whatsapp || "la recepție"}</p>

@@ -58,11 +58,11 @@ export default function PrivacyPolicyPage() {
               Poți cere accesul, ștergerea sau corectarea datelor prin mesaj direct. Pentru detalii complete, vezi pagina de contact.
             </p>
             <div className="jar-link-list">
-              <p>
-                <Link className="jar-link jar-link--text touch-target" href="/contact">
+            <p>
+                <Link className="jar-link touch-target" href="/contact">
                   Pagina de contact
                 </Link>
-              </p>
+            </p>
             </div>
           </section>
         </Card>

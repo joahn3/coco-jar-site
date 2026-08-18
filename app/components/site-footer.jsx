@@ -25,31 +25,33 @@ export default function SiteFooter({ config }) {
               {config.siteName} · {config.locality}
             </p>
           </div>
-          <p className="text-ink-title">Deschis: {config.hours}</p>
-          <p>Adresă: {config.fullAddress}</p>
+          <div className="jar-link-list">
+            <p className="text-sm text-ink-muted">Deschis: {config.hours}</p>
+            <p className="text-sm text-ink-muted">Adresă: {config.fullAddress}</p>
+          </div>
         </div>
 
         <div className="space-y-2">
           <p className="font-semibold text-ink-title">Meniu și rezervări</p>
           <div className="jar-link-list">
             <p>
-              <Link href="/termeni-si-conditii" className="jar-link jar-link--text touch-target">
+              <Link href="/termeni-si-conditii" className="jar-link touch-target">
                 Termeni și condiții
               </Link>
             </p>
             <p>
-              <Link href="/politica-confidentialitate" className="jar-link jar-link--text touch-target">
+              <Link href="/politica-confidentialitate" className="jar-link touch-target">
                 Politica de confidențialitate
               </Link>
             </p>
             <p>
-              <Link href="/cookies" className="jar-link jar-link--text touch-target">
+              <Link href="/cookies" className="jar-link touch-target">
                 Politica cookie-urilor
               </Link>
             </p>
             <p>
               <a
-                className="jar-link jar-link--text touch-target"
+                className="jar-link touch-target"
                 href={config.social?.googleBusiness || "#"}
                 target="_blank"
                 rel="noreferrer"
@@ -58,12 +60,12 @@ export default function SiteFooter({ config }) {
               </a>
             </p>
             <p>
-              <Link href="/contact" className="jar-link jar-link--text touch-target">
+              <Link href="/contact" className="jar-link touch-target">
                 Contact
               </Link>
             </p>
             <p>
-              <Link href="/meniu-zilei" className="jar-link jar-link--text touch-target">
+              <Link href="/meniu-zilei" className="jar-link touch-target">
                 Meniul zilei
               </Link>
             </p>
@@ -75,7 +77,7 @@ export default function SiteFooter({ config }) {
             <p>
               <a
                 href={fbUrl}
-                className="jar-link jar-link--text touch-target"
+                className="jar-link touch-target"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -85,7 +87,7 @@ export default function SiteFooter({ config }) {
             <p>
               <a
                 href={instaUrl}
-                className="jar-link jar-link--text touch-target"
+                className="jar-link touch-target"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -95,18 +97,18 @@ export default function SiteFooter({ config }) {
             <p>
               <a
                 href="/meniu/coco-jar-meniu-detaliat-2026-08-15.pdf"
-                className="jar-link jar-link--text touch-target"
+                className="jar-link touch-target"
               >
                 Meniu PDF
               </a>
             </p>
             <p>
-              <Link href="/meniu" className="jar-link jar-link--text touch-target">
+              <Link href="/meniu" className="jar-link touch-target">
                 Meniu a la carte
               </Link>
             </p>
             <p>
-              <Link href="/evenimente-catering" className="jar-link jar-link--text touch-target">
+              <Link href="/evenimente-catering" className="jar-link touch-target">
                 Evenimente și catering
               </Link>
             </p>

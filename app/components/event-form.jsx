@@ -105,18 +105,18 @@ export default function EventForm() {
         <label className="grid gap-1.5 text-sm text-ink-muted">
           Telefon *
             <input
-            name="phone"
-            required
-            placeholder="Telefon mobil, de ex. 07xx xxx xxx"
-            className={inputClassName}
-          />
+              name="phone"
+              required
+              placeholder="Telefon mobil (format 07xx xxx xxx)"
+              className={inputClassName}
+            />
         </label>
         <label className="grid gap-1.5 text-sm text-ink-muted">
           Email
           <input
             name="email"
             type="email"
-            placeholder="nume@exemplu.ro (opțional)"
+              placeholder="Email (opțional)"
             className={inputClassName}
           />
         </label>
@@ -151,7 +151,7 @@ export default function EventForm() {
               min="5"
               max="300"
               name="guestCount"
-              placeholder="Ex: 40 invitați"
+              placeholder="Ex.: 40 invitați"
               required
               className={inputClassName}
             />
@@ -161,7 +161,7 @@ export default function EventForm() {
           <label className="grid gap-1.5 text-sm text-ink-muted">
             Interval de servire
             <select name="timeSlot" className={inputClassName} aria-label="Interval de servire">
-              <option value="">Alege intervalul de servire</option>
+              <option value="">Alege intervalul dorit</option>
               {timeSlots.map((slot) => (
                 <option key={slot} value={slot}>
                   {slot}
@@ -173,23 +173,23 @@ export default function EventForm() {
             Buget orientativ
             <input
               name="budget"
-              placeholder="Ex: 80-120 lei/persoană"
+              placeholder="Ex.: 80–120 lei/persoană"
               className={inputClassName}
             />
           </label>
         </div>
         <label className="grid gap-1.5 text-sm text-ink-muted">
           Tip meniu preferat
-          <input
+            <input
             name="preferredMenu"
-            placeholder="ex: pui la jar, opțiuni vegetariene"
+            placeholder="Ex.: pui la jar, opțiuni vegetariene"
             className={inputClassName}
           />
         </label>
-            <label className="sr-only">
-              Câmp de protecție automatizată
-              <input className="sr-only" name="website" tabIndex={-1} autoComplete="off" />
-            </label>
+    <label className="sr-only">
+      Câmp de protecție
+      <input className="sr-only" name="website" tabIndex={-1} autoComplete="off" />
+    </label>
         <label className="grid gap-1.5 text-sm">
           Mesaj / alergeni / alte detalii
           <textarea

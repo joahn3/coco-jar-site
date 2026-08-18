@@ -2,12 +2,9 @@ import { getSiteConfig, getFullMenu } from "../lib/site-data";
 import SiteHeader from "./components/site-header";
 import SiteFooter from "./components/site-footer";
 import SeoSchema from "./components/seo-schema";
-import { phoneHref, whatsappHref } from "../lib/format";
 import AnalyticsScripts from "./components/analytics-scripts";
 import { Manrope, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import Container from "./components/ui/container";
-import Button from "./components/ui/button";
 import BackToTopButton from "./components/back-to-top-button";
 
 const manrope = Manrope({
@@ -75,33 +72,6 @@ export default async function RootLayout({ children }) {
         {children}
         <SiteFooter config={config} />
         <BackToTopButton />
-        <div className="floating-cta-bar fixed inset-x-0 bottom-0 z-40 lg:hidden">
-          <Container className="floating-cta-shell grid h-full grid-cols-2 gap-2">
-            <Button
-              href={phoneHref(config.phone)}
-              data-analytics="phone_click|conversion|floating_phone|source=global|journey=lead_capture|lead_type=reservation"
-              aria-label={`Sună la ${config.phone || "restaurantul"}`}
-              className="floating-cta-button w-full justify-center gap-2"
-            >
-              <span className="floating-cta-icon" aria-hidden="true">
-                ☎
-              </span>
-              <span className="floating-cta-label">Sună</span>
-            </Button>
-            <Button
-              variant="whatsapp"
-              href={whatsappHref(config.whatsapp, config.phone)}
-              data-analytics="whatsapp_click|conversion|floating_whatsapp|source=global|journey=lead_capture|lead_type=whatsapp"
-              aria-label={`Trimite mesaj pe WhatsApp la ${config.whatsapp || config.phone || "restaurant"}`}
-              className="floating-cta-button w-full justify-center gap-2"
-            >
-              <span className="floating-cta-icon" aria-hidden="true">
-                WA
-              </span>
-              <span className="floating-cta-label">WhatsApp</span>
-            </Button>
-          </Container>
-        </div>
       </body>
     </html>
   );

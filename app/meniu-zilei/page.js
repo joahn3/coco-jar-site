@@ -124,31 +124,38 @@ export default async function DailyMenuPage({ searchParams }) {
             ]}
           />
         <h1 className="text-display-md">Meniul zilei — experiență completă la jar + a la carte</h1>
-        <p className="mt-2 text-sm text-ink-muted">
-          {selectedDate
-            ? `Compoziția pentru ${requestedLabel || selectedDate} este gândită ca o experiență de zi: start echilibrat, preparat la jar, ritm constant și servire stabilă.`
-            : `Este o propunere de zi completă: început, fel principal și final pentru o masă întreagă, fără compromis pe calitate și timp.`}
-        </p>
+        <div className="jar-link-list mt-2">
+          <p className="text-sm text-ink-muted">
+            {selectedDate
+              ? `Compoziția pentru ${requestedLabel || selectedDate} este gândită ca o experiență de zi: start echilibrat, preparat la jar, ritm constant și servire stabilă.`
+              : `Este o propunere de zi completă: început, fel principal și final pentru o masă întreagă, fără compromis pe calitate și timp.`}
+          </p>
         {selectedDate ? (
-          <p className="mt-2 text-sm text-ink-muted">
+          <p className="text-sm text-ink-muted">
             Ai activat meniul zilei pentru data <span className="font-semibold">{requestedLabel || selectedDate}</span>.{" "}
-            <a href="/meniu-zilei" className="underline underline-offset-3">
+            <a href="/meniu-zilei" className="jar-link w-auto touch-target inline-flex">
               Revino la ziua curentă
             </a>
           </p>
         ) : null}
-	        {!isMenuActive && (
-          <p className="jar-badge jar-badge--subtle mt-2 normal-case">
-            <span className="mr-2 inline-block size-2 rounded-full bg-brand-500" />
-            {menuWindowText}
+          <p className="text-sm text-ink-muted">
+            Meniul este actualizat zilnic, la fiecare schimbare din bucătărie, ca o experiență de zi echilibrată și constantă.
           </p>
+          <p className="text-sm text-ink-muted">
+            Vrei flexibilitate? În paralel cu meniul zilei, îți păstrăm complet meniul a la carte din restaurant.
+          </p>
+          <p className="text-xs text-ink-muted">
+            Program: 10:00–{config.menuValidUntilHour || "16:00"}, complet cu opțiuni a la carte disponibile permanent.
+          </p>
+        </div>
+        {!isMenuActive && (
+          <div className="mt-2">
+            <p className="jar-badge jar-badge--subtle normal-case">
+              <span className="mr-2 inline-block size-2 rounded-full bg-brand-500" />
+              {menuWindowText}
+            </p>
+          </div>
         )}
-        <p className="mt-2 text-sm text-ink-muted">
-          Meniul este actualizat zilnic, la fiecare schimbare din bucătărie, ca o experiență de zi echilibrată și constantă.
-        </p>
-        <p className="mt-2 text-sm text-ink-muted">
-          Vrei flexibilitate? În paralel cu meniul zilei, îți păstrăm complet meniul a la carte din restaurant.
-        </p>
         <div className="mt-4 flex flex-wrap gap-2">
           <Button as="next-link" href="/contact" variant="primary" className="touch-target">
             Rezervă-ți locul pentru azi
@@ -164,8 +171,8 @@ export default async function DailyMenuPage({ searchParams }) {
         <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {dayItems.length === 0 ? (
                 <Card className="md:col-span-2 xl:col-span-3">
-                  <p className="text-sm text-ink-muted">
-                    Îți pregătim experiența zilei pas cu pas; revenim în scurt timp cu oferta completă pentru această zi.
+                  <p className="jar-badge jar-badge--subtle">
+                    Meniul zilei e în revizie pentru moment. Îți arătăm varianta completă imediat ce intră în rotație.
                   </p>
                 </Card>
             ) : (

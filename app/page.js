@@ -15,7 +15,7 @@ import Section from "./components/ui/section";
 export const metadata = {
   title: "Coco Jar | Restaurant de pui la jar în Popești-Leordeni",
   description:
-    "La Coco Jar ai două opțiuni clare de alegere: meniul zilei pentru o seară completă și preparatele la-platou din restaurantul nostru a la carte.",
+    "La Coco Jar ai două opțiuni clare: meniul zilei pentru o masă echilibrată, de la început la final, și preparatele a la carte din restaurant.",
 };
 
 export default async function HomePage() {
@@ -198,26 +198,31 @@ export default async function HomePage() {
               </div>
             ))}
           </div>
-        <div className="grid gap-2.5 sm:grid-cols-3 sm:gap-3">
-            <p className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
-              {operatingHoursText}
+          <div className="jar-link-list">
+            <p>
+              <span className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
+                {operatingHoursText}
+              </span>
             </p>
-            <p className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
-              Telefon: {contactText}
+            <p>
+              <span className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
+                Telefon: {contactText}
+              </span>
             </p>
-            <p className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
-              Locație: {config.locality}
+            <p>
+              <span className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
+                Locație: {config.locality}
+              </span>
             </p>
           </div>
         </Card>
 
         <Card className="space-y-4 py-6 sm:py-7">
           <h2 className="text-title-lg">Rezervare directă</h2>
-          <p className="text-sm text-ink-muted">{operatingHoursText}</p>
-          <p className="text-sm text-ink-muted">
-                    Pentru intervalele aglomerate, recomandăm rezervare din timp. Confirmăm rapid preferințele tale.
-          </p>
           <div className="jar-link-list">
+            <p className="text-sm text-ink-muted">
+              Pentru intervalele aglomerate, recomandăm rezervare din timp. Confirmăm rapid preferințele tale.
+            </p>
             <p>
               <a
                 className="jar-link touch-target"
@@ -236,19 +241,17 @@ export default async function HomePage() {
                 Confirmare prin WhatsApp — răspuns în timp real: {whatsappText}
               </a>
             </p>
-          </div>
-          <p className="text-sm text-ink-muted">Adresa: {config.fullAddress}</p>
-          <div className="jar-link-list">
+            <p className="text-sm text-ink-muted">Adresa: {config.fullAddress}</p>
             <p>
-                <a
-                  className="jar-link jar-link--text touch-target"
-                  href={mapHref(config.siteName, config.fullAddress)}
-                  data-analytics="maps_click|conversion|google_maps|source=home|journey=information|lead_type=site"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Deschide locația pe hartă
-                </a>
+              <a
+                className="jar-link touch-target"
+                href={mapHref(config.siteName, config.fullAddress)}
+                data-analytics="maps_click|conversion|google_maps|source=home|journey=information|lead_type=site"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Deschide locația pe hartă
+              </a>
             </p>
           </div>
         </Card>
@@ -332,9 +335,9 @@ export default async function HomePage() {
                       <p className="text-sm text-ink-title">
                         {review.source} — {review.title}
                       </p>
-                      <p className="text-xs text-ink-muted">{review.text}</p>
+                    <p className="text-xs text-ink-muted">{review.text}</p>
                     <a
-                      className="jar-link jar-link--text touch-target"
+                      className="jar-link touch-target"
                       href={review.href}
                       target="_blank"
                       rel="noreferrer"
@@ -354,23 +357,29 @@ export default async function HomePage() {
           <div className="grid gap-4 md:grid-cols-3">
             <Card>
               <h3 className="text-title-md">Telefon și WhatsApp</h3>
-              <p className="text-sm text-ink-muted">
-                Rezervare directă: {contactText}
-              </p>
-              <p className="text-sm text-ink-muted">{operatingHoursText}</p>
-              <p className="text-xs text-ink-muted">Confirmare estimativă: în maxim 30 de minute (în interval de program)</p>
+              <div className="jar-link-list">
+                <p className="text-sm text-ink-muted">Rezervare directă: {contactText}</p>
+                <p className="text-sm text-ink-muted">{operatingHoursText}</p>
+                <p className="text-xs text-ink-muted">Confirmare estimativă: în maxim 30 de minute (în interval de program)</p>
+              </div>
             </Card>
             <Card>
               <h3 className="text-title-md">Locație</h3>
-              <p className="text-sm text-ink-muted">{config.fullAddress}</p>
-              <p className="text-sm text-ink-muted">Popești-Leordeni, Ilfov</p>
+              <div className="jar-link-list">
+                <p className="text-sm text-ink-muted">{config.fullAddress}</p>
+                <p className="text-sm text-ink-muted">Popești-Leordeni, Ilfov</p>
+              </div>
             </Card>
             <Card>
               <h3 className="text-title-md">Evenimente și catering</h3>
-              <p className="text-sm text-ink-muted">Nuntă, botez, aniversări, evenimente corporate.</p>
-              <Link className="jar-link jar-link--text touch-target" href="/evenimente-catering">
-                Cere o ofertă pentru evenimente
-              </Link>
+              <div className="jar-link-list">
+                <p className="text-sm text-ink-muted">Nuntă, botez, aniversări, evenimente corporate.</p>
+                <p>
+                  <Link className="jar-link touch-target" href="/evenimente-catering">
+                    Cere o ofertă pentru evenimente
+                  </Link>
+                </p>
+              </div>
             </Card>
           </div>
         </Section>
@@ -385,7 +394,7 @@ export default async function HomePage() {
             {!todayItems.length ? (
               <Card className="md:col-span-2 xl:col-span-3">
                 <p className="text-sm text-ink-muted">
-                  Preparatul zilei se finalizează, revenim în scurt timp cu oferta completă.
+                  Meniul zilei e în curs de actualizare. Revenim imediat cu varianta completă pentru ziua de azi.
                 </p>
               </Card>
             ) : (
