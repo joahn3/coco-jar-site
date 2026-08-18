@@ -27,6 +27,7 @@ export default function BackToTopButton() {
       onClick={handleClick}
       aria-label="Înapoi sus"
       title="Înapoi sus"
+      data-analytics="click|navigation|back_to_top|source_page=global|journey_stage=utility|lead_type=site"
     >
       <span className="back-to-top__icon" aria-hidden="true">
         ↑

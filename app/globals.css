@@ -409,7 +409,7 @@
   .jar-link {
     position: relative;
     display: inline-flex;
-    min-height: 2.3rem;
+    min-height: 2.75rem;
     width: 100%;
     align-items: center;
     justify-content: flex-start;
@@ -849,8 +849,8 @@
     border-radius: 999px;
     border: 1px solid color-mix(in srgb, var(--color-line-soft) 88%, transparent);
     padding: 0.55rem 0.85rem;
-    min-height: 2.6rem;
-    min-width: 2.6rem;
+    min-height: 2.75rem;
+    min-width: 2.75rem;
     font-size: 0.86rem;
     font-weight: 600;
     color: var(--color-ink-title);

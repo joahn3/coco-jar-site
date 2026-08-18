@@ -83,7 +83,7 @@ export default function MenuSearch({ sections, totalItems = 0 }) {
                 type="button"
                 aria-label="Șterge căutarea"
                 onClick={() => setQuery("")}
-                className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full border border-line-soft bg-surface-base px-2 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-ink-muted transition hover:border-brand-500/55 hover:text-ink-title"
+                className="touch-target absolute right-1 top-1/2 -translate-y-1/2 rounded-full border border-line-soft bg-surface-base px-2 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-ink-muted transition hover:border-brand-500/55 hover:text-ink-title"
               >
                 ×
               </button>
