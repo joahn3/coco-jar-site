@@ -110,7 +110,6 @@ export default function ContactForm() {
             required
             defaultValue=""
             aria-required="true"
-            aria-describedby="visitType-error"
             className={inputClassName}
             aria-label="Tipul vizitei"
           >
@@ -126,25 +125,23 @@ export default function ContactForm() {
         </label>
         <label className="grid gap-1.5 jar-copy-sm">
           <span>Nume*</span>
-          <input
+            <input
             id="name"
             name="name"
             required
             aria-required="true"
-            aria-describedby="contact-name-error"
             placeholder="Numele tău"
             className={inputClassName}
           />
         </label>
         <label className="grid gap-1.5 jar-copy-sm">
           <span>Telefon*</span>
-          <input
+            <input
             id="phone"
             type="tel"
             name="phone"
             required
             aria-required="true"
-            aria-describedby="contact-phone-error"
             inputMode="tel"
             autoComplete="tel"
             pattern="[0-9+()\\-\\s]{8,20}"

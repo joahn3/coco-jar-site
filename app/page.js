@@ -16,7 +16,11 @@ export const metadata = {
   title: "Coco Jar | Restaurant de pui la jar în Popești-Leordeni",
   description:
     "La Coco Jar ai două opțiuni clare: meniul zilei pentru o masă echilibrată, de la început la final, și preparatele a la carte din restaurant.",
+  alternates: {
+    canonical: "/",
+  },
 };
+export const revalidate = 3600;
 
 export default async function HomePage() {
   const config = await getSiteConfig();
@@ -28,6 +32,12 @@ export default async function HomePage() {
   const contactText = config.phone || "la recepție";
   const whatsappText = config.whatsapp || config.phone || "la recepție";
   const menuWindowText = `Meniul zilei: 10:00–${config.menuValidUntilHour || "16:00"}`;
+  const heroSignals = [
+    { label: "Locație", value: config.locality },
+    { label: "Program", value: "10:00–22:00" },
+    { label: "Status meniu", value: isMenuActive ? "În curs" : "În interval" },
+    { label: "Contact", value: contactText },
+  ];
 
   const coreSignals = [
     {
@@ -100,34 +110,49 @@ export default async function HomePage() {
   return (
     <main className="pb-40">
       <section className="relative">
-        <Container as="section" className="py-5 md:py-7">
-          <article className="jar-card grid gap-6 overflow-hidden rounded-[var(--ds-radius-2xl)] p-5 sm:p-7 md:grid-cols-[1.2fr_0.8fr] md:p-8">
-            <div className="space-y-5">
+        <Container as="section" className="py-5 md:py-8">
+          <article className="jar-card hero-card grid gap-5 rounded-[var(--ds-radius-2xl)] p-5 sm:p-7 md:grid-cols-[1.1fr_0.9fr] md:p-8 xl:p-10">
+            <div className="space-y-5 sm:space-y-6">
               <p className="jar-badge hero-kicker">Când focul se aude blând, gustul devine memorabil</p>
-              <h1 className="text-display-md sm:text-display-lg md:text-display-2xl">
+              <h1 className="text-display-md sm:text-display-lg md:text-display-xl">
                 Coco Jar — pui la jar, meniul zilei și preparate la carte.
               </h1>
-              <p className="text-balance jar-copy jar-kicker text-body-lg max-w-2xl">
-                Zi de zi, aducem aceeași experiență constantă: atmosferă autentică, preparate
-                atent gătite și servicii fără grabă.
+              <p className="jar-copy max-w-2xl">
+                Zi de zi, aducem aceeași experiență: atmosferă caldă, preparate atent gătite
+                și servicii fără grabă.
               </p>
-              <div className="hidden md:flex gap-2 md:flex-wrap">
+              <div className="hero-cta-group hidden md:flex gap-2.5 md:flex-wrap">
                 <Button as="next-link" href="/contact" variant="primary" className="touch-target w-full sm:w-auto">
                   Rezervă-ți masa
                 </Button>
-                <Button as="next-link" href="/meniu-zilei" variant="secondary" className="touch-target w-full sm:w-auto">
+                <Button
+                  as="next-link"
+                  href="/meniu-zilei"
+                  variant="secondary"
+                  className="touch-target w-full sm:w-auto"
+                >
                   Explorează meniul zilei
                 </Button>
               </div>
             </div>
-            <div className="space-y-3">
+            <div className="grid content-start gap-3">
               <div className="jar-link-list p-4">
-                <p className="jar-copy-xs jar-kicker">Informații utile</p>
-                <p className="jar-copy-sm">Telefon: {contactText}</p>
-                <p className="jar-copy-sm">WhatsApp: {whatsappText}</p>
-                <p className="jar-copy-sm">Locație: {config.locality}</p>
-                <p className="jar-copy-sm">Program: 10:00–22:00</p>
-                <p className="jar-copy-sm">Meniu zilei: {isMenuActive ? "în curs" : menuWindowText}</p>
+                <p className="jar-copy-xs jar-kicker">Date rapide</p>
+                <div className="grid gap-2 pt-1">
+                  {heroSignals.map((item) => (
+                    <p key={item.label} className="jar-chip jar-chip--row flex-wrap">
+                      <span className="jar-copy-xs uppercase tracking-wide text-[var(--ds-text-muted)]">{item.label}</span>
+                      <span className="text-sm font-semibold">{item.value}</span>
+                    </p>
+                  ))}
+                  <p className="jar-chip jar-chip--row flex-wrap">
+                    <span className="jar-copy-xs uppercase tracking-wide text-[var(--ds-text-muted)]">WhatsApp</span>
+                    <span className="text-sm font-semibold">{whatsappText}</span>
+                  </p>
+                  <p className="jar-chip mt-1 justify-start text-xs text-[var(--ds-text-muted)]">
+                    Status meniu: {isMenuActive ? "în curs" : menuWindowText}
+                  </p>
+                </div>
               </div>
               <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                 <Link href="/meniu" className="jar-link touch-target">
@@ -143,10 +168,10 @@ export default async function HomePage() {
 
         <div className="mobile-bottom-cta md:hidden" aria-label="Acțiuni rapide">
           <div className="mobile-bottom-cta__panel">
-            <Button as="next-link" href="/contact" variant="primary" className="touch-target w-full">
+            <Button as="next-link" href="/contact" variant="primary" className="mobile-cta-primary w-full">
               Rezervă-ți masa
             </Button>
-            <Button as="next-link" href="/meniu-zilei" variant="secondary" className="touch-target w-full">
+            <Button as="next-link" href="/meniu-zilei" variant="secondary" className="mobile-cta-secondary w-full">
               Explorează meniul zilei
             </Button>
           </div>
@@ -155,7 +180,7 @@ export default async function HomePage() {
 
       <Container as="section">
         <div className="bento-grid">
-          <article className="jar-card md:col-span-8">
+            <article className="jar-card col-span-12 md:col-span-8">
             <Section title="Cum te simți când intri la noi" subtitle="Atmosferă calmă, orientată pe confortul tău">
               <p className="jar-copy-sm">
                 Loc cald, confortabil, orientat pe confortul tău: preparat constant, servicii la timp,
@@ -171,7 +196,7 @@ export default async function HomePage() {
             </Section>
           </article>
 
-          <article className="jar-card md:col-span-4">
+          <article className="jar-card col-span-12 md:col-span-4">
             <Section title="Rezervare directă" subtitle="Răspuns clar, fără pași inutili">
               <div className="jar-link-list">
                 <p>
@@ -201,11 +226,11 @@ export default async function HomePage() {
             </Section>
           </article>
 
-          <div className="md:col-span-12">
+          <div className="col-span-12">
             <Section title="Ce poți verifica înainte de a veni" subtitle="Indicatori clari, pentru o decizie sigură">
               <div className="bento-grid !grid">
                 {coreSignals.map((item) => (
-                  <Card key={item.label} className="md:col-span-4">
+                  <Card key={item.label} className="col-span-12 md:col-span-4">
                     <p className="jar-badge">{item.label}</p>
                     <p className="text-title-md">{item.value}</p>
                     <p className="jar-copy-sm">{item.description}</p>
@@ -215,7 +240,7 @@ export default async function HomePage() {
             </Section>
           </div>
 
-          <article className="jar-card md:col-span-12">
+          <article className="jar-card col-span-12">
             <Section title="Experiențe verificate" subtitle="Ce simte clientul în fiecare zi">
               <div className="carousel-track mt-4 pb-1">
                 {experienceStories.map((item) => (
@@ -228,11 +253,11 @@ export default async function HomePage() {
             </Section>
           </article>
 
-          <article className="jar-card md:col-span-12">
+          <article className="jar-card col-span-12">
             <Section title="Meniul zilei — astăzi" subtitle={`${todayMenuLabel} • ${isMenuActive ? "în curs de afișare" : menuWindowText}`}>
               <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
                 {!todayItems.length ? (
-                  <Card className="md:col-span-3">
+                  <Card className="col-span-12 md:col-span-3">
                     <p className="jar-copy-sm">
                       Meniul zilei e în curs de actualizare. Revenim imediat cu varianta completă pentru ziua de azi.
                     </p>
@@ -259,7 +284,7 @@ export default async function HomePage() {
             </Section>
           </article>
 
-          <article className="jar-card md:col-span-12">
+          <article className="jar-card col-span-12">
             <Section title="Recomandări din partea publicului" subtitle="Review-uri vizibile direct din canale oficiale">
               <div className="carousel-track mt-4 pb-1">
                 {reviewSignals.map((review) => (
@@ -276,7 +301,7 @@ export default async function HomePage() {
             </Section>
           </article>
 
-          <article className="jar-card md:col-span-4">
+            <article className="jar-card col-span-12 md:col-span-4">
             <Section
               title="Servicii principale"
               subtitle="Totul pentru o rezervare bună din prima"
@@ -290,7 +315,7 @@ export default async function HomePage() {
               </div>
             </Section>
           </article>
-          <article className="jar-card md:col-span-4">
+          <article className="jar-card col-span-12 md:col-span-4">
             <Section title="Acoperire evenimente">
               <div className="jar-link-list">
                 <p className="jar-copy-sm">Nuntă, botez, aniversări, evenimente corporate</p>
@@ -302,7 +327,7 @@ export default async function HomePage() {
               </div>
             </Section>
           </article>
-          <article className="jar-card md:col-span-4">
+          <article className="jar-card col-span-12 md:col-span-4">
             <Section title="Navigare rapidă">
               <div className="jar-link-list">
                 <p>

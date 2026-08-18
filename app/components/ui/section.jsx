@@ -4,7 +4,7 @@ export default function Section({ className = "", title, subtitle, children, ...
   return (
     <section
       className={cn(
-        "relative section-shell space-y-6 sm:space-y-7",
+        "relative section-shell content-section-shell space-y-6 sm:space-y-7",
         className,
       )}
       {...props}

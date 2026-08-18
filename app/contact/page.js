@@ -7,10 +7,14 @@ import ContactForm from "../components/contact-form";
 import Breadcrumbs from "../components/breadcrumbs";
 
 export const metadata = {
-  title: "Contact și rezervări | Coco Jar Bistro",
+  title: "Contact și rezervări",
   description:
     "Rezervări rapide la Coco Jar Bistro: confirmare clară, detalii complete și un răspuns personalizat pentru mesele de zi sau seară.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
+export const revalidate = 3600;
 
 export default async function ContactPage() {
 	    const config = await getSiteConfig();

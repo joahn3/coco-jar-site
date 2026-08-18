@@ -1,32 +1,76 @@
+import { getSiteUrl, sanitizeJsonLdText, toAbsoluteUrl } from "../../lib/seo-jsonld";
+import JsonLdScript from "./jsonld-script";
+
 export default function SeoSchema({ config, menu }) {
-  const schemaOrgUrl = "https://coco-jar-site.vercel.app";
+  const siteUrl = getSiteUrl();
 
   const addressParts = (config.fullAddress || "").split(",");
-
   const [street = "", locality = "", region = "", postalCode = ""] = addressParts
-    .map((value) => value.trim())
+    .map((value) => sanitizeJsonLdText(value.trim()))
     .concat(["", "", "", ""]);
 
-  const localBusiness = {
+  const siteName = sanitizeJsonLdText(config.siteName || "Coco Jar");
+  const tagline = sanitizeJsonLdText(config.tagline || "");
+  const openingHours = sanitizeJsonLdText(config.hours || "10:00–22:00");
+  const localCuisine = "Romanian";
+  const logo = toAbsoluteUrl(config.social?.logo);
+
+  const address = {
+    "@type": "PostalAddress",
+    streetAddress: street,
+    addressLocality: locality || sanitizeJsonLdText(config.locality),
+    addressRegion: region || "Ilfov",
+    postalCode,
+    addressCountry: "RO",
+  };
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: siteName,
+    url: siteUrl,
+    logo,
+    description: tagline,
+    sameAs: [
+      sanitizeJsonLdText(config.social?.facebook),
+      sanitizeJsonLdText(config.social?.instagram),
+      sanitizeJsonLdText(config.social?.googleBusiness),
+    ].filter(Boolean),
+  };
+
+  const webSite = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteName,
+    url: siteUrl,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${siteUrl}/?s={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteName,
+    },
+  };
+
+  const restaurantSchema = {
     "@context": "https://schema.org",
     "@type": "Restaurant",
-    name: config.siteName,
-    description: config.tagline,
-    telephone: config.phone,
-    url: schemaOrgUrl,
-    image: config.social?.logo,
-    servesCuisine: "Romanian",
+    name: siteName,
+    description: tagline,
+    telephone: sanitizeJsonLdText(config.phone),
+    url: siteUrl,
+    image: logo,
+    servesCuisine: localCuisine,
     priceRange: "$$",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: street,
-      addressLocality: locality || config.locality,
-      addressRegion: region || "Ilfov",
-      postalCode,
-      addressCountry: "RO",
-    },
-    openingHours: ["Mo-Su 10:00-22:00"],
-    sameAs: [config.social?.facebook, config.social?.instagram, config.social?.googleBusiness].filter(Boolean),
+    address,
+    openingHours: [sanitizeJsonLdText(`Mo-Su ${openingHours.replace("–", "-")}`)],
+    sameAs: [
+      sanitizeJsonLdText(config.social?.facebook),
+      sanitizeJsonLdText(config.social?.instagram),
+      sanitizeJsonLdText(config.social?.googleBusiness),
+    ].filter(Boolean),
   };
 
   const menuSections = Object.entries(menu || {})
@@ -34,15 +78,15 @@ export default function SeoSchema({ config, menu }) {
     .slice(0, 5)
     .map(([category, rows]) => ({
       "@type": "MenuSection",
-      name: category,
+      name: sanitizeJsonLdText(category),
       hasMenuItem: rows.slice(0, 18).map((item) => ({
         "@type": "MenuItem",
-        name: item.name,
-        description: item.description,
+        name: sanitizeJsonLdText(item.name),
+        description: sanitizeJsonLdText(item.description),
         offers: item.price
           ? {
               "@type": "Offer",
-              price: String(item.price).replace(/[^0-9,.]/g, "").trim() || "",
+              price: String(item.price).replace(/[^0-9,.]/g, "").trim() || "0",
               priceCurrency: "RON",
             }
           : undefined,
@@ -52,36 +96,16 @@ export default function SeoSchema({ config, menu }) {
   const menuSchema = {
     "@context": "https://schema.org",
     "@type": "Menu",
-    name: `${config.siteName} - Meniu`,
+    name: `${siteName} - Meniu`,
     hasMenuSection: menuSections,
-  };
-
-  const webSite = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: config.siteName,
-    url: schemaOrgUrl,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${schemaOrgUrl}/?s={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(menuSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite) }}
-      />
+      <JsonLdScript id="jsonld-organization" data={organizationSchema} />
+      <JsonLdScript id="jsonld-website" data={webSite} />
+      <JsonLdScript id="jsonld-restaurant" data={restaurantSchema} />
+      <JsonLdScript id="jsonld-menu" data={menuSchema} />
     </>
   );
 }

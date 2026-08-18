@@ -13,9 +13,10 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
 });
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://coco-jar-site.vercel.app";
 
 export const metadata = {
-  metadataBase: new URL("https://coco-jar-site.vercel.app"),
+  metadataBase: new URL(siteUrl),
   title: {
     template: "%s | Coco Jar Bistro",
     default: "Coco Jar Bistro | Restaurant premium de pui la jar în Popești-Leordeni",
@@ -31,6 +32,9 @@ export const metadata = {
     "grătar",
     "restaurant cu terasă",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Coco Jar Bistro | Restaurant premium de pui la jar",
     description:
@@ -38,15 +42,22 @@ export const metadata = {
     type: "website",
     locale: "ro_RO",
     siteName: "Coco Jar",
-    url: "https://coco-jar-site.vercel.app",
+    url: siteUrl,
     images: [
       {
-        url: "https://coco-jar-site.vercel.app/galerie/instagram-011-47b855d73e.jpg",
+        url: `${siteUrl}/galerie/instagram-011-47b855d73e.jpg`,
         width: 1200,
         height: 630,
         alt: "Coco Jar Bistro, atmosferă de restaurant pui la jar",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Coco Jar Bistro | Restaurant premium de pui la jar",
+    description:
+      "Atmosferă caldă, preparate gătite la jar și un cadru premium pentru seri de neuitat.",
+    images: [`${siteUrl}/galerie/instagram-011-47b855d73e.jpg`],
   },
 };
 
@@ -58,6 +69,25 @@ export default async function RootLayout({ children }) {
     <html lang="ro">
       <head>
         <SeoSchema config={config} menu={fullMenu} />
+        <script
+          id="theme-bootstrap"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                try {
+                  const storedTheme = window.localStorage.getItem("coco-jar-theme");
+                  if (storedTheme === "light" || storedTheme === "dark") {
+                    document.documentElement.setAttribute("data-theme", storedTheme);
+                    return;
+                  }
+                  document.documentElement.removeAttribute("data-theme");
+                } catch {
+                  return;
+                }
+              })();
+            `,
+          }}
+        />
       </head>
       <body className={`${inter.variable} min-h-screen antialiased`}>
         <AnalyticsScripts />

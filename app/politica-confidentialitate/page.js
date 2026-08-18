@@ -7,7 +7,11 @@ export const metadata = {
   title: "Politica de confidențialitate",
   description:
     "Cum tratăm datele personale pe site-ul Coco Jar.",
+  alternates: {
+    canonical: "/politica-confidentialitate",
+  },
 };
+export const revalidate = 86400;
 
 export default function PrivacyPolicyPage() {
   const lastUpdated = "15 august 2026";

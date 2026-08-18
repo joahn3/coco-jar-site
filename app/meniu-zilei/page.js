@@ -12,11 +12,32 @@ import Card from "../components/ui/card";
 import Button from "../components/ui/button";
 import Breadcrumbs from "../components/breadcrumbs";
 
-export const metadata = {
-  title: "Meniul zilei | Coco Jar Bistro",
-  description:
-    "Meniul zilei de la Coco Jar: pui la jar, preparate tradiționale și opțiuni a la carte pentru experiența ta completă.",
-};
+export const dynamic = "force-dynamic";
+
+export async function generateMetadata({ searchParams }) {
+  const selectedDate = searchParams?.date;
+  const requestedDayKey = selectedDate ? getDayKeyByDate(selectedDate) : null;
+  const dayKey = requestedDayKey || getCurrentDayKey();
+  const requestedLabel = selectedDate ? formatDateInput(selectedDate) : "";
+  const title = selectedDate
+    ? `Meniul zilei din ${getDayLabel(dayKey)} (${requestedLabel || selectedDate})`
+    : `Meniul zilei — ${getDayLabel(dayKey)}`;
+  const description = selectedDate
+    ? `Meniu zilnic pentru data ${requestedLabel || selectedDate}. Verifică preparatele disponibile și programează-ți vizita.` 
+    : "Meniul zilei de la Coco Jar, cu porții echilibrate, preparate la jar și opțiuni din bucătărie.";
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: "/meniu-zilei",
+    },
+    openGraph: {
+      title,
+      description,
+    },
+  };
+}
 
 const premiumMenuCopy = {
   "Meniul zilei": {
@@ -60,7 +81,6 @@ const premiumMenuCopy = {
       "Sfeclă și varză gândite pentru echilibru acid, crocant și curat, ca contrapunct digestiv la preparatele principale.",
   },
 };
-
 function getPremiumMenuItemCopy(item) {
   const preset = premiumMenuCopy[item.name];
   const title = preset?.name || item.name;

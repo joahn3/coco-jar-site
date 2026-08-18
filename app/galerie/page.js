@@ -9,6 +9,29 @@ import Breadcrumbs from "../components/breadcrumbs";
 
 const galleryPath = path.join(process.cwd(), "public/galerie");
 const EXCLUDED_PATTERNS = [/meniu/i];
+export const dynamic = "force-dynamic";
+export async function generateMetadata({ searchParams }) {
+  const resolvedSearchParams = await Promise.resolve(searchParams || {});
+  const activeFilter = normalizeFilter(resolvedSearchParams?.filtru);
+  const activeFilterLabel = FILTERS.find((filter) => filter.key === activeFilter)?.label || "Toate";
+  const title = `Galerie Coco Jar — ${activeFilterLabel}`;
+  const description =
+    activeFilter === "toate"
+      ? "Vezi atmosfera completă de la Coco Jar, de la interior la preparate."
+      : `Fotografii din secțiunea ${activeFilterLabel.toLowerCase()} de la Coco Jar.`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: "/galerie",
+    },
+    openGraph: {
+      title,
+      description,
+    },
+  };
+}
 
 const FILTERS = [
   { key: "toate", label: "Toate" },

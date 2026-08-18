@@ -1,4 +1,4 @@
-const baseUrl = "https://coco-jar-site.vercel.app";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://coco-jar-site.vercel.app";
 
 export default async function sitemap() {
   const now = new Date();
@@ -8,7 +8,7 @@ export default async function sitemap() {
       url: `${baseUrl}/`,
       lastModified: now,
       changeFrequency: "daily",
-      priority: 1,
+      priority: 1.0,
     },
     {
       url: `${baseUrl}/meniu`,
@@ -21,6 +21,12 @@ export default async function sitemap() {
       lastModified: now,
       changeFrequency: "hourly",
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/galerie`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/despre-noi`,
@@ -38,7 +44,7 @@ export default async function sitemap() {
       url: `${baseUrl}/contact`,
       lastModified: now,
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.75,
     },
     {
       url: `${baseUrl}/termeni-si-conditii`,

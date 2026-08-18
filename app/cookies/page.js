@@ -5,7 +5,11 @@ import Breadcrumbs from "../components/breadcrumbs";
 export const metadata = {
   title: "Politica cookies",
   description: "Informații despre modul de utilizare a cookie-urilor pe site-ul Coco Jar.",
+  alternates: {
+    canonical: "/cookies",
+  },
 };
+export const revalidate = 86400;
 
 export default function CookiesPage() {
   const lastUpdated = "15 august 2026";

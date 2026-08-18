@@ -6,16 +6,24 @@ import Card from "../components/ui/card";
 import EventForm from "../components/event-form";
 import Button from "../components/ui/button";
 import Breadcrumbs from "../components/breadcrumbs";
+import PageJsonLd from "../components/page-jsonld";
 
 export const metadata = {
   title: "Evenimente private | Coco Jar Bistro",
   description:
     "Evenimente private la Coco Jar: nuntă, botez, aniversări, team-building. Pregătim pachete personalizate cu meniu la jar, organizare atentă și comunicare constantă.",
+  alternates: {
+    canonical: "/evenimente-catering",
+  },
 };
+export const revalidate = 3600;
 
 export default async function EventPage() {
-    const config = await getSiteConfig();
+  const config = await getSiteConfig();
 	const phoneDisplay = config.phone || "la recepție";
+  const pageTitle = "Evenimente private | Coco Jar Bistro";
+  const pageDescription =
+    "Evenimente private la Coco Jar: nuntă, botez, aniversări, team-building. Pregătim pachete personalizate cu meniu la jar, organizare atentă și comunicare constantă.";
 	const eventProof = [
 	  {
 	    title: "Răspuns prioritar",
@@ -51,6 +59,13 @@ export default async function EventPage() {
     return (
       <main className="pb-28">
         <Container as="section" className="space-y-6 py-6">
+          <PageJsonLd
+            slug="/evenimente-catering"
+            title={pageTitle}
+            description={pageDescription}
+            section="Servicii"
+            author="Coco Jar"
+          />
           <Breadcrumbs
             items={[
               { label: "Acasă", href: "/" },

@@ -2,12 +2,32 @@ import { getSiteConfig } from "../../lib/site-data";
 import Container from "../components/ui/container";
 import Card from "../components/ui/card";
 import Breadcrumbs from "../components/breadcrumbs";
+import PageJsonLd from "../components/page-jsonld";
+export const metadata = {
+  title: "Despre noi | Coco Jar Bistro",
+  description:
+    "Descoperă povestea Coco Jar: abordarea culinară, atmosfera locală și valorile noastre pentru o experiență autentică în Popești-Leordeni.",
+  alternates: {
+    canonical: "/despre-noi",
+  },
+};
+export const revalidate = 86400;
 
 export default async function AboutPage() {
   const config = await getSiteConfig();
+  const siteTitle = `Despre noi | ${config.siteName}`;
+  const siteDescription =
+    "Descoperă povestea Coco Jar: abordarea culinară, atmosfera locală și valorile noastre pentru o experiență autentică în Popești-Leordeni.";
 
     return (
       <main className="pb-28">
+          <PageJsonLd
+            slug="/despre-noi"
+            title={siteTitle}
+            description={siteDescription}
+            section="Despre noi"
+            author="Coco Jar"
+          />
         <Container as="section" className="space-y-6 py-6">
           <Breadcrumbs
             items={[

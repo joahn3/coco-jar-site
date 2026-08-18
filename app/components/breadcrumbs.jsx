@@ -1,6 +1,6 @@
 import Link from "next/link";
-
-const SITE_ORIGIN = "https://coco-jar-site.vercel.app";
+import JsonLdScript from "./jsonld-script";
+import { toAbsoluteUrl, sanitizeJsonLdText } from "../../lib/seo-jsonld";
 
 export default function Breadcrumbs({ items = [] }) {
   if (!Array.isArray(items) || items.length < 2) {
@@ -18,8 +18,8 @@ export default function Breadcrumbs({ items = [] }) {
     itemListElement: validItems.map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
-      name: item.label,
-      item: `${SITE_ORIGIN}${item.href}`,
+      name: sanitizeJsonLdText(item.label),
+      item: toAbsoluteUrl(item.href),
     })),
   };
 
@@ -33,23 +33,20 @@ export default function Breadcrumbs({ items = [] }) {
             <li key={`${item.href}-${index}`} className="inline-flex items-center gap-2">
               {index > 0 ? <span className="mt-0.5 inline-block size-1 rounded-full bg-brand-400/85" aria-hidden="true" /> : null}
               {isLast ? (
-                <span className="font-semibold text-ink-title">{item.label}</span>
+                <span className="font-semibold text-ink-title">{sanitizeJsonLdText(item.label)}</span>
               ) : (
                 <Link
                   className="hover:text-ink-title touch-target inline-flex items-center transition-colors duration-200 rounded-full"
                   href={item.href}
                 >
-                  {item.label}
+                  {sanitizeJsonLdText(item.label)}
                 </Link>
               )}
             </li>
           );
         })}
       </ol>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <JsonLdScript id="jsonld-breadcrumb" data={breadcrumbSchema} />
     </nav>
   );
 }

@@ -7,7 +7,11 @@ export const metadata = {
   title: "Termeni și condiții",
   description:
     "Termeni de utilizare pentru accesarea site-ului Coco Jar și pentru relația de comunicare cu restaurantul.",
+  alternates: {
+    canonical: "/termeni-si-conditii",
+  },
 };
+export const revalidate = 86400;
 
 export default function TermsPage() {
   const lastUpdated = "15 august 2026";

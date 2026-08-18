@@ -22,6 +22,25 @@ const EVENING_HIGHLIGHTS = [
 	  { href: "/meniu-zilei", label: "Meniul zilei" },
   { href: "/galerie", label: "Atmosferă autentică din restaurant" },
 ];
+const THEME_STORAGE_KEY = "coco-jar-theme";
+const THEME_ORDER = ["system", "light", "dark"];
+const THEME_LABELS = {
+  system: {
+    icon: "🖥️",
+    currentLabel: "Mod sistem",
+    nextLabel: "mod deschis",
+  },
+  light: {
+    icon: "☀️",
+    currentLabel: "Mod luminos",
+    nextLabel: "mod întunecat",
+  },
+  dark: {
+    icon: "🌙",
+    currentLabel: "Mod întunecat",
+    nextLabel: "mod sistem",
+  },
+};
 
 function MenuIcon({ open }) {
   return (
@@ -49,8 +68,65 @@ export default function SiteHeader({ config }) {
   const logoSrc = config?.social?.logo || "/images/logo-coco-jar.svg";
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHeaderScrolled, setIsHeaderScrolled] = useState(false);
+  const [themeMode, setThemeMode] = useState("system");
+  const [isThemeReady, setIsThemeReady] = useState(false);
+
+  const safeThemeMode = THEME_LABELS[themeMode] ? themeMode : "system";
+  const themeState = THEME_LABELS[safeThemeMode];
+  const nextThemeMode =
+    THEME_ORDER[(THEME_ORDER.indexOf(safeThemeMode) + 1) % THEME_ORDER.length];
+  const nextThemeState = THEME_LABELS[nextThemeMode];
+
+  const themeLabel = isThemeReady ? themeState.icon : "🖥️";
+  const themeAriaMessage = isThemeReady
+    ? `Comută pe ${nextThemeState.nextLabel}`
+    : "Comută tema";
+
+  function applyThemeMode(nextMode) {
+    if (!window?.document?.documentElement) {
+      return;
+    }
+
+    if (nextMode === "system") {
+      document.documentElement.removeAttribute("data-theme");
+      localStorage.removeItem(THEME_STORAGE_KEY);
+    } else {
+      document.documentElement.setAttribute("data-theme", nextMode);
+      localStorage.setItem(THEME_STORAGE_KEY, nextMode);
+    }
+  }
+
+  function toggleThemeMode() {
+    const nextMode = nextThemeMode;
+    setThemeMode(nextMode);
+    applyThemeMode(nextMode);
+  }
 
   const closeMenu = () => setIsMenuOpen(false);
+
+  useEffect(() => {
+    setIsThemeReady(true);
+    try {
+      const stored = localStorage.getItem(THEME_STORAGE_KEY);
+      if (stored === "light" || stored === "dark") {
+        setThemeMode(stored);
+        applyThemeMode(stored);
+      } else {
+        setThemeMode("system");
+        applyThemeMode("system");
+      }
+    } catch {
+      setThemeMode("system");
+      applyThemeMode("system");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!isThemeReady) {
+      return;
+    }
+    applyThemeMode(themeMode);
+  }, [themeMode, isThemeReady]);
 
   useEffect(() => {
     const onScroll = () => setIsHeaderScrolled(window.scrollY > 12);
@@ -153,31 +229,55 @@ export default function SiteHeader({ config }) {
               >
                 WhatsApp
               </Button>
+              <button
+                type="button"
+                onClick={toggleThemeMode}
+                aria-label={themeAriaMessage}
+                title={isThemeReady ? `${themeAriaMessage} (${themeState.currentLabel})` : "Tema"}
+                className="touch-target inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--ds-border)] bg-surface-panel text-ink-title transition-all duration-200 hover:border-[color:var(--ds-accent)] hover:bg-[color-mix(in srgb,var(--ds-surface-subtle) 84%,transparent)] focus-visible:ring-2 focus-visible:ring-[var(--ds-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ds-surface-page)]"
+              >
+                <span aria-hidden>{themeLabel}</span>
+                <span className="sr-only">{themeAriaMessage}</span>
+              </button>
             </div>
 
-            <button
-              type="button"
-              className={`group inline-flex h-11 w-11 items-center justify-center rounded-full border text-ink-title shadow-[0_14px_30px_rgba(82,42,16,.18)] transition-all duration-200 lg:hidden ${
-                isHeaderScrolled
-                  ? "border-brand-400/55 bg-surface-raised/85 backdrop-blur-xl shadow-[0_16px_30px_rgba(0,0,0,.28)]"
-                  : "border-brand-500/30 bg-gradient-to-b from-brand-50/70 to-brand-100/35"
-              }`}
-              aria-label={isMenuOpen ? "Închide meniul" : "Deschide meniul"}
-              aria-expanded={isMenuOpen}
-              aria-controls="mobile-nav"
-              onClick={() => setIsMenuOpen((open) => !open)}
-            >
-              <MenuIcon open={isMenuOpen} />
-            </button>
+            <div className="flex items-center gap-2 lg:hidden">
+              <button
+                type="button"
+                onClick={toggleThemeMode}
+                aria-label={themeAriaMessage}
+                title={isThemeReady ? `${themeAriaMessage} (${themeState.currentLabel})` : "Tema"}
+                className="touch-target inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--ds-border)] bg-surface-panel text-ink-title transition-all duration-200 hover:border-[color:var(--ds-accent)] hover:bg-[color-mix(in srgb,var(--ds-surface-subtle) 84%,transparent)] focus-visible:ring-2 focus-visible:ring-[var(--ds-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ds-surface-page)]"
+              >
+                <span aria-hidden>{themeLabel}</span>
+                <span className="sr-only">
+                  {themeAriaMessage}
+                </span>
+              </button>
+              <button
+                type="button"
+                className={`group inline-flex h-11 w-11 items-center justify-center rounded-full border text-ink-title shadow-[0_14px_30px_rgba(82,42,16,.18)] transition-all duration-200 lg:hidden ${
+                  isHeaderScrolled
+                    ? "border-brand-400/55 bg-surface-raised/85 backdrop-blur-xl shadow-[0_16px_30px_rgba(0,0,0,.28)]"
+                    : "border-brand-500/30 bg-gradient-to-b from-brand-50/70 to-brand-100/35"
+                }`}
+                aria-label={isMenuOpen ? "Închide meniul" : "Deschide meniul"}
+                aria-expanded={isMenuOpen}
+                aria-controls="mobile-nav"
+                onClick={() => setIsMenuOpen((open) => !open)}
+              >
+                <MenuIcon open={isMenuOpen} />
+              </button>
+            </div>
           </div>
 
           <nav className="hidden pb-2 pt-1 lg:block" aria-label="Meniu principal">
             <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3">
               {NAV_LINKS.map((item) => (
               <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="shrink-0 touch-target inline-flex items-center justify-center rounded-full px-3.5 py-2 jar-copy-xs text-ink-muted transition-colors duration-200 hover:border-brand-500/55 hover:bg-brand-500/10 hover:text-ink-title focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-surface-base sm:text-sm"
+                  <Link
+                    href={item.href}
+                  className="shrink-0 touch-target inline-flex items-center justify-center rounded-full px-3.5 py-2 jar-copy-xs text-ink-muted transition-colors duration-200 hover:border-brand-500/55 hover:bg-brand-500/10 hover:text-ink-title focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-surface-base sm:text-sm"
                     data-analytics={`click|navigation|header_nav_${item.href.replace(/\W+/g, "_").replace(/^_+|_+$/g, "")}|source_page=global|journey_stage=navigation|lead_type=site_nav`}
                   >
                     {item.label}

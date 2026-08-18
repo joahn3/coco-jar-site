@@ -8,7 +8,11 @@ export const metadata = {
   title: "Meniu complet | Coco Jar Bistro",
   description:
     "Descoperă meniul complet a la carte al Coco Jar: preparate pe categorii, porții clare și recomandări pentru mesele de orice moment.",
+  alternates: {
+    canonical: "/meniu",
+  },
 };
+export const revalidate = 3600;
 
 export default async function MenuPage() {
   const fullMenu = await getFullMenu();

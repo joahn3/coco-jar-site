@@ -161,7 +161,8 @@ export default function SiteFooter({ config }) {
       <div className="mt-6 border-t border-[color:var(--ds-border)]/60 pt-4">
         <div className="container mx-auto px-4 sm:px-6">
           <p className="jar-copy-xs text-center text-ink-muted">
-            Restaurant, Cafenea, Grătar și Terasă în Popeşti-Leordeni! | Crafted with 🤍 and 🧠 by Firacode.ro
+            <span className="block sm:inline">Restaurant, Cafenea, Grătar și Terasă în Popești-Leordeni!</span>{" "}
+            <span className="block sm:inline">Crafted with 🤍 and 🧠 by Firacode.ro</span>
           </p>
         </div>
       </div>
