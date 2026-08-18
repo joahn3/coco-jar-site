@@ -157,13 +157,29 @@ export default async function DailyMenuPage({ searchParams }) {
           </div>
         )}
         <div className="mt-4 flex flex-wrap gap-2">
-          <Button as="next-link" href="/contact" variant="primary" className="touch-target">
+          <Button
+            as="next-link"
+            href="/contact"
+            variant="primary"
+            data-analytics="click|conversion|daily_menu_to_contact|source_page=/meniu-zilei|journey_stage=lead_capture|lead_type=reservation"
+            className="touch-target"
+          >
             Rezervă-ți locul pentru azi
           </Button>
-          <Button as="next-link" href="/meniu" variant="secondary" className="touch-target">
+          <Button
+            as="next-link"
+            href="/meniu"
+            variant="secondary"
+            data-analytics="click|navigation|daily_menu_to_full_menu|source_page=/meniu-zilei|journey_stage=menu_cta|lead_type=menu"
+            className="touch-target"
+          >
             Explorează meniul complet
           </Button>
-          <Button href={phoneHref(config.phone)} className="touch-target">
+          <Button
+            href={phoneHref(config.phone)}
+            data-analytics="phone_click|conversion|daily_menu_phone|source_page=/meniu-zilei|journey_stage=lead_capture|lead_type=reservation"
+            className="touch-target"
+          >
             Rezervare directă pe telefon
           </Button>
         </div>

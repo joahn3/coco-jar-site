@@ -19,6 +19,7 @@ Proiectul este portat în Next.js App Router pentru:
 - `README.md` — acest fișier
 - `PRODUCTION-READINESS-PLAN.md` — plan de lansare și verificări
 - `OFERTA-CLIENT-COCO-JAR-2026.md` — ofertă orientativă (3.200–4.500 EUR)
+- `docs/strategic-design-refactor-coco-jar-site.md` — audit strategic + plan de refactorizare de design (premium, WCAG AA, roadmap 5 săptămâni)
 - `data/meniu-coco-jar-fotografii-2026-08-15.xlsx` — setul inițial de extragere
 - `data/meniu-coco-jar-detaliat-integral-2026-08-15.xlsx` — meniu integral exportat din JSON (159 preparate)
 - `data/meniu-complet-fara-pret-46.json` — listă completă a preparatelor fără preț (46)

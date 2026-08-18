@@ -136,7 +136,7 @@ export default function SiteHeader({ config }) {
             <div className="hidden w-full flex-wrap justify-end gap-2 md:flex md:w-auto">
               <Button
                 href={phoneHref(config.phone)}
-                data-analytics="phone_click|conversion|header_phone|source=global|journey=lead_capture|lead_type=reservation"
+                data-analytics="phone_click|conversion|header_phone|source_page=global|journey_stage=lead_capture|lead_type=reservation"
                 className="touch-target"
               >
                 Sună
@@ -148,7 +148,7 @@ export default function SiteHeader({ config }) {
                   config.phone,
                   "Bună ziua, aș vrea detalii pentru o rezervare.",
                 )}
-                data-analytics="whatsapp_click|conversion|header_whatsapp|source=global|journey=lead_capture|lead_type=whatsapp"
+                data-analytics="whatsapp_click|conversion|header_whatsapp|source_page=global|journey_stage=lead_capture|lead_type=whatsapp"
                 className="touch-target"
               >
                 WhatsApp
@@ -178,7 +178,7 @@ export default function SiteHeader({ config }) {
                   <Link
                     href={item.href}
                     className="shrink-0 touch-target inline-flex items-center justify-center rounded-full border border-transparent px-3.5 py-2 text-xs font-semibold text-ink-muted transition-colors duration-200 hover:border-brand-500/55 hover:bg-brand-500/10 hover:text-ink-title focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-surface-base sm:text-sm"
-                    data-analytics={`click|navigation|header_nav_${item.href.replace(/\W+/g, "_").replace(/^_+|_+$/g, "")}|source=global|journey=navigation|lead_type=site_nav`}
+                    data-analytics={`click|navigation|header_nav_${item.href.replace(/\W+/g, "_").replace(/^_+|_+$/g, "")}|source_page=global|journey_stage=navigation|lead_type=site_nav`}
                   >
                     {item.label}
                   </Link>
@@ -221,7 +221,7 @@ export default function SiteHeader({ config }) {
                     href={item.href}
                     onClick={closeMenu}
                     className="group relative flex items-center rounded-lg border border-line-soft bg-surface-base/80 px-3.5 py-3 text-sm font-semibold text-ink-title transition-all duration-200 hover:border-brand-500/55 hover:bg-brand-500/12 hover:text-ink-title"
-                    data-analytics={`click|navigation|mobile_nav_${item.href.replace(/\W+/g, "_").replace(/^_+|_+$/g, "")}|source=mobile|journey=navigation|lead_type=site_nav`}
+                    data-analytics={`click|navigation|mobile_nav_${item.href.replace(/\W+/g, "_").replace(/^_+|_+$/g, "")}|source_page=mobile|journey_stage=navigation|lead_type=site_nav`}
                   >
                     <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-500/85 transition-all duration-200 group-hover:scale-125" />
                     <span className="ml-2.5">{item.label}</span>
@@ -250,7 +250,7 @@ export default function SiteHeader({ config }) {
           <div className="mt-3 flex gap-2 border-t border-line-soft/80 pt-3">
             <Button
               href={phoneHref(config.phone)}
-              data-analytics="phone_click|conversion|mobile_nav_phone|source=mobile|journey=lead_capture|lead_type=reservation"
+              data-analytics="phone_click|conversion|mobile_nav_phone|source_page=mobile|journey_stage=lead_capture|lead_type=reservation"
               aria-label="Sună restaurantul"
               className="touch-target h-auto flex-1 justify-center bg-surface-base/95 py-2.5 text-xs font-semibold md:h-11"
             >
@@ -261,17 +261,17 @@ export default function SiteHeader({ config }) {
                 </span>
               </span>
             </Button>
-            <Button
-              variant="whatsapp"
+              <Button
+                variant="whatsapp"
               href={whatsappHref(
                 config.whatsapp,
                 config.phone,
-                "Bună ziua, aș vrea detalii pentru o rezervare.",
-              )}
-              data-analytics="whatsapp_click|conversion|mobile_nav_whatsapp|source=mobile|journey=lead_capture|lead_type=whatsapp"
-              aria-label="Trimite mesaj pe WhatsApp"
-              className="touch-target h-auto flex-1 justify-center py-2.5 text-xs font-semibold md:h-11"
-            >
+                  "Bună ziua, aș vrea detalii pentru o rezervare.",
+                )}
+                data-analytics="whatsapp_click|conversion|mobile_nav_whatsapp|source_page=mobile|journey_stage=lead_capture|lead_type=whatsapp"
+                aria-label="Trimite mesaj pe WhatsApp"
+                className="touch-target h-auto flex-1 justify-center py-2.5 text-xs font-semibold md:h-11"
+              >
               <span className="hidden sm:inline">WhatsApp</span>
               <span className="sm:hidden inline-flex items-center justify-center" aria-hidden="true">
                 <span className="grid h-5 w-5 place-items-center rounded-full border border-current/65 text-[0.52rem] font-bold leading-none">

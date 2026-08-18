@@ -961,14 +961,14 @@
 
   .hero-ambiance {
     margin-top: 0.45rem;
-    min-height: min(66vh, 520px);
+    min-height: min(70vh, 540px);
     border-radius: var(--radius-xl);
   }
 
   .hero-ambiance__overlay {
-    opacity: 0.24;
+    opacity: 0.3;
     background: radial-gradient(circle at 30% 20%, color-mix(in srgb, var(--color-brand-400) 32%, transparent), transparent 52%),
-      linear-gradient(180deg, rgb(0 0 0 / 0.16), color-mix(in srgb, var(--color-brand-300) 6%, transparent));
+      linear-gradient(180deg, rgb(0 0 0 / 0.16), color-mix(in srgb, var(--color-brand-300) 14%, transparent));
   }
 
   .hero-ambiance__grain {
@@ -998,6 +998,14 @@
   .glass-panel--hero {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+  }
+
+  .hero-copy-grid {
+    gap: 0.82rem;
+  }
+
+  .hero-copy-grid > .hero-kicker {
+    margin-bottom: 0.1rem;
   }
 
   .jar-card,

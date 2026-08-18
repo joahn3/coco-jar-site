@@ -48,10 +48,20 @@ export default async function ContactPage() {
             Dacă ești la orar aglomerat sau ai grupul mare, îți fixăm opțiunea potrivită din prima variantă.
           </p>
           <div className="mt-4 grid gap-2 sm:grid-cols-2">
-            <Button as="next-link" href="/meniu-zilei" variant="secondary" className="w-full sm:w-auto">
+            <Button
+              as="next-link"
+              href="/meniu-zilei"
+              variant="secondary"
+              data-analytics="click|navigation|contact_to_meniu_zilei|source_page=/contact|journey_stage=menu_cta|lead_type=menu"
+              className="w-full sm:w-auto"
+            >
               Vezi meniul zilei
             </Button>
-            <Button href={phoneHref(config.phone)} className="w-full sm:w-auto">
+            <Button
+              href={phoneHref(config.phone)}
+              data-analytics="phone_click|conversion|contact_phone_cta|source_page=/contact|journey_stage=lead_capture|lead_type=reservation"
+              className="w-full sm:w-auto"
+            >
               Confirmare prioritară prin telefon
             </Button>
           </div>
@@ -67,7 +77,7 @@ export default async function ContactPage() {
             <p>
               <a
                 href={phoneHref(config.phone)}
-                data-analytics="phone_click|conversion|phone_contact|source=contact|journey=lead_capture|lead_type=reservation"
+                data-analytics="phone_click|conversion|phone_contact|source_page=/contact|journey_stage=lead_capture|lead_type=reservation"
                 className="jar-link touch-target"
               >
                 Rezervare prioritară pe telefon — {phoneDisplay}
@@ -75,8 +85,8 @@ export default async function ContactPage() {
             </p>
             <p>
               <a
-	                href={whatsappHref(config.whatsapp, config.phone)}
-	                data-analytics="whatsapp_click|conversion|whatsapp_contact|source=contact|journey=lead_capture|lead_type=reservation"
+                href={whatsappHref(config.whatsapp, config.phone)}
+                data-analytics="whatsapp_click|conversion|whatsapp_contact|source_page=/contact|journey_stage=lead_capture|lead_type=reservation"
                 className="jar-link touch-target"
               >
                 Confirmare rapidă prin WhatsApp — {whatsappDisplay}
@@ -88,7 +98,7 @@ export default async function ContactPage() {
             <p>
               <a
                 href={mapHref(config.siteName, config.fullAddress)}
-                data-analytics="maps_click|conversion|google_maps_contact|source=contact|journey=information|lead_type=none"
+                data-analytics="maps_click|conversion|google_maps_contact|source_page=/contact|journey_stage=information|lead_type=site"
                 className="jar-link touch-target"
                 target="_blank"
                 rel="noreferrer"

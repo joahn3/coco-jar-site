@@ -65,21 +65,41 @@ export default async function EventPage() {
               </p>
             </div>
           <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:max-w-2xl">
-                <Button as="next-link" href="/contact" variant="primary" className="w-full sm:w-auto">
+                <Button
+                  as="next-link"
+                  href="/contact"
+                  variant="primary"
+                  data-analytics="click|conversion|events_to_contact|source_page=/evenimente-catering|journey_stage=lead_capture|lead_type=event"
+                  className="w-full sm:w-auto"
+                >
               Rezervă experiența privată
               </Button>
-    <Button as="next-link" href="/meniu-zilei" variant="secondary" className="w-full sm:w-auto">
+    <Button
+      as="next-link"
+      href="/meniu-zilei"
+      variant="secondary"
+      data-analytics="click|navigation|events_to_daily_menu|source_page=/evenimente-catering|journey_stage=menu_cta|lead_type=menu"
+      className="w-full sm:w-auto"
+    >
               Alege meniul potrivit pentru eveniment
             </Button>
           </div>
           <div className="jar-link-list mt-4">
             <p>
-              <Link className="jar-link touch-target" href="/contact">
+              <Link
+                className="jar-link touch-target"
+                href="/contact"
+                data-analytics="click|navigation|event_detail_contact|source_page=/evenimente-catering|journey_stage=lead_capture|lead_type=event"
+              >
                 Detalii complete despre serviciile de evenimente
               </Link>
             </p>
             <p>
-              <a className="jar-link touch-target" href={phoneHref(config.phone)}>
+              <a
+                className="jar-link touch-target"
+                href={phoneHref(config.phone)}
+                data-analytics="phone_click|conversion|event_phone|source_page=/evenimente-catering|journey_stage=lead_capture|lead_type=event"
+              >
                 Rezervă direct prin telefon — {phoneDisplay}
               </a>
             </p>
@@ -111,7 +131,11 @@ export default async function EventPage() {
             </div>
           <div className="jar-link-list">
             <p>
-              <a className="jar-link touch-target" href={phoneHref(config.phone)}>
+              <a
+                className="jar-link touch-target"
+                href={phoneHref(config.phone)}
+                data-analytics="phone_click|conversion|event_confirmation_call|source_page=/evenimente-catering|journey_stage=lead_capture|lead_type=event"
+              >
                 Confirmare disponibilitate eveniment — {phoneDisplay}
               </a>
             </p>

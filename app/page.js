@@ -74,8 +74,8 @@ export default async function HomePage() {
 
 	const heroHighlights = [
     "Atmosferă calmă, lumină caldă, muzică discretă",
-    "Mese echilibrate, porții constante, servire atentă",
-    "Rezervare directă, fără formulare suplimentare",
+    "Porții constante, gust consistent, servire atentă",
+    "Rezervare directă, fără pași suplimentari",
 	];
 
   const reviewSignals = [
@@ -111,34 +111,34 @@ export default async function HomePage() {
           <div className="hero-ambiance__grain" />
           <Container className="relative z-10 py-4 sm:py-6 md:py-10">
             <div className="glass-panel glass-panel--hero relative z-10 rounded-[1.35rem] p-4 sm:p-6 md:p-8">
-            <div className="hero-copy-grid flex flex-col gap-4 md:grid md:grid-cols-[1fr_auto] md:items-end md:gap-8">
-                <div className="max-w-2xl space-y-4">
-                  <p className="jar-badge">Când focul se aude blând, gustul devine memorabil</p>
-                  <h1 className="text-display-md sm:text-display-xl md:text-display-2xl">
+            <div className="hero-copy-grid flex flex-col gap-3 md:grid md:grid-cols-[1fr_auto] md:items-end md:gap-8">
+                <div className="max-w-2xl space-y-3 sm:space-y-4">
+                  <p className="jar-badge hero-kicker">Când focul se aude blând, gustul devine memorabil</p>
+                  <h1 className="text-display-sm sm:text-display-xl md:text-display-2xl">
                     Coco Jar — pui la jar, meniul zilei și preparate la carte.
                   </h1>
-                  <p className="text-sm sm:text-base text-ink-title/90 prose-balance">
-                    Alege experiența completă, cu meniul zilei gândit pe zi și selecția a la carte din restaurant.
+                  <p className="max-w-xl text-sm sm:text-base text-ink-title/90">
+                    Zi de zi, aducem aceeași experiență constantă: atmosferă autentică, preparate la jar și servicii fără grabă.
                   </p>
 
-	                  <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                  <div className="mt-4 grid gap-2 sm:grid-cols-2">
                     <Button
                       as="next-link"
                       href="/contact"
                       variant="primary"
-                      data-analytics="click|conversion|rezervare_primara|source=home|journey=primary_cta|lead_type=reservation"
+                      data-analytics="click|conversion|rezervare_primara|source_page=/|journey_stage=primary_cta|lead_type=reservation"
                       className="touch-target w-full min-h-11 text-sm sm:text-base"
                     >
                       Rezervă-ți masa
 	                    </Button>
 	                    <Button
-	                      as="next-link"
-	                      href="/meniu-zilei"
-	                      variant="secondary"
-	                      data-analytics="click|navigation|meniu_zilei_hero|source=home|journey=menu_cta|lead_type=menu"
-	                      className="touch-target w-full min-h-11 text-sm sm:text-base"
-	                    >
-                      Meniul zilei
+                      as="next-link"
+                      href="/meniu-zilei"
+                      variant="secondary"
+                      data-analytics="click|navigation|meniu_zilei_hero|source_page=/|journey_stage=menu_cta|lead_type=menu"
+                      className="touch-target w-full min-h-11 text-sm sm:text-base"
+                      >
+                      Explorează meniul zilei
 		                    </Button>
                   </div>
 
@@ -228,6 +228,7 @@ export default async function HomePage() {
                 className="jar-link touch-target"
                 aria-label={`Sună la ${config.phone || "numărul de telefon"} pentru rezervare`}
                 href={phoneHref(config.phone)}
+                data-analytics="phone_click|conversion|home_phone|source_page=/|journey_stage=lead_capture|lead_type=reservation"
               >
                 Rezervare pe telefon — confirmare prioritară: {contactText}
               </a>
@@ -237,6 +238,7 @@ export default async function HomePage() {
                 className="jar-link touch-target"
                 aria-label={`Deschide conversație pe WhatsApp ${config.whatsapp || config.phone || "la restaurant"} din pagina principală`}
                 href={whatsappHref(config.whatsapp, config.phone, "Bună ziua, vreau mai multe detalii.")}
+                data-analytics="whatsapp_click|conversion|home_whatsapp|source_page=/|journey_stage=lead_capture|lead_type=whatsapp"
               >
                 Confirmare prin WhatsApp — răspuns în timp real: {whatsappText}
               </a>
@@ -246,7 +248,7 @@ export default async function HomePage() {
               <a
                 className="jar-link touch-target"
                 href={mapHref(config.siteName, config.fullAddress)}
-                data-analytics="maps_click|conversion|google_maps|source=home|journey=information|lead_type=site"
+                data-analytics="maps_click|conversion|google_maps|source_page=/|journey_stage=information|lead_type=site"
                 target="_blank"
                 rel="noreferrer"
               >

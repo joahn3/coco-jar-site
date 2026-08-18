@@ -79,7 +79,7 @@ export default async function NotFound() {
             <Button
               as="next-link"
               href="/meniu-zilei"
-              data-analytics="404_click|navigation|meniu_zilei|source=404|journey=recovery|lead_type=menu"
+              data-analytics="404_click|navigation|meniu_zilei|source_page=404|journey_stage=recovery|lead_type=menu"
             >
               Meniul zilei
             </Button>
@@ -87,13 +87,13 @@ export default async function NotFound() {
               as="next-link"
               href="/evenimente-catering"
               variant="ghost"
-              data-analytics="404_click|navigation|evenimente|source=404|journey=recovery|lead_type=event"
+              data-analytics="404_click|navigation|evenimente|source_page=404|journey_stage=recovery|lead_type=event"
             >
               Evenimente și catering
             </Button>
             <Button
               href={phoneHref(config.phone)}
-              data-analytics="404_click|conversion|telefon|source=404|journey=lead_capture|lead_type=reservation"
+              data-analytics="404_click|conversion|telefon|source_page=404|journey_stage=lead_capture|lead_type=reservation"
               className="sm:col-span-2 md:col-span-1"
             >
               Sună pentru rezervare
@@ -101,7 +101,7 @@ export default async function NotFound() {
             <Button
               variant="whatsapp"
               href={whatsappHref(config.whatsapp, config.phone, "Bună! Nu am reușit să găsesc pagina. Aș vrea informații despre meniu, program sau o rezervare.")}
-              data-analytics="404_click|conversion|whatsapp|source=404|journey=lead_capture|lead_type=whatsapp"
+              data-analytics="404_click|conversion|whatsapp|source_page=404|journey_stage=lead_capture|lead_type=whatsapp"
               className="sm:col-span-2 md:col-span-1"
             >
               Trimite mesaj pe WhatsApp
@@ -118,12 +118,12 @@ export default async function NotFound() {
           </div>
           <div className="jar-link-list">
             <p>
-              <a
+                <a
                 className="jar-link touch-target"
                 href={mapsLink}
                 target="_blank"
                 rel="noreferrer"
-                data-analytics="404_click|conversion|google_maps|source=404|journey=information|lead_type=site"
+                data-analytics="404_click|conversion|google_maps|source_page=404|journey_stage=information|lead_type=site"
               >
                 Deschide locația pe Google Maps
               </a>
@@ -151,7 +151,7 @@ export default async function NotFound() {
                 <Link
                   className="jar-link touch-target"
                   href={item.href}
-                  data-analytics={`404_click|navigation|${item.href.replace("/", "") || "home"}|source=404|journey=recovery|lead_type=${item.href.includes("/evenimente") ? "event" : item.href.includes("/meniu") ? "menu" : "navigation"}`}
+                  data-analytics={`404_click|navigation|${item.href.replace("/", "") || "home"}|source_page=404|journey_stage=recovery|lead_type=${item.href.includes("/evenimente") ? "event" : item.href.includes("/meniu") ? "menu" : "navigation"}`}
                 >
                   {item.title}
                 </Link>

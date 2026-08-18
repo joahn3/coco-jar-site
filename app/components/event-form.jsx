@@ -105,8 +105,13 @@ export default function EventForm() {
         <label className="grid gap-1.5 text-sm text-ink-muted">
           Telefon *
             <input
+              type="tel"
               name="phone"
               required
+              inputMode="tel"
+              autoComplete="tel"
+              pattern="[0-9+()\\-\\s]{8,20}"
+              title="Folosește doar cifre, de exemplu 07xx xxx xxx"
               placeholder="Telefon mobil (format 07xx xxx xxx)"
               className={inputClassName}
             />
@@ -212,7 +217,7 @@ export default function EventForm() {
           as="button"
           type="submit"
           disabled={loading}
-          data-analytics="form_submit|conversion|event_form|source=/evenimente-catering|journey=lead_capture|lead_type=event"
+          data-analytics="form_submit|conversion|event_form|source_page=/evenimente-catering|journey_stage=lead_capture|lead_type=event"
           className={cn(
             "justify-self-start",
             loading ? "pointer-events-none opacity-70" : "",
@@ -220,7 +225,11 @@ export default function EventForm() {
         >
           {loading ? "Se procesează..." : "Trimite cererea"}
         </Button>
-        {status && <p className="text-sm text-success">{status}</p>}
+        {status && (
+          <p role="status" aria-live="polite" className="text-sm text-success">
+            {status}
+          </p>
+        )}
       </form>
     </Card>
   );
