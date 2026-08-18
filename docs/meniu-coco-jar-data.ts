@@ -2,7 +2,7 @@ export interface MenuExtractionItem {
   name: string;
   size: string;
   price_lei: number | null;
-  description: string;
+  description?: string;
   allergens?: string;
   nutrition?: string;
   price_per_100g?: boolean;
